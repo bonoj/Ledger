@@ -175,3 +175,12 @@ Human inspection immediately caught what looked like one static moon beneath Jup
 The animation loop now reaches the presentation-owned state. Each frame therefore realizes all four distinct XZ orbital positions from its own radius, eccentricity, inclination, node, phase, and period.
 
 Repair provenance: `11af174a1e9d9c3d6dc8ecac726c3f897902db72`.
+
+
+### First bearing packet
+
+The Jovian table gained 32 small steel bearings as a loose incoming packet outside Callisto's displayed orbit. They are free bodies with short trajectory tails. Jupiter and the four moving Galileans influence their paths; the bearings do not influence one another. This is deliberately a dimensionless orbital playground rather than an ephemeris claim, with the Galilean/Jupiter relative gravitational hierarchy retained while display and time are compressed for observation.
+
+Objects reaching Jupiter's displayed surface or leaving the experiment are recycled into the incoming packet. No charts or classification UI were added; the fading trajectories are the first instrument.
+
+Repository provenance: `f19fc938ad97f8768ebcb1422c7f03a1769773a3`.
