@@ -962,3 +962,45 @@ The simplest success criterion is correspondingly concrete:
 Crossing 001 has now completed the first cold observation passage. The next experimental pressure is corrective use: give the downstream model the Observer evidence, let it make the second construction pass, then determine whether the diagnosed spatial structure actually improves.
 
 **Frontier: Observer₀ complete. Next passage is diagnosis → correction.**
+
+
+## First native construction pressure — semantic desk lamp
+
+Neptunian has now left the staged Crossing 001 specimen and entered ordinary construction.
+
+john asked Clara to choose the first object, then constrained the attempt to use two already-earned substrates: Workshop materials and the beginnings of semantic node / snapping architecture. The object is a small articulated brass desk lamp, itself a Betwixtable, placed in front of the vertical work stack.
+
+Excavation before construction found that both ideas already had executable ancestry rather than requiring invention from scratch:
+
+- WorkshopMats is an existing shared material vocabulary.
+- RelationalBuild is already a tiny semantic graph → projection → materialization substrate, earned through Chemlab.
+- the semantic snapping-point LEGO idea also survives as a physical thoughtform on the brass/glass tabletop.
+- workshopCyl(a,b,...) is already an endpoint-defined physical primitive.
+
+The lamp therefore became the first non-chemistry pressure on the relational idea rather than a parallel modeling framework.
+
+The authoritative construction representation is a small semantic graph:
+
+**base → lowerPivot → elbow → headPivot → shadeAxis → bulb**
+
+with relations:
+
+**supports → paired-arm → paired-arm → aims → contains**
+
+Physical arm members are generated between semantic endpoints. Existing Workshop brass, dark brass, steel, and warm emissive materials are reused. The lamp is wrapped directly in an ordinary Betwixtable.
+
+This passage also produced the first native JIT correction. Semantic intent alone said that the shade **contains** the bulb, but the generated conical shade does not inherit that truth merely because the graph names it. The construction therefore measures the bulb against the shade's actual axial/radial envelope. If containment fails, the correction moves the bulb along the already-authoritative shade semantic axis rather than patching an arbitrary world-space XYZ transform.
+
+That is the desired Neptunian distinction in miniature:
+
+**semantic relationship proposes → executable geometry exists → spatial evidence verifies → relationship-space correction repairs**
+
+Repository build f7ea17bd contains this first lamp passage and passed the Repository build. Home pinned and successfully published the exact artifact into Interstice. Interstice source provenance reports the exact Repository SHA. Public Pages provenance could not be independently fetched from the available web aperture during this turn, so the account does not claim the public membrane verified live yet.
+
+The next pressure is human visual inspection of the lamp as an ordinary object, followed by whatever mismatch that inspection exposes. The goal remains for Observer/JIT perception to progressively absorb spatial feedback that currently requires human eyes.
+
+A second complementary trajectory is now explicit but deliberately not prebuilt:
+
+**semantic 2D composition / nodeification → relational compositional legos → provisional 3D → JIT spatial self-inspection → correction**
+
+This may begin either from model-painted semantic nodes or by nodeifying a 2D image. The important invariant is the same: use semantic relationships to construct; use spatial evidence to verify.
