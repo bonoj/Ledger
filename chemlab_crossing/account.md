@@ -689,3 +689,20 @@ NIST CCCBDB reports an experimental H-N-H angle of 106.7 degrees. The projector 
 Nitrogen also earns its first presentation color in the current molecular renderer: blue. The lone pair is scientific structure in the fixture but is not rendered as a decorative object.
 
 The complete prior corpus plus NH3 passed executable geometry CI and browser/source agreement before Home advanced. Interstice provenance is 4810a585d151ab57c7c78e22d352c03c96f59ddd.
+
+
+## Chemlab goes dormant inside a Thoughtform
+
+john accepted ammonia as "Neptunian. Striking." and chose to zoom out from molecular geometry toward Jupiter rather than continue immediately.
+
+Before leaving, a second Thoughtform was hung from the opposite side of the Betwixtable. It is a cold-boot capsule for this exact Chemlab state, not operational authority.
+
+Its embedded residue records the accepted corpus: CH4, H2O, CO2, C2H6, C2H4, C2H2, NH3. It preserves the working loop: science fixture -> projection -> executable geometry regression -> browser/CI agreement -> Home pin -> Interstice runtime gate -> human inspection -> acceptance. It also preserves current debts: bond-order rendering lags graph semantics; the projector remains directed/tree-shaped rather than a cycle solver; semantic ports remain metadata rather than a general compatibility system; repeated flash replacement still deserves explicit resource disposal.
+
+The restart instruction is intentionally short: resume after accepted ammonia, preserve the accepted corpus and regression gate, and let new specimens earn new geometry or invariants rather than generalizing in advance.
+
+Inside the glass sphere, tiny water, methane, and ammonia constructions orbit and tumble while the brass gimbal cage turns. They are visual memory only; the executable fixtures and verifier remain authoritative.
+
+The Thoughtform passed the existing complete Chemlab geometry gate before publication. Interstice provenance is 52d7b0d7fa8753bfe9f2cf8ddb47aa52a10bf528.
+
+Chemlab can now be left without requiring either collaborator to carry its active working set while attention moves to Jupiter's cloud bands, Coriolis structure, and possible material gas.
