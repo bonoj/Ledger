@@ -480,3 +480,24 @@ The point of Chemlab so far has not been to prove that we already possess a univ
 It has been to create a place where such a compiler, if it deserves to exist, can be bullied into existence by things that are independently true.
 
 Somewhere in the heavens, Titan gurgles.
+
+
+## Turn-for-turn ledger experiment
+
+After accepting CO2, john asked for a temporary whiteboard behind the inspection stage containing the relevant color-coded element cards. We added only the vocabulary earned so far: H, C, and O, using the exact colors already used by the molecular renderer.
+
+The board is intentionally presentation-only. It is not a periodic-table implementation or new chemistry authority. Its purpose is to let john verify the visual encoding at a glance while specimens are flashed.
+
+We then changed the documentation process itself.
+
+For the next stretch of Chemlab, we will update this account turn for turn rather than reconstructing the crossing afterward.
+
+This is an experiment too.
+
+The question is whether a lightweight trailing account improves continuity while the work is happening, or whether maintaining it continuously introduces enough narrative and bookkeeping pressure to become noise for the model.
+
+The rule for now is deliberately loose: preserve consequential changes in collaboration, evidence, and workflow without turning the Ledger into a transcript or operational authority.
+
+john explicitly asked that even the decision to run this experiment be entered here.
+
+So it is.
