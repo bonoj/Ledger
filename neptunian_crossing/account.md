@@ -704,3 +704,81 @@ They look like an early **visual/perceptual primitive for model-native inhabitan
 ### john
 
 Okay. Let's begin synthesizing into a plan. Let's add turn by turn logging into workflow for now so we can review it later and apply "inpainting" to other problems and domains entirely.
+
+
+## Provisional synthesis: bounded inpainting workflow
+
+This is a working plan, not a specification. During this phase, preserve consequential turns before compressing them so the eventual abstraction can be derived from evidence across domains rather than from today's vocabulary.
+
+### Working hypothesis
+
+“Inpainting” is provisionally the broader pattern:
+
+`bounded encounter -> inference -> coherent uninterrupted passage -> changed substrate -> fresh bounded encounter`
+
+The substrate need not be raster or even spatial. The useful constraints appear to be:
+
+1. **Bounded encounter.** The acting model receives an aperture, not authoritative substrate truth.
+2. **Inference before intervention.** It forms a belief from encountered evidence rather than inheriting the builder's ontology or intention.
+3. **Coherent passage.** It gets a small uninterrupted horizon in which to make several mutually informed moves rather than requiring human/model resynchronization after every atomic action.
+4. **Executable consequence.** The passage changes the actual substrate, not merely a description of it.
+5. **Fresh encounter.** The next pass discovers consequences through the aperture again instead of assuming the intended result occurred.
+6. **Memory with provenance.** Observations, beliefs, interventions, surprises, and revisions can survive without becoming ground truth.
+
+### Immediate Neptunian experiment
+
+Use one small Betwixtable construction as the first deliberate test.
+
+**Builder** creates or selects an executable object.
+
+**Witness** enters through bounded perception and does not receive construction semantics. It has a small perception budget and may choose viewpoints/probes. Begin with cheap trustworthy primitives already close to the substrate: ray intersections, depth/distance, silhouette or edge discontinuities, normals, visibility/occlusion, and a tiny raster projection when useful. Disposable instrumentation is allowed and preferred over prematurely permanent APIs.
+
+**Inference packet** records what the Witness believes it encountered, the evidence supporting those beliefs, uncertainty, and what it would change or investigate next. Preserve prose interpretation beside structured measurements rather than choosing one representation.
+
+**Painter** receives the inference packet and enough constructive authority to make one coherent passage of several related edits. It should not be interrupted after every stroke.
+
+**Witness resets/re-enters** and encounters the changed object again.
+
+Run a few passages. The question is not whether the final object is beautiful. The first question is whether the loop discovers and corrects consequences that the constructing model would otherwise have carried forward from intention.
+
+### Permission gradient
+
+Treat these as permissions over the same underlying model-native inhabitant rather than prematurely separate agents:
+
+`Witness -> Wanderer -> Painter`
+
+- Witness may perceive, instrument, infer, and remember.
+- Wanderer may additionally choose movement/action within world affordances.
+- Painter may additionally mutate the substrate.
+
+Storytelling may emerge from preserved interpreted experience rather than require an omniscient Storyteller role. Keep that proposition open.
+
+### Logging rule for this phase
+
+Until the pattern stabilizes, append consequential human/model turns to this Neptunian crossing account in order. Do not replace them with retrospective summaries.
+
+Alongside the turn stream, record executable passages compactly when they occur:
+
+`aperture/evidence -> belief -> intended passage -> mutations -> fresh evidence -> revision`
+
+Preserve failures and wrong inferences. They are evidence about the aperture and workflow.
+
+Periodically synthesize from the accumulated turns, but leave the raw conversational trajectory intact beneath the synthesis.
+
+### Generalization watch
+
+Do not define “inpainting” as a 3D technique. While working, notice other domains with the same shape:
+
+- code: bounded runtime evidence -> diagnosis -> coherent patch passage -> rerun
+- science: bounded measurement -> hypothesis -> intervention -> new measurement
+- narrative: bounded experience -> interpretation -> action -> changed world
+- repository architecture: bounded semantic/context aperture -> local inference -> coherent refactor -> fresh executable evidence
+- research: bounded evidence set -> provisional model -> focused acquisition/work passage -> revised evidence set
+
+These are hypotheses, not promoted abstractions. A pattern earns shared machinery only after distinct real consumers demonstrate the same need.
+
+### Near-term cadence
+
+`orient briefly -> choose aperture/pass budget -> observe -> infer -> paint/wander for several moves -> observe fresh consequences -> log -> human judgment at a meaningful boundary -> repeat`
+
+The human remains acceptance, taste, redirection, and meaning—not the mandatory perceptual return path for every machine iteration.
