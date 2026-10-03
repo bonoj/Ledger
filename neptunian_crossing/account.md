@@ -184,3 +184,10 @@ The Jovian table gained 32 small steel bearings as a loose incoming packet outsi
 Objects reaching Jupiter's displayed surface or leaving the experiment are recycled into the incoming packet. No charts or classification UI were added; the fading trajectories are the first instrument.
 
 Repository provenance: `f19fc938ad97f8768ebcb1422c7f03a1769773a3`.
+
+
+### Chemlab glance-back during Neptunian
+
+A small Chemlab usability pass happened without leaving the crossing. Nitrogen joined H/C/O on the temporary element glance board using the already-earned blue nitrogen vocabulary. The relational inspection Betwixtable now carries the seven accepted molecules as a tiny deck. Focusing it shows one restrained information card with the molecule name/formula and one useful structural fact; tapping the already-focused molecule advances to the next accepted specimen. Dismissing focus dismisses the card. This reuses the vestibule's quiet contextual-card language rather than adding laboratory UI.
+
+Repository provenance: `fb1ccc39a9227c517dd069d5ddd966bb2007f087`.
