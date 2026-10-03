@@ -548,3 +548,18 @@ john inspected the flashed C2H6 structure against the external reference and acc
 That acceptance matters beyond the molecule. Ethane validates the first local-frame propagation through the relational construction grammar: a connected child center can inherit an axis from its parent connection and construct its own geometry around that axis without hand-authored world coordinates.
 
 The staggered conformer is therefore accepted evidence for both the chemistry fixture and the underlying spatial mechanism.
+
+
+## Ethylene takes the plane
+
+With ethane accepted, we chose ethylene as the next pressure test because it changes geometry rather than merely molecule size.
+
+C2H4 introduces a C=C double bond and trigonal-planar carbon centers. NIST CCCBDB calculated geometry gives D2h symmetry and a completely planar coordinate set, with C-C-H angles about 121.55 degrees and H-C-H about 116.90 degrees. The NIST Chemistry WebBook independently identifies ethylene as C2H4 with D2h symmetry.
+
+The relational projector now has a trigonal local construction rule. Given an occupied parent-bond axis, it constructs the two remaining directions symmetrically in the same plane. The ethylene fixture uses the observed C-C-H opening rather than pretending ideal 120 degrees is the experimental geometry.
+
+This is also the first accepted-chemistry candidate whose connection graph contains a double bond while the spatial renderer still draws only one bond cylinder. The semantic graph is ahead of the disposable view. That debt remains explicit.
+
+The candidate built green and was pinned through Home. Interstice provenance is 16d7bf81371e4985767dd6e07725533906907efc.
+
+The next human check is deliberately simple: two carbons, four hydrogens, all six atoms coplanar. The exact small departure from 120-degree ideality belongs to the scientific fixture, not to visual hand-tuning.
