@@ -153,3 +153,16 @@ The sharpened direction at pivot is:
 **make relational semantics ironclad; let composition emerge from relationships to owned geometry; let higher-level semantic modeling fall out afterward rather than designing it prematurely.**
 
 Repository retirement provenance: `820c4dd547179793d8be4b887312bf84bbc32c56`.
+
+
+### Jovian system table
+
+The pivot stayed vertical. A new Betwixtable was placed high above the workstation rather than replacing the lower stack.
+
+The first Jovian realization is deliberately small: Jupiter plus Io, Europa, Ganymede, and Callisto. JPL JUP365 mean elements provide the orbital evidence. The table records semimajor axes 421,800 / 671,100 / 1,070,400 / 1,882,700 km; eccentricities .004 / .009 / .001 / .007; local-Laplace-plane inclinations 0.0 / 0.5 / 0.2 / 0.3 degrees; nodes 0 / 184 / 58.5 / 309.1 degrees; and periods 1.762732 / 3.525463 / 7.155588 / 16.690440 days. The first three therefore retain the observed near-4:2:1 Laplace resonance while Callisto remains outside it.
+
+Presentation compresses orbital radii linearly to the brass/glass table and exaggerates body radii; those display choices are explicitly recorded rather than confused with orbital evidence. The moons advance from their measured periods and small eccentricities/inclinations. This is a legible dynamical scaffold for the next Neptunian experiment, not an ephemeris.
+
+The next intended pressure is discrete bearing exchange/capture under Jovian and Galilean gravity before material gas is introduced.
+
+Repository provenance: `9c286d3053e25b5ad7d25e7a0aa80acef206f0c3`.
