@@ -812,3 +812,78 @@ Pass 0 is accepted as the starting reality.
 From this boundary forward the bridge/beacon construction is frozen for the first Witness crossing. Builder knowledge remains in this account and source history but is excluded from the cold Witness context.
 
 The next engineering work may add only generic bounded-perception machinery. It must not encode the names, intended identities, coordinates, composition, or privileged scene-graph semantics of the accepted construction. The first Witness will be a genuinely cold model invocation, not the Builder pretending to forget.
+
+
+## Observer bootstrap wake
+
+The first cold Witness crossing has not yet begun. The work since the Crossing 001 boundary has been construction of the generic Observer instrument itself. That distinction matters: manufacturing the aperture in a warm Builder context is not observation.
+
+The crossing cadence has sharpened to:
+
+**Builder₀ → Observer₀ → Painter₀ → Builder₁**
+
+Crossing 001 requires a one-time bootstrap between Builder₀ and Observer₀ because the Observer did not yet exist. Later crossings should be able to reuse the earned instrument.
+
+### Bounded Observer
+
+A generic bounded Witness/Observer was added inside the same rigid Crossing 001 Betwixtable frame as the accepted construction. Its machine-facing sensor is intentionally anonymous. A deliberate ray observation returns only geometric consequence:
+
+- distance
+- hit point
+- surface normal
+
+It does not expose names, object IDs, `userData`, hierarchy, materials, semantic components, or source coordinates. The Observer's own body and human-visible instrumentation are excluded from its sensing.
+
+The instrument also carries pose and transcript access plus a finite deliberate-action budget. Its body is physically visible to the human so orientation can be inspected without granting that geometry back to the Observer.
+
+The warm construction thread knows what Builder₀ made. The eventual cold Observer must not inherit that knowledge.
+
+### Spherical idle law
+
+Free-flight locomotion proved to be the wrong pressure. The experiment is about bounded perception and inference, not whether a model can pilot a tiny spacecraft through collision geometry.
+
+The Observer's natural state is therefore becoming environmental rather than commanded: a deterministic orbit around the Crossing 001 Betwixtable center whose orbital plane slowly precesses. The body continuously faces inward. Over time its path samples a spherical shell of viewpoints rather than one repeated great circle.
+
+A faint persistent trajectory makes that accumulated shell visible to the human. The Observer is blind to the trace.
+
+This yields the intended separation:
+
+**idle = free deterministic locomotion + center-facing attention**
+
+**agency = pause + redirect attention + bounded sensing**
+
+The current visual candidate is Repository build `70a3990c`. Human inspection confirmed the orbit is running and the raycast axis is visible at the public Betwixt membrane.
+
+The older `look` and `move` calls still exist as transitional construction residue; idle currently reasserts the orbital pose on the next frame. They are not the intended final Observer contract.
+
+The next small construction passage is to replace that residue with explicit intentional attention: pause the orbit, aim without spending evidence budget, spend budget only when sensing, and resume the center-facing orbit afterward. The working first-pass budget remains twelve ray observations. No camera, depth map, cone scan, automatic point cloud, or scene-graph shortcut has yet been earned.
+
+After that interface is executable and accepted, warm Observer construction stops. A fresh cold Clara receives the actual Observer aperture without being told the accepted construction's identities. Its evidence and inference account become the legitimate input to Painter₀. Painter₀ must not be designed in advance.
+
+### Interruptions absorbed into the wake
+
+Observer construction crossed several useful Betwixt pressures without changing the experiment's boundary.
+
+Betwixtable foreground/focus behavior was tightened so presentation bounds and focused-object interaction remain coherent. This improved the substrate Crossing 001 inhabits rather than adding Neptunian semantics.
+
+Chemlab briefly resurfaced. Its molecule information card was raised clear of the spell containers, and the temporary element glance board was cleaned up as presentation rather than chemistry authority.
+
+During a family demonstration, john's mother asked to add **platinum**. Pt joined H/C/O/N on the live Chemlab board. The tiny request became a useful demonstration of the conversational construction loop: an ordinary human contribution traveled through the same model-to-executable path and appeared in the shared world.
+
+The board was then made data-driven. Its dimensions and card placement now derive from the element specification list, so another element can extend the presentation without manually reconstructing the container.
+
+That work also coincided with a deployment lesson. Interstice source containing a publication is not sufficient evidence that the public Pages membrane serves it. The publication contract was hardened so “live” means the public Betwixt membrane has been fetched and verified against the exact expected Repository provenance/build. Normal coordination uses the exact eight-character HUD build identity.
+
+The wider Home/Repository system has already demonstrated useful cold handoff. That is separate from the next experimental boundary. The pending cold passage is specifically a model inhabiting Observer₀ without privileged Builder₀ knowledge.
+
+### Current frontier
+
+Builder₀ is complete and frozen.
+
+Observer₀ is in final construction.
+
+Build `70a3990c` is publicly visible and human-validated for the precessing center-facing orbit, persistent shell trace, and ray axis.
+
+Next: finish pause / aim / sense / resume semantics, preserve the earned interface here, then cross the cold membrane.
+
+**Do not build Painter₀ yet.**
