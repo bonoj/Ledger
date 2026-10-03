@@ -782,3 +782,16 @@ These are hypotheses, not promoted abstractions. A pattern earns shared machiner
 `orient briefly -> choose aperture/pass budget -> observe -> infer -> paint/wander for several moves -> observe fresh consequences -> log -> human judgment at a meaningful boundary -> repeat`
 
 The human remains acceptance, taste, redirection, and meaning—not the mandatory perceptual return path for every machine iteration.
+
+
+### john
+
+Let's do beacon and bridge. They are two very clearly separate entities that exist everywhere. And it gives us a chance to play with in world light and occlusion as well.
+
+### Clara
+
+The pairing is accepted for the first deliberate bounded-perception construction passage.
+
+Bridge supplies structure, contact, span, rhythm, and negative space. Beacon supplies enclosure, repetition, emission, and a compact vertical silhouette. Together they create useful in-world lighting and occlusion relationships while remaining two ordinary, strongly separable entities whose identity does not depend on specialized laboratory ontology.
+
+The first Builder passage should place their Betwixtable away from the existing vertical laboratory stack: enough ordinary Betwixt between them to preserve environmental noise, but still inside the existing world rather than a pristine fixture. Human visual supervision should stop after the initial construction is accepted as the starting substrate; subsequent Witness/Painter passages are intended to encounter consequences through bounded machine perception.
