@@ -631,3 +631,24 @@ Inspection of the coordinate construction located the mismatch without weakening
 This is new architectural evidence. Propagating a connection axis is sufficient for tetrahedral ethane when torsion is independently selectable, but planar double-bond geometry also requires orientation about that axis. A local spatial frame is not merely a heading.
 
 The next candidate explicitly carries the parent plane orientation into C2. The regression gate remains intact and must pass at runtime before the candidate is accepted.
+
+
+## Publication is now downstream of executable geometry
+
+After the browser runtime caught what source CI had missed, the publication gate was tightened.
+
+The Chemlab relational projector, current molecular fixtures, and geometry verifier were extracted into an executable ES module using the same Three.js dependency as Betwixt. Repository verification now imports that module under Node and actually runs the accepted geometry regression corpus during npm test.
+
+The gate currently requires CH4, H2O, CO2, C2H6, and corrected C2H4 to pass their earned numerical invariants before Repository CI can become green.
+
+A second guard compares the Chemlab geometry block embedded in the built browser artifact against the executable verifier module. CI therefore rejects drift where one projector is tested while a materially different projector is shipped.
+
+The in-browser startup regression remains in place as an independent runtime gate.
+
+Only after both executable geometry verification and browser/source agreement passed did Home advance. Interstice provenance is 7e689bd21b8eaca8629b2de078a75ee09b0a566a.
+
+The publication chain is now stricter:
+
+source -> build -> executable geometry regression -> browser/CI geometry agreement -> Home pin -> Interstice -> browser runtime regression -> human inspection
+
+A green build alone is no longer sufficient evidence for Chemlab geometry.
