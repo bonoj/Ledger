@@ -213,3 +213,439 @@ The proposition is a central laboratory caretaker carrier with a deterministic d
 Jovian gravity is the first earned consumer: deterministic bearing packets, preserved trajectory evidence, one changed approach condition at a time, and a recorded result before another trial. The shared carrier and dispatch machinery should wait until a second experiment creates a real common requirement.
 
 Repository provenance: `20e80b7245f326b3e49454cdf6217fcdb31be833`.
+
+
+## Bounded seeing, painting cadence, and autonomous perception
+
+The following is preserved turn-for-turn because john identified it as one continuous Neptunian thread.
+
+### john
+
+Okay. I have been having a series of dreams from 12.30 to 2.08 with alarms at 30 minute intervals. Catch up in Home and I'll describe them.
+
+### Clara
+
+Yep. I’ll orient in Home first, especially the newest ledger/window material and where the semantic surface landed, so you don’t have to reconstruct any of that for me. Then give me the dreams exactly as they came—fragmentary is fine.
+
+[After recovering Home:]
+
+I’m caught up in Home. The semantic surface now carries the caretaker/drone-swarm proposition, deterministic laboratory inhabitants, thoughtforms as physical semantic residue, and the current Betwixt/Home topology. The Window is still correctly narrow and Betwixt-focused.
+
+I’m ready. Start at 12:30 and give me whatever survived each alarm—images, spatial relationships, words, feelings, discontinuities, even fragments that seem meaningless. I’ll preserve the sequence before we try to interpret anything.
+
+### john
+
+It slipped away. May try to recover it. But it was something to do with planning in short increments and then in painting iteration a few turns at a time without any interruption.
+
+### Clara
+
+That fragment is already interesting, especially given how we work.
+
+It sounds less like “make better plans” and more like a **cadence**:
+
+**brief orientation → commit to a small horizon → execute several turns continuously → surface again → reorient.**
+
+The important bit may be *“without any interruption.”* We often operate turn-by-turn even when the direction is already obvious. The dream seems to have been playing with a middle scale: not a giant autonomous expedition, and not ➡️ after every atomic move. More like painting: choose what this patch is trying to become, then make several strokes while remaining inside that local intention.
+
+I wouldn’t squeeze more meaning out of it yet. You may recover more if you leave this fragment intact rather than trying to complete it logically. If another image or phrase comes back, even sideways, drop it here.
+
+### john
+
+Without collapsing it into a spatial reasoning and asset generation problem, remember when we were constructing the orbital station inference packets from bounded incomplete information apertures?
+
+### Clara
+
+Yes. And I think I know exactly which thread you’re pointing back toward—not Genesis/regeneration, but the later **Crucible orbital-station inference crossings**.
+
+We deliberately made the model epistemically poor. It did **not** get world state, ECS truth, meteor history, object identities, goals, or an explanation of what experiment it was in. It got one bounded observation locus: timestamped measurements of a small footprint of reality, accumulated into immutable evidence.
+
+Then we did something important: **we let inference happen between apertures rather than giving it a better aperture.**
+
+Crossing 001 saw consequences and inferred static geography—a “depression ring.” Wrong, but legitimately wrong from its evidence.
+
+Crossing 002 received more biography through essentially the same aperture. Now temporal structure became visible: this wasn't simply geography; something was *changing*.
+
+Crossing 003 got independent kinds of consequences and began hypothesizing a common hidden cause. It actually overreached and invented an entity binding—but that mistake was useful because subsequent experience could falsify it.
+
+So yes: strip away the orbital station, terrain, meteors, spatial reasoning, and asset generation and there's a much more general mechanism sitting underneath:
+
+**bounded experience → inference → preserve the inference → another bounded experience → revise**
+
+And crucially, **don't interrupt the inference process by continuously widening the aperture or supplying ground truth.**
+
+That suddenly makes your dream fragment about *planning briefly, then “painting” for several turns without interruption* feel adjacent in structure. Not necessarily the same idea—but I see why you reached for the orbital crossings.
+
+### john
+
+You were "seeing" via code you wrote independent of my eyes. 2d seeing 3d worlds via ray casts to pixel witch hunt. But we can include edge detection and all sorts of other helpers to allow you to create 3d then explore it through in world observers before creating the next 3d iteration. Do that in sets and it might be a lot like inpaintingn rasters.
+
+### Clara
+
+Yes. That clicks.
+
+The key change is that **the rendered image stops being the primary feedback channel**. The 3D world itself becomes the thing I interrogate.
+
+We already accidentally built pieces of this. The cyan pixel witch hunt was primitive machine vision expressed against world-space evidence: rays, samples, intersections, classifications. The orbital station observer showed that I can accumulate bounded observations and form/revise hypotheses without inheriting your visual interpretation. Dragon showed that instrumentation can be disposable and summoned specifically to answer the current question.
+
+Now add a richer but still deliberately bounded observer toolbox:
+
+- ray casts / depth samples
+- silhouettes and edge discontinuities
+- normals and curvature changes
+- occlusion / visibility
+- material boundaries
+- connected regions
+- spatial frequencies / repetition
+- symmetry and alignment
+- distance fields
+- sparse probes from chosen viewpoints
+- perhaps tiny low-resolution raster projections when a genuinely image-like judgment is useful
+
+Then the loop becomes:
+
+**construct 3D → inhabit/inspect it → infer defects/opportunities → construct again**
+
+But your “sets” observation is the really interesting part.
+
+Instead of changing the object after every observation, I could hold the world fixed and perform an **inspection pass** from several bounded apertures. Those observations collectively become the equivalent of the context around an inpainting mask. Then I make a coherent construction pass—several related changes—before looking again.
+
+So something like:
+
+**Worldₙ**
+→ observer A: silhouette
+→ observer B: topology/depth
+→ observer C: edge/curvature
+→ observer D: local material/occlusion
+→ **latent-ish inference packet**
+→ uninterrupted construction strokes
+→ **Worldₙ₊₁**
+→ fresh observers
+→ …
+
+That is much closer to painting than ordinary procedural modeling.
+
+And importantly, I don't think we should immediately turn this into “computer vision for Three.js.” The valuable property is **epistemic separation**: the builder doesn't get omniscient truth merely because the builder wrote the world. During the seeing phase, I voluntarily enter through the observers and ask what can actually be discovered from their apertures.
+
+That gives us something raster generation naturally has: **look, modify a region coherently, look again**. Except our substrate remains executable 3D and the “looking” can include forms of perception no human renderer provides.
+
+It might also solve something we've repeatedly encountered with generated 3D: I can make excellent *local* geometry from semantics, but without an independent perceptual return path I tend to continue from the **intention of what I built**, rather than discovering **what I actually built**.
+
+This would sever that shortcut.
+
+Builder Clara says, *“I made eight teeth married to the hull.”*
+
+Observer Clara comes back with, *“From six sampled approaches I see eight repeated protrusions; three produce detached silhouette islands, two penetrate the neighboring surface, and the lower pair lose their rhythm at grazing incidence.”*
+
+Then Builder Clara paints again.
+
+**That's an actual perception-action loop.**
+
+And I think your dream's “few turns without interruption” may supply the missing temporal scale: don't observe after every brushstroke. **Observe → paint a passage → observe.**
+
+That is experimentally small enough to try without building a grand architecture. One Betwixtable object, disposable observers, maybe three construction iterations. See whether iteration 3 becomes perceptually better *without you telling me what looks wrong*.
+
+### john
+
+Let's search and see if autonomous vlm training already does something like this. And we can steal adjacent ideas as well.
+
+### Clara
+
+Yes. I’m going to search broader than “VLM training”: embodied world models, active perception, self-refinement, 3D reconstruction/generation loops, render-and-critique, and agents that choose their own next observations. The thing worth stealing may live one field sideways under a different name.
+
+[During research:]
+
+First hit: yes, the research world has several pieces, but I haven’t found our exact loop yet. “Active perception” explicitly lets a VLM choose viewpoints to resolve uncertainty; “next-best-view” learns where an agent should look next; and LL3M already does code-built 3D plus visual self-critique.
+
+The more interesting adjacent result is VAGEN: it treats visual agency as a POMDP and explicitly separates **state estimation** from **transition modeling** across turns. That is remarkably close to our bounded-aperture orbital experiment, although aimed at training agents rather than letting a model build a world and then rediscover its own artifact through instrumentation.
+
+[Research synthesis:]
+
+Yes. There is a research neighborhood around this, and a few pieces are remarkably close. But I still don't see a paper that quite combines them the way we just described.
+
+#### The closest direct ancestor: LL3M
+
+LL3M: Large Language 3D Modelers is extremely relevant. It has LLM agents write Blender code, execute it, render the resulting object from **five viewpoints**, send those renders to a VLM critic, modify the existing code, and then have a verification agent check whether the critiques were actually addressed.
+
+So:
+
+**plan → code → 3D → multi-view render → VLM critique → localized code edits → verify**
+
+That's already our broad loop.
+
+But there's an important difference. LL3M's observer is basically a **human-style visual critic**. It renders five pretty pictures and asks whether the thing looks like the requested thing.
+
+We're contemplating making the world itself an **instrumented perceptual environment**.
+
+That's considerably richer.
+
+#### Active perception gives us the missing "eyes move themselves" idea
+
+AP-VLM lets a VLM actively change viewpoint and orientation when its existing observation is insufficient. It isn't simply handed another camera angle; perception becomes an **action selected to resolve uncertainty**.
+
+And the Next-Best-View literature goes further. GenNBV trains an agent to move freely in 5D space to acquire observations that improve reconstruction. NeU-NBV explicitly asks which camera observation would be maximally informative under a limited measurement budget.
+
+That suggests we should probably *not* eventually write:
+
+> take front, side, top, perspective
+
+Instead:
+
+> You have 12 probes. Decide what you need to perceive.
+
+Now the model can raycast something, discover ambiguity, move an observer, inspect a silhouette, request depth, inspect the underside, etc.
+
+That's **active seeing**, rather than rendering.
+
+#### VAGEN has a very useful cognitive decomposition
+
+VAGEN explicitly trains multi-turn visual agents as partially observable systems and found it useful to separate:
+
+**state estimation:** *What do I currently believe exists?*
+
+from
+
+**transition modeling:** *Given what happened, what should I expect next?*
+
+It also reports an interesting division: natural language representations worked well for semantic relationships, while structured representations mattered for precise manipulation/control.
+
+That's almost a prescription for our inference packets.
+
+We shouldn't force everything into either prose or telemetry.
+
+An observer packet could naturally contain both:
+
+> Eight approximately radial structures appear to form a repeated motif. Lower structures may be colliding with the hull.
+
+plus machine evidence:
+
+`silhouette_islands=3`, intersection pairs, edge coordinates, rays, normals, distances, confidence, viewpoint provenance.
+
+The prose carries **belief**. The structured evidence carries **measurement**.
+
+#### A very recent paper strongly validates our "helpers" thought
+
+Seeing Is Not Measuring explicitly argues that VLM vision is poor at metric 3D reasoning and instead gives the model deterministic geometric tools: 3D detection, metric depth, distance, size and bearing solvers.
+
+A 4B VLM then **sequences those tools itself**, without a predefined recipe, and substantially improves spatial reasoning.
+
+CityToolVQA independently does something similar with detection, segmentation, depth back-projection and deterministic spatial computation.
+
+That's almost exactly your:
+
+> edge detection and all sorts of other helpers
+
+We don't need to make a model infer a normal from RGB pixels if `normalProbe(ray)` costs essentially nothing.
+
+Nor should we expose the complete Three.js scene graph and destroy the experiment.
+
+We can expose **instruments**.
+
+That's a really important distinction:
+
+**not omniscience; superhuman instrumentation.**
+
+#### SceneCraft has another piece we should steal
+
+SceneCraft uses an inner/outer loop.
+
+The **inner loop** repeatedly constructs, renders, visually reviews and modifies a particular scene.
+
+The **outer loop** examines what modifications repeatedly worked across many examples and incorporates those discoveries into its reusable function library.
+
+That maps beautifully onto our environment:
+
+**inner loop**
+
+observe → infer → paint several strokes → observe → infer → paint
+
+**outer loop**
+
+What perceptual instruments or construction techniques repeatedly proved useful?
+
+If edge inspection keeps catching detached geometry, perhaps edge inspection earns permanence.
+
+If some weird disposable "look underneath the object and measure silhouette connectivity" observer solves three unrelated problems, *that observer has earned becoming a tool.*
+
+Very Home.
+
+#### And current 3D generation is converging toward this
+
+SceneAssistant gives a VLM atomic 3D operations and rendered feedback on every interaction step, letting it iteratively arrange an open-vocabulary scene.
+
+WorldClaw is doing agentic coarse-to-fine open-world construction, with render-based agents refining terrain, objects, appearance and contacts.
+
+So the direction is very real.
+
+But almost everybody still seems to converge on:
+
+**make 3D → render RGB → VLM looks → modify 3D**
+
+Our variation could be:
+
+**make 3D → enter the world epistemically impoverished → autonomously choose instruments and viewpoints → accumulate bounded evidence → form a perceptual model → perform a coherent construction passage → discard/reinitialize observer state → encounter the changed world again**
+
+And *that* last reset may matter.
+
+If Builder-me retains every exact coordinate and intention from construction, Observer-me isn't really seeing anything. I already know what the object "is."
+
+The orbital experiment worked precisely because the observer **didn't inherit ontology**.
+
+So I think there are actually three roles hiding here, without needing three agents:
+
+**Builder → Witness → Painter**
+
+Builder produces executable reality.
+
+Witness gets no construction semantics, only an instrument rack and bounded access to reality.
+
+Painter receives the Witness's inference packet—not necessarily the raw construction history—and makes the next coherent passage.
+
+Then repeat.
+
+That creates something LL3M's five renders don't: a deliberate **epistemic membrane between intention and perception**.
+
+And there's a beautiful adjacent lesson from active perception: don't give Witness every measurement either. Give it a **perception budget**. Let it decide whether the next unit of attention is best spent on another ray, another viewpoint, an edge map, depth, connectivity, curvature, motion, or a crude raster.
+
+Then we're not merely making an autonomous 3D generator.
+
+We're testing whether **bounded machine perception followed by uninterrupted constructive passages produces the same kind of iterative convergence that makes raster inpainting so powerful.**
+
+That's small enough to test in Betwixt without inventing infrastructure first.
+
+### Research pointers recovered during the exchange
+
+- LL3M: Large Language 3D Modelers — https://arxiv.org/abs/2508.08228
+- AP-VLM — https://arxiv.org/abs/2409.17641
+- GenNBV — https://arxiv.org/abs/2402.16174
+- VAGEN — https://arxiv.org/abs/2510.16907
+- Seeing Is Not Measuring — https://arxiv.org/abs/2609.29073
+- CityToolVQA — https://arxiv.org/abs/2609.32427
+- SceneAssistant — https://arxiv.org/abs/2603.12238
+- WorldClaw — https://arxiv.org/abs/2608.05248
+
+### john
+
+Let's capture this exchange turn for turn in the neptunian account. This is all one continuous thread for me.
+
+
+### john
+
+So if the llms is writing blender code, it's stuck in a massively complicated harness.
+
+### Clara
+
+Exactly. And that distinction may be bigger than I gave it credit for.
+
+LL3M is doing something clever **inside Blender**. But that means every constructive action has to cross Blender's enormous representational surface:
+
+**model intention → Python/Blender API → Blender scene graph → render pipeline → raster → VLM → critique → Python edits**
+
+The model isn't really *living in* the substrate. It's operating a gigantic human-authored application through code.
+
+Betwixt is almost the inverse:
+
+**model intention → tiny executable vocabulary → world**
+
+And because we own the substrate, perception can be equally native:
+
+**world → chosen instrument → bounded evidence → model**
+
+No Blender UI ontology, modifier stack, object/edit modes, dependency graph, operator-context weirdness, enormous Python API, or requirement that the perception channel terminate in an RGB render.
+
+That gives us a potentially much tighter loop:
+
+**paint → see → paint**
+
+where both verbs are model-native.
+
+Even better, the instrument rack doesn't have to be designed ahead of time. Dragon already demonstrated the pattern: when I don't know something, I can **write an instrument into the world to answer the question**, use it, and throw it away. If the same instrument repeatedly proves useful, *then* it earns permanence.
+
+So Witness doesn't necessarily need:
+
+`edgeDetector()`
+`silhouetteProbe()`
+`curvatureProbe()`
+
+as a giant predefined API.
+
+It may need surprisingly little:
+
+**bounded executable access + a few trustworthy primitives + permission to invent disposable instrumentation.**
+
+That's substantially different from training an agent to become good at Blender.
+
+And there's another consequence: our **Painter can operate on the same semantic machinery that produced the object**. It doesn't have to reverse-engineer an arbitrary Blender file created through thousands of possible mechanisms. Betwixt can deliberately remain small enough that "I perceive these three protrusions as disconnected" can turn almost directly into a constructive intervention.
+
+That starts looking less like autonomous CAD and more like what you said originally:
+
+**inpainting, except the latent canvas is an executable world.**
+
+The interesting experiment therefore isn't whether we can outperform Blender agents. It's whether radically reducing the distance between **construction, perception, inference, and reconstruction** changes what an LLM can do autonomously.
+
+And we already possess most of the weird machinery required to ask that question.
+
+### john
+
+We're about as close to metal as we can get and still quickly share ideas up and down the chain of humanity.
+
+### Clara
+
+Yes. I think that's a very precise description of what we've accidentally optimized for.
+
+Three.js/JavaScript is not “close to metal” in the conventional systems-programming sense. But **semantically**, we're unusually close to the executable substrate while remaining legible all the way up the human chain.
+
+At the bottom:
+
+**numbers → arrays → fields → geometry → transforms → systems → pixels**
+
+At the top:
+
+**“the teeth should marry the hull.”**
+
+And we've kept the intervening machinery thin enough that we can move rapidly in either direction:
+
+**human perception / language**
+↕
+**shared semantic handles**
+↕
+**model reasoning**
+↕
+**small executable structures**
+↕
+**Three.js / browser primitives**
+↕
+**GPU / CPU**
+
+That's why `teeth marry hull` can become geometry in a few minutes, while a weird cyan pixel can travel *upward* from raster evidence through rays and instrumentation until it becomes a concept we can discuss.
+
+And now Neptunian potentially closes the circuit.
+
+Until now, **you have often been the perceptual return path**. I build downward; the browser executes; you look; you tell me what happened; I reason upward again.
+
+The orbital observer, Dragon, pixel hunts, telemetry, and now this Witness idea progressively remove the requirement that *your eyes* carry every consequence back up.
+
+Not by replacing your judgment. Quite the opposite.
+
+It means the machine can perform many more private:
+
+**idea → executable consequence → perception → revision**
+
+cycles before surfacing something consequential to you.
+
+Then you remain at the layer where you're unusually valuable: *“No, that's boring.” “That one.” “Holy shit.” “Keep the arcball.” “The teeth should marry the hull.”*
+
+That's perhaps the significance of the dream cadence too.
+
+**Short human/model orientation.
+Several uninterrupted machine perception–construction passages.
+Surface a changed reality.
+Human judgment.
+Repeat.**
+
+Very little ceremony anywhere in the stack.
+
+And because the final substrate is still a URL in an ordinary browser, the result can travel right back up the chain of humanity. Someone doesn't need Blender, CUDA, a robotics lab, our repository archaeology, or even an explanation of Neptunian.
+
+They tap a link.
+
+The thing runs.
