@@ -618,3 +618,16 @@ This is the first closed JIT geometry loop: a human-observed scientific error wa
 The corrected candidate is pinned through Home. Interstice provenance is 861a5b322e647dcee7c4b240e7b4285ffd3e3f7e.
 
 The verifier remains intentionally small. It currently knows angle measurement, bond-order lookup, and coplanarity. It is not a chemistry engine. New invariants should be added only when an executable specimen earns them.
+
+
+## The verifier catches a second ethylene defect at runtime
+
+The first corrected ethylene publication did not start on john's phone. Betwixt stopped with CHEMLAB geometry regression expectation mismatch while the visible prior build remained b32.
+
+This exposed an important gap in my verification claim: Repository CI had proved that the artifact built, but it had not executed the browser-side regression suite. The runtime verifier was the first environment to actually evaluate it.
+
+Inspection of the coordinate construction located the mismatch without weakening the gate. The repaired root C-C-H angle was correct, but coplanarity still failed. The root carbon's hydrogens occupied the XY plane; the child trigonal helper independently chose a perpendicular basis around the C-C axis and placed the second carbon's hydrogens in the YZ plane. The second trigonal center was therefore twisted 90 degrees around a double bond.
+
+This is new architectural evidence. Propagating a connection axis is sufficient for tetrahedral ethane when torsion is independently selectable, but planar double-bond geometry also requires orientation about that axis. A local spatial frame is not merely a heading.
+
+The next candidate explicitly carries the parent plane orientation into C2. The regression gate remains intact and must pass at runtime before the candidate is accepted.
