@@ -676,3 +676,16 @@ The scientific assertion was not changed. The projector changed from negative he
 Only after executable geometry CI and browser/source agreement were green did Home advance. Interstice provenance is e9daae977accb3a7c7b36259f7bf34527be9ada4.
 
 This is the first new molecule for which the human never had to see the mechanically wrong candidate. The regression gate caught the spatial error upstream of publication.
+
+
+## Ammonia makes the invisible domain matter
+
+Acetylene was accepted as deliberately boring: H-C#C-H remained linear after the verifier had already caught and removed the bad candidate upstream.
+
+The next specimen turns away from the carbon hybridization ladder. NH3 forces the grammar to distinguish visible bonded neighbors from electron-domain geometry. Nitrogen carries three N-H bonds, four electron domains, and one lone pair. The fixture therefore persists ports:3, electronDomains:4, lonePairs:1 and projects a trigonal-pyramidal molecular geometry rather than a planar three-neighbor arrangement.
+
+NIST CCCBDB reports an experimental H-N-H angle of 106.7 degrees. The projector constructs three symmetry-equivalent N-H directions whose pairwise angles are 106.7 degrees; the regression suite checks all three pairs numerically before publication.
+
+Nitrogen also earns its first presentation color in the current molecular renderer: blue. The lone pair is scientific structure in the fixture but is not rendered as a decorative object.
+
+The complete prior corpus plus NH3 passed executable geometry CI and browser/source agreement before Home advanced. Interstice provenance is 4810a585d151ab57c7c78e22d352c03c96f59ddd.
