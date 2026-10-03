@@ -166,3 +166,12 @@ Presentation compresses orbital radii linearly to the brass/glass table and exag
 The next intended pressure is discrete bearing exchange/capture under Jovian and Galilean gravity before material gas is introduced.
 
 Repository provenance: `9c286d3053e25b5ad7d25e7a0aa80acef206f0c3`.
+
+
+#### Galilean realization repair
+
+Human inspection immediately caught what looked like one static moon beneath Jupiter and the other three missing. Inspection of the entire local XZ realization found the astronomy was not the failure: all four moon meshes had been created at their default origin and remained stacked there. `buildBetwixtable()` gives builders the presentation group, so Jovian runtime state lived on `presentation.userData.jovian`; the animation loop mistakenly queried `jovianBetwixtable.userData.jovian` on the outer shell. Optional chaining made the error silent.
+
+The animation loop now reaches the presentation-owned state. Each frame therefore realizes all four distinct XZ orbital positions from its own radius, eccentricity, inclination, node, phase, and period.
+
+Repair provenance: `11af174a1e9d9c3d6dc8ecac726c3f897902db72`.
