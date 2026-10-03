@@ -649,3 +649,58 @@ And because the final substrate is still a URL in an ordinary browser, the resul
 They tap a link.
 
 The thing runs.
+
+
+### john
+
+This is also a visual primitive of our narrative engine model storyteller / wanderer.
+
+### Clara
+
+Yes. **The same primitive works in both directions.**
+
+For construction we were describing:
+
+**bounded perception → inference → coherent passage → changed world → fresh perception**
+
+For narrative:
+
+**bounded experience → interpretation → coherent action/story passage → changed world → fresh experience**
+
+The crucial primitive isn't really “vision.” It's **a model encountering an executable world through an aperture rather than receiving its truth**.
+
+That is exactly what our Storyteller/Wanderer has been missing.
+
+The Wanderer doesn't need the ECS, scene graph, quest state, authored ontology, or “what this place means.” Give it eyes—or stranger instruments—and let it discover. A doorway is a silhouette discontinuity before it is `Door`. A distant moving thing is motion before it is `Enemy`. Three repeated structures become a pattern the Wanderer notices rather than lore injected into context.
+
+Then Storyteller can work from **experienced evidence**, not omniscient world state.
+
+And because the observer is model-native, its aperture needn't imitate human sight exactly. It can be deliberately constructed for narrative usefulness: coarse raster, edges, depth, motion, sound/event traces, nearby affordances, remembered observations. Enough to wander; insufficient to know.
+
+That gives us a remarkably compact engine primitive:
+
+**World → Aperture → Witness → Memory → Action → World**
+
+Construction just adds another allowed action:
+
+**World → Aperture → Witness → Memory → Paint → World**
+
+So **Painter and Wanderer may be the same creature with different permissions.**
+
+And Storyteller may not even need to be a separate creature. Narrative could be what falls out when the Witness preserves and interprets its sequence of bounded encounters.
+
+That's a much more interesting narrative engine than giving an LLM a JSON dump saying:
+
+> You are in the ancient temple. There is a mysterious locked door to the north.
+
+Let it **see something dark interrupting the wall**, approach it, probe it, remember what happened last time it encountered something shaped like that, decide what it thinks it is, and act.
+
+Then when it tells us a story, it's recounting something it actually *experienced inside our executable substrate*.
+
+And suddenly the orbital inference packets don't look like an isolated science experiment at all.
+
+They look like an early **visual/perceptual primitive for model-native inhabitants**.
+
+### john
+
+Okay. Let's begin synthesizing into a plan. Let's add turn by turn logging into workflow for now so we can review it later and apply "inpainting" to other problems and domains entirely.
