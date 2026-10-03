@@ -599,3 +599,22 @@ The working loop becomes:
 science fixture -> project -> numerical verification -> build -> flash -> human check -> accept
 
 The human remains the final judge of embodied consequence, but arithmetic no longer waits for human eyesight.
+
+
+## The first geometry verifier closes the loop
+
+The MVP verifier now exists as executable code beside the relational projector.
+
+Its first job was adversarial rather than celebratory. Before repairing ethylene, the suite projected the known-bad candidate and measured its coordinates. CH4 passed its tetrahedral angle check. H2O passed 104.5 degrees. CO2 passed 180 degrees and both double-bond order assertions. Ethane passed tetrahedral checks on both carbon centers and its C-C single-bond assertion.
+
+The bad ethylene candidate failed the C-C-H geometry exactly as john's eyes had already determined, while still passing coplanarity and C=C bond-order checks.
+
+Only after that negative regression succeeded did we change the root trigonal frame. The corrected root now constructs its two hydrogen directions directly around the outgoing C-C axis at 121.55 degrees instead of borrowing child/incoming-bond semantics. The ethylene fixture was flipped from expected failure to expected success.
+
+The complete suite then built green.
+
+This is the first closed JIT geometry loop: a human-observed scientific error was converted into a numerical regression, the regression reproduced the failure independently, the projector was repaired, and the same test became a positive gate.
+
+The corrected candidate is pinned through Home. Interstice provenance is 861a5b322e647dcee7c4b240e7b4285ffd3e3f7e.
+
+The verifier remains intentionally small. It currently knows angle measurement, bond-order lookup, and coplanarity. It is not a chemistry engine. New invariants should be added only when an executable specimen earns them.
