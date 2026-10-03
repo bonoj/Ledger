@@ -539,3 +539,12 @@ The exact Repository candidate built green and was pinned through Home. Intersti
 This is the first point where the relational layer has moved beyond projecting a single center. It can now propagate a spatial frame through a connection.
 
 The Ledger experiment still does not feel noisy. On this turn it captured a distinction that would otherwise be easy to flatten later: the safety boundary was real, but it was a property of one mutation surface, not a requirement for john to become the transport layer.
+
+
+## Ethane accepted
+
+john inspected the flashed C2H6 structure against the external reference and accepted it: "Staggering. Literally."
+
+That acceptance matters beyond the molecule. Ethane validates the first local-frame propagation through the relational construction grammar: a connected child center can inherit an axis from its parent connection and construct its own geometry around that axis without hand-authored world coordinates.
+
+The staggered conformer is therefore accepted evidence for both the chemistry fixture and the underlying spatial mechanism.
