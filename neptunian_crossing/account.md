@@ -134,3 +134,22 @@ The sharpened Thoughtform question is:
 **Can semantic relationships be sufficient spatial source code?**
 
 john then requested preservation of these turns before legitimate salvage. Raw verbatim transport was blocked before repository mutation; inspection confirmed Ledger itself remained healthy and unchanged. john authorized sanitizing the triggering material and pushing the account instead.
+
+
+### Relational fleet pressure test and retirement
+
+The crossing briefly floated a new empty brass/glass Betwixtable above the existing work surface and used it to pressure the relational grammar with 25 small spacecraft: twelve Roci-like axial torchships, twelve Serenity-like transports, and one dealer's-choice torchship.
+
+The first pass was already coherent enough to read as families, while exposing two useful weaknesses. Variation was shallow, and Serenity's Firefly-like VTOLs inherited the wrong orientation relationship. A second pass varied meaningful relational parameters across hull proportions, drive and nose proportions, equipment count and phase, command masses, transport body/neck/wing proportions, sweep, engine size, and tail geometry. The VTOL relationship was corrected so wing sweep changed the attachment station without rotating the engine thrust axis with the wing.
+
+Human inspection then exposed the more important boundary: Roci greebles could be relationally consistent while visibly floating beside the hull. A radial offset from a centerline is not the same semantic statement as “mounted on this hull surface.”
+
+That clarified the construction hierarchy for specific authored designs: establish base geometry first, then primary greebles structurally married to it, then secondary greebles, then procedural surface treatment. But the crossing deliberately did **not** turn that realization into a painstaking Semantic Blender project. The stronger conclusion was that surface ownership and attachment are pressure toward composition, and Semantic Blender should fall out downstream as relational semantics extend naturally into compositional semantics.
+
+The fleet therefore completed its job as disposable executable evidence. It was removed rather than polished. The dealer's-choice torchship was miniaturized and placed inside the original A-Z Thoughtform as physical residue of the experiment. The upper fleet Betwixtable was cleared away entirely.
+
+The sharpened direction at pivot is:
+
+**make relational semantics ironclad; let composition emerge from relationships to owned geometry; let higher-level semantic modeling fall out afterward rather than designing it prematurely.**
+
+Repository retirement provenance: `820c4dd547179793d8be4b887312bf84bbc32c56`.
