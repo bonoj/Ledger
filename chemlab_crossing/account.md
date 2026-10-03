@@ -563,3 +563,20 @@ This is also the first accepted-chemistry candidate whose connection graph conta
 The candidate built green and was pinned through Home. Interstice provenance is 16d7bf81371e4985767dd6e07725533906907efc.
 
 The next human check is deliberately simple: two carbons, four hydrogens, all six atoms coplanar. The exact small departure from 120-degree ideality belongs to the scientific fixture, not to visual hand-tuning.
+
+
+## Ethylene visual check rejects the first candidate
+
+john's first glance at the flashed ethylene immediately exposed a mistake and he asked, "Intended?"
+
+No.
+
+The candidate was planar, but both pairs of hydrogens bent toward the same end of the C-C axis. The lower carbon therefore displayed the wrong C-C-H opening: visually the supplement of the intended angle rather than the approximately 121.55 degree experimental constraint.
+
+The cause is precise. I reused the local-child trigonal helper to construct the root carbon. That helper interprets its axis as an incoming parent bond and reverses it before constructing the free directions. A root has no parent. Reusing those semantics inverted one end of ethylene.
+
+This candidate is rejected.
+
+This is exactly the human/model verification loop Chemlab was built to exercise: the graph carried the intended scientific assertion, the build was green, and provenance was exact, yet the embodied consequence contradicted the assertion. john's visual inspection caught what compilation could not.
+
+The next repair is not chemistry-specific hand tuning. Root trigonal geometry needs root semantics; child trigonal geometry needs incoming-bond semantics. Later JIT geometry tests should numerically measure the projected C-C-H angles so this class of error fails before publication.
