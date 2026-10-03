@@ -661,3 +661,18 @@ john independently verified the corrected C2H4 specimen's coplanarity and accept
 This is the first molecule accepted after the publication noose was tightened around executable geometry: numerical CI regression, browser/CI source agreement, browser runtime regression, then human spatial inspection all agreed.
 
 The next pressure test is acetylene, C2H2. It earns a new carbon geometry rather than merely adding matter: a C#C triple bond with two-coordinate linear carbon centers. The scientific invariant is H-C-C-H collinearity, with H-C-C angles of 180 degrees. The verifier gets first refusal before the specimen is published for human inspection.
+
+
+## Acetylene is caught before publication, then repaired
+
+The tightened gate immediately paid for itself on the next molecule.
+
+The first C2H2 candidate encoded a C#C triple bond and linear carbon centers, but executable CI rejected it before Home moved. The first H-C-C angle measured 180 degrees while the second C-C-H angle measured 0 degrees. Bond order was correctly 3.
+
+The defect was a local-frame sign error: the child carbon's remaining hydrogen direction was constructed back toward its parent rather than continuing away along the inherited C-C heading.
+
+The scientific assertion was not changed. The projector changed from negative heading to positive heading for the free direction of a linear child center. The same 180-degree checks then passed, along with the triple-bond assertion and the complete prior corpus.
+
+Only after executable geometry CI and browser/source agreement were green did Home advance. Interstice provenance is e9daae977accb3a7c7b36259f7bf34527be9ada4.
+
+This is the first new molecule for which the human never had to see the mechanically wrong candidate. The regression gate caught the spatial error upstream of publication.
