@@ -53,3 +53,16 @@ john accepted:
 > “Good point. Fling it, rockhoppa. Inyalowda gonya pay.”
 
 And so the Neptunian Crossing begins.
+
+
+### The Roci comes before Jupiter
+
+The first published cold-boot Thoughtform exposed a browser parse failure: `SyntaxError: Unexpected token 'const'`. The static/executable chemistry gates had remained green because they verify the chemistry module and source agreement, not parse/execute the complete browser shell. The visible build remained `0d7`.
+
+The failure is localized to the newly inserted second Thoughtform: its declarations were accidentally placed after the `build(root)` method had already closed, leaving `const` declarations directly inside an object literal. The last runtime-proven Betwixt pin was restored while the source repair is made; the cold-boot payload remains preserved in Ledger and source history.
+
+At the same turn, john sharpened the planetary direction:
+
+> “We're absolutely doing beratnas gas. Sure we'll do cloud bands. But first we'll make a Roci.”
+
+So the Neptunian sequence is now: repair the shipyard, make a Roci, earn material gas, then use it against Jupiter and its cloud bands. The Jupiter experiment remains a destination, not the immediate construction.
