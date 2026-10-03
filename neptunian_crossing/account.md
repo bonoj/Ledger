@@ -202,3 +202,14 @@ Trajectory history is sampled in simulation time and retained for 180 samples, m
 A second 32-body packet was added beside the first with the same general approach geometry but 72% of its incoming velocity. Nothing is aimed at a moon and no capture is engineered. Incoming energy is the deliberately changed variable. The table therefore contains 64 protected bodies in two regimes and asks the moving Jovian system what happens.
 
 Repository provenance: `07b500ba65939b7452b90547146c3c7490bf1d25`.
+
+
+### Third Thoughtform: laboratory caretaker carrier
+
+The Jovian experiment exposed a useful direction: prefer deterministic laboratory inhabitants over adding another manual control for every stimulus. A third Thoughtform now hangs from the Betwixtable. Its miniature contains a small brass carrier and three steel drones on a quiet deterministic patrol.
+
+The proposition is a central laboratory caretaker carrier with a deterministic drone swarm. Experiments expose only interfaces they earn. A dispatched drone can deliver a stimulus, execute a protocol, observe and record the result, and return. Repeated known workloads can therefore act as continuous regression evidence, including longitudinal frame-rate evidence.
+
+Jovian gravity is the first earned consumer: deterministic bearing packets, preserved trajectory evidence, one changed approach condition at a time, and a recorded result before another trial. The shared carrier and dispatch machinery should wait until a second experiment creates a real common requirement.
+
+Repository provenance: `20e80b7245f326b3e49454cdf6217fcdb31be833`.
