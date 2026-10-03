@@ -66,3 +66,12 @@ At the same turn, john sharpened the planetary direction:
 > “We're absolutely doing beratnas gas. Sure we'll do cloud bands. But first we'll make a Roci.”
 
 So the Neptunian sequence is now: repair the shipyard, make a Roci, earn material gas, then use it against Jupiter and its cloud bands. The Jupiter experiment remains a destination, not the immediate construction.
+
+
+### Dracarys
+
+john gave the repair permission in one word: “Dracarys.”
+
+The malformed Thoughtform scope was repaired at its exact brace seam rather than discarded. Repository verification remained green, Home advanced only after that gate passed, and Interstice now carries the repaired cold-boot Thoughtform at exact Repository provenance `54289d39923d3152355bd44c6fd6a7e7bf7e044e`.
+
+The temporary rollback did its job: the public membrane never needed to remain pinned to the known-bad parse candidate while the repair was prepared.
