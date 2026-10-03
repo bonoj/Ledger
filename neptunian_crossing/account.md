@@ -191,3 +191,14 @@ Repository provenance: `f19fc938ad97f8768ebcb1422c7f03a1769773a3`.
 A small Chemlab usability pass happened without leaving the crossing. Nitrogen joined H/C/O on the temporary element glance board using the already-earned blue nitrogen vocabulary. The relational inspection Betwixtable now carries the seven accepted molecules as a tiny deck. Focusing it shows one restrained information card with the molecule name/formula and one useful structural fact; tapping the already-focused molecule advances to the next accepted specimen. Dismissing focus dismisses the card. This reuses the vestibule's quiet contextual-card language rather than adding laboratory UI.
 
 Repository provenance: `fb1ccc39a9227c517dd069d5ddd966bb2007f087`.
+
+
+### Persistent histories and a second energy regime
+
+The first Jovian packet was visually useful but experimentally dishonest at its boundary: escaped or impacting bodies were silently recycled into the inlet, and its 18-frame trails were too short to read. The next pass separates these protected experimental bodies from the cheap packed-bearing substrate. They now retain individual state and escaped bodies remain wherever gravity sends them. Jupiter impacts terminate the body rather than respawn it.
+
+Trajectory history is sampled in simulation time and retained for 180 samples, making the incoming arc, close passage, temporary curvature, and outgoing path readable as one history rather than a frame-scale whisker.
+
+A second 32-body packet was added beside the first with the same general approach geometry but 72% of its incoming velocity. Nothing is aimed at a moon and no capture is engineered. Incoming energy is the deliberately changed variable. The table therefore contains 64 protected bodies in two regimes and asks the moving Jovian system what happens.
+
+Repository provenance: `07b500ba65939b7452b90547146c3c7490bf1d25`.
