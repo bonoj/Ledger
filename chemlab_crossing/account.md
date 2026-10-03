@@ -580,3 +580,22 @@ This candidate is rejected.
 This is exactly the human/model verification loop Chemlab was built to exercise: the graph carried the intended scientific assertion, the build was green, and provenance was exact, yet the embodied consequence contradicted the assertion. john's visual inspection caught what compilation could not.
 
 The next repair is not chemistry-specific hand tuning. Root trigonal geometry needs root semantics; child trigonal geometry needs incoming-bond semantics. Later JIT geometry tests should numerically measure the projected C-C-H angles so this class of error fails before publication.
+
+
+## The verifier earns itself
+
+Rather than immediately repairing ethylene and continuing molecule by molecule, john proposed pausing to build the MVP JIT geometry verifier and using it to verify both the prior accepted corpus and corrected ethylene.
+
+Agreed.
+
+The rejected ethylene candidate established the need cleanly: scientific assertions existed in the fixture, projection executed, CI was green, provenance was exact, and yet the resulting coordinates contradicted the intended C-C-H angle. Human vision caught the mismatch.
+
+The MVP verifier therefore begins from projected coordinates, not screenshots and not renderer geometry. It should measure only facts our current corpus has already earned: graph connectivity and bond order, bond angles, coplanarity, equivalent bond lengths where asserted, and torsion when a fixture explicitly constrains a conformer.
+
+CH4, H2O, CO2, and C2H6 become the initial positive regression corpus. The currently rejected C2H4 projection becomes the first negative regression: before correcting ethylene, the verifier must independently reject the same geometry john rejected. Only then do we repair the projector and require corrected C2H4 to pass numerically before flashing it for human acceptance.
+
+The working loop becomes:
+
+science fixture -> project -> numerical verification -> build -> flash -> human check -> accept
+
+The human remains the final judge of embodied consequence, but arithmetic no longer waits for human eyesight.
