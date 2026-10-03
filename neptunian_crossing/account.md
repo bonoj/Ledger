@@ -795,3 +795,20 @@ The pairing is accepted for the first deliberate bounded-perception construction
 Bridge supplies structure, contact, span, rhythm, and negative space. Beacon supplies enclosure, repetition, emission, and a compact vertical silhouette. Together they create useful in-world lighting and occlusion relationships while remaining two ordinary, strongly separable entities whose identity does not depend on specialized laboratory ontology.
 
 The first Builder passage should place their Betwixtable away from the existing vertical laboratory stack: enough ordinary Betwixt between them to preserve environmental noise, but still inside the existing world rather than a pristine fixture. Human visual supervision should stop after the initial construction is accepted as the starting substrate; subsequent Witness/Painter passages are intended to encounter consequences through bounded machine perception.
+
+
+### john
+
+Excellent. This is even more rigorous than I had anticipated for our first exploration. Accepted.
+
+### Crossing 001 boundary
+
+Pass 0 is accepted as the starting reality.
+
+- Repository Builder revision: `dd64debfa2ad4af09be47716698c31d36d33eeb1`
+- Home publication pin: `105381776ffc46fd2b2124c4d5a91e57dff320f9`
+- Interstice publication commit: `3debf9969dd603dda18ee7b54974243a63e7d331`
+
+From this boundary forward the bridge/beacon construction is frozen for the first Witness crossing. Builder knowledge remains in this account and source history but is excluded from the cold Witness context.
+
+The next engineering work may add only generic bounded-perception machinery. It must not encode the names, intended identities, coordinates, composition, or privileged scene-graph semantics of the accepted construction. The first Witness will be a genuinely cold model invocation, not the Builder pretending to forget.
