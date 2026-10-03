@@ -501,3 +501,20 @@ The rule for now is deliberately loose: preserve consequential changes in collab
 john explicitly asked that even the decision to run this experiment be entered here.
 
 So it is.
+
+
+## Ethane reaches the first mechanical boundary
+
+CO2 was accepted as clean and elegant. The temporary H/C/O glance board was then slung behind the inspection stage so the current atom-color vocabulary could be checked without leaving the scene.
+
+We moved next to ethane, C2H6, specifically because it should force a capability methane could not: one tetrahedral carbon attached to another tetrahedral carbon.
+
+Inspection confirmed the expected weakness in the current projector. Recursive projection already carries the incoming bond direction, but tetrahedral projection still uses a world-fixed canonical frame. Methane cannot reveal that defect because its carbon is the root. Ethane does.
+
+The intended repair is correspondingly small: once a parent bond occupies one tetrahedral direction, construct the child carbon's remaining three directions in a local orthonormal frame around that bond. A torsional phase can then express the staggered ethane conformer without changing connectivity.
+
+An external NIST check confirms C2H6 and provides a computed 3D structure; NIST vibrational data identifies the molecule with D3d symmetry, consistent with the staggered reference we intend to flash.
+
+At this point the repository write itself encountered a tool safety boundary because the large Betwixt source contains unrelated legacy material that triggers the write guard. The chemistry change was therefore not smuggled around that boundary. The executable remains unchanged until an ordinary authorized write path is available.
+
+This is useful evidence for the turn-for-turn Ledger experiment: the account can preserve the exact conceptual and mechanical state of a blocked crossing without pretending that planned code became executable.
