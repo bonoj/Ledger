@@ -920,3 +920,45 @@ The next passage is genuinely cold. The new model should orient from persisted r
 Painter₀ remains unbuilt. Its interface and corrective passage are downstream of what cold Observer₀ actually discovers.
 
 **Frontier: cross the cold membrane.**
+
+
+## Cold Observer₀ passage complete — the tool is now named
+
+A genuinely cold model oriented from Home and followed executable authority into the prepared Crossing 001 Observer without receiving Builder₀'s intended object identities or geometry. It operated the bounded aperture and stopped at the observation boundary without modifying the construction.
+
+The bounded pass supported the following account:
+
+- a broad, extremely thin horizontal support spanning much of the observable footprint;
+- one low elevated construction near the central region, with evidence for multiple surfaces and structural discontinuity rather than one smooth slab;
+- a second spatially separate vertical construction offset to one side, substantially taller and approximately axial/faceted from the sampled side normals;
+- substantial empty space between and around those elevated constructions.
+
+The strongest geometric diagnosis was therefore **two independent constructions sharing a common thin support**, with markedly different morphology: one low, laterally extended, and structurally discontinuous; the other compact, tall, and approximately axial/faceted.
+
+The cold Observer explicitly rejected an early hypothesis that the displaced vertical returns might belong to the low central construction seen obliquely. Location, height, and mutually consistent side normals made spatial independence better supported.
+
+The aperture did **not** support semantic object names or complete topology. Twelve rays were sufficient to distinguish masses and recover several surfaces, but insufficient to establish exact silhouettes, holes, connectivity, repeated members, symmetry, or intended identity. The cold account correctly withheld labels such as bridge, tower, rail, deck, or lamp.
+
+That limitation is useful evidence. Observer₀ can already separate gross spatial structure and catch some classes of geometric mistake, but sparse rays alone leave important generated-geometry failures underdetermined. Future perceptual helpers should be earned specifically against failures encountered in corrective use.
+
+### What Neptunian is
+
+The experiment has now collapsed to its practical purpose.
+
+**Neptunian is a single-turn JIT tool for model-generated 3D geometry.**
+
+Its intended use is not long-horizon autonomous exploration, scene reconstruction, object recognition, or a persistent agent architecture. The target workflow is:
+
+**model generates or receives a 3D object → JIT Observer inspects the actual executable geometry through bounded spatial instruments → model diagnoses unsupported, detached, intersecting, misaligned, malformed, or otherwise suspect geometry → model performs a second corrective construction pass**
+
+The important property is that this can happen **inside one model turn**. The model does not need to trust the semantic intention of the code it just wrote, wait for a human visual report, or route the object through a heavyweight external modeling application. It can temporarily acquire a bounded perceptual return path into the executable 3D result, discover what the geometry actually does in space, preserve uncertainty and wrong hypotheses as evidence, and then use that evidence for correction.
+
+The spherical Observer shell is therefore an instrument pose space, not a world or itinerary. The current visible orbit and telemetry remain useful human/debug theater but are not causal requirements. The instrument may eventually gain additional earned probes such as silhouette, edge, depth, connectivity, intersection, or curvature measurements when actual diagnostic failures demonstrate the need.
+
+The simplest success criterion is correspondingly concrete:
+
+**Does a model produce better 3D geometry on its second pass because the JIT Observer showed it spatial defects that were not reliably available from construction intent alone?**
+
+Crossing 001 has now completed the first cold observation passage. The next experimental pressure is corrective use: give the downstream model the Observer evidence, let it make the second construction pass, then determine whether the diagnosed spatial structure actually improves.
+
+**Frontier: Observer₀ complete. Next passage is diagnosis → correction.**
