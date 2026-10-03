@@ -652,3 +652,12 @@ The publication chain is now stricter:
 source -> build -> executable geometry regression -> browser/CI geometry agreement -> Home pin -> Interstice -> browser runtime regression -> human inspection
 
 A green build alone is no longer sufficient evidence for Chemlab geometry.
+
+
+## Ethylene accepted after the tightened gate
+
+john independently verified the corrected C2H4 specimen's coplanarity and accepted it.
+
+This is the first molecule accepted after the publication noose was tightened around executable geometry: numerical CI regression, browser/CI source agreement, browser runtime regression, then human spatial inspection all agreed.
+
+The next pressure test is acetylene, C2H2. It earns a new carbon geometry rather than merely adding matter: a C#C triple bond with two-coordinate linear carbon centers. The scientific invariant is H-C-C-H collinearity, with H-C-C angles of 180 degrees. The verifier gets first refusal before the specimen is published for human inspection.
