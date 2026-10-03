@@ -887,3 +887,36 @@ Build `70a3990c` is publicly visible and human-validated for the precessing cent
 Next: finish pause / aim / sense / resume semantics, preserve the earned interface here, then cross the cold membrane.
 
 **Do not build Painter₀ yet.**
+
+
+## Observer instrument accepted — cold membrane
+
+Observer₀ construction is complete enough for Crossing 001. The warm construction thread stops here.
+
+The orbital visualization clarified an important distinction: the spherical shell is the scanner's legal pose space, not the experimental itinerary. The pleasant precessing orbit remains as human-visible idle theater, but it is outside the causal sensing workflow. Deliberate inspection uses instantaneous legal pose selection.
+
+Repository build `028f6a9c` replaced transitional free-flight behavior with the scanner contract:
+
+- `place(direction)` normalizes a parent-local direction, teleports the Observer to the fixed-radius spherical shell, and faces the Crossing center.
+- `aim(direction)` redirects the sensor in the same explicit parent-local frame.
+- `sense()` alone spends evidence budget. The first-pass budget remains twelve anonymous ray observations.
+- `pause()` and `resume()` control idle theater; they do not create evidence.
+- `pose()` and `transcript()` expose instrument state and accumulated observations.
+- arbitrary `move(distance)` was removed.
+- `selfTest()` checks ±X, ±Y, ±Z shell poses for radius preservation and center-facing world-ray alignment.
+
+The sensor now has one canonical ray path. Observer pose and aim remain parent-local; origin and direction convert to world space only at the raycast boundary. The human-visible ray is derived from that exact canonical ray rather than reconstructed independently. This is specifically intended to make transform/sign mistakes observable rather than silently misattribute them to model inference.
+
+Repository build `17afd2ec` added a small floating telemetry display above Crossing 001. It shows current pose, aim, sense count/budget, HIT/MISS, hit distance, and surface normal. The display is human eye candy and debugging instrumentation only: it is marked as Witness instrumentation, excluded from raycasting, adds no machine-facing sensor modality, and does not drive Observer state. Removing it would not change the experiment. john visually confirmed `17afd2ec` at the public Betwixt membrane.
+
+The experiment's target has also sharpened. This is not primarily scene reconstruction, navigation, or object recognition. The desired loop is:
+
+**3D starting construction → bounded Observer inspection → geometric diagnosis → corrective construction → optional fresh Observer pass**
+
+The practical question is how little machine perception is required for a model to detect and repair defects in freshly generated 3D geometry. Observer₀ is intentionally weak so additional perceptual primitives must be earned by demonstrated failure rather than supplied in advance.
+
+The next passage is genuinely cold. The new model should orient from persisted repository/executable authority, discover and operate the bounded Observer, and report only what its available evidence supports. It must not be supplied privileged Builder₀ knowledge, expected object identities, intended geometry, or planted conclusions.
+
+Painter₀ remains unbuilt. Its interface and corrective passage are downstream of what cold Observer₀ actually discovers.
+
+**Frontier: cross the cold membrane.**
