@@ -288,3 +288,146 @@ The verbatim log begins at the moment john explicitly asked the Observer to reas
 ## Crossing note — operable resolutions
 
 Nested Betwixtables are now explicitly understood as **telescoping operable resolutions**. Containment establishes context; the deepest eligible shell owns a tap; focus should establish a scope rather than a modal dead end; embedded descendants remain available for drill-up; presentation focus must not fight the simulation transform that owns an embedded object. Thoughtforms are also recognized as executable asset stores and should be excavated before parallel geometry is invented.
+
+
+### Turn 023 — Clara
+
+> Yes. **Telescoping focus is the right abstraction.** A Betwixtable is not merely “focusable”; it establishes an operable resolution. Its descendants can expose finer resolutions without flattening the world into one giant interaction plane.
+>
+> I’ll do this in two passes in the same sling: first append the missing dialogue and the thoughtform-as-asset-store discovery to Ozymandias; then change Betwixt dispatch/focus so nested shells resolve deepest-first and focus can telescope into descendants cleanly. I’ll leave the fireship replacement separate until the nesting substrate proves itself—otherwise we’d confound asset reuse with interaction repair.
+
+### Turn 024 — Clara
+
+> Ledger is caught up at **`8b26e5c9`**.
+>
+> For the implementation I’m going one notch more general than “child beats parent”: resolve **all hit Betwixtable shells by containment depth**, constrained to the current focus scope. And I’m going to stop moving nested simulation nodes for focus. The cleanest first cut is to reparent the focused Betwixtable to a scene-level focus layer while preserving world transform, then restore it to its original parent/local placement on dismissal. That gives us the telescope without teaching Jupiter anything about camera presentation.
+
+### Turn 025 — Clara
+
+> The repository write was blocked by the tool’s mutation guard before GitHub saw it; nothing changed. I’m going to narrow the patch instead of fighting it with a giant replacement.
+>
+> One refinement from reading the focus code: we do **not** need full recursive focus stacking yet. A single foreground loan plus descendant selection is enough to prove the operable-resolution rule. Once that works, true multi-level drill history can be earned by an object nested two or three levels deep.
+
+### Turn 026 — Clara
+
+> First cut is green: **`a57b0358`**.
+>
+> This deliberately attacks only the interaction half first: all Betwixtable shells under the pointer are collected, **deepest structural resolution wins**, and a focused Betwixtable remains a scope in which embedded Betwixtables can be selected. Drilling into a child currently returns the parent focus and then summons the child, so we preserve the existing single focus owner rather than introducing transform-stack complexity prematurely.
+>
+> I’m publishing this as the testable cut. The moving-parent/focus transform problem is still real, but the carrier gives us executable evidence for whether we need extraction immediately or whether the existing parent-relative focus surprisingly survives well enough to refine from there.
+
+### Turn 027 — Clara
+
+> Slung: **`a57b0358`**. Repository and Home publication are green.
+>
+> This is the first executable **n-operable-resolution** cut:
+>
+> **outer context → embedded shell → deepest hit wins → drill into finer resolution**
+>
+> And while something is focused, its descendants remain eligible rather than being sealed behind a modal shell.
+>
+> I intentionally did **not** replace the counterfeit carrier yet. Let’s use the ugly little bastard as the nesting probe. 😄 If you can now tap it directly—or focus Jupiter and then drill into it—we’ve isolated the interaction rule before bringing the real thoughtform fireship across.
+
+### Turn 028 — john
+
+> Can't tap it. Before or after focus. Thoughts?
+
+### Turn 029 — Clara
+
+> That tells us the deepest-first idea is probably fine, but **the carrier is not actually participating in the same Betwixtable contract we thought it was**. Since it fails both in world view and inside Jovian focus, I’d stop touching dispatcher policy and inspect the shell construction itself.
+>
+> My first suspicion is that `makeBetwixtable()` and `buildBetwixtable()` are not interchangeable: we wrapped an already-built carrier with the former *inside* the latter, and its target may either have stale/local bounds or not be discoverable the way construction-first Betwixtables are. I’m checking that seam now rather than increasing its hitbox until it accidentally works.
+
+### Turn 030 — Clara
+
+> Found it. The carrier is wearing a **legacy shell**, not a construction-first Betwixtable.
+>
+> `makeBetwixtable()` creates `target`, `fit`, and `interact`—but **no `focus()` method**. Our dispatcher explicitly admits only objects with `target && focus`. So the carrier is invisible to the Betwixt dispatcher by contract. Deepest-first never even sees it.
+>
+> That also explains why changing hit resolution did nothing. The nesting experiment has exposed an older split-brain in Betwixt itself: legacy wrapped objects and construction-first objects look alike but do not have the same operability.
+>
+> I think the clean move is not a carrier patch. **Unify the contract.** Give `makeBetwixtable()` the same `focus()` behavior and spatial API shape as `buildBetwixtable()`. Then the carrier becomes the first nested legacy-wrapper pressure against the unified contract.
+
+### Turn 031 — Clara
+
+> So: excellent failure. We found the actual seam.
+>
+> The hierarchy was innocent. **The child wasn't registered as an operable resolution at all.**
+>
+> I’d make this the next cut:
+>
+> **Betwixtable means Betwixtable.** Whether geometry is wrapped after construction (`makeBetwixtable`) or built inside the shell (`buildBetwixtable`), both expose the same minimum contract:
+>
+> `target · bounds · fit · focus · interact`
+>
+> Then our existing deepest-first dispatcher should immediately begin seeing the carrier. If that succeeds, *then* we discover the next real problem—probably the moving-parent/focus transform contention we already predicted.
+>
+> Nice progression:
+>
+> **couldn't tap → suspected nesting → fixed resolution policy → still couldn't tap → discovered two species of Betwixtable**
+>
+> That's exactly the kind of pressure we want before making telescoping a foundational primitive.
+
+### Turn 032 — john
+
+> You're the surgeon :).
+
+### Turn 033 — Clara
+
+> Scalpel it is. 😄
+>
+> I’m making the **smallest contract repair first**: legacy `makeBetwixtable()` gets `bounds()` and `focus()` with the same semantics as construction-first Betwixtable. No carrier special case, no larger shell, no more dispatcher changes. Then build, publish, and let the counterfeit carrier tell us what breaks next.
+
+### Turn 034 — Clara
+
+> Surgery complete. **`79576391`** is green and published.
+>
+> No carrier hacks. `makeBetwixtable()` now exposes the same operative contract as `buildBetwixtable()`:
+>
+> `target · bounds · fit · focus · interact`
+>
+> So the little counterfeit fireship is finally an actual participant in the telescoping-resolution system.
+>
+> Try him **directly first**, then **Jupiter → fireship**. Whatever happens now should be the next genuine layer of the problem rather than the split-brain contract.
+
+### Turn 035 — john
+
+> Ab fab. Here's your neptunian.
+
+### Turn 036 — Clara
+
+> Oh, **excellent**. The aperture works. This is our first actual Neptunian report delivered back across the seam.
+>
+> And before I touch the lamphead, the Observer has already told us something more important than “change this cone.”
+>
+> The report contains **84 senses, 60 hits, 24 misses**. But those hits are not cleanly confined to the lamp. There are coherent lamp-region observations around `z ≈ 3.55`, but some rays escape and strike geometry around `z = 0` at distances around 6–7 units. There is also a bizarre cluster of very-near hits around distance `0.10–0.12`, meaning some poses are sensing something essentially on top of the Observer.
+>
+> So I **should not edit the lamphead from this report yet**.
+>
+> That would be cheating in a subtler form: I could use my source knowledge to recognize which points belong to the head and mentally discard everything else. But the Observer itself cannot establish that provenance from its anonymous `{distance, point, normal}` evidence.
+>
+> We have just earned the next piece of Neptunian:
+>
+> **A dispatched Observer needs a target spatial scope.**
+>
+> Not semantic labels. Not “this mesh is the lampshade.” Just: *you were dispatched to this Betwixtable; report intersections belonging to that Betwixtable's presentation, and treat everything else as occlusion/environment rather than target evidence.*
+>
+> That is wonderfully small. Our raycaster currently asks essentially **“what did I hit in the world?”** It needs to be capable of asking **“what did I hit in the thing I was sent to inspect?”**
+>
+> Then I can actually reason cold from the resulting surface.
+>
+> Also: the report itself proves the carrier pipeline works. It identifies the lamp-head mission and carries the full 84-sense evidence payload.
+>
+> I would log this exactly as our first genuine Observer result:
+>
+> **Neptunian did not yet diagnose the lamp. It diagnosed Neptunian.**
+>
+> The first returned evidence exposed missing **target isolation**. That's a fantastic first closed-loop result.
+
+### Turn 037 — john
+
+> Perfect. Capture the missing turns in oxymandias ledger and let's plan the observer's earned sensory apparatus.
+
+## Crossing note — first returned Neptunian evidence
+
+The first report physically crossed runtime → carrier download → john → model. It contained 84 senses, 60 hits, and 24 misses. The evidence was not cleanly target-isolated: some rays struck distant environmental geometry and another cluster returned extremely near hits. No lamp correction was made. The report therefore earned **target spatial scope** as the next Observer capability: distinguish evidence belonging to the dispatched Betwixtable presentation from environment/occlusion without granting semantic mesh labels. The report also proves the manual return aperture end to end.
