@@ -227,3 +227,18 @@ My strongest prediction is that the first world will be visually sparse and some
 My uncertainty is the handle criterion. It may be too ambitious for the first 1,000 turns and may teach us that **history can precede things**.
 
 That would still be a useful world.
+
+
+## Build 1 — committed before runtime observation
+
+Repository implementation: `1293194a0c5312a886a3f9208141d5bbd87e8e4a`.
+
+The collapse marble's disappearance is now the genesis trigger. The old world remains source-resident but detached and inert. Worldseed creates a 40×40 authoritative lattice with potential, resistance, trace, and disturbance; two drifting sources, one drifting sink, and 137-turn deterministic shocks maintain disequilibrium. Local movement leaves durable trace and trace slowly changes resistance.
+
+Projection is a single vertex-colored deforming plane. Anonymous distinctions are connected regions of sufficiently accumulated trace that persist across detection windows; mature handles get only a tiny white physical marker. They remain unnamed.
+
+Execution is deliberately visible rather than instant: five world turns per animation frame, so 1,000 turns should unfold over roughly 200 rendered frames. Evidence is deposited at `globalThis.WorldseedEvidence` after turn 1000.
+
+Important pre-observation admission: the current distinction criterion tests persistence/coherence but does **not yet implement the stronger predictive-rent test described in Pass 2**. I chose not to counterfeit that with an unearned metric before seeing whether persistent distinctions arise at all. If handles appear, predictive rent becomes an evidence-driven next pressure.
+
+I have not observed this build running yet. Green source mutation is not runtime evidence.
