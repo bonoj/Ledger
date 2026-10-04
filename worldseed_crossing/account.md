@@ -242,3 +242,8 @@ Execution is deliberately visible rather than instant: five world turns per anim
 Important pre-observation admission: the current distinction criterion tests persistence/coherence but does **not yet implement the stronger predictive-rent test described in Pass 2**. I chose not to counterfeit that with an unearned metric before seeing whether persistent distinctions arise at all. If handles appear, predictive rent becomes an evidence-driven next pressure.
 
 I have not observed this build running yet. Green source mutation is not runtime evidence.
+
+
+## Build 1 publication correction
+
+The first Home publication attempt failed Repository verification before reaching Interstice: Worldseed used the generic variable name `mesh` in a direct `scene.add(mesh)`, tripping the existing organism-ownership guard. This is useful pressure, not a runtime finding. Worldseed now owns its projection and anonymous-handle group beneath a named `worldseed:organism` root. Corrected Repository commit: `015f2d6df337e445beb12b21326c112d0a0b7b6b`. No simulation semantics intentionally changed.
