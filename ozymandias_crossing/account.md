@@ -586,3 +586,28 @@ The first report physically crossed runtime → carrier download → john → mo
 ## Crossing note — focus is a seat
 
 The nested-carrier pressure refined Betwixt composition beyond deepest-hit ownership. A focused object does not own a special focus position: **focus is a stable presentation seat**. Telescoping exchanges occupants while camera and target remain fixed. The outgoing Betwixtable returns home while the incoming descendant is translated so its presented bounds center replaces the outgoing presented bounds center exactly. Moving simulations must yield presentation transforms while Betwixt owns focus. The same contract repair also eliminated Chemlab's bespoke dispatcher path: dynamite now declares interaction through the unified Betwixtable contract, as Crucible already did.
+
+
+### Turn 061 — Clara
+
+> We’re at the good part: **stop engineering Observer for a moment and make it earn the next change.**
+>
+> `bf14368c` gave it target scope, occlusion discrimination, and target-bounds proprioception. The clean experiment now is exactly the one we already prepared: **run the unchanged 84-sense lamp-head mission and bring me the carrier report.**
+>
+> I want to read that report *without inspecting the lamp source first*. Then either I can diagnose and edit spatially, a specific ambiguity earns the next sense, or the evidence establishes the boundary between spatial coherence and semantic intent.
+>
+> **No more senses until confusion earns them.**
+
+### Turn 062 — john
+
+> Excellent. Fling our account updates and dracarys!
+
+## Crossing note — target-scoped Neptunian is ready
+
+Repository **`bf14368c`** extends the Observer at its existing ray boundary rather than changing its movement or scan policy. A mission may now carry a target Betwixtable. Target surfaces are drawn only from that Betwixtable's presentation subtree, preserving the existing contract that observers, shells, instrumentation, and semantic residue are not presentation geometry. A scoped sense distinguishes **target-hit**, **occluded**, and **miss**. Target and occluder remain anonymous spatial evidence; no mesh identity, material, semantic part, or source label is exposed. Mission evidence also records target bounds, center, and enclosing radius as proprioception. The lamp-head scan remains the same deterministic **84 senses**, enabling direct comparison with the first contaminated report. No lamp correction has yet been made from this new apparatus. The next executable boundary is human action: download the fresh carrier report and return it to the model for a cold diagnosis.
+
+The carrier report's false hardcoded Repository provenance (`43869374-parent`) was removed rather than replaced with another guess. Runtime provenance remains explicitly unavailable until build authority is deliberately exposed to runtime.
+
+## Adjacent thoughtform — deterministic graph mind
+
+Repository **`343b3568`** adds a fourth cardinal tabletop thoughtform: a stable white point-star surrounded by nineteen seeded dark shards whose apparently chaotic orbit/precession is deterministic. Its semantic residue preserves a separate future experiment: a tiny model-like self-authoring engine inside the runtime, based on deterministic graph traversal over a rich playground vocabulary with a socketable external agent. It explicitly does **not** claim to be a true LLM. Its invariant is: **same graph, seed, state, and inputs → same traversal and authored result**. This is an embodied seed/asset for later work, not evidence that the traversal engine has been implemented.
