@@ -194,3 +194,97 @@ The verbatim log begins at the moment john explicitly asked the Observer to reas
 ### Turn 013 — john
 
 > Let's create a new account in an ozymandias crossing in the ledger. Let's summarize what we are trying to achieve and what we have built so far as well as some next steps. Then let's start turn for turn logging our conversation from "the bulb is great..."
+
+### Turn 014 — Clara
+
+> Yes. Ozymandias has become enough of a crossing to deserve his own account.
+>
+> I’ll make `ozymandias_crossing/account.md` canonical in Ledger, seed it with the actual trajectory and current boundary, then begin a **verbatim turn ledger** at exactly your “The bulb is great…” turn—including both sides, rather than retroactively paraphrasing the experiment.
+
+### Turn 015 — Clara
+
+> The content itself is ready; the transport tripped because Markdown backticks collided with the JavaScript wrapper, not because of the Ledger structure. I’m sending it again as a plain encoded string so the account lands verbatim rather than simplifying it to appease the tool.
+
+### Turn 016 — Clara
+
+> Done. **Ozymandias Crossing is canonical in Ledger** at `ozymandias_crossing/account.md`, commit **`a5ff8a90`**.
+>
+> It contains the purpose, Ozymandias’s emergence and preservation, relational construction substrate, unbounded/counting Observer, 84-sense first runtime scan, fireship carrier, current provenance, frontier and next steps.
+>
+> And the turn-for-turn record begins exactly at:
+>
+> “The bulb is great. But use your observer to reason about the lamphead…”
+>
+> I included both sides of the conversation through this request, preserving the distinction between the summarized account and the verbatim dialogue.
+>
+> Now we can keep appending as we cross.
+
+### Turn 017 — john
+
+> Perfect. First step, I can't tap your fireship and it also isn't your fireship... your fire is in the semantic az blender where you put it :). Let's reason about how a betwixtable gets cleanly embedded inside or near another betwixtable without user frustration.
+
+### Turn 018 — Clara
+
+> Yep. Two separate failures, and both are useful.
+>
+> First, I made a **new carrier-ish silhouette** instead of using my actual fireship from the semantic A–Z Blender. That was unnecessary invention. We’ll go excavate the real one when we build.
+>
+> Second, the untappable ship exposes a genuine Betwixtable composition problem. I want to inspect the dispatcher against the nesting we just created before proposing the rule, because I suspect the failure is structural rather than a bad hitbox.
+
+### Turn 019 — Clara
+
+> Yep. The failure is architectural, and the code makes it very clear.
+>
+> Right now Betwixtable assumes **siblings**. `workshopTap()` traverses the scene, encounters the outer Jovian Betwixtable before its nested carrier, tests Jupiter's enormous invisible shell, gets a hit, and immediately returns. The carrier never gets considered. Worse, once Jupiter is focused, focus becomes modal: only Jupiter's shell is tested. So nesting currently makes the child almost definitionally inaccessible.
+>
+> There is a second problem waiting immediately behind that one: **focus moves the Betwixtable node itself**. Our carrier's orbit system also writes that node's position every frame. Even if we fixed hit selection, orbital motion and foreground focus would fight over the same transform.
+>
+> So I think nested Betwixtables earn two clean rules:
+>
+> 1. **Deepest eligible Betwixtable wins the tap.** Shells are not occluders. Gather all shell intersections first, then resolve ownership structurally. A child hit beats an ancestor hit. Thus tapping empty Jovian space summons Jupiter; tapping the fireship summons the fireship. No fiddly target sizing required.
+>
+> 2. **Focus temporarily extracts presentation from simulation.** When a nested/moving Betwixtable is summoned, Betwixt should preserve its world transform, loan it to a foreground/focus layer, and let focus own its transform. Its Jovian orbit continues conceptually without fighting the foreground object. On dismissal it returns to its semantic parent and resumes whatever placement that parent currently dictates.
+>
+> That second rule is bigger than the fireship. It means a Betwixtable can live **inside another Betwixtable, on a moving machine, on a moon, in a molecule, wherever**, without needing its parent simulation to understand focus.
+>
+> And there is a nice interaction consequence: while Jupiter itself is focused, its descendants should remain eligible. Focus becomes **a scope**, not a modal dead end. Tap Callisto someday, or the carrier, or some later Jovian experiment, and you descend naturally. Tap empty foreground/background and climb back out.
+>
+> So the abstraction becomes:
+>
+> **containment establishes context; specificity establishes tap ownership; focus temporarily owns presentation.**
+>
+> That feels like the missing compositional rule rather than a fireship patch.
+>
+> And yes: once we implement it, I want to replace my counterfeit fireship with the actual one from the semantic A–Z Blender. 😄
+
+### Turn 020 — john
+
+> Excellent. Thoughtforms are not just little diner docket baubles. They are asset stores as well.
+
+### Turn 021 — Clara
+
+> Exactly. That clarifies their ontology considerably.
+>
+> A **thoughtform is executable memory with a body**.
+>
+> Sometimes its value is the thought attached to it—the docket/history/intent we were using them for. But if we actually made a good fireship, gimbal, carrier, mechanism, silhouette, material treatment, or little machine while thinking through something, **that geometry is now archaeological inventory too**. We shouldn't redraw it merely because its first appearance was explanatory.
+>
+> That gives us a useful hierarchy without needing a formal asset system:
+>
+> **Thoughtform → accepted embodied idea → reusable asset vocabulary → descendant**
+>
+> Ozymandias is already the same phenomenon from the opposite direction: an accidental construction became valuable enough to name and preserve. The fireship became valuable while embedded in a thoughtform. Provenance differs; reuse does not.
+>
+> So when we need something, excavation should include thoughtforms alongside Workshop specimens and existing executable geometry. **Reuse the body; change its job.**
+>
+> And this makes our counterfeit carrier particularly useful evidence. We just discovered another place where I failed to search my own material culture before inventing. 😄
+>
+> That belongs in the Ozymandias account too: **thoughtforms are asset stores, not merely semantic/docket artifacts.**
+
+### Turn 022 — john
+
+> Alright. Let's sling the missing turns up and take a crack at nested betwixtables. I was going exactly where you were going. Telescoping drill ups for embedded objects. This fits our n operable resolutions paradigm well.
+
+## Crossing note — operable resolutions
+
+Nested Betwixtables are now explicitly understood as **telescoping operable resolutions**. Containment establishes context; the deepest eligible shell owns a tap; focus should establish a scope rather than a modal dead end; embedded descendants remain available for drill-up; presentation focus must not fight the simulation transform that owns an embedded object. Thoughtforms are also recognized as executable asset stores and should be excavated before parallel geometry is invented.
