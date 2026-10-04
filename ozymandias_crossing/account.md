@@ -431,3 +431,158 @@ Nested Betwixtables are now explicitly understood as **telescoping operable reso
 ## Crossing note — first returned Neptunian evidence
 
 The first report physically crossed runtime → carrier download → john → model. It contained 84 senses, 60 hits, and 24 misses. The evidence was not cleanly target-isolated: some rays struck distant environmental geometry and another cluster returned extremely near hits. No lamp correction was made. The report therefore earned **target spatial scope** as the next Observer capability: distinguish evidence belonging to the dispatched Betwixtable presentation from environment/occlusion without granting semantic mesh labels. The report also proves the manual return aperture end to end.
+
+
+### Turn 038 — john
+
+> Minor regression before we continue. Csn you see why the dynamite broke? Crucible still works.
+
+### Turn 039 — Clara
+
+> Yep. Found it.
+>
+> Our Betwixtable unification made **dynamite newly visible to the generic dispatcher**, but dynamite still relies on its older bespoke interaction path.
+>
+> Before surgery: `tap shell → tapChemSpell() → focus → second tap detonates`.
+>
+> After surgery: `tap shell → generic Betwixt focus()`. Then, while focused, generic dispatch sees the same shell again. Because `chemBetwixtable` has no `interact` callback, it consumes that second tap and returns. `tapChemSpell()`—which contains the detonation—is now unreachable.
+>
+> Crucible survives because its legacy wrapper was created with an explicit interaction: `interact: () => tapWorkshopCrucibleOrb()`.
+>
+> So this is collateral from the contract unification, and the principled repair is to wire chemistry's existing interaction into its Betwixtable contract and retire the chemistry-specific dispatcher escape hatch.
+
+### Turn 040 — john
+
+> Okay. Before you fix dynamite, let's fix the embedded betwixtable. It's absolutely fantastic already but it can be even better if the newly focus summoned betwixtable moved from its current in position in focus to the focus and the old betwixtable returns to its initial point. Is this getting too complicated?
+
+### Turn 041 — Clara
+
+> No. In fact, I think that's **simpler conceptually** than the compromise we just shipped.
+>
+> The focus position becomes a **seat**, not something owned by an object: **one focus seat, one occupant**.
+>
+> When drilling down, the current occupant returns toward its home/simulation position while the selected descendant simultaneously moves from its currently perceived position into the focus seat. Visually it should feel like pulling something out of Jupiter rather than closing Jupiter and independently opening something else.
+>
+> For a moving carrier, “home” should mean where its simulation says it belongs now, not where it happened to be when tapped.
+>
+> **Containment chooses the next resolution. The focus seat presents the current resolution. Telescoping exchanges occupants.**
+
+### Turn 042 — john
+
+> Okay. Let's get it right at the betwixtable level so the future can just inherit.
+
+### Turn 043 — Clara
+
+> Yes. No carrier exception. No “nested mode.” **Focus becomes a Betwixt-level seat/exchange primitive**, and every present and future Betwixtable inherits it.
+>
+> I’m preserving the current single-owner model but replacing descendant handoff with one coordinated telescope: outgoing resolution returns home while incoming resolution begins from its current presentation and occupies the focus seat. The carrier is merely the first proof.
+
+### Turn 044 — Clara
+
+> There’s one important thing in the existing code: focus currently saves a **local position snapshot**. That is exactly wrong for descendants whose parent is moving. I’m changing the primitive around **world-space focus seat + live home ownership** rather than trying to make that snapshot smarter.
+>
+> For this first inheritance-quality cut, a Betwixtable remembers who owns its home transform; telescope animates the outgoing occupant back while the incoming descendant moves into the same focus seat, and the simulation updater is prevented from overwriting a node only while focus owns its presentation.
+
+### Turn 045 — Clara
+
+> Green. One subtlety: the carrier updater was the only current moving-child pressure, so I added a **generic focus-ownership predicate** but only the carrier simulation currently consults it. The exchange behavior is Betwixt-level; future moving simulations have a tiny explicit contract—don't write presentation transforms while Betwixt owns focus.
+
+### Turn 046 — Clara
+
+> Slung: **`70ae13ce`**. Repository and Home publication are green.
+>
+> The foundational behavior is now: **one focus seat → one occupant → descendant tap exchanges occupants**.
+>
+> With Jupiter focused, tapping the carrier should produce one continuous telescope: Jupiter travels home while the carrier travels directly from its visible orbital position into the vacated focus seat. No dismiss-then-resummon gap.
+>
+> Dynamite remains intentionally broken for this cut.
+
+### Turn 047 — john
+
+> Ah. It worked but it sent the carrier to a focus above Jupiter rather than my camera focus.
+
+### Turn 048 — Clara
+
+> Yep. I see the exact coordinate-space bug.
+>
+> `telescopeWorkshopFocus()` computes the incoming seat in the incoming object's parent frame. But the carrier’s parent is the tilted/orbiting `carrierOrbit` inside Jupiter, while Jupiter’s focused position is expressed in its outer frame. I accidentally asked where camera focus would be in the carrier's still-Jovian coordinate system; as Jupiter traveled home, that frame traveled underneath the carrier.
+>
+> The stronger rule is: during a telescope, the incoming child should occupy the **exact world-space focus seat currently occupied by the outgoing Betwixtable**. The seat must be independent of containment.
+
+### Turn 049 — Clara
+
+> Fixed and slung: **`fd83d409`**. Both pipelines green.
+>
+> The focus seat is now genuinely world-space. Jupiter returns home while the carrier moves from its current world position toward the world position Jupiter occupied in focus. Each frame converts that world trajectory back through the carrier's moving parent.
+>
+> **The resolution changes; the seat does not.**
+
+### Turn 050 — john
+
+> Slings the ship far below me. It should actually be replacing the current focus exactly where it is. The camera shouldn't have to animate at all since it is already "focused". Does that help?
+
+### Turn 051 — Clara
+
+> Yes. That identifies the mistake precisely.
+>
+> I was still treating “focus” as an object position. It isn't. **The current focus is a camera/target relationship plus the outgoing object's presented bounds.** When Jupiter is already focused, freeze the camera completely and replace Jupiter's *presented center* with the child's *presented center*.
+>
+> Using the outgoing object origin was wrong because Jupiter's origin is not necessarily the visual center under the reticle.
+>
+> So the telescope invariant becomes: **capture outgoing `bounds().center` in world space → move incoming so its own `bounds().center` lands exactly there → camera and target do not move at all.**
+>
+> That is the literal “replace what I’m looking at” operation.
+
+### Turn 052 — Clara
+
+> **`3a0d1b8a`** is green and published.
+>
+> The telescope now means: **current presented center stays fixed; camera stays fixed; target stays fixed; Jupiter returns home; carrier moves until its presented center exactly replaces Jupiter's presented center.**
+>
+> We are exchanging **what occupies the already-established visual focus**.
+
+### Turn 053 — john
+
+> WORLD LAB VESTIBULE — startup / runtime\nReferenceError: seatWorld is not defined at telescopeWorkshopFocus ... On tap carrier.
+
+### Turn 054 — Clara
+
+> Yep—my typo, and the stack trace pins it cleanly. I renamed the fixed seat to `seatCenterWorld` / `seatOriginWorld`, but left one stale `seatWorld` reference in the duration calculation. CI didn't catch it because that path only executes when you actually telescope.
+>
+> I’ll remove that stale reference and scan the whole telescope function for old-name residue before republishing.
+
+### Turn 055 — Clara
+
+> Confirmed: the remaining `m.seatWorld` occurrences are legitimate motion-object property references, not unresolved lexical variables. The only bad one was the duration expression.
+
+### Turn 056 — Clara
+
+> Fixed: **`4a548b77`**. Repository and Home publication green.
+>
+> It was exactly one stale lexical `seatWorld` reference in the duration calculation. Try the carrier telescope again.
+
+### Turn 057 — john
+
+> Perfect. And now Oli's dynamite :).
+
+### Turn 058 — Clara
+
+> 😄 Oli’s dynamite gets its fuse back.
+>
+> Now that `makeBetwixtable()` has a real unified interaction contract, I’m doing the clean repair we identified: chemistry declares its existing `tapChemSpell()` as its Betwixtable interaction, and the old dispatcher-side `chemTapTarget` escape hatch goes away. No dynamite-specific behavior in `workshopTap()`.
+
+### Turn 059 — Clara
+
+> 🧨 **Oli’s dynamite is back.** `14811a49` is green and published.
+>
+> The repair also removes the old chemistry-specific dispatcher path entirely. Dynamite now behaves like a proper Betwixtable: **tap → focus; tap focused dynamite → its declared interaction → BOOM → microscope**.
+>
+> Crucible and dynamite now inherit the same interaction machinery.
+
+### Turn 060 — john
+
+> Excellent. Sling these turns into ozymandias. Might as well. Then remind me where we were :P.
+
+## Crossing note — focus is a seat
+
+The nested-carrier pressure refined Betwixt composition beyond deepest-hit ownership. A focused object does not own a special focus position: **focus is a stable presentation seat**. Telescoping exchanges occupants while camera and target remain fixed. The outgoing Betwixtable returns home while the incoming descendant is translated so its presented bounds center replaces the outgoing presented bounds center exactly. Moving simulations must yield presentation transforms while Betwixt owns focus. The same contract repair also eliminated Chemlab's bespoke dispatcher path: dynamite now declares interaction through the unified Betwixtable contract, as Crucible already did.
