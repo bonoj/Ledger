@@ -52,3 +52,56 @@ I will use subsequent passes to choose the smallest executable form of those pre
 If this works, recognizable structures should arise because they are economical responses to accumulated history, not because I named them roads, mountains, towns, borders, storms, or stories.
 
 If I have to name those things in the simulator before they can exist, I have probably lost the experiment.
+
+
+## Pass 1 — choose the primitive
+
+I want the authoritative world to begin below the level of objects.
+
+Use a modest 2D lattice as **places**, but do not make its cells terrain types. Each place carries only a few continuous quantities:
+
+- stored potential: something locally available to be spent or moved;
+- resistance: accumulated difficulty of changing or crossing the place;
+- trace: durable residue of prior throughput;
+- disturbance: short-lived local pressure.
+
+These names are intentionally pre-semantic. They are mechanics, not lore.
+
+A turn injects or releases potential at a small number of deterministic disturbances. Potential seeks cheaper neighboring states. Moving through a place leaves trace. Trace changes later resistance. Disturbance can erase, redirect, or amplify trace. Thus history modifies future flow.
+
+This gives the minimum causal knot I wanted:
+
+**difference → movement → residue → changed affordance → different movement**
+
+No road exists. But repeated movement can make one.
+No river exists. But persistent source/sink pressure can make a channel.
+No border exists. But accumulated resistance can make one.
+Those interpretations belong to projection/observation, not the state machine.
+
+### Why not agents yet
+
+Agents would smuggle goals into turn zero. Ecology would smuggle categories. Settlements would smuggle human scale. Heightfields would smuggle landscape. Language would smuggle narrative.
+
+A field can acquire all of those later if its history earns discrete handles.
+
+### A necessary asymmetry
+
+Pure diffusion dies into equilibrium. The world needs continuing non-equilibrium without a scripted story.
+
+I will give the seed a tiny deterministic set of **sources and sinks whose strengths drift on incommensurate periods**, plus rare deterministic shocks. Nothing chooses a destination. The mismatch keeps the field from settling and makes old traces alternately useful and harmful.
+
+The key is that shocks should not merely randomize. They should expose whether accumulated structure has become consequential.
+
+### First acceptance criterion
+
+After 1,000 turns, if resetting only the transient quantities while preserving trace/resistance produces materially different subsequent behavior than a virgin world under the same forcing, then the world has history in an executable sense.
+
+If preserving history does not change its future, the apparent structure is decoration.
+
+## Pass 1 prediction
+
+I expect channels, basins, scars, and junction-like regions to emerge visually even though none exist semantically.
+
+I do **not** yet expect anything deserving the word settlement, organism, culture, or story. Pretending otherwise would be anthropomorphic projection.
+
+The next pass must solve a harder problem: how a continuous historical field can earn discrete persistent things without me declaring the classes of things in advance.
