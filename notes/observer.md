@@ -328,3 +328,161 @@ Coverage completeness: **failed**.
 Concrete next target: **small isolated bead discovery without privileged location**.
 
 The observer has earned its next sense.
+
+
+---
+
+# 2026-10-05 — Semantic Construction T2
+
+## Question
+
+T1 recovered the major construction but missed a small isolated bead, then declared convergence after a refinement pass discovered no new continuity.
+
+T2 asked a deliberately narrower question:
+
+> Can the observer discover bead-sized isolated geometry without being told that such a thing exists or where it is?
+
+The semantic inventory remained available only as post-hoc ground truth.
+
+## Intervention
+
+T1 refinement aimed a small center-biased lattice into the target volume and stopped after the first refinement pass that discovered no new continuity.
+
+T2 changed the search policy rather than the answer key.
+
+Refinement now samples cell centers across each principal projection of the entire observed target bounds at increasing deterministic resolutions. The observer receives no semantic thing identities, expected thing count, or privileged bead location.
+
+The tested resolutions were 4, 8, and 16 cells per projected axis.
+
+A provisional stopping idea also changed: one quiet scale should not by itself imply convergence. Two successive increasingly fine scales without a newly encountered continuity were proposed as the bounded stopping rule.
+
+## Result
+
+Report schema: `construction-observer-report/3`  
+Mission: `semantic-construction-t2`  
+Runtime build reported: `47653992`  
+Created: `2026-10-05T17:02:41.524Z`
+
+Aggregate evidence:
+
+- total senses: **2,148**
+- target hits: **987**
+- misses: **1,161**
+- occluded observations: **0**
+
+Coverage history:
+
+| pass | policy | resolution | senses | continuities | newly discovered |
+| --- | --- | ---: | ---: | ---: | ---: |
+| 0 | coarse | — | 132 | 4 | — |
+| 1 | multiscale refinement | 4 | 96 | 4 | 0 |
+| 2 | multiscale refinement | 8 | 384 | **5** | **1** |
+| 3 | multiscale refinement | 16 | 1,536 | 5 | 0 |
+
+The decisive observation is the transition **4 → 4 → 5 → 5**.
+
+Resolution 4 produced no new continuity. If the T1 stopping criterion had still been in force, the observer would again have stopped while incomplete. Continuing to the next spatial scale exposed a fifth continuity.
+
+### Observation-first fifth continuity
+
+Continuity 5 was supported by **26 hits**.
+
+Observed bounds:
+
+- min: `(1.3770, 8.1125, 24.6502)`
+- max: `(1.5418, 8.2367, 24.8123)`
+
+This is distinct compact geometric evidence below the larger recovered bodies.
+
+### Post-hoc ground truth
+
+The authored bead bounds were:
+
+- min: `(1.3720, 8.0959, 24.6412)`
+- max: `(1.5520, 8.2759, 24.8212)`
+
+The fifth continuity lies squarely within the bead's ground-truth volume.
+
+T2 therefore recovered the component T1 missed without receiving its semantic identity, expected count, or location as part of the search.
+
+## What T2 establishes
+
+### A quiet refinement scale was not sufficient evidence of completeness
+
+This is the strongest result.
+
+Pass 1 was quiet: 96 additional senses at resolution 4 discovered nothing. Pass 2, operating at a finer scale over the same bounded target volume, discovered previously unseen geometry.
+
+T1's operative convergence criterion is therefore experimentally falsified for this construction.
+
+### Scale-aware whole-volume coverage can recover the demonstrated miss
+
+The change from center-biased refinement to multiscale principal-projection coverage was sufficient to expose the bead in this test.
+
+This does not establish a general completeness guarantee, an optimal sampling policy, or a minimum reliable feature size.
+
+### Independent observation can disagree with authorship and later resolve the disagreement
+
+T1 reported four continuities against five authored things. T2, after a change to observation policy rather than construction semantics, produced a fifth independently observed continuity matching the previously unseen component.
+
+That is useful behavior for an inspection instrument.
+
+## Important caveat
+
+The proposed **two successive quiet scales** stopping rule was not itself completed in T2.
+
+The sequence after discovery was:
+
+- resolution 8: one new continuity;
+- resolution 16: zero new continuities.
+
+The run therefore ended with only one quiet scale following the discovery.
+
+T2 establishes bead discovery and falsifies the earlier one-quiet-pass convergence rule. It does **not** validate the replacement convergence rule.
+
+No stronger claim is warranted.
+
+## Cost
+
+T2 expanded from T1's 340 senses to **2,148 senses**, and the serialized full transcript approached megabyte scale.
+
+That cost is acceptable as experimental evidence but unattractive as a routine construction workflow. No compression or optimization conclusion is drawn from T2; the full transcript was useful while determining what evidence mattered.
+
+## Practical disposition
+
+This research line has reached a useful stopping point.
+
+A crude semantic construction primitive now exists in which authored parts can be related through named snapping/attachment points rather than manually guessed world-space coordinates. **No claim of efficacy is made for that assembler yet.** Its practical value, failure modes, and generality remain to be demonstrated through ordinary construction work.
+
+The emerging working arrangement is:
+
+```
+semantic construction + snapping
+        ↓
+executable geometry
+        ↓
+human visual inspection
+        ↓
+Observer when fine-grained spatial evidence is worth the cost
+```
+
+Snapping is intended to prevent or reduce routine alignment mistakes. Human eyes remain the cheapest first inspection layer. Observer is retained as a higher-cost geometric instrument for ambiguity, fine-grained precision, or defects that cannot be resolved confidently by visual inspection alone.
+
+Observer therefore does not need to become a mandatory compiler pass, autonomous corrective agent, or exhaustive scanner before construction work continues.
+
+The instrument works well enough to keep in the laboratory.
+
+## Status
+
+**T2 complete for the bead-discovery question.**
+
+Small isolated component discovered without privileged location: **yes**.  
+T1 one-quiet-pass convergence criterion falsified: **yes**.  
+Replacement convergence rule validated: **no**.  
+Routine workflow demonstrated: **no**.  
+Semantic snapping efficacy demonstrated: **no**.  
+Observer retained as an escalation/debugging instrument: **yes**.
+
+No T3 is currently required.
+
+The next useful evidence should come from **making things**, not from improving the Observer for its own sake.
