@@ -133,3 +133,39 @@ Keep making tiny things. Observe where communication becomes surprisingly cheap.
 Perhaps one route toward powerful human-LLM collaboration is constructing places where both already know how to think.
 
 **The world becomes part of the language.**
+
+
+## Horizon
+
+A useful horizon is not a prediction about how many years ahead one approach is.
+
+**The horizon is the boundary beyond which our present primitives stop making the next experiment cheap.**
+
+Our working horizon has repeatedly moved as formerly expensive mechanics became ordinary:
+
+- cheap generation made strange executable objects disposable
+- rapid variation made families of candidates cheap to inspect
+- repository transport and publication receded from human attention
+- Betwixt made persistent spatial references ordinary
+- bounds made relations such as `above` executable rather than merely descriptive
+- the d20 made twenty separately addressable world containers almost free to represent
+
+Each reduction in cost changed what was cheap enough to think about next.
+
+The useful question is therefore not "what architecture comes next?" but:
+
+**Where does cheapness end?**
+
+The next limiting boundary might be spatial vocabulary, observation, persistence, scale, cross-world causality, reconstruction, or something not yet named. We should not choose it in advance.
+
+Walk toward the horizon experimentally. When the work becomes suddenly awkward, verbose, brittle, expensive, confusing, or requires the human to become a mechanical transport layer again, we have encountered evidence of a missing primitive.
+
+This complements the existing rule:
+
+**Confusion earns senses.**
+
+More generally:
+
+**Rising coordination cost reveals the horizon.**
+
+Do not roadmap beyond it merely because the future can be described. Let the next primitive earn itself where present representations stop carrying the work cheaply.
