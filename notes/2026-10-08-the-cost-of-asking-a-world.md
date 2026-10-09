@@ -3,55 +3,77 @@
 
 ## The observation
 
-A miniature geological world was being prepared for construction. An ambiguous visual feature prompted a question about the terrain. Rather than continue to infer the world's state from rendered appearance alone, we added a survey: a familiar tap could export structured evidence from the running simulation.
+We were preparing to construct within a miniature geological world when an ambiguous visual patch prompted a simple question: **What is that?**
 
-The first survey described geology. A later extension reported hydrology without requiring a new interaction. After a water-level adjustment from +6 to +15 terrain units, the exported measurements showed a largely shared water surface near +1.83, 71.7% sampled water coverage, and terrain relief of roughly 23.19 units. The visual scene and numerical report became two independent ways to interrogate the same physical state.
+We could have traded screenshots, described quadrants and landmasses, guessed at strata, or reasoned about the rendering from source code. Instead, we asked the running world to report what it knew.
 
-The human's assessment was immediate: 15 was full, but not a water world; 20 likely would be. The precise threshold remains a perceptual judgment, not a measured law. Crucially, the number was now an intelligible scale reference for terrain, motion, and possible construction.
+The resulting survey was inexpensive to build. The geological state already existed in the executable simulation; a small instrument exposed it as structured evidence through a familiar interaction. When we later needed hydrological evidence, extending that same instrument was inexpensive too. No new interaction was required.
 
-The published phone view displayed build identity `53d4e4c3` and approximately 59 fps. This anchored the observation to a particular executable version rather than a remembered or imagined state.
+The first report described geology. The next described water. After changing one fill parameter from +6 to +15 terrain units, the hydrological survey reported 71.7% sampled water coverage, a water surface clustered near +1.83, and approximately 23.19 units of terrain relief. The human looking at the world judged that 15 was full but not quite a water world; 20 likely would be. That last comparison is perceptual judgment, not a measured threshold.
+
+The published phone view showed build identity `53d4e4c3` and approximately 59 fps. We could associate the visual scene and numerical evidence with an identifiable executable version.
+
+## What did not have to happen
+
+The human did **not** have to supply screenshots, orient the model by quadrants, narrate landmasses, identify geological layers, estimate elevations, transcribe water values, or build a shared spatial vocabulary one clarification at a time.
+
+Nor did the human need to predict which individual measurements the model would request next. A single export carried a substantial, situated description of the world, including measurements that could support questions formulated *after* the observation.
+
+The meaningful human input was not a lengthy explanation. It was attention, a well-aimed question, one parameter change, and a tap. Taking the established survey required **one tap and zero words**; transferring its file into the conversation remained a separate action.
+
+This did not eliminate human cognition. It removed the need for the human to act as a lossy translator between a world and an observer who could not directly inhabit it.
+
+## Three economies of inquiry
+
+The striking feature was not only that the survey became cheap to reuse. **It was cheap to create, cheap to extend, and cheap to invoke.**
+
+1. **Discovery:** a specific uncertainty revealed which sense was missing. The scarce contribution was asking the useful question, not specifying a grand instrumentation system.
+2. **Construction and extension:** the executable world already possessed relevant state. A small observational boundary made it legible; later questions justified adding hydrology without rebuilding the interaction.
+3. **Repeated use:** once present, the instrument delivered a rich report through the same single tap, rather than requiring repeated verbal reconstruction.
+
+The method is recursive: **questions become instruments; instruments produce evidence; evidence makes better questions possible.**
+
+This is not a claim that every possible instrument will be cheap. It is an account of what happened here, and of the advantage conferred by a malleable executable environment with accessible state.
 
 ## The epistemic boundary
 
-A rendered image is evidence of appearance. Source code is evidence of intended machinery. Neither alone is a complete account of the current world.
+An image reports appearance. Source code describes intended machinery. A runtime survey reports sampled state from a particular execution. None is a substitute for the others, and none is automatically infallible.
 
-A runtime survey provides a third kind of evidence: **the executable world's own report of its state at an identifiable moment**. It does not become infallible by being machine-readable. Its sampling, coordinate conventions, approximations, and blind spots remain subject to examination.
+Keeping four categories distinct helps prevent confidence from outrunning evidence:
 
-That distinction permits disciplined claims:
-
-- **Observation:** what the instrument actually recorded.
+- **Observation:** what the instrument recorded, within its sampling and measurement limits.
 - **Inference:** what a human or model concludes from those observations.
 - **Intervention:** what was deliberately changed.
-- **Verification:** whether the intended executable version and resulting behavior were actually observed.
+- **Verification:** which executable actually ran, and whether the intended behavior was observed.
 
-These categories must not silently collapse into one another. In particular, a single hydrological snapshot can support claims about measured depths and speeds, but not automatically about long-term stability.
+A single hydrological snapshot does not prove long-term stability. A model's plausible explanation does not become a measurement merely because it sounds physical. A build that was committed is not necessarily the build a human saw.
 
-## The methodological turn
+**Knowing what ran is part of knowing what happened.** A traceable executable identity connects the construction side of the experiment to its observations without requiring a description of deployment machinery.
 
-The instrument was not specified as a universal framework. It was earned by a particular uncertainty. When a new question required liquid measurements, the existing survey was extended instead of multiplying controls or asking the human to narrate the scene.
+## A sense that need not be redesigned for every world
 
-The emerging pattern is:
+The survey's *principle* is independent of the snowglobe's size. The same observational relationship can apply to another miniature, a larger terrain, or a different executable world whose state can be sampled and expressed coherently.
 
-**Notice uncertainty → expose the smallest sufficient evidence → inspect and interpret → change deliberately → observe again.**
+That does not mean infinite scale is free. Frame rate, computation, sampling resolution, data volume, and transport impose real limits. Larger worlds may need selective, hierarchical, or streamed surveys. But these are scaling choices, not reasons to return to screenshot-by-screenshot narration or invent a wholly new human interaction for each world.
 
-The striking economy lies in the *recurring* human input. Once the capability exists, taking the survey requires **one tap and zero words**. Sharing the resulting artifact remains a separate action in the present workflow. The cognitive work is not zero: the human still decides what deserves attention and judges whether the result makes physical sense. What shrinks is the mechanical burden of translating a world into prose for a model.
-
-The instrument can grow in response to new questions while its use remains familiar. The cost of establishing a new sense is paid once; subsequent observations reuse it.
+The important possibility is that **world complexity can increase without a corresponding increase in the human burden of describing that world to the model**.
 
 ## Why this is more than telemetry
 
-Ordinary telemetry can be extensive and still leave the observer uncertain about what matters. Here the instrumentation is driven by a question, its evidence is situated in a known world, and interpretation is shared across two different strengths: human spatial intuition and model-assisted numerical analysis.
+Telemetry can provide numbers without establishing a useful relationship between observers and the thing observed. Here a question drove the instrument, the instrument returned situated evidence, and the evidence could be compared with human spatial judgment and model-assisted numerical reasoning.
 
-Neither perspective is treated as an oracle. A mismatch is an invitation to inspect the model, the instrument, or the intuition—not to declare one party authoritative by default.
+The human supplied attention and physical intuition. The executable world supplied measurements. The model could analyze, compare, and propose explanations. Each could reveal errors in the others; none was an oracle.
 
-This is the beginning of an epistemology for executable worlds: **how to know what a world is doing without requiring either participant to reconstruct or remember the whole world.**
+One observation could support many subsequent questions, including questions neither participant had thought to ask when the file was produced.
 
-It is also the beginning of a methodology: build senses when uncertainty earns them, keep the boundary between evidence and interpretation visible, and make the repeated act of asking extraordinarily cheap.
+This is the beginning of an **epistemology of executable worlds**: a way to distinguish what the world did, what we observed, and what we think those observations mean.
+
+It is also a **methodology of inquiry**: encounter uncertainty, expose the smallest useful evidence, interpret it together, intervene deliberately, and observe again—growing new senses as questions earn them, while keeping their recurring use extraordinarily cheap.
 
 ## Limits and provenance
 
-This account describes an observed capability, not a claim that all future world state is automatically available or that survey export is already a zero-action transfer into conversation. The geological and hydrological reports were snapshots of a particular running specimen. The original observation and the later survey measurements are recorded in [When the snowglobe answered back](2026-10-08-when-the-snowglobe-answered-back.md).
+This account records one successful geological-to-hydrological extension, not a universal guarantee of cheap instrumentation, arbitrary-scale sampling, or automatic delivery into a conversation. The original survey events and measurements are recorded in [When the snowglobe answered back](2026-10-08-when-the-snowglobe-answered-back.md).
 
-The public lesson is the epistemic pattern and its observable results. This account intentionally does not document private collaboration infrastructure, internal continuity mechanisms, or deployment implementation details.
+The public account concerns the observed capability and its epistemic implications. It does not describe private collaboration infrastructure, internal continuity mechanisms, or deployment implementation.
 
-*Ledger records the crossing. The executable world and its exported observations remain the evidence.*
+*The world need not be narrated into existence for another observer. It can be asked—and it can answer.*
