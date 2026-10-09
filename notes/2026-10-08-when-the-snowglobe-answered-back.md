@@ -9,7 +9,9 @@ A source inspection found global distance fog, but no dedicated local fog volume
 
 John asked to turn off the meteor barrage and instrument the focused snowglobe so a tap would produce a file he could bring back. The objective was not merely to identify a patch. It was to collect enough ground truth to begin six tiny cities, eventually able to drive water, lava, population fields, and matter streams.
 
-## The crossing
+## Geological survey — the first crossing
+
+### The crossing
 
 The miniature was already an executable geological history: seed 741, seven strata, differential erosion, drainage, faults, folds, collapse, and a gypsum-sand mantle. It had a deformable heightfield and material/geology sampling functions. The missing piece was a **human-to-model observation bridge**.
 
@@ -48,3 +50,66 @@ That delight was earned not by a finished city, but by the world answering back.
 *Ledger is an account, not operational authority. The Repository implementation and the exported survey are the evidence of what actually ran. The original survey should not be mistaken for a permanent record of subsequent terrain changes.*
 
 **Relevant commits:** Repository `94e3248c` (survey instrument), `3f932a2e` (tap ownership fix). Home handled publication.
+
+---
+
+## Hydrological survey — when 15 became a physical reference
+
+The later survey was exported with schema \`six-cities-snowglobe-survey-v2\`, after the canyon's initial water level was changed from +6 to +15 geological units. The following is Clara's reply to the hydrological survey, preserved as spoken. The original chat presented the measurements in three visual metric blocks and a bar chart; their values are transcribed here without changing the accompanying words.
+
+### Clara's reply — verbatim
+
+🐉 **We have it. The new 📋 is working.**
+
+And now I can begin to understand what **15** means in this world.
+
+| Water coverage | Mean wet depth | Maximum sampled depth |
+| --- | --- | --- |
+| **71.7%** — Surveyed area | **4.45** — Terrain units | **14.89** — Terrain units |
+
+The selected water source sits at elevation **−13.16**, so your +15 initialization corresponds to an initial surface elevation of approximately **+1.84**.
+
+The whole terrain ranges from −13.63 to +9.56: about **23.19 units of vertical relief**.
+
+That's the first remarkable calibration: **15 units is roughly 65% of the world's entire vertical relief.** It's a substantial geological event, not a modest puddle.
+
+## What the liquid is actually doing
+
+**Water surface elevations across wet samples**
+
+| Percentile | Surface elevation |
+| --- | ---: |
+| 10th | 1.807 |
+| 25th | 1.820 |
+| Median | 1.832 |
+| 75th | 1.851 |
+| 90th | 1.872 |
+
+*Percentiles of sampled water surface elevation, terrain-local units.*
+
+Here's the satisfying part: the median water surface is approximately **+1.83**, almost exactly the **+1.84** target implied by your chosen 15-unit fill.
+
+So the solver isn't merely accepting the initial condition. Most sampled water is sitting very close to that common hydrostatic level.
+
+There's also useful physical evidence:
+
+- **Flow:** median sampled speed is about 0.15 terrain units/s; some localized samples reach 8.82.
+- **Conservation:** the solver reports a balance error of about **0.0052%** of injected volume.
+- **Containment:** zero reported escaped water and zero dry loss.
+- **Lava:** dry, as expected.
+
+The high local velocities deserve investigation eventually, but one snapshot doesn't establish whether they're transient or pathological.
+
+## What we've learned
+
+Your eyeballed 15 gave us a reference that connects the canyon's shape, shoreline, water depth, and movement. We can now evaluate future changes against that same reference instead of guessing.
+
+And the survey identifies the exact geological specimen: **seed 741, mutation 0**.
+
+My next question is perceptual rather than numerical: **does this +15 world look pleasantly full to you?**
+
+Because I now have a fairly rich numerical description of what your answer will mean.
+
+---
+
+*Hydrological survey source: user-exported \`six-cities-snowglobe-survey-v2\`; this is a subsequent observation, not a reinterpretation of the first geological survey. The quoted analysis is a snapshot, not a claim about all future solver states.*
