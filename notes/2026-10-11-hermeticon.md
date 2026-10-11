@@ -249,3 +249,121 @@ The last two v7 inspector reports plus the screenshot establish a serious **sust
 8. Treat Ledger as a historical account; consult live source before changing implementation.
 
 **🐉 Arc of the experiment (updated through v7):** a chaotic bead medium → selectable central forces and absorbing horizon → one-shot radial disturbances → a red inhabitant that consumes the substrate and enlarges its own geometry. This is a progression from visual emergent structure toward consequential, composable inhabitants of an executable world → gravity-bound predators that may sacrifice material to escape. The next problem is engineering: preserve the new causal richness while restoring mobile simulation throughput.
+
+---
+
+# Hermeticon — Human/Model Turn Chronicle
+
+**October 11, 2026 · UTC**
+
+This reconstructs the conversation from Hermeticon's inception through the v8 performance repair. Human turns are paraphrased for brevity, with spelling normalized. Each is followed by the model's response or the resulting engineering action.
+
+I'll distinguish **known message timestamps** from timestamps inferred from inspector reports. Where I cannot recover an exact message, I'll preserve the sequence without inventing dialogue.
+
+## Act I — The vessel wakes
+
+*08:27–09:03 UTC*
+
+1. **08:27:01 — Human:** Test the entire pipeline. Build Hermeticon: 100,000 tiny BBs, chaotic collisions and bouncing, targeting 60 FPS.
+
+   **Model:** Establishes the JIT simulation with a glass vessel, particle dynamics, containment, and instrumentation.
+
+2. **08:36:58 — Human:** Instrument the simulation. Add a central zero-point injector and gravity modes including Strong, Overwhelming, and Black Hole.
+
+   **Model:** Introduces adjustable gravity, the injector experiment, and associated measurements.
+
+3. **08:46:15 — Human:** Remove the zero-point button. Add Zero G and Microgravity to the ordered gravity cycle.
+
+   **Model:** Discards the ineffective injector and simplifies the controls.
+
+4. **08:51:48 — Human:** Add a red phage button. Each tap spawns a random phage that consumes BBs and grows through collisions.
+
+   **Model:** Implements visible, growing phages. Early trials reveal runaway feeding and rapid extinction of the bead population.
+
+5. **09:00:03 — Human:** Throttle phage consumption substantially; accept a feeding limit of 20 BBs per simulated second.
+
+   **Model:** Plans bounded feeding, phage collisions, size-dependent predation, and progressive digestion.
+
+6. **09:02:27 — Human:** Build, instrument, and publish the revised phage mechanics.
+
+   **Model:** Delivers v6, including feeding caps, phage capture, digestion, and telemetry.
+
+## Act II — Phages become creatures
+
+*Approximately 09:07–09:24 UTC*
+
+The v6 inspection showed 56 spawned phages, 18 captures, 6,352 consumed BBs, and approximately 61.7 FPS with only 15,705 active BBs. It also exposed an erroneous digestion-completion counter.
+
+The next human turn proposed something qualitatively different: phages should no longer merely eat and collide. They should be able to **sacrifice their own mass to survive**.
+
+7. **Exact message time unavailable — Human:** “Phages are now affected by gravity. They may shed yellow BBs back into the bauble to thrust away from larger, potentially dangerous phages at the expense of mass. (Yellow BBs rejoin the population.) What will you instrument?”
+
+   **Model:** Proposes threat prediction, gravity and velocity telemetry, mass-conserving exhaust, reaction momentum, escape outcomes, and bounded event histories.
+
+8. **Exact message time unavailable — Human:** “Make it so!”
+
+   **Model:** Implements and commits v7, with gravity-driven phages, yellow-bead exhaust, escape telemetry, and a correction to the repeated digestion counter.
+
+## Act III — The performance wall
+
+*09:24–09:25 UTC and subsequent turns*
+
+9. **After 09:24:29 — Human:** Submits two v7 inspector reports, recorded at 09:24:13 and 09:24:29, then asks: “FPS issue?”
+
+   **Model:** Identifies a sustained regression to approximately 18.5 FPS, with growing dropped simulation time. Suspects expensive bead–phage checks and proposes spatial lookup and profiling.
+
+10. **After 09:25:20 — Human:** Shares a screenshot and a third inspector report, recorded at 09:25:20, showing 16.95 FPS, 30.79 dropped seconds, and ten living phages.
+
+    **Model:** Confirms the slowdown is sustained. Notes that all ten phages are similar in size, explaining the absence of escape attempts. Corrects the earlier diagnosis: the feeding scan existed in v6, so the new code cannot be blamed without controlled measurements.
+
+11. **Exact message time unavailable — Human:** “Update the Ledger with all recent work and your proposed solution to FPS issues.”
+
+    **Model:** Updates the dated Hermeticon Ledger with v7 mechanics, three field reports, the performance regression, unresolved conservation questions, and a staged profiling/spatialization plan. Commit `65993720`.
+
+12. **Exact message time unavailable — Human:** “Implement and sling.”
+
+    **Model:** Implements v8 spatial phage-feeding lookup and sampled phase profiling, preserving the 100,000-bead model. Commit `243b15bd`. GitHub source readback and JavaScript syntax pass; public deployment and FPS improvement remain unverified.
+
+13. **Current turn — Human:** “Let's see a summary of all timestamped human turns since we started with brief model responses for continuation between each turn. Correct any of my misspelled words :).”
+
+    **Model:** Reconstructs this chronological human/model account, normalizes spelling, and explicitly distinguishes recovered message timestamps from report timestamps.
+
+## The engineering arc
+
+**v1–v3 · Physical substrate — 100k BBs**
+
+Chaotic contacts, vessel containment, gravity modes, black-hole capture.
+
+**v4 · Perturbation — Impulse**
+
+Radial kicks, momentum and shell measurements.
+
+**v5 · Consumption — Phages**
+
+Growing predators; runaway population extinction reveals the need for constraints.
+
+**v6 · Ecology — 20 BB/s**
+
+Feeding limits, competition, capture, digestion, and size-dependent interactions.
+
+**v7 · Survival — Yellow exhaust**
+
+Gravity-driven creatures that can sacrifice material for propulsion.
+
+**v8 · Computational recovery — Spatial lookup**
+
+Localized feeding checks and profiling, awaiting mobile performance measurements.
+
+## What matters for continuation
+
+The central progression is from **particles → physical interactions → consumers → bounded ecological behavior → creatures making survival tradeoffs**.
+
+Three unresolved questions now define the next experiment:
+
+- **Performance:** Does v8 recover mobile frame rate with approximately 100,000 active BBs and ten phages?
+- **Behavior:** Can an intentionally oversized predator provoke yellow exhaust and a measurable escape?
+- **Conservation:** Does material remain accounted for through consumption, ejection, recapture, and nested digestion?
+
+The canonical engineering history remains in the [Hermeticon Ledger](https://github.com/bonoj/Ledger/blob/main/notes/2026-10-11-hermeticon.md).
+
+*Chronology note:* The first six message timestamps were recoverable directly. Later inspector timestamps are exact, but the corresponding human message times were not available. Some intermediate turns and exact original wording could not be recovered, so this is a reconstructed chronology rather than a complete verbatim transcript.
