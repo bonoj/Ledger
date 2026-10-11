@@ -168,6 +168,65 @@ The report claims **25,664 digestions despite only 18 captures**. Code inspectio
 
 **Recommendation:** Make the next code change **surgical**: correct digestion completion, instrument material transfer and event history, and repeat a clean experiment. The v6 behavior is compelling enough to study rather than immediately embellish.
 
+
+## 🚀 v7 — gravity-driven phages and reaction exhaust (2026-10-11)
+
+**Build:** `hermeticon-v7-shell-v7`; GitHub commit `e5c380b4` (prefix). The user independently verified this build in the public mobile browser through screenshot and three inspector snapshots. The experiment extends v6 rather than replacing its 100k-bead simulation.
+
+**Intended behavior:** Phages now experience the active central gravity mode, can perceive a larger approaching predator, and can spend accumulated material to eject **yellow BBs toward the threat**. Ejection returns consumed beads to the existing population and generates opposite recoil. This creates a survival tradeoff between size and maneuverability.
+
+**Implementation details and semantics:**
+- Phage gravitational acceleration varies by selected gravity mode and distance to the origin, with speed caps. The inspected mode was **STRONG**, with per-phage reported acceleration ranging roughly **0.9–8.0** across snapshots. These are computed accelerations, not a directly measured trajectory response.
+- A predator must be **at least 2× the smaller phage's radius**. Threat selection also requires closing motion and a predicted close approach. The code considers nearby predators, then applies a short cooldown after an escape maneuver.
+- Each triggered maneuver is intended to eject up to **four** previously swallowed BB slots at exhaust speed **18**, deduct the BB-equivalent volume from the phage, color those beads yellow, and impart reaction impulse. Exhaust uses the existing fixed bead arrays rather than increasing the nominal population.
+- `exhaustFree` is populated by phage consumption; no material is invented for exhaust. `exhaustTotal` is cumulative, `yellowBBsActive` instantaneous, `exhaustReconsumed` cumulative, and `phageConsumed` represents current swallowed population (not lifetime meals). Reconsumption of a yellow BB is intended to count separately.
+- Escape events include predator/prey IDs, distance, closing speed, BBs ejected, and delta-v. Per-phage telemetry includes gravity acceleration, current threat ID, exhausted count, escape successes/failures, and total thrust impulse.
+- v6's repeated digestion-completion increment was repaired with a one-time `digested` transition; new checks assert completed digestions do not exceed captures and phages retain minimum material. **⚠️ This was not tested by the v7 reports**: they had zero captures/digestions.
+- A material summary was introduced, but **global conservation through nested host chains and exhaust remains unproven**. The summary alone is not an invariant across all ownership states.
+
+### 📊 v7 field measurements — one continuous session, three snapshots
+
+All three reports are from the same browser session, **not independent trials**. The screenshot shows ten glossy red phages in a dense, flowing, white-bead vessel with the gravity control at STRONG. It is visually compelling but also establishes that no yellow exhaust is yet visible.
+
+| Timestamp UTC | Sim time | Steps | FPS approx | Dropped sim time | Active BBs | Phage-consumed BBs | Phage bounces |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| 09:24:13.676 | 18.032 s | 2,254 | **18.43** | 4.929 s | 98,633 | 1,367 | 2 |
+| 09:24:29.197 | 26.688 s | 3,336 | **18.56** | 11.796 s | 97,244 | 2,756 | 8 |
+| 09:25:20.669 | 59.168 s | 7,396 | **16.95** | **30.790 s** | 93,036 | 6,964 | 48 |
+
+**Session conditions:** 10 phages spawned at steps `573,724,760,1261,1299,1473,1498,1523,1679,1704`; **0 black-hole captures**, **0 phage captures**, **0 completed digestions**, **0 exhaust**, **0 escape attempts/successes/failures**, **0 yellow BBs active**, and **0 thrust impulse** in all three snapshots. The inspector event history captured these ten spawns and an impulse at step **2611** affecting **65,434 BBs**, scalar momentum metric **712,073.08**. At the last snapshot, the impulse was **38.28 simulated seconds** old. Mode STRONG at inspection; the bounded event history contains no gravity-mode changes. No reported containment or invariant failures. At each snapshot `active + captured + phageConsumed = 100,000`.
+
+**Feeding:** Total consumed grew 1,367 → 2,756 → 6,964 while ten phages survived. At the last snapshot phage radii were approximately **0.753–0.906** and individual eaten counts **466–837**. Their size ratios never approached the required 2:1 predator threshold. Therefore **zero escape attempts is expected, not evidence of failed escape code**. The screenshot does not demonstrate yellow exhaust; the feature is implemented but **unexercised** in these tests.
+
+**Visual dynamics:** At 59.168 simulated seconds, the radial shell counts were `[13575,3245,1365,704,412,327,256,228,275,72649]`; **72,649/93,036 active BBs (~78.1%)** were in the outermost shell, while 13,575 remained in the innermost. This is an unusual bimodal-looking **count distribution**, not volume-normalized density. Earlier (18.032 s) counts were `[37220,17955,7507,4713,3461,2943,3022,3604,5675,12533]`. An impulse at step 2611 and continuing gravity/collisions confound simple causal attribution. Mean speed squared rose **9.733 → 23.154 → 66.388**. Bead contacts rose cumulatively **5.66m → 8.69m → 23.47m**; wall bounces **142,451 → 427,363 → 5,312,497**.
+
+### ❌ Critical regression — sustained ~17–19 FPS
+
+The last two v7 inspector reports plus the screenshot establish a serious **sustained performance regression** on the user's mobile browser. Approximate FPS fell to **16.95–18.56**, whereas a v6 56-phage report showed **61.71 FPS**. These runs are **not controlled equivalents**: v6 had **77,943 black-hole-captured beads** and only **15,705 active**, while v7 retained **93k–99k active**. The v6 run therefore performed substantially less live bead work despite having more phages. Do **not** claim that the v7 code change alone caused the whole slowdown.
+
+**Dropped simulation time:** At ~90 seconds elapsed, only **59.168 s** had advanced and **30.790 s** had been dropped by the fixed-step scheduler. This is not merely a visual frame-rate issue; simulation throughput cannot keep up with wall-clock time. The drop grew from 4.929 to 11.796 to 30.790 s in the same session. Render calls were modest (**24, 24, 21**), triangles ~**21–22k**, but those numbers do not rule out particle-buffer uploads, GPU fill, or JS simulation costs.
+
+**⚠️ Suspects, not established causes:**
+1. Existing feeding implementation checks phage contact for every active bead against the phage list: approximately **O(A×P)** per physics step. With 93k–99k active beads, 10 phages and 125 target steps/s, the worst-case order is **116–124 million bead–phage candidate comparisons per simulated second**, before other bead work. **Important:** this scan existed in v6; it is a scaling bottleneck, **not proof of a newly introduced v7 defect**.
+2. v7 adds phage gravity, per-phage predator prediction, event bookkeeping, and exhaust handling. Phage threat checks are approximately O(P²) per step, but with P=10 this alone is unlikely to explain such a large regression.
+3. Gravity/impulse-driven bead distributions may increase bead collision work; v7 accumulated ~23.47m approximate contacts and ~5.31m wall bounces. Whether that is dominant requires measurement.
+4. Particle positions/colors may still upload buffers for 100k points regardless of active count. Render call and triangle counts are insufficient for diagnosis.
+5. Any allocation or heavy instrumentation inside per-step/per-bead loops could add overhead. No phase-level timing exists yet.
+
+**⚠️ Do not diagnose by FPS alone.** The sample FPS, fixed-step backlog/drop, active bead count, phage count, collisions per step, and browser rendering must be recorded together. The v7 run had no exhaust, so **yellow-particle spawning itself cannot explain the slowdown**.
+
+### 🧭 Proposed performance repair — measurement first, spatial feeding second
+
+**P0 — Profile without changing behavior.** Instrument elapsed milliseconds per fixed physics step and its phases: bead integration/gravity, bead–bead contacts, bead–wall response, phage movement/gravity, phage–phage threat/collision, bead–phage feeding, buffer update, and frame render. Use lightweight aggregated counters/sampled timings (not per-bead logs). Report p50/p95 step time, max, simulated steps/frame, dropped time/frame, active bead count, P, and candidate comparisons. Ensure timing overhead is negligible. Establish baselines at **0, 1, 10 phages** in fresh STRONG-gravity runs with no impulse; measure with 100k active beads. If 0 phages is also slow, look at the bead core or rendering before optimizing predators.
+
+**P1 — Spatialize bead–phage feeding if profiling confirms it.** Reuse the existing spatial grid. Each phage indexes **all cells intersecting its current sphere** (not only the center cell), with cell-range bounds updated as it moves/grows. Each bead tests only phages indexed in its own cell. Preserve frozen-radius-per-step feeding, 20 BB/s credit cap, deterministic tie-breaking/rotating priority, and material accounting. Reuse typed arrays or pooled lists to avoid allocation churn. Add `feedingCandidatesTested`, `feedingContacts`, and `feedingMs` to quantify the speedup. Validate correctness near cell boundaries and for large phages. An alternative phage-neighbor query against the bead grid may be preferable if it is cheaper; benchmark rather than presuppose.
+
+**P2 — Only then tune secondary costs.** If phage–phage O(P²) dominates at high P, introduce a predator broadphase. If the bead engine dominates at P=0, optimize its hot loops without changing the collision model's observable behavior. If rendering dominates, investigate dynamic attribute uploads and overdraw. Never reduce 100k beads, silently change physics, or remove the phage mechanics merely to make FPS look better.
+
+**Validation gates:** Compare v7 and optimized build under matched settings and active population; target recovery toward **~60 FPS** on the same phone while preserving 100k beads, bead accounting, no containment violations, and small dropped-time accumulation. Compare **0/1/10/56 phages**, and test a deliberately oversized predator separately so the yellow-BB exhaust/escape code actually executes. Record escape trajectory, mass debit, opposite exhaust momentum, reactivated yellow BBs, and whether a fleeing phage survives. **No successful escape claim until a real escape event is observed.**
+
+**Priority decision:** Fix performance and validate the existing mechanics before adding more features. The current visual result is worth preserving.
+
 ## 🗂️ Chronology and epistemic status
 
 | Build | Change | Evidence |
@@ -176,7 +235,7 @@ The report claims **25,664 digestions despite only 18 captures**. Code inspectio
 | v2 | Zero Point and three gravity modes | two measured inspector reports |
 | v3 / 29158dac | remove Zero Point, add Zero G and Microgravity | GitHub commit/readback |
 | v4 / 846a880f | localized impulse + radial instruments | commit/readback and full user report |
-| v5 / af9d255f | red growing phages | two user reports: total extinction, catastrophic growth |\n| v6 / 72282c13 | throttled feeding, bounce, capture, digestion | user screenshot + 56-phage inspector report; completion counter bug found |
+| v5 / af9d255f | red growing phages | two user reports: total extinction, catastrophic growth |\n| v6 / 72282c13 | throttled feeding, bounce, capture, digestion | user screenshot + 56-phage inspector report; completion counter bug found |\n| v7 / e5c380b4 | phage gravity, yellow BB reaction exhaust, escape telemetry; digestion counter fix | public screenshot and 3 reports; 17–19 FPS regression; escape not yet triggered |
 
 ## ⚠️ Open experiments and cautions
 
@@ -189,4 +248,4 @@ The report claims **25,664 digestions despite only 18 captures**. Code inspectio
 7. For the impulse hypothesis, measure time-resolved shell statistics after a single controlled tap rather than inferring a propagating wave from snapshots.
 8. Treat Ledger as a historical account; consult live source before changing implementation.
 
-**🐉 Arc of the experiment:** a chaotic bead medium → selectable central forces and absorbing horizon → one-shot radial disturbances → a red inhabitant that consumes the substrate and enlarges its own geometry. This is a progression from visual emergent structure toward consequential, composable inhabitants of an executable world.
+**🐉 Arc of the experiment (updated through v7):** a chaotic bead medium → selectable central forces and absorbing horizon → one-shot radial disturbances → a red inhabitant that consumes the substrate and enlarges its own geometry. This is a progression from visual emergent structure toward consequential, composable inhabitants of an executable world → gravity-bound predators that may sacrifice material to escape. The next problem is engineering: preserve the new causal richness while restoring mobile simulation throughput.
