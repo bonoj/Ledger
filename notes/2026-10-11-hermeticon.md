@@ -367,3 +367,150 @@ Three unresolved questions now define the next experiment:
 The canonical engineering history remains in the [Hermeticon Ledger](https://github.com/bonoj/Ledger/blob/main/notes/2026-10-11-hermeticon.md).
 
 *Chronology note:* The first six message timestamps were recoverable directly. Later inspector timestamps are exact, but the corresponding human message times were not available. Some intermediate turns and exact original wording could not be recovered, so this is a reconstructed chronology rather than a complete verbatim transcript.
+
+---
+
+## 2026-10-11 · v8 field report and response — partial verbatim capture
+
+**Archival integrity note:** The previous human turn was a large JSON inspection report. The complete raw message is not accessible through the available conversation-history tools in a form that can be copied byte-for-byte. Therefore the human report below is a **verbatim excerpt of its top-level and diagnostic fields**, not a complete verbatim transcript. Do not represent this section as a fully archived turn pair. The model reply is preserved verbatim below, with its chart and layout rendered as Markdown equivalents.
+
+### Human — original v8 inspector report (verbatim excerpts)
+
+```json
+{
+  "build": "hermeticon-v8-shell-v7",
+  "time": "2026-10-11T09:34:40.359Z",
+  "viewport": {
+    "width": 384,
+    "height": 694,
+    "pixelRatio": 1.7
+  },
+  "performance": {
+    "fpsApprox": 59.93
+  },
+  "simulation": {
+    "time": 35.936,
+    "steps": 4492,
+    "droppedSeconds": 0.092,
+    "fixedStep": 0.008
+  },
+  "hermeticon": {
+    "count": 100000,
+    "active": 22337,
+    "captured": 64823,
+    "phageConsumed": 12840,
+    "phageSpawns": 59,
+    "phageCaptures": 1,
+    "phageDigestions": 0,
+    "phageBounces": 116,
+    "peakFeedingPerStep": 1,
+    "exhaustTotal": 276,
+    "exhaustReconsumed": 110,
+    "yellowBBsActive": 166,
+    "escapeAttempts": 69,
+    "escapeSuccesses": 50,
+    "escapeFailures": 1,
+    "thrustImpulseTotal": 4.2594,
+    "performanceProfile": {
+      "sampleEverySteps": 64,
+      "samples": 71,
+      "meanStepMs": 18.961,
+      "p50StepMs": 13.8,
+      "p95StepMs": 32.9,
+      "maxStepMs": 42.6,
+      "meanPhageMs": 0.025,
+      "meanFeedingGridMs": 0.015,
+      "meanBeadLoopMs": 18.92,
+      "meanFeedingExactMs": 7.132,
+      "lastStepFeedingCandidates": 94,
+      "lastStepFeedingContacts": 7,
+      "totalFeedingCandidates": 157700,
+      "totalFeedingContacts": 13116,
+      "indexedPhageCellEntries": 1798,
+      "gridCells": 85184,
+      "activePhages": 58,
+      "note": "Sampled phase timers include instrumentation overhead; bead-loop includes feeding, collisions and integration; render not timed here."
+    },
+    "accountedBeads": 100000,
+    "contacts": 5381731,
+    "bounces": 668755,
+    "ticks": 4492,
+    "outside": 0,
+    "gravity": "MICROGRAVITY",
+    "impulses": 0
+  }
+}
+```
+
+**Omitted from the human excerpt:** camera, vessel, render, containment, invariants, interactionTrace, warnings, the 80-entry event history, material, the 59 individual phage records, radial shell counts, momentum, and other diagnostic fields. These fields were present in the original turn but are not archived here verbatim.
+
+### Model — previous response (verbatim wording; Markdown layout)
+
+🐉 **There it is. Hermeticon is back at 60 FPS. And the phages are fighting for their lives.**
+
+**v8 frame rate:** 59.93 FPS
+
+**Dropped time:** 0.092s across ~36 seconds
+
+**Population:** 100k, fully accounted for
+
+## Performance recovery
+
+**Observed FPS — v7 versus v8** (different simulation states; not a controlled A/B comparison):
+
+| Build | FPS |
+|---|---:|
+| v7 | 16.95 |
+| v8 | 59.93 |
+
+That's **3.54× the observed frame rate** of the previous v7 report, although the conditions differ.
+
+The profiler confirms the spatial lookup is doing its job:
+
+| Measurement | v8 |
+|---|---:|
+| Feeding candidate tests, cumulative | 157,700 |
+| Feeding grid construction, sampled mean | 0.015 ms |
+| Phage processing, sampled mean | 0.025 ms |
+| Full bead loop, sampled mean | 18.92 ms |
+| Physics step p50 / p95 | 13.8 / 32.9 ms |
+
+One instrumentation caveat: the reported 7.132 ms of exact feeding timing includes a `performance.now()` measurement inside the per-bead loop on sampled steps. That measurement itself is expensive. The sampled step times therefore aren't clean production step timings, even though the measured frame rate is excellent.
+
+## The ecological experiment worked
+
+**Phages spawned:** 59 — 58 alive, 1 captured
+
+**Escape attempts:** 69 — 50 reported successes
+
+**Yellow BBs expelled:** 276 — 166 still active, 110 reconsumed
+
+**Phage material consumed:** 12,840 — BBs currently held by phages
+
+There's an especially interesting event sequence:
+
+- **Step 4335:** Phage 36 ejects four BBs to escape predator 8.
+- **Step 4341:** Predator 8 captures phage 36 anyway.
+- **At inspection:** Phage 36 is 60.4% digested.
+
+That's exactly the sort of consequential interaction we wanted: an organism sacrifices material and attempts escape, but survival isn't guaranteed.
+
+However, I found two issues worth correcting before interpreting the ecology quantitatively.
+
+**First, escape successes are overstated.** The current code can mark an escape successful when the immediate threat disappears or changes, even without demonstrating sustained separation. The event log contains several successes just one simulation step after an exhaust event. We have verified *reaction exhaust*, not 50 rigorously demonstrated successful evasions.
+
+**Second, the profiler itself needs refinement.** We should remove per-bead timer calls, measure whole phases at their boundaries, and preserve lightweight candidate counters. That will give us trustworthy physics costs without distorting the sampled steps.
+
+## Conservation and containment
+
+All current checks pass:
+
+- 22,337 active + 64,823 black-hole captured + 12,840 phage-consumed = **100,000 BBs**.
+- Zero escaped BBs.
+- Zero containment violations.
+- Zero invariant failures.
+- One captured phage undergoing digestion.
+
+This confirms bead-count accounting, though full phage-material conservation through digestion still needs a stronger invariant.
+
+**My recommendation:** Preserve v8 as our recovered-performance baseline. The next surgical change should improve escape outcome accounting and profiling, not redesign the physics. We've now observed material consumption, expulsion, reconsumption, predation, and an unsuccessful escape attempt in a single executable world.
