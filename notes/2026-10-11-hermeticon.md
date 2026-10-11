@@ -598,3 +598,36 @@ Implementation: magenta material persists while a phage has an eligible target; 
 **Known limitation:** hunt net-bead telemetry does not yet include captured prey's digested material. Hunt success, FPS, and conservation in v9 require a real browser report.
 
 **Why this matters:** The human invited the model to choose the experiment; the model proposed an ecology of costly pursuit; the human added a legibility constraint and authorized implementation. The resulting system tests whether spending one's own body to hunt can produce unscripted reversals of predator and prey.
+
+
+---
+
+## 2026-10-11 — Hunting ghosts in the machine: v9 FPS diagnosis and v10 profiler repair
+
+**Human, verbatim:**
+> Hunt for ghosts in the machine. Fps below 60 steady is unacceptable.
+
+**Model, verbatim initial response:**
+> Agreed. **Steady sub-60 FPS is a defect**, not an acceptable tradeoff for 100,000 beads.
+>
+> The first ghost I suspect is our own instrumentation: v9 calls `performance.now()` inside the bead loop on sampled steps. The profiler reports 12.77 ms spent measuring feeding, despite only a handful of actual feeding candidates per step.
+>
+> That is measurement overhead, not feeding physics. I'll remove it, then inspect the remaining hot path without changing the ecology.
+
+**Evidence from user-provided v9 report (2026-10-11T09:41:51.717Z):**
+- Build `hermeticon-v9-hunters`; phone viewport 384×694 at DPR 1.7; observed FPS **44.88**.
+- **98,181 active BBs** out of 100,000, 14 live phages, STRONG gravity; zero hunt attempts and zero hunters. Thus this snapshot cannot measure hunting overhead.
+- Fixed step .008 seconds, 2,102 steps, 16.816 simulated seconds, .075 dropped seconds.
+- Sampled mean step 32.179 ms; bead loop 32.176 ms; feeding exact timing 12.77 ms, though the timing itself was called for every active bead on sampled steps. Sampled timing was intrusive and cannot be treated as a trustworthy isolated feeding cost.
+- No containment or invariant failures; accounted beads 100,000.
+- v8's ~59.93 FPS snapshot had only 22,337 active beads under MICROGRAVITY, so it was **not** a controlled performance comparison.
+
+**Model action:** Removed per-bead `performance.now()` calls and their derived `meanFeedingExactMs` field; retained sampled boundary-level phase timings, feeding candidate/contact counters, and all simulation behavior. Bumped build identity to `hermeticon-v10-perf-ghosts`.
+
+**Source:** `bonoj/bonoj.github.io/jit/hermeticon/index.html`  
+**Commit:** `38a7fc117503712092af02a9bda159c6a72afdc5`  
+**Public URL:** https://bonoj.github.io/jit/hermeticon/
+
+**Model delivery summary:** Syntax test passed; GitHub source readback matched. Public Pages deployment and phone FPS **not independently verified**. This is a first surgical profiler repair, not proof that 60 FPS has been recovered.
+
+**Next experiment:** Run v10 on the phone with ~100k active beads under STRONG gravity and capture an inspector report. Compare steady FPS and boundary-only timings to v9. If still below 60, profile/optimize the bead-loop physics and render costs without sacrificing the 100,000-bead ecological system. The performance target is sustained **60 FPS**, not a one-time peak.
