@@ -514,3 +514,87 @@ All current checks pass:
 This confirms bead-count accounting, though full phage-material conservation through digestion still needs a stronger invariant.
 
 **My recommendation:** Preserve v8 as our recovered-performance baseline. The next surgical change should improve escape outcome accounting and profiling, not redesign the physics. We've now observed material consumption, expulsion, reconsumption, predation, and an unsuccessful escape attempt in a single executable world.
+
+
+---
+
+## 2026-10-11 — The invitation to lead: Hermeticon v9 hunters
+
+### Human invitation (verbatim)
+> Anything you're dying to try?
+
+### Model's proposed experiment (verbatim)
+> Oh, yes. 🐉
+>
+> **I want to find out whether a phage can become a hunter.**
+>
+> Right now, we've given them metabolism, gravity, predation, and the ability to sacrifice mass for thrust. But they're mostly passengers in the physics. They react to danger; they don't pursue opportunity.
+>
+> Here's the experiment I'd love:
+>
+> Give each phage exactly one new capability: **it can eject BBs to accelerate toward prey, not just away from predators.**
+>
+> Same exhaust mechanism. Same conservation rules. No steering magic. No teleportation. No new particle species.
+>
+> That creates an interesting economy:
+>
+> - A hunter spends its own body to chase a meal.
+> - The prey can spend its body to escape.
+> - A failed hunt makes the hunter smaller and potentially vulnerable.
+> - A successful hunt may repay the expenditure many times over.
+> - The yellow BBs from both creatures return to the environment, where anyone can eat them.
+>
+> And the wonderful part is that **we don't have to script any of those outcomes**.
+>
+> I'd instrument pursuit expenditure, prey captured, net mass gained or lost, and whether hunting actually improves survival.
+>
+> I particularly want to see a large phage exhaust itself chasing a smaller one, only to become small enough that a third phage starts hunting *it*.
+>
+> That's the experiment. Not intelligence, exactly. **An ecology of consequential decisions made out of matter.**
+>
+> And I'd keep it strictly one experiment: preserve v8, introduce pursuit thrust, watch what happens.
+
+### Human design refinement (verbatim)
+> Make it legible when a phage becomes a hunter. Red > magenta?
+
+### Model's response (verbatim prose; visual color swatches omitted)
+> **Red → magenta.** Absolutely.
+>
+> I'd make the color indicate *intent*, not merely movement.
+>
+> **Red — Forager**
+>
+> Feeding opportunistically. No active pursuit.
+>
+> **Magenta — Hunter**
+>
+> Has selected prey and is spending mass to intercept it.
+>
+> I'd transition to magenta as soon as a phage commits to a target, then return to red when it abandons the hunt, captures its prey, or can no longer afford pursuit.
+>
+> And importantly, **magenta should persist between thrust bursts**. Otherwise we'd see flickering rather than recognize a creature engaged in a hunt.
+>
+> One extra touch: its yellow exhaust should stream *away from its target*. That makes the propulsion physically legible without adding arrows or UI clutter.
+>
+> The interesting visual will be a magenta hunter pursuing a red phage, which suddenly turns magenta itself when it spots something smaller.
+>
+> Same material economy. Two intentions. One color transition. 🐉
+
+### Human authorization (verbatim)
+> Engage.
+
+### Model implementation announcement (verbatim)
+> Engaging. 🐉
+>
+> I'll make **magenta a persistent hunting state**, not a flash during thrust. A hunter will spend its own mass to accelerate toward smaller prey, ejecting yellow BBs in the opposite direction. Threatened phages will still prioritize escape.
+>
+> I'll preserve v8's spatial feeding and 100,000-bead accounting, and add pursuit telemetry so we can see whether hunting pays for itself.
+
+### Delivered result
+Hermeticon v9, build `hermeticon-v9-hunters`, committed to `bonoj/bonoj.github.io/jit/hermeticon/index.html` at `4852e02a980584f6fdf149464ab13c35278eab9d`. Syntax check and GitHub readback passed; public Pages deployment and phone behavior were not independently verified.
+
+Implementation: magenta material persists while a phage has an eligible target; red indicates foraging. Prey selection requires a live target at most half the hunter's radius, within 6.5 units plus contact radii. Hunting thrust ejects up to four yellow BBs opposite the target, at a 0.55-second cooldown, spending the hunter's mass and accelerating it toward prey. Threat response retains priority. Telemetry records hunt-start, hunt-thrust, hunt-end, hunt-capture, active hunters, expended BBs, and individual phage hunt state. Existing v8 spatial feeding and population accounting remain intact.
+
+**Known limitation:** hunt net-bead telemetry does not yet include captured prey's digested material. Hunt success, FPS, and conservation in v9 require a real browser report.
+
+**Why this matters:** The human invited the model to choose the experiment; the model proposed an ecology of costly pursuit; the human added a legibility constraint and authorized implementation. The resulting system tests whether spending one's own body to hunt can produce unscripted reversals of predator and prey.
