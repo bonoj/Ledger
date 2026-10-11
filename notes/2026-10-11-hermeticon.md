@@ -631,3 +631,24 @@ Implementation: magenta material persists while a phage has an eligible target; 
 **Model delivery summary:** Syntax test passed; GitHub source readback matched. Public Pages deployment and phone FPS **not independently verified**. This is a first surgical profiler repair, not proof that 60 FPS has been recovered.
 
 **Next experiment:** Run v10 on the phone with ~100k active beads under STRONG gravity and capture an inspector report. Compare steady FPS and boundary-only timings to v9. If still below 60, profile/optimize the bead-loop physics and render costs without sacrificing the 100,000-bead ecological system. The performance target is sustained **60 FPS**, not a one-time peak.
+
+
+---
+
+## 2026-10-11 — Fingers crossed: Hermeticon v11 color and exhaust repair
+
+**Human:** “Fix both. Restore my 60fps.”
+
+**Diagnosis:** In v10, `phageConsumed` was a cumulative counter used as a condition to mark the entire 100,000-bead color buffer dirty every physics step after first feeding. That caused unnecessary requests to upload the RGB attribute. Yellow exhaust was physically present in the inspector but visually difficult to distinguish: only four tiny beads per thrust amid a dense point cloud. The reports showed 1,508 hunt-exhaust beads, 377 hunt thrusts, 2 hunt captures, 11 active hunters, but approximately 15 FPS.
+
+**Implementation:** Build `hermeticon-v11-color-exhaust` in `bonoj/bonoj.github.io/jit/hermeticon/index.html`. Changed color invalidation to a `colorsDirty` flag set by actual bead color changes and reset after an upload request. Added a larger yellow point-cloud overlay whose positions follow existing physical exhaust beads, with a compact list of exhaust indices rather than a full-population scan. No additional physical beads or material were created; bead population and fixed timestep remain unchanged.
+
+**GitHub commits:**
+- `c32a9051d4b4ad5eb1665ecbb795586e85815f5f` — color dirty-flag repair and overlay setup.
+- `f2110853f30cfe244fd3d9d4b6fec1a8b625a655` — active-exhaust tracking and overlay updates.
+
+**Verification:** Source readback matched the written content; JavaScript syntax check passed. Public deployment and phone FPS were not independently verified. **Do not call this a 60 FPS recovery yet.** A v11 phone inspector report is required, ideally with active hunters and visible exhaust.
+
+**Human, verbatim:** “Update ledger, fingers crossed🤞:).”
+
+**State of the experiment:** Hopeful, not declared solved. 🤞
