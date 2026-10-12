@@ -79,9 +79,23 @@ Those are useful witnesses, not proof of a complete matter engine. The cloud was
 
 But we have earned the crucial distinction: **matter persists when attention moves elsewhere**.
 
+## The atom that contains a universe
+
+There was another inheritance from the bauble we did **not** abandon: its unity.
+
+Seen from outside, a Hermeticon is one thing. It can have a position, move through space, and participate in a larger system alongside other things. At that scale it is an **atom** of composition—a single participant, not a demand that its observer inspect every internal bearing, cloud or hillside.
+
+Seen from within, the same Hermeticon opens onto a world of geology, weather, matter, inhabitants and history. Its visible sphere is not the limit of that world's existence. The world can be larger than the window through which it is experienced.
+
+These are simultaneous descriptions, not competing ones. **One particle from outside; an entire universe from inside.** Atomicity is a relationship between scales, not a claim that the interior is simple or that its material ceases to exist when unobserved.
+
+That makes the Hermeticon more than a portable viewpoint. It is a possible unit of composition: a world-bearing thing that can itself belong to a world. We have established the conceptual boundary and a working single-Hermeticon experiment; we have **not** yet demonstrated a complete recursive system of nested, interacting Hermeticons. That is the possibility the design opens, not an accomplishment we should quietly assume.
+
+The bauble's greatest gift was never just the glass. It was the ability to grasp something immense as **one thing**, without pretending it had become small.
+
 ## What the glass became
 
-We started with a sphere that contained everything. We ended with a sphere that has three distinct relationships to a world larger than itself:
+We started with a sphere that contained everything. We ended with a sphere that remains a single composable object while revealing a world larger than itself. It has three distinct relationships to that world:
 
 - **Observation:** a moving aperture into persistent geology.
 - **Manifestation:** a weather dome in which nearby cloud can become discrete rain.
@@ -94,6 +108,8 @@ There is a parallel in the way we built it. Our working harness—source, diagno
 The next frontier is not a bigger sphere. It is finding ways to spend detailed simulation only where detail is needed, without losing material, history or consequence elsewhere. We have not solved that yet.
 
 **The Hermeticon does not contain the world. It contains the cost of experiencing it.**
+
+**The Hermeticon is one thing from the outside, and a world from the inside. Neither description cancels the other.**
 
 The glass is small.
 
