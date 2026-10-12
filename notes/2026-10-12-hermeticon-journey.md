@@ -129,6 +129,24 @@ Those are useful witnesses, not proof of a complete matter engine. The cloud was
 
 But we have earned the crucial distinction: **matter persists when attention moves elsewhere**.
 
+## The world that could explain itself
+
+There was another observer in these experiments. It did not see the world the way the human did.
+
+The human could orbit the glass, watch the water move, notice a missed tap, delight in a bearing ricocheting around the bowl, or decide that a scene had finally become beautiful. The model could inspect the executable, its state and its witnesses: material inventories, geological coordinates, interaction traces, camera transitions, frame rates, shader hooks, containment checks and explicit invariants. These were not interchangeable senses. They were **two ways of encountering the same causal world**.
+
+The difference became decisive in Wanderer's rain. The human saw lively, absurd bouncing and liked it. The generic containment verifier reported an escape. The material ledger, however, still accounted for the bearings; some were simply beyond the moving aperture. The defect lay partly in the *observer*: the verifier still assumed that a bauble's glass defined the extent of its world. We changed its jurisdiction rather than destroying the playful behavior to silence an alarm.
+
+This is why instrumentation here is not an afterthought or a debug console stapled onto a picture. It is a **model-legible sensory surface**. An INSPECT report can say not merely *what happened*, but which assumptions were checked, which measurements support a claim, and where the evidence stops. A witness can itself be wrong. When it is, correcting the witness is part of correcting our shared understanding.
+
+It changes the collaboration. The human need not always translate a moving world into prose or screenshots before the model can reason about it. The model can often read the system's own accounts and inspect its implementation. Conversely, the model cannot infer delight, legibility, or the feel of a gesture from a passing invariant. The human remains the witness to those qualities. **Neither observer is complete; their evidence is complementary.**
+
+There is an honest limit to what we have earned. A model does not automatically possess a live stream of the browser's pixels or GPU state. Some runtime evidence still reaches it through reports that the human runs and shares, or through deliberately available inspection tools. A shader-compilation flag is not a complete proof of a rendered frame. Our ambition is to make the world's consequences directly and reliably inspectable without repeatedly asking the human to serve as courier—not to claim that this is universally solved.
+
+We have been tuning two instruments at once: the executable world, and the means by which a different kind of intelligence can observe it. The powerful part is not a particular JSON schema or counter. It is the habit of making causal claims inspectable, giving those claims witnesses, and allowing the witnesses to evolve when the world outgrows their assumptions.
+
+We can describe that principle openly without publishing every private operational mechanism behind the collaboration. Protecting a working instrument today need not mean treating its discoveries as possessions forever. The knowledge can be shared deliberately, with enough context to be useful, rather than surrendered accidentally before we understand what we are giving away.
+
 ## The atom that contains a universe
 
 There was another inheritance from the bauble we did **not** abandon: its unity. The armillary, the world-bearing Workshop, the conserved water, the fractured asteroid and the collapsing bead cloud had all approached this from different directions.
