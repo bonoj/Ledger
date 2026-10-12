@@ -12,11 +12,61 @@ And the glass became a problem.
 
 ## A world inside glass
 
-The baubles taught us to build legible, perturbable systems rather than merely decorate scenes. In Crucible, terrain could deform under meteors and material impacts. In Waterworld, discrete beads fed a conserved liquid reservoir whose surface moved and carried a little skiff. Elsewhere, particles rose, condensed, fell and accreted. We learned to separate material inventory from its visible representation, and a simulation from the mesh that lets us see it.
+The baubles taught us to build legible, perturbable systems rather than merely decorate scenes. In Crucible, terrain could deform under meteors and material impacts. Elsewhere, particles rose, condensed, fell and accreted. We learned to separate material inventory from its visible representation, and a simulation from the mesh that lets us see it.
 
 The glass made those experiments comprehensible. It also quietly trained us to assume that what was inside the sphere was the whole world.
 
 A vessel is an excellent place to test a law. It is a poor definition of a universe.
+
+## The instruments before the name
+
+The photographs of our experiments make the lineage clearer than a chronology of commits could.
+
+In Betwixt, a brass armillary hangs above a small world. In Workshop, an elaborate terrain-and-water landscape rests on an instrument of rings and supports. They are not yet the Hermeticon contract, but they establish a visual grammar: **the apparatus can be a thing in a world, while carrying a world of its own.** We were already distinguishing the instrument, its subject, and the observer.
+
+Other baubles tested what such an interior could mean. A little boy and an old man inhabited a miniature narrative world. Subnautimation pictured a civilization of islands and swimmers, with a displayed count of five active material circuits, 1,120 delivered parcels and 130 swimmers. Pale Horse made a frozen woodland into a place where a film and an explorable environment could meet. These are not evidence that every scene shares one physics engine. They are evidence that the **kind of world** need not define the instrument: a world may be a story, a civilization, an environment, or an experiment.
+
+We had been asking the glass to hold increasingly different things. The eventual Hermeticon could not be defined by any one of them.
+
+## Waterworld: substance without a single appearance
+
+Waterworld sharpened a harder question: if water is sometimes a flying bead and sometimes a continuous-looking surface, what remains the same?
+
+Its executable v25 account describes **245,944 conserved material units** across a shrinking source, ballistic beads, a collecting basin, and a 64 × 64 transport grid. The grid owns a discrete liquid-transport state; the rendered surface and apparent water volume are presentations of it. A brass skiff must meet the *rendered* water where the eye sees it, even when that surface differs slightly from the transport grid.
+
+This is not a complete three-dimensional liquid solver. It is an experiment in separating **substance, dynamics and appearance**. We can change how a material is represented without quietly creating or destroying it.
+
+That matters beyond water. If a Hermeticon can be one participant in a larger system while containing innumerable internal participants, then its detail must be negotiable without its identity or accounting becoming negotiable too.
+
+## Asteroid: the whole and its constituents
+
+Asteroid approached the same seam from the opposite direction.
+
+A carbonaceous rock appears to be one coherent body. Its executable v7 uses a sampled heterogeneous material field and assigns **five conserved bearings per occupied sample**. Staggered shock fronts expose its constituent bearings as the rock breaks apart; a reformation path brings the experiment back toward a whole.
+
+The point is not that a rock is secretly made of our preferred rendering primitive. The point is that a **whole** and its **constituent material** are two descriptions of one accountable thing. Breaking the presentation apart need not break the material ledger.
+
+In retrospect, Asteroid was rehearsing one half of Hermeticon atomicity: an object may be treated as a unit without denying the complexity inside it.
+
+## Genesis: constituents become a whole
+
+Hermeticon Genesis asked the complementary question.
+
+Its executable experiment begins with **100,000 beads**, deterministic particle-mesh self-gravity, gas pressure, a conservative sink and local collision interactions. The source explicitly declines to begin with authored planets or prearranged orbits. It tries instead to let organization arise from interactions among material units.
+
+Asteroid asks what happens when a whole becomes many. Genesis asks what happens when many begin to become a whole.
+
+Neither experiment by itself establishes a recursive universe. Together, they make the idea of an atomic Hermeticon less mystical and more exact. **Atomic from outside** does not mean **undifferentiated inside**. It means a surrounding system may interact with a coherent unit while that unit has its own internally meaningful causal life.
+
+## The boundary between causes
+
+Across the experiments, we also kept approaching a question we have not yet solved.
+
+An impulse, a meteor, a tap, or a collision acts **from outside inward**. A change in water inventory, an inhabitant's journey, an asteroid's fracture, or a forming star develops **from inside outward**. If a Hermeticon is to be a single participant in a larger world, which effects can cross its boundary? In what representation? With what conservation and provenance?
+
+That interface is not implemented as a general recursive mechanism. But our separate experiments have furnished its vocabulary: material identity, aggregate representation, local resolution, human intent, physical contact, and persistent world state.
+
+The Hermeticon emerged not from making our worlds smaller, but from learning **how much complexity a single thing can possess without ceasing to be one thing**.
 
 ## A world too large for glass
 
@@ -81,7 +131,7 @@ But we have earned the crucial distinction: **matter persists when attention mov
 
 ## The atom that contains a universe
 
-There was another inheritance from the bauble we did **not** abandon: its unity.
+There was another inheritance from the bauble we did **not** abandon: its unity. The armillary, the world-bearing Workshop, the conserved water, the fractured asteroid and the collapsing bead cloud had all approached this from different directions.
 
 Seen from outside, a Hermeticon is one thing. It can have a position, move through space, and participate in a larger system alongside other things. At that scale it is an **atom** of composition—a single participant, not a demand that its observer inspect every internal bearing, cloud or hillside.
 
@@ -105,7 +155,7 @@ Those roles need not share one definition of “inside.” The world continues o
 
 There is a parallel in the way we built it. Our working harness—source, diagnostics, semantic surfaces and handoffs—has changed repeatedly as our understanding changed. More like musicians tuning an instrument each time they play than engineers finishing one rigid apparatus. A good handoff preserves understanding without becoming another barrier to making things. When we described Hermeticon afresh, the existing documents were enough to recover the same meaning. **The semantics survived compression.**
 
-The next frontier is not a bigger sphere. It is finding ways to spend detailed simulation only where detail is needed, without losing material, history or consequence elsewhere. We have not solved that yet.
+The next frontier is not a bigger sphere. It is finding ways to spend detailed simulation only where detail is needed, without losing material, history or consequence elsewhere—and defining which causes and quantities may cross between a Hermeticon's inner and outer lives. We have not solved those problems yet.
 
 **The Hermeticon does not contain the world. It contains the cost of experiencing it.**
 
