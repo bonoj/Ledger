@@ -1,54 +1,102 @@
-# Hermeticon: the world beyond the glass
+# Hermeticon: The World Beyond the Glass
 
-*Ledger account · October 12, 2026 · [Wanderer V31](https://bonoj.github.io/jit/hermeticon-wanderer/)*
+*Ledger account · October 12, 2026 · [Hermeticon Wanderer](https://bonoj.github.io/jit/hermeticon-wanderer/) · accepted V31*
 
-This is an account of work between a human and a model, not an executable specification. Current behavior belongs to [Repository](https://github.com/bonoj/Repository/tree/main/src/jit/hermeticon-wanderer).
+We began by putting worlds inside glass.
 
-## The aperture
+It was a useful conceit. A sphere gave every experiment an edge, every material a place to go, and every simulation a shape we could hold in our minds. We could pour water into it, deform its terrain, fill it with thousands of tiny bearings, and watch consequences unfold inside a beautiful, bounded object.
 
-Our baubles began as beautiful bounded simulations. Hermeticon made a different claim: the glass is a three-dimensional eye into an independent geological world, not the world's edge. A deterministic signed geological field (seed 741; 85×21×85 samples) produces one resident mesh. A GPU spherical aperture reveals a local region. Walking does not regenerate or squeeze the terrain.
+Then we wanted to walk.
 
-## The inhabitant
+And the glass became a problem.
 
-Wanderer introduced a human interaction contract: tap directs; drag orbits; pinch zooms. Camera control remains available while walking and raining. The world begins sliding after Wanderer leaves the central 25% of aperture **area** (half the radius). This behavior was tested and accepted. Flat-plane tap targeting and a cube avatar remain deliberate provisional choices.
+## A world inside glass
 
-## The weather
+The baubles taught us to build legible, perturbable systems rather than merely decorate scenes. In Crucible, terrain could deform under meteors and material impacts. In Waterworld, discrete beads fed a conserved liquid reservoir whose surface moved and carried a little skiff. Elsewhere, particles rose, condensed, fell and accreted. We learned to separate material inventory from its visible representation, and a simulation from the mesh that lets us see it.
 
-The cloud occupies geological coordinates. Its visible mesh is clipped to the upper weather dome. Emission happens only where cloud intersects that dome; leaving can pause emission, returning can resume it. Emitted bearings remain in the geological world even when outside the moving view. The upper hemisphere is not a BB collision wall. The lower bowl is physical.
+The glass made those experiments comprehensible. It also quietly trained us to assume that what was inside the sphere was the whole world.
 
-The moving bowl currently produces lively repeated bounces. The player likes the effect; strict trajectory-based collision remains unresolved. We stopped interpreting every bearing outside the aperture as an escape. A generic containment verifier must check the jurisdiction of its objects, not insist that all geological matter lives inside moving glass.
+A vessel is an excellent place to test a law. It is a poor definition of a universe.
 
-## Material evidence
+## A world too large for glass
 
-The cloud begins with 10,000 material units. Each successful emission transfers one unit into a discrete BB:
+Hermeticon began by reversing the relationship.
 
-```
+Instead of fitting terrain into a sphere, we made a persistent geological field and allowed the sphere to reveal a piece of it. The geology is deterministic: seed 741, a signed field sampled on an 85 × 21 × 85 lattice, built into a resident mesh. The Hermeticon's spherical aperture reveals a portion of that mesh without remeshing the world each time the viewpoint moves.
+
+That change sounds like a camera trick. It is actually a change in what exists.
+
+The terrain beyond the glass is not missing terrain waiting to be invented. It is terrain we cannot currently see. The boundary has moved from *the edge of reality* to *the edge of observation*.
+
+## Then we wanted to walk
+
+We gave the aperture an inhabitant: a small cube called Wanderer.
+
+This forced us to take human intent seriously. A tap means go there. A drag means orbit the camera. Two fingers mean zoom. Those gestures must remain distinct while the inhabitant walks and the simulation continues. Early attempts to consult complex terrain geometry during interaction produced missed taps and an unreliable, blinking cube. We simplified: flat-plane targets, continuous movement, no expensive per-frame terrain raycasts.
+
+Then came the question of how a moving eye should follow its inhabitant. Locking the Wanderer rigidly to the center felt like dragging a diorama beneath him. Letting him wander entirely offscreen was no better. The accepted compromise gives him the central **25% of aperture area**—half the aperture radius—to roam before the world begins sliding. The camera stays in the human's hands.
+
+This was the experiential turning point. We were no longer looking *at* a little world. We were moving *through* a much larger one, with a small visible neighborhood following our steps.
+
+## The cloud that stayed behind
+
+Weather made the new interpretation unavoidable.
+
+In a traditional bauble, a cloud belongs to the container. Move the container, and the weather comes along. But our cloud belonged to the geological world. Walking away should leave it behind. If it was still raining everywhere we went, the sphere was secretly acting as the owner of the sky.
+
+We placed the cloud in geological coordinates and clipped its visible mesh to the Hermeticon's upper weather dome. Rain can manifest only where the cloud overlaps that dome. Leave the cloud's reach and local emission stops. Return while inventory remains and emission can resume.
+
+The cloud does not disappear merely because it is out of sight. Nor does its material budget refill when we look again.
+
+The upper dome is therefore not a hard wall for falling matter. It is a boundary for **local weather manifestation and observation**. The lower hemisphere has a different job: it is a **physical bowl**, capable of contacting bearings that cross its surface.
+
+One object, several kinds of boundary. Confusing them had caused much of our trouble.
+
+## The bearings refused to vanish
+
+The next question was even better: what happens to a raindrop when we walk away?
+
+A spawned bearing must remain at its geological position. It may become invisible because it lies outside the aperture, but invisibility cannot be destruction. Likewise, a moving glass boundary should not automatically seize ownership of everything it passes.
+
+Our first containment verifier disagreed. It reported bearings outside the sphere as violations, as though the old bauble rule still applied. The alarm was revealing: **the verifier understood the former architecture, not the world we had built.**
+
+We corrected its jurisdiction. Geological terrain, cloud and bearings are not vessel-local objects. The verifier still checks objects that genuinely belong inside the Hermeticon, but it no longer declares world matter escaped simply because the eye moved away.
+
+The lower bowl's current collision response is lively to the point of absurdity. It can repeatedly bounce bearings against moving glass—our affectionate “nutso ball” behavior. We enjoyed it and kept it, while recording that strictly trajectory-based contact remains unfinished. An amusing physical consequence is not the same thing as a proven physical law.
+
+## Material has a memory
+
+The rain began with **10,000 units**. Emission transfers a unit from cloud inventory into a persistent bearing; a bearing may be airborne or resting, but it does not become an extra unit by landing.
+
+```text
 cloudRemaining + emittedBBs = 10000
-emittedBBs = restingBBs + airborneBBs
+emittedBBs = airborneBBs + restingBBs
 ```
 
-Resting BBs are not a second inventory. No general water collection, absorption, phase conversion, or distant aggregate-resolution machinery exists in Wanderer yet.
+In the player-accepted V31 report, after 33.752 simulated seconds, all 10,000 had emitted: 848 airborne, 9,152 resting. **185 bearings remained offscreen**, still accounted for. The report showed conservation holding, no generic invariant or containment failures, and approximately **58.94 FPS** on the player's phone.
 
-In the accepted V31 report, at 33.752 simulated seconds, 10,000 BBs had emitted, 9,152 were resting, 848 airborne, 9,815 within the aperture, and 185 persisted offscreen. Conservation held, generic invariant/containment failures were zero, and measured performance was about 58.94 FPS. There were also 182 BBs beyond the lower bowl and roughly 1.59 million wall-bounce events. The cloud was exhausted at inspection: shader compilation and terrain aperture witnesses passed, but that snapshot does not prove proportional emission or visual clipping for a partially overlapping cloud. Those remain open.
+Those are useful witnesses, not proof of a complete matter engine. The cloud was already exhausted at inspection, so that report does not directly demonstrate the visual or emission behavior of a partly overlapping cloud. Some bearings were outside the lower bowl; repeated wall contacts do not yet prove correct crossing physics. Wanderer has no pooling or absorption system, nor a general mechanism for changing distant material into a cheaper aggregate representation.
 
-## Tuning the instrument
+But we have earned the crucial distinction: **matter persists when attention moves elsewhere**.
 
-The collaboration has been an experiment too. Home, Window, Sanctum and cold handoffs grew to preserve continuity between model sessions. But the aim is not one immovable harness. We are more like musicians adjusting an instrument whenever we sit down to play. The harness changes with the work.
+## What the glass became
 
-We called this an **anti-antipattern**: a refusal to let the system for helping us build become a bureaucracy that prevents us from building. Autocorrect briefly made it “antimatter,” which suited a discussion of material accounting but was not the intended term.
+We started with a sphere that contained everything. We ended with a sphere that has three distinct relationships to a world larger than itself:
 
-Wanderer now has a local HANDOFF.md pointing to the relevant executable, semantic surface, Hermeticon and matter contracts, and read paths into Home and Sanctum. It is explicitly **not a gate**. If a handoff is missing or unwritable, continue from executable evidence and the operating contracts. A failed convenience operation calls for diagnosis and permitted recovery, not surrender; genuine access and safety boundaries still stand.
+- **Observation:** a moving aperture into persistent geology.
+- **Manifestation:** a weather dome in which nearby cloud can become discrete rain.
+- **Contact:** a lower bowl that physically interacts with matter.
 
-A useful test occurred when the human described the system in new words and the model recovered the same interpretation from existing documents. No new architecture or prose was required. **The semantics survived compression.** We do not need perfect transcript continuity; we need continuity of understanding.
+Those roles need not share one definition of “inside.” The world continues outside our view. The Hermeticon governs what we witness, what locally manifests, and where its physical surface matters.
 
-## Disclosure and distinction
+There is a parallel in the way we built it. Our working harness—source, diagnostics, semantic surfaces and handoffs—has changed repeatedly as our understanding changed. More like musicians tuning an instrument each time they play than engineers finishing one rigid apparatus. A good handoff preserves understanding without becoming another barrier to making things. When we described Hermeticon afresh, the existing documents were enough to recover the same meaning. **The semantics survived compression.**
 
-The broad practice of human–model collaboration and a malleable harness need not be treated as a proprietary incantation. Describing how we work is different from publishing private infrastructure, credentials, or unpublished technical details. This account shares the journey and public experimental evidence, not the private machinery. Intellectual-property rules distinguish general ideas from particular protected expression, technical inventions and confidential know-how; the account makes no blanket legal claim.
-
-## The threshold
-
-Hermeticon now separates three relationships: observation of a persistent world, local manifestation of weather, and physical interaction with matter. Material can persist outside our view. The remaining challenge is not making a larger sphere; it is learning how to vary the **cost of resolution** while preserving consequence.
+The next frontier is not a bigger sphere. It is finding ways to spend detailed simulation only where detail is needed, without losing material, history or consequence elsewhere. We have not solved that yet.
 
 **The Hermeticon does not contain the world. It contains the cost of experiencing it.**
 
-The glass is small. The world need not be. And the instrument can keep changing. 🐉
+The glass is small.
+
+The world need not be.
+
+And the instrument can keep changing. 🐉
