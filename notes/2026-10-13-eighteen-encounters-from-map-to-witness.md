@@ -199,7 +199,20 @@ Violet Coast settled at t=135.760s, visit 1, scene hidden with `near:false` and 
 
 **Disposition:** No Hermeticon modifications. Await Report 12 and qualitative appearance observations.
 
-*Awaiting Report 12.*
+## Report 12 — Bood Lakes (2026-10-13)
+
+**Evidence:** User INSPECT on build `05b3897a2f1e29e1c67fef16fc56ff967c171159`, simulation t=295.93s, 70.9 fps, zero runtime errors; 18 registered and 18 scene instances, no missing scenes, zero geological transactions.
+
+**Bood Lakes:** Anchor (-14,1), seed 40336, 18 meshes, scene group visible, aperture center distance 3.72. Wanderer (-13.010,-1.131), distance 2.35 from anchor, visit 1. Primed t=285.744s, performing t=286.472s (0.728s wait), still performing at t=295.93s after 9.458s. Settlement near t=297.472s is an expectation, not an observed transition. No material transactions or errors.
+
+**Concurrent state:** Cinderglade and Fell Crater settled at t=282.872s (confirming Report 11's forecast to within 0.008s) and its scene group remains visible alongside performing Bood Lakes. Whisperwood remains primed and unvisited for 89.26s, now aperture distance 8.03, outside the prime radius. Jade Peak is also primed without a visit, outside the aperture.
+
+**Interpretation:** Eleven distinct encounters activated; ten settled and one performing. The overlapping visible scene groups support scene persistence during travel, but are not pixel-level confirmation. Bood Lakes' intended liquid/material behavior remains unimplemented; no geological transactions, terrain hits, or micro contacts reported. Crucible rain count remains 8,306, unrelated to encounter material transfers.
+
+**Disposition:** No Hermeticon changes. Await Report 13 and the human witness's visual observations.
+
+*Awaiting Report 13.*
+
 
 
 
