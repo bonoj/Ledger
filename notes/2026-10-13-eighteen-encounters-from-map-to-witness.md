@@ -151,5 +151,18 @@ Violet Coast settled at t=135.760s, visit 1, scene hidden with `near:false` and 
 
 **Disposition:** No source changes; survey continues. Six visual performances have activated, but zero geological transactions. Human visual judgment not yet reported.
 
-*Awaiting Report 8.*
+## Report 8 — Brambles (2026-10-13)
+
+**Evidence:** User INSPECT on unchanged deployed build `05b3897a2f1e29e1c67fef16fc56ff967c171159`, simulation t=196.90s, 73.3 fps, zero runtime errors. Encounter registry and scene count 18, no missing scenes, zero geological transactions.
+
+**Brambles:** Anchor (-1,-12), seed 79931, 14 meshes. Wanderer (-0.831,-12.744), nearest distance 0.76. Aperture distance 2.06, `near:true`, scene group visible. Primed at 171.560s, activated by Wanderer at 189.968s, **18.408 seconds after priming**. At inspection `performing` for 6.93 seconds, visit 1, no errors or material transactions. If uninterrupted, scheduled settling is approximately 200.968s; not yet observed.
+
+**Concurrent scene:** Kindle Tower remains settled and group-visible, 13 meshes, aperture distance 5.22. Seven of eighteen encounters have activated so far, six confirmed settled and Brambles performing. No physical entanglement, terrain or BB material transactions demonstrated. Two thumps cumulatively affected 16,612 rain particles; not evidence of encounter action.
+
+**Interpretation:** Brambles confirms the dual-distance gate inferred in Report 7: aperture proximity primes, Wanderer proximity activates. It did not activate while Wanderer was farther away, then activated on approach. This is evidence for lifecycle mechanics, not rendered-pixel quality or authored material consequence.
+
+**Disposition:** Preserve build; await Report 9 and human visual impressions.
+
+*Awaiting Report 9.*
+
 
