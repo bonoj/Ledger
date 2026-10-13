@@ -103,4 +103,18 @@ No geological transactions occurred. The planned excavating customs arches and m
 
 Observation: walker-to-anchor distance and aperture-to-anchor distance use different frames. No code changes requested. Await Report 3.
 
-*Awaiting Report 3.*
+## Report 3 — Spill (2026-10-13)
+
+**Evidence:** INSPECT telemetry on deployed build `05b3897a2f1e29e1c67fef16fc56ff967c171159` at simulation time 80.87 seconds. Frame rate 69.7 fps; no identity errors; 18 registry entries and scene definitions; no missing scenes.
+
+**Spill:** Anchor (19,-13), seed 95769, 17 meshes. The Wanderer was at (17.694,-14.685), 2.13 horizontal units from the anchor. Both dormant→primed and primed→performing occurred at 68.952 seconds; performing→settled at 79.960 seconds. At inspection, settled for 0.91 seconds; scene group visible, within aperture, center distance 5.10; visit count 1, no errors.
+
+**Other witnesses:** Silverpass settled at 61.424 seconds and its group was now hidden outside the aperture. Heart of Darkness remained settled and hidden outside the aperture. Rift entered primed at 68.584 seconds, but had not performed. Jade Peak remained primed from earlier. The audit showed only Spill as an active scene.
+
+**Expected versus observed:** The intended uphill material stream and self-excavated sediment channel are not implemented. The report contains zero geological transactions, no terrain interactions, no micro impacts, and no material movement attributable to Spill. Its visual scene and lifecycle are present; its physical consequence is not.
+
+**Interpretation:** Three encounters have completed their timed performance in one continuous browser session without reported errors. Rift's separate primed state is consistent with proximity gating, not unintended triggering. Scene visibility correctly falls away when completed encounters leave the aperture. These are telemetry claims, not judgments of visible animation quality.
+
+**Disposition:** No Hermeticon changes during expedition. Await human visual impressions and Report 4.
+
+*Awaiting Report 4.*
