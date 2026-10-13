@@ -245,7 +245,18 @@ Violet Coast settled at t=135.760s, visit 1, scene hidden with `near:false` and 
 
 **Disposition:** Count fourteen of eighteen **activated**, thirteen settled and Jade Peak performing; four unvisited. Do not infer Jade Peak completion before another report. Geological transactions remain zero. No world modifications during expedition.
 
-*Awaiting Report 16.*
+## Report 16 — Winter King's Realm (2026-10-13)
+
+**Evidence:** INSPECT build `05b3897a2f1e29e1c67fef16fc56ff967c171159`, simulation t452.22s, 67.3 fps, no global errors; registry 18, scenes 18, missing 0, geological transactions 0.
+
+**Winter King's Realm:** Anchor (12,14), seed 8660. Wanderer (12.956,2.499,12.760), distance 1.57; aperture-center distance 6.28. Phase **performing** at inspection, visits 1, 18 meshes, group visible. Dormant→primed and primed→performing both at t443.728, immediate activation on first priming step; 8.50s into performance. **Settlement not yet observed.** No encounter-local errors or material transactions.
+
+**Follow-up on Report 15:** Jade Peak settled at t439.704 after beginning performance t428.696; remains visible at center distance 6.07, visits 1. Heart of Darkness remains settled and visible at center distance 6.19, visits 1. Three encounter groups simultaneously visible (Winter King's Realm performing, Jade Peak and Heart of Darkness settled), without evidence of repeat activation.
+
+**Disposition:** Fifteen of eighteen encounters activated: fourteen settled, one performing. Ice Vale, Gradient, Ocean of Tears remain dormant/unvisited. Seven cumulative thumps, zero fractures, not attributed to encounters. No world modifications during expedition.
+
+*Awaiting Report 17.*
+
 
 
 
