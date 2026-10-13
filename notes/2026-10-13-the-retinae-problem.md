@@ -104,15 +104,25 @@ A reliable workflow requires more than visually plausible output:
 
 This is why the small instrumentation details matter. FPS measures performance, not correctness. A build SHA anchors which code was examined. A screenshot supplies visual evidence. A state probe can answer questions pixels cannot. Together they make a partial observation actionable.
 
-## Why call it a three-dimensional retina?
+## Three-dimensional retina: definition and implications
 
-The term is intentionally cross-disciplinary, but not merely metaphorical. A biological retina samples incident light over a curved, approximately two-dimensional receptor surface. A camera image plane samples a projection of three-dimensional geometry. The Hermeticon samples a **three-dimensional region** of a larger world, admitting entities into a local behavioral and rendering domain. It is a volumetric observation interface rather than an image plane.
+A **three-dimensional retina** is a bounded volumetric sampling interface into a larger persistent world. In Hermeticon Wanderer, its inner spherical boundary defines which world-space entities and populations participate in the local scene and which behaviors are active. The underlying geology and entity identities are defined independently of the camera's orientation.
 
-The term exposes several valid technical readings of the same executable object. In computer graphics, it raises questions of visibility, clipping, and projection. In computational geometry, it defines a spatial membership predicate. In simulation engineering, it separates persistent state from active local computation. In perception research, it highlights the transformation from sampled signals into inferred objects and causes. In epistemology, it asks what can be known about a system through partial observations.
+The term *retina* identifies the interface as a locus of observation; *three-dimensional* specifies the dimensionality of its sampling domain. A biological retina samples light across a curved receptor surface, while a conventional virtual camera projects geometry onto a two-dimensional image plane. The Hermeticon instead admits a three-dimensional portion of the world before any camera projection takes place.
 
-These readings are complementary, not competing definitions. Their intersection is the useful part: **the phrase “three-dimensional retina” is itself a shared semantic surface**. Specialists can approach it with different conceptual tools and still refer to one implementation, its boundary conditions, and its measurable behavior.
+This architecture separates three operations:
 
-The distinction from an ordinary sensor should remain explicit. The Hermeticon's boundary currently controls both observation eligibility and aspects of simulation activity; it is not a passive detector. Camera rotation, by contrast, should alter projection without altering entity state. Conflating these responsibilities produced the Mists reed-growth defect.
+1. **Spatial membership:** Determine whether an entity or population lies within the Hermeticon's inner boundary.
+2. **Simulation eligibility:** Apply the appropriate local update rules to admitted entities, preserving state when behavior is paused outside the boundary.
+3. **Projection:** Render the admitted scene from an arbitrary camera orientation without changing its underlying state.
+
+These operations have different mathematical and computational meanings. Membership is a world-space geometric predicate; simulation eligibility governs state transitions; projection maps three-dimensional scene data to image coordinates. In the current Hermeticon, the first two are intentionally coupled for selected behaviors, while the third remains independent.
+
+The concept intersects several disciplines. Computer graphics concerns include visibility, clipping, occlusion, and projection. Computational geometry supplies boundary tests and spatial queries. Simulation engineering addresses persistence, activation, and conservation across a moving local domain. Perception research concerns the relationship between sampled signals and inferred objects. Epistemology concerns what conclusions can be supported by partial observations.
+
+The same executable boundary is therefore legible through multiple technical vocabularies. **Three-dimensional retina** names their common referent without requiring any one discipline's description to replace the others.
+
+The Mists reeds provide a practical example. Moving the Hermeticon across the landscape changes which reeds are admitted and allowed to grow; rotating the camera around a stationary Hermeticon changes only their projected appearance. This distinction can be inspected visually and verified through world-space state measurements.
 
 ## Conclusion
 
