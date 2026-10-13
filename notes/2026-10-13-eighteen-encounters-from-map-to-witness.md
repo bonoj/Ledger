@@ -211,7 +211,22 @@ Violet Coast settled at t=135.760s, visit 1, scene hidden with `near:false` and 
 
 **Disposition:** No Hermeticon changes. Await Report 13 and the human witness's visual observations.
 
-*Awaiting Report 13.*
+## Report 13 — Whisperwood (2026-10-13)
+
+**Evidence:** User INSPECT, build `05b3897a2f1e29e1c67fef16fc56ff967c171159`, simulation t=326.58s, 62.3 fps, zero runtime errors. Eighteen registered scenes, no missing scenes, zero geological transactions.
+
+**Whisperwood:** Anchor (-9,-9), seed 72012; Wanderer (-10.656,-9.483), distance 1.73. Eighteen meshes, group visible, aperture center distance 2.84, visit count 1. Primed t=206.664s, performing t=312.416s, settled t=323.424s. The primed state waited **105.752 seconds** before the Wanderer approached, longest witnessed interval so far. Eleven-second visual cycle completed; scene remains visible after settlement. No encounter material transactions or errors.
+
+**Report 12 follow-through:** Bood Lakes settled at t=297.480s, within 0.008s of the prior expected settlement. Bood Lakes and Cinderglade and Fell Crater are still within the aperture geometrically (center distances 8.40 and 7.24 respectively) but their groups are hidden because the encounter-near condition is false. This separates aperture inclusion from actual group visibility.
+
+**Overall:** Twelve encounters visited and settled; Jade Peak remains primed but unvisited. Six encounters remain unvisited, including Jade Peak. Rain active 8,306; no terrain hits, micro contacts, or geological transactions. No pixel readback or human visual description provided.
+
+**Interpretation:** The persistent primed state is supported by a long delayed activation, not a forced timeline. The visible-state gating has a narrower reach than the aperture geometry. Whisperwood's intended physical consequences remain absent in this visual prototype.
+
+**Disposition:** No Hermeticon changes. Await Report 14 and visual observations.
+
+*Awaiting Report 14.*
+
 
 
 
