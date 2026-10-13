@@ -225,7 +225,18 @@ Violet Coast settled at t=135.760s, visit 1, scene hidden with `near:false` and 
 
 **Disposition:** No Hermeticon changes. Await Report 14 and visual observations.
 
-*Awaiting Report 14.*
+## Report 14 — Summerlands (2026-10-13)
+
+**Evidence:** User INSPECT at simulation t=364.93s, build `05b3897a2f1e29e1c67fef16fc56ff967c171159`, 85.9 fps. Global errors empty, eighteen registered and scene objects, none missing. Thump count four, unrelated to encounter geology.
+
+**Summerlands:** Anchor (-13,12), seed 741, Wanderer (-13.692,12.575), distance 0.90; aperture center distance 2.72. Primed at t345.184, performing t350.096, settled t361.104; visit 1, 26 meshes, group visible after settlement. Geological transfer attempted but encounter-local error: `Summerlands geological sample transfer unavailable at authored terrain resolution`. Implementation remains `visual-prototype`; `materialTransactions:[]`; audit geologicalTransactions 0. The code requires paired eligible positive signed-field source samples and nonpositive destination samples, and fails without a viable pair. No terrain change or conservation transaction was recorded. Source versus destination candidate counts are not exposed, so the precise constraint cannot yet be isolated.
+
+**Distinction:** Global `identity.errors:[]` does not imply zero encounter-local errors. This is a successfully completed visual lifecycle but failed geological test, not a completed physical encounter. Thirteen of eighteen encounters now visited and settled; five unvisited.
+
+**Disposition:** Preserve the failure for diagnosis after expedition; instrument source/destination candidate counts, then repair at actual grid resolution while preserving balance and provenance. No world modifications during exploration.
+
+*Awaiting Report 15.*
+
 
 
 
