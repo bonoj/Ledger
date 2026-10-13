@@ -255,7 +255,17 @@ Violet Coast settled at t=135.760s, visit 1, scene hidden with `near:false` and 
 
 **Disposition:** Fifteen of eighteen encounters activated: fourteen settled, one performing. Ice Vale, Gradient, Ocean of Tears remain dormant/unvisited. Seven cumulative thumps, zero fractures, not attributed to encounters. No world modifications during expedition.
 
-*Awaiting Report 17.*
+## Report 17 — Gradient (2026-10-13)
+
+**Evidence:** INSPECT build `05b3897a2f1e29e1c67fef16fc56ff967c171159`, simulation t477.86s, 59.9 fps, no global errors; registry 18, scenes 18, missing 0, geological transactions 0.
+
+**Gradient:** Anchor (0,12), seed 24498. Wanderer (-0.300,0.591,11.778), distance 0.37; aperture-center distance 4.60. Phase **performing**, visits 1, 11 meshes, group visible and within aperture. Dormant→primed at t467.824; primed→performing at t467.872 (0.048s later). At inspection, 9.98s into performance; **settlement not yet observed**. No encounter-local errors or material transactions.
+
+**Follow-up on Report 16:** Winter King's Realm settled at t454.736, 11.008s after performing began. At this inspection its center distance is 7.98, within the aperture (9.72) but outside the prime radius (7.2), and its settled group is hidden. This reinforces the distinction between aperture containment and encounter-group visibility; no source change made.
+
+**Disposition:** Sixteen of eighteen activated: fifteen settled, Gradient performing. Ice Vale and Ocean of Tears remain dormant/unvisited. Summerlands remains settled but records `Summerlands geological sample transfer unavailable at authored terrain resolution`; all material transaction arrays remain empty. Seven cumulative thumps, fractures zero, not attributed to encounters. No world modifications during expedition.
+
+*Awaiting Report 18.*
 
 
 
