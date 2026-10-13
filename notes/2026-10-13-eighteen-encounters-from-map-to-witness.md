@@ -75,4 +75,20 @@ Do not silently overwrite failed predictions. Later observations may correct ear
 
 ## Reports
 
-*Awaiting Report 1.*
+## Report 1 — Heart of Darkness (2026-10-13)
+
+**Witness:** User-supplied INSPECT JSON; build `05b3897a2f1e29e1c67fef16fc56ff967c171159`; observation at simulation t=45.3s. This is telemetry, not a screenshot or pixel readback.
+
+**Operational conditions:** 72.3 fps at inspection; `identity.errors=[]`; 18 registry entries, 18 scene definitions, zero missing scenes. Crucible mode idle, owner geology; 8,306 rain particles emitted and active; no thump, terrain-hit, or micro-contact interactions recorded. These broader counters are context, not evidence of encounter geology.
+
+**Heart of Darkness — confirmed state:** Anchor (12,2), seed 32417; walker (14.791,0.414), nearest landmark at 3.21 world units. Scene has 15 authored meshes; group visible, phase visible, aperture center distance 1.4, within aperture; no encounter errors. Lifecycle transitions: dormant→primed at 15.208s (`aperture-near`), primed→performing at 20.768s (`wanderer-near`), performing→settled at 31.776s (`visual-cycle-complete`). Visit count 1; settled for 13.52s at report. This supports lifecycle operation and retained settled scene visibility **in the deployed browser's telemetry**, not proof that every mesh was rasterized or the performance looked as intended.
+
+**Other encounter witnesses:** Jade Peak primed at 29.016s, not performed (aperture center distance 6.38, walker farther than start radius); all other encounters dormant. Silverpass anchor is geometrically within the nominal aperture radius (7.43) but not within the tighter prime radius (7.2), hence correctly dormant. All 18 have empty material transaction lists; the only implemented geological transfer belongs to Summerlands, which was not visited.
+
+**Instrumentation defect observed:** `visibleCount` is the number of authored scene children even when `groupVisible=false` (e.g. Summerlands shows 26 while dormant and invisible). `clippedCount=0` does not prove that all meshes were rasterized or clipped correctly. Prefer `visual.groupVisible`, `visual.withinAperture`, and phase state; consider renaming the old count `authoredMeshCount` in a later instrumentation-only repair.
+
+**Interpretation:** The registry, approach gating, performance timer, settled persistence, and error reporting all returned coherent evidence in one real deployed session. No Heart of Darkness geological excavation is present yet; zero material transactions is consistent with implementation status. No visual judgment can be made without the explorer's account or image.
+
+**Disposition:** Preserve current build during expedition; collect the explorer's qualitative visual impression before proposing a repair. Do not silently edit the world. Await Report 2.
+
+*Awaiting Report 2.*
