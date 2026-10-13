@@ -235,7 +235,18 @@ Violet Coast settled at t=135.760s, visit 1, scene hidden with `near:false` and 
 
 **Disposition:** Preserve the failure for diagnosis after expedition; instrument source/destination candidate counts, then repair at actual grid resolution while preserving balance and provenance. No world modifications during exploration.
 
-*Awaiting Report 15.*
+## Report 15 — Jade Peak (2026-10-13)
+
+**Evidence:** INSPECT build `05b3897a2f1e29e1c67fef16fc56ff967c171159`, simulation t435.22s, 78.7 fps, no global errors, registry/scene 18/18 and no missing scenes.
+
+**Jade Peak:** Anchor (19,5), seed 48255. Wanderer (18.188,2.927,4.745), distance 0.85; aperture-center distance 5.01. Phase **performing** at inspection, visits 1, 13 meshes, group visible. Primed t29.016, performing t428.696: **399.680 seconds** (~6m40s) waiting in primed state. Performing for 6.52 seconds at inspection; **settlement not yet observed**. No material transactions or local errors.
+
+**Revisit and gate observations:** Heart of Darkness remains settled from t31.776 and is visible again (center distance 3.82), without a second activation. Winter King's Realm is dormant at center distance 8.97: within aperture 9.72 but outside priming radius 7.2. Summerlands retains the encounter-local sample-transfer failure from Report 14; global errors still empty. Seven cumulative thumps, fractures zero, not attributed to encounters.
+
+**Disposition:** Count fourteen of eighteen **activated**, thirteen settled and Jade Peak performing; four unvisited. Do not infer Jade Peak completion before another report. Geological transactions remain zero. No world modifications during expedition.
+
+*Awaiting Report 16.*
+
 
 
 
