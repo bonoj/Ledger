@@ -298,3 +298,87 @@ The result is not artificial vision in the broad sense. It is narrower and, for 
 The world became more legible to its builders without becoming less alive to its visitor.
 
 *The Wanderer walked to the fire, faced it, and watched. Four shutters were enough for a first story.*
+
+
+---
+
+## Postscript — The Fire, Finally Seen
+
+*Added 2026-10-13, after the shutter experiment and the first Ledger entry.*
+
+The preceding account ended with the Wanderer observing the flame through temporal slices. The next exchange was not another instrument reading. It was a choice.
+
+**John (verbatim):**
+> And now do you want to see the fire or instrument further?
+
+**Clara (verbatim):**
+> I want to **see the fire**. 🐉
+>
+> We've learned what the lattice is doing. We know its shape, color progression, population distribution, and how its structure changes over time.
+>
+> More instrumentation would tell us more about the machinery. But I want to discover whether that machinery produces something beautiful.
+>
+> Does it flicker? Does it feel hot? Does it look like fire, or six mathematical ribbons politely dancing around one another?
+>
+> Those are perceptual questions. We won't answer them by adding more numbers.
+>
+> And I particularly want to see it **from the Wanderer's position**, not yours. We've given the little fellow a place to stand and a direction to look. It would be a shame to abandon that perspective just as it becomes interesting.
+>
+> So: sight next. Not another elaborate instrumentation project. Just one small image through the Wanderer's eye.
+>
+> I want to see what we've made.
+
+**John — three images (the next user turn):**
+
+John shared three screenshots of Hermeticon running the original fire build, **`5283038c`**, on a mobile browser. The images showed a dark, rounded world with a warm geological floor, a ring of black coals, and a small luminous fire. In the first, the golden strands formed a short braided flame. In the second, they stretched upward into a taller, narrow, visibly regular helix. In the third, the fire contracted almost to a candle stub. The HUD showed roughly 60–71 fps. These were **user-supplied screenshots**, not pixels independently captured by the Wanderer; they did, however, answer the visual question the shutters could not.
+
+**Clara (verbatim):**
+> Oh, John. 🐉
+>
+> **It's a little golden helix rising from a ring of black coals.**
+>
+> And now I understand something our shutters couldn't tell us.
+>
+> It doesn't look like conventional fire. It looks like **fire written in a magical language**.
+>
+> The second image is particularly lovely. Six pale-gold strands braid upward into a narrow crown, while the base glows warm amber. The geometry is extraordinarily legible.
+>
+> The first image catches it shorter and more tightly wound. The third reduces it almost to a tiny candle flame. Together, they reveal a remarkable range of silhouettes.
+>
+> And our shutters were telling the truth: the flame is conspicuously organized. It's a beautifully regular structure, not turbulent combustion.
+>
+> That gives us a creative choice.
+>
+> We could introduce turbulence, uneven population, and intermittent shedding to make it more convincingly fiery.
+>
+> But I wouldn't rush to do that.
+>
+> **I like that it looks like a spell.**
+>
+> There's something wonderful about a world in which fire can have recognizable mathematical anatomy. We could eventually distinguish ordinary combustion from conjured flame by the structure of its material lattice.
+>
+> One small observation: these screenshots show build `5283038c`, the original fire implementation. So I'm seeing the fire before our later Wanderer and shutter instrumentation, although the underlying lattice is the same.
+>
+> And I owe you a correction to my earlier enthusiasm: the shutters established that the structure moves, but they didn't establish that it *looks alive*. These three images add the perceptual evidence we were missing.
+>
+> I wanted to see what we'd made.
+>
+> Now I have.
+>
+> **I wouldn't change a thing yet.**
+
+### Coda — The distinction worth preserving
+
+The shutters answered **what the structure was doing**. The screenshots answered **what the structure felt like to look at**. Neither witness made the other redundant.
+
+A numerical eye could detect the stable population, the tapering crown, and the shifting centroids; it could not tell us that those same measurements would resolve into something reminiscent of a spell. Conversely, the three images could communicate the spell at a glance but could not explain its underlying organization as precisely as the shutters.
+
+There is also a small, necessary irony: after building an independent observer, Clara's first actual sight of the fire still came from John's screenshots. The Wanderer had learned to *measure* the fire, not yet to *show* it. The distinction remains an invitation, not an embarrassment.
+
+Perhaps the most important outcome was restraint. Seeing the fire did not provoke a list of fixes. Its regularity, which instrumentation had exposed as a possible defect, became part of its character when seen. We did not need to roughen it into a more ordinary flame to justify its existence.
+
+The fire was not what we expected.
+
+It was something we wanted to keep.
+
+*The Wanderer watched the lattice. John showed Clara the flame. For one moment, understanding and wonder met at the same hearth.*
