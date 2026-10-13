@@ -163,6 +163,19 @@ Violet Coast settled at t=135.760s, visit 1, scene hidden with `near:false` and 
 
 **Disposition:** Preserve build; await Report 9 and human visual impressions.
 
-*Awaiting Report 9.*
+## Report 9 — Upton (2026-10-13)
+
+**Evidence:** INSPECT on unchanged build `05b3897a2f1e29e1c67fef16fc56ff967c171159`, simulation t=216.46s, 82.3 fps, no runtime errors. All 18 encounter scenes exist, none missing; geological transactions remain zero.
+
+**Upton:** Anchor (-7,-18), seed 111607, 14 meshes, Wanderer (-7.756,-18.088) at distance 0.76, aperture distance 4.42, groupVisible true, visit 1. Primed and activated at 205.400s; settled at 216.400s after its eleven-second visual cycle. Inspection occurred 0.06s after settlement. No material transactions or errors.
+
+**Other findings:** Brambles settled at 200.968s, matching Report 8's prediction, and remains group-visible (aperture distance 4.59). Whisperwood primed at 206.664s, but not activated (visit 0, groupVisible false, aperture distance 6.32). Kindle Tower is settled but groupVisible false despite aperture distance 7.91, consistent with the separate encounter near gate. Eight encounters have now activated and settled.
+
+**Interpretation:** Immediate Upton priming/activation contrasts with Brambles' delayed approach, consistent with the two-distance activation design. INSPECT establishes scene state, not rendered pixels or the legibility of Upton's authored architecture. No authored geological or BB consequences have been demonstrated.
+
+**Disposition:** Preserve deployed build, no code changes. Await Report 10 and visual impressions.
+
+*Awaiting Report 10.*
+
 
 
