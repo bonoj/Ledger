@@ -175,7 +175,20 @@ Violet Coast settled at t=135.760s, visit 1, scene hidden with `near:false` and 
 
 **Disposition:** Preserve deployed build, no code changes. Await Report 10 and visual impressions.
 
-*Awaiting Report 10.*
+## Report 10 — Redwall (2026-10-13)
+
+**Evidence:** INSPECT on build `05b3897a2f1e29e1c67fef16fc56ff967c171159`, simulation t=262.67s, 84 fps, zero runtime errors. Registry 18, scenes 18, missing 0, geological transactions 0.
+
+**Redwall:** Anchor (-16,-16), seed 103688, 16 meshes, groupVisible true, aperture distance 2.83. Wanderer (-16.225,-14.831), 1.19 from anchor; visits 1. Dormant to primed at 223.400s, performing at 232.952s (9.552s wait), settled at 243.952s after eleven-second cycle. No material transactions or encounter errors.
+
+**Neighboring states:** Whisperwood remained primed for 56.01s, aperture distance 7.07 within 7.2 prime radius, without activation or visible group. Cinderglade and Fell Crater remained dormant at aperture distance 7.62, inside visual aperture but outside prime radius. Upton settled and groupVisible false at aperture distance 8.06. Nine encounters have activated and settled.
+
+**Interpretation:** Encounter activation distinguishes priming proximity from Wanderer approach. Visual scene presence does not prove rendered appearance. Redwall's intended material fortification remains unimplemented; no physical consequence established.
+
+**Disposition:** No Hermeticon modifications. Await Report 11 and qualitative appearance observations.
+
+*Awaiting Report 11.*
+
 
 
 
