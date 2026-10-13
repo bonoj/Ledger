@@ -91,4 +91,16 @@ Do not silently overwrite failed predictions. Later observations may correct ear
 
 **Disposition:** Preserve current build during expedition; collect the explorer's qualitative visual impression before proposing a repair. Do not silently edit the world. Await Report 2.
 
-*Awaiting Report 2.*
+## Report 2 — Silverpass and Gemgates (2026-10-13)
+
+Build: 05b3897a2f1e29e1c67fef16fc56ff967c171159. INSPECT at simulation 60.54 seconds; 60.3 fps; no runtime errors.
+
+Silverpass (16,-5), seed 56174, has 18 meshes, groupVisible true, aperture distance 2.52, visit count 1. Dormant to primed and primed to performing both occurred at 50.424 seconds. At inspection, performance duration was 10.12 seconds. The Wanderer was 2.91 units from its anchor.
+
+Heart of Darkness remained settled, groupVisible true, at aperture distance 5.82. The audit listed both scenes as active. This is evidence of concurrent scene visibility state, not a rendered-pixel test.
+
+No geological transactions occurred. The planned excavating customs arches and material-provenance sorting remain unimplemented; appearance and legibility await the explorer's qualitative account.
+
+Observation: walker-to-anchor distance and aperture-to-anchor distance use different frames. No code changes requested. Await Report 3.
+
+*Awaiting Report 3.*
