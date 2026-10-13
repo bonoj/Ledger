@@ -117,4 +117,20 @@ Observation: walker-to-anchor distance and aperture-to-anchor distance use diffe
 
 **Disposition:** No Hermeticon changes during expedition. Await human visual impressions and Report 4.
 
-*Awaiting Report 4.*
+## Report 4 — Rift (2026-10-13)
+
+**Evidence:** User INSPECT telemetry, build `05b3897a2f1e29e1c67fef16fc56ff967c171159`, simulation t=116.53s; 73.5 fps, no identity errors. Eighteen scenes present; zero encounter geological transactions.
+
+**Rift:** Anchor (8,-11), seed 87850; Wanderer at (10.232,-10.4), distance 2.31. Scene 13 meshes, visible group, aperture center distance 6.64, visit count 1. Primed at t=68.584s; began performing at t=105.136s; settled at t=116.144s. **The primed state persisted for 36.552 seconds before the Wanderer came close enough to activate it.** At inspection, settled for 0.38 seconds. No errors or material transactions.
+
+**Concurrency:** Silverpass and Gemgates, Rift, and Spill were all settled and reported as active scene groups within the aperture. Heart of Darkness remained settled but outside the aperture. The evidence is scene-state telemetry, not pixel readback.
+
+**Separate physical observation:** A single thump affected 8,306 rain particles, reporting 12,870.523884795428 energy added and zero fractures. No evidence links this thump to Rift; keep it separate from encounter effects. Terrain hits and micro contacts remained zero.
+
+**Expected versus observed:** Rift's intended material bridge, traversal, and collapse into the Crucible are not implemented; no geological or encounter matter transactions. Visual legibility still requires the human witness's account.
+
+**Interpretation:** Four distinct encounters have completed without reported runtime errors. Rift provides particularly strong evidence that priming does not automatically consume an encounter; the Wanderer's subsequent approach controls performance. No world changes made during expedition.
+
+**Disposition:** Preserve current build. Await Report 5 and visual impressions.
+
+*Awaiting Report 5.*
