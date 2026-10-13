@@ -187,7 +187,20 @@ Violet Coast settled at t=135.760s, visit 1, scene hidden with `near:false` and 
 
 **Disposition:** No Hermeticon modifications. Await Report 11 and qualitative appearance observations.
 
-*Awaiting Report 11.*
+## Report 11 — Cinderglade and Fell Crater (2026-10-13)
+
+**Evidence:** INSPECT on build `05b3897a2f1e29e1c67fef16fc56ff967c171159`, simulation t=279.99s, 84.4 fps, zero runtime errors. Registry 18, scenes 18, missing 0, geological transactions 0.
+
+**Cinderglade and Fell Crater:** Anchor (-17,-7), seed 64093, 13 meshes, groupVisible true, aperture distance 3.00. Wanderer (-18.726,-6.093), 1.95 from anchor; visits 1. Primed at 269.000s, performing at 271.864s (2.864s wait), still performing at inspection after 8.126s. Expected eleven-second visual-cycle settlement near 282.864s is a projection, not yet witnessed. No material transactions or encounter errors.
+
+**Neighboring states:** Whisperwood remains primed for 73.33s, aperture distance 5.36, without activation or visible group. Bood Lakes remains dormant at aperture distance 8.06 (inside visual aperture, outside priming radius). Redwall is settled and not visible, aperture distance 9.16; its scene group is hidden. Ten encounters have activated, nine are confirmed settled, one currently performing.
+
+**Interpretation:** Moving aperture, priming, and Wanderer-triggered performance remain distinguishable. No evidence of the planned crater's physical geology; the 13 meshes and visible scene flag do not constitute pixel-level visual confirmation.
+
+**Disposition:** No Hermeticon modifications. Await Report 12 and qualitative appearance observations.
+
+*Awaiting Report 12.*
+
 
 
 
