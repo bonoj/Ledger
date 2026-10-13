@@ -265,6 +265,16 @@ Violet Coast settled at t=135.760s, visit 1, scene hidden with `near:false` and 
 
 **Disposition:** Sixteen of eighteen activated: fifteen settled, Gradient performing. Ice Vale and Ocean of Tears remain dormant/unvisited. Summerlands remains settled but records `Summerlands geological sample transfer unavailable at authored terrain resolution`; all material transaction arrays remain empty. Seven cumulative thumps, fractures zero, not attributed to encounters. No world modifications during expedition.
 
+## Follow-up to Report 17 — Gradient settlement and Winter King's Realm revisit (2026-10-13)
+
+**Evidence:** INSPECT build `05b3897a2f1e29e1c67fef16fc56ff967c171159`, simulation t497.30s, 70.1 fps, no global errors; 18 registry/18 scenes, zero geological transactions.
+
+**Gradient:** Confirmed performing→settled at t478.880, 11.008s after performing began at t467.872. Visits remain 1, 11 meshes; group hidden at aperture-center distance 7.58 despite being inside the 9.72 aperture, because beyond 7.2 prime gate.
+
+**Winter King's Realm revisit:** Wanderer (12.21,3.087,14.123), 0.24 from anchor (12,14); encounter settled since t454.736, visits still 1, 18 meshes, group visible at aperture-center distance 4.62. Previously hidden at 7.98, now visible again without retriggering: positive evidence of persistent settled phase and location-gated scene display.
+
+**Disposition:** Sixteen activated and sixteen settled. Ice Vale and Ocean of Tears still dormant. Summerlands geological sample-transfer error persists; no material transactions. Seven thumps, zero fractures, unrelated to encounter activations. No world modifications.
+
 *Awaiting Report 18.*
 
 
