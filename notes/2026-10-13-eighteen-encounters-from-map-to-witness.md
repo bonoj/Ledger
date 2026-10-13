@@ -133,4 +133,23 @@ Observation: walker-to-anchor distance and aperture-to-anchor distance use diffe
 
 **Disposition:** Preserve current build. Await Report 5 and visual impressions.
 
-*Awaiting Report 5.*
+## Report 5 — Violet Coast (2026-10-13)
+
+**Evidence:** INSPECT build `05b3897a2f1e29e1c67fef16fc56ff967c171159`, t=130.92s, 60.5 fps, no errors. Violet Coast anchor (10,-20), seed 127445, 18 meshes, phase performing, visit 1. Primed and activated at 124.760s; performance time 6.16s. Scene group visible at aperture distance 6.48; Wanderer at (10.291,-18.285). Audit: Rift, Spill, Violet Coast active; no geological transactions. Thump count 1 affecting 8,306 rain particles, unrelated to encounters. No human qualitative visual report.
+
+## Report 6 — Ocean of Tears proximity survey (2026-10-13)
+
+**Evidence:** Same build, t=151.89s, 69.5 fps, no errors. Ocean of Tears anchor (19,-20), seed 135364; nearest landmark to Wanderer, horizontal distance 1.17 from Wanderer position (17.879,-19.666). **Remains dormant**, zero visits, zero transitions, 14 meshes but scene group hidden. Aperture-center distance 7.81, `near:false`, despite being within the 9.72 aperture and Wanderer within the 2.9 activation radius. This is consistent with the code's **aperture prime gate of 7.2** being unsatisfied, so the encounter never reaches the Wanderer activation check. It is not evidence that nearest.distance is itself wrong. Needs an intentional design decision: should Wanderer proximity independently prime an encounter? Do not change code during survey without instruction.
+
+Violet Coast settled at t=135.760s, visit 1, scene hidden with `near:false` and aperture distance 7.21 (just outside prime radius). Rift and Spill visible and settled. Five activated encounters so far; zero geology. No human visual account.
+
+## Report 7 — Kindle Tower (2026-10-13)
+
+**Evidence:** Same build, t=185.41s, 71.9 fps, no errors. Kindle Tower anchor (1,-19), seed 119526, 13 meshes, visible and settled, visit 1. Primed at 171.464s, performing at 172.552s, settled at 183.552s; aperture distance 5.22, Wanderer (-0.016,-18.206), 1.29 from anchor. This is the **sixth activated encounter**; all six settled at latest sample. Zero material transactions and zero encounter-caused geological effects.
+
+**Neighbor:** Brambles anchor (-1,-12) is primed, `near:true`, aperture distance 2.06, 14 meshes hidden, visit 0. Wanderer-to-Brambles distance approximately 6.22, above activation radius 2.9. Thus this is **expected dual-distance gating**, unlike Ocean of Tears, where the inverse condition occurs (Wanderer close, aperture beyond prime radius). No confirmed defect in Brambles. A second thump is recorded, cumulative 16,612 rain affected, 24,271.15 energy added, zero fractures; not attributable to Kindle Tower.
+
+**Disposition:** No source changes; survey continues. Six visual performances have activated, but zero geological transactions. Human visual judgment not yet reported.
+
+*Awaiting Report 8.*
+
