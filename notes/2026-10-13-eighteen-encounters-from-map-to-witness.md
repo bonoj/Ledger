@@ -275,7 +275,17 @@ Violet Coast settled at t=135.760s, visit 1, scene hidden with `near:false` and 
 
 **Disposition:** Sixteen activated and sixteen settled. Ice Vale and Ocean of Tears still dormant. Summerlands geological sample-transfer error persists; no material transactions. Seven thumps, zero fractures, unrelated to encounter activations. No world modifications.
 
-*Awaiting Report 18.*
+## Report 18 — Ice Vale (2026-10-13)
+
+**Evidence:** INSPECT build `05b3897a2f1e29e1c67fef16fc56ff967c171159`, simulation t529.41s, 72.3fps, global errors []; registry 18, scene 18, missing [], geological transactions 0.
+
+**Observed:** Ice Vale anchor (17,20), seed 16579, walker (16.852,0.405,20.966), walker distance 0.98. Six scene meshes, groupVisible true, centerDistance 6.71 (inside 7.2 prime radius and 9.72 aperture), visits 1, settled, no encounter errors. Transitions: dormant→primed t514.344, primed→performing t516.744 (2.400s wait), performing→settled t527.744 (11.000s performance); inspected 1.66s after settlement.
+
+**Coexistence:** Winter King's Realm remains settled and visible at centerDistance 2.00 with 18 meshes and visits 1. Both scenes simultaneously visible, with no reactivation. Gradient and the previous fourteen visited encounters remain settled but outside their display gate.
+
+**Interpretation and limits:** Seventeen of eighteen visual encounter lifecycles have activated and settled. Ocean of Tears (19,-20) remains dormant, visits 0. No geological transactions anywhere; Summerlands still reports `Summerlands geological sample transfer unavailable at authored terrain resolution`. Ice Vale is a witnessed visual prototype, not a physically completed transformation. Seven thumps, 58,142 rain particles affected, zero fractures, not attributable to encounters. No Hermeticon source changes.
+
+*Awaiting Report 19 — Ocean of Tears.*
 
 
 
