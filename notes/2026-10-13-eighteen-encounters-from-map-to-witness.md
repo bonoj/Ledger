@@ -285,7 +285,25 @@ Violet Coast settled at t=135.760s, visit 1, scene hidden with `near:false` and 
 
 **Interpretation and limits:** Seventeen of eighteen visual encounter lifecycles have activated and settled. Ocean of Tears (19,-20) remains dormant, visits 0. No geological transactions anywhere; Summerlands still reports `Summerlands geological sample transfer unavailable at authored terrain resolution`. Ice Vale is a witnessed visual prototype, not a physically completed transformation. Seven thumps, 58,142 rain particles affected, zero fractures, not attributable to encounters. No Hermeticon source changes.
 
-*Awaiting Report 19 — Ocean of Tears.*
+## Report 19 — Ocean of Tears: arrival without activation (2026-10-13)
+
+**Evidence:** INSPECT build `05b3897a2f1e29e1c67fef16fc56ff967c171159`, simulation t581.26s, 65.3fps, global errors []; registry 18, scenes 18, missing 0, geological transactions 0.
+
+**Ocean of Tears:** Anchor (19,-20), seed 135364; Wanderer (19.611,0.421,-21.189), nearest-landmark distance 1.34, inside the 2.9 walker activation radius. Aperture-center distance 7.81, inside the 9.72 aperture but outside the 7.2 prime radius. Phase dormant, visits 0, transitions [], near false, performanceSteps 0, groupVisible false; fourteen authored meshes exist, no local error. This **reproduces Report 6** at the same aperture distance and walker distance 1.17. The code's aperture-first gate explains why the walker-proximity test is not reached; it does **not** establish whether the gate should be changed.
+
+**Other witnesses:** Rift and Spill are settled and visible concurrently (center distances 6.71 and 5.10). Violet Coast is settled but hidden at center distance 7.21, barely outside the prime gate while still inside the aperture. Silverpass is also settled but hidden within the aperture (9.22). All prior seventeen activated encounters have settled. Seven thumps affected 58,142 rain particles, fractures 0; these are not encounter geological effects. Summerlands retains its failed geological sample-transfer error; zero geological transactions overall.
+
+**Disposition:** **Seventeen of eighteen visual lifecycles completed; Ocean of Tears unvisited in encounter state despite the Wanderer's physical arrival.** No Hermeticon source changes. Preserve the evidence and decide the spatial authority of walker versus aperture before repairing.
+
+## Reflection — What did the world actually witness? (2026-10-13)
+
+The expedition succeeded at one level and failed to reach the level that motivated it. Eighteen authored scenes were deployed, seventeen activated and settled, primed states persisted for minutes, completed scenes reappeared on return, and multiple scenes could coexist. That is a working **encounter theatre**, with useful inspection and durable lifecycle state. It is not yet a world of eighteen causal geological encounters. The only attempted authoritative material transfer, Summerlands, could not find a valid sample pair at the authored resolution. Zero geological transactions occurred. A settled phase remembers that a performance ended; it does not prove that the terrain or material history remembers its consequence.
+
+Ocean of Tears sharpens rather than simply contradicts the design. The Wanderer reached its anchor while the aperture center remained outside the priming gate. We can explain the nonactivation from the code and reproduce it from Reports 6 and 19. But the aperture is a meaningful perceptual and physical boundary, not necessarily a disposable camera constraint. An unconditional walker override might make the counter increment without making the encounter visible or causally coherent. The evidence identifies a **spatial-authority question**, not yet an approved answer.
+
+Before changing source, distinguish three decisions: **(1)** what counts as an encounter being reached, **(2)** what permits its scene to become visible, and **(3)** what authorizes irreversible physical effects. These may legitimately have different conditions. Retest Ocean of Tears only after the author weighs in. And before calling the eighteen encounters complete, make at least one authored event leave a measurable, conserved, inspectable alteration of the world. The ledger's value is precisely that it refuses to exchange theatrical success for physical proof.
+
+*Awaiting the author's interpretation and the next deliberate experiment.*
 
 
 
