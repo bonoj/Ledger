@@ -121,3 +121,50 @@ The crucial pivot was to stop making a separate node-search system rediscover wh
 The working principle: **Don't make nodes rediscover what the terrain already knows.** Preserve the earlier failures as evidence of how the human and the model reached this change of representation.
 
 Evidence: colored four-population experiment `747f4aa4`; later metallic-node survey `f5d5f066`, whose narrow audit did not detect the missing full-surface maxima.
+
+
+## Addendum — October 14: DRAW, not terrain
+
+The four-color node experiment exposed a fundamental category error. We had been finding geological extrema. The human wanted the extrema of **what the camera draws**.
+
+### Failed steps that earned the correction
+
+1. The original angular rim probes missed visible crests despite a passing `auditPass`: the audit covered the probe domain, not the image.
+2. A disposable height-ranked mesh index (`845c8d27`, repaired at `4e7573b8`) preserved vertex indices and paired witnesses with vertical SDF bisection. It was efficient but still missed crests. One moved report had 93 upper SDF nodes, three missing crossings, and a suspect Y=3.6 extraction-ceiling seed.
+3. Signed-field crossing classification (`c6773e8e`) removed many wall and ceiling candidates:
+
+```js
+const below = sample(x, y - .055, z);
+const above = sample(x, y + .055, z);
+const isTop = below > 0 && above <= 0;
+const isBottom = below <= 0 && above > 0;
+```
+
+4. The classified candidates were height-sorted, reduced to one extreme per 1.25-unit XZ tile, then to 96 spaced nodes per side. At live build `35534622`, the report showed 57,114 classified vertices, 29,103 upper candidates, 28,011 lower candidates, 210 upper tiles, 208 lower tiles, 96 witnesses in each of four arrays, zero missing SDF crossings, ~55.3 ms one-time index construction, ~3.7 ms selection/search, and four draw calls. `fps: null` was **not** an FPS measurement. `extremaCoverageAudited: false` correctly admitted that visible extrema were untested; zeroed candidate counters were stale instrumentation.
+5. A deployment regression was also part of the experiment: `c6773e8e` required `sample` in the module API while the deployed caller did not pass it. The page threw `TypeError: sample is not a function`; the matching `7346ffde` workflow was cancelled, and `35534622` restored a matching, working build. Publish coupled interfaces atomically or compatibly.
+
+We proposed local summit detection. That would have improved a **terrain** question, not the user's question.
+
+> “We want highest point of DRAW not of terrain. I may not have made that clear. We actually give zero fucks about terrain. We need the draw edges.”
+
+A vertex may never appear on screen. The spherical aperture clips triangles *between* vertices; depth testing occludes fragments; camera projection changes apparent height. World-space maximum Y is not a screen-space maximum. The signed field is authoritative for geology, **not** for the visible outline.
+
+The model finally asked whether the desired maximum was the highest visible pixel or the highest clipped 3D point. The human recognized the missing authority:
+
+> “Bam. That's the unlock. Only the camera matters. We got there.”
+
+```text
+OLD: field -> mesh -> height sort -> tiles -> nodes -> camera
+NEW: field + mesh -> clipping + camera + depth visibility
+                  -> drawn edges -> screen-space witnesses
+```
+
+**Only the camera matters for this witness-selection question**, not for geological simulation. Camera rotation now legitimately changes the witnesses.
+
+Next experiment, **not yet implemented**: compare a lightweight GPU visibility/depth/ID pass with CPU-projected, clipped geometry; measure screen-edge recall, missed extrema, occlusion, latency, readback stalls, and mobile FPS. Preserve the four colored populations as display infrastructure, but do not assume geological top/bottom pairings map directly to visible edges.
+
+The half-Matrix Larian-facing toy may eventually expose a beautiful low-poly world and its camera-conditioned spatial anatomy together.
+
+The irony: cage, rim probes, adaptive sampling, territories, sorted vertices, signed crossings, tile maxima, bisection, and a deployment failure all led to one corrected noun:
+
+**DRAW.**
