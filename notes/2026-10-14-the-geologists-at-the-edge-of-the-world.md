@@ -58,7 +58,7 @@ Then came the more important change of representation:
 
 > “4 arrays. Surface terrain nodes, sdf surface nodes just below, sdf undersurface nodes, undersurface terrain nodes.
 >
-> Surface and undersurface nodes organize by find nearest highest (sighed) point whilst maintaining spread. So max ys are always found on surface min ys on undersurface.”
+> Surface and undersurface nodes organize by find nearest highest (signed) point whilst maintaining spread. So max ys are always found on surface min ys on undersurface.”
 
 Instead of asking *how many uniformly spaced probes* to use, this asks **where the geometry requires witnesses**.
 
