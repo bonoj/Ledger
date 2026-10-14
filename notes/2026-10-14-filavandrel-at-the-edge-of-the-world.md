@@ -677,3 +677,92 @@ The second unlock was subtler: **we do not need to infer the DRAW from a CPU sim
 The earlier architecture and Mermaid diagrams above are preserved as historical proposals, **superseded for the immediate experiment**. The later decision is GPU-first visible-boundary evidence, with the smallest possible diagnostic pass. It is not yet a solved boundary extractor.
 
 **The world owns matter. The renderer owns the visible evidence. The witness maker only renders the witnesses we can justify.**
+
+
+---
+
+## The world learns to draw itself
+*October 14, 2026 · verified live at Hermeticon build \`2e4c3ed2\`*
+
+> “We need the GPU to tell us exactly what is being drawn.”
+
+The question survived the abandonment of the CPU witness system. It no longer required the world to find the tallest geological point, reconstruct projected mesh edges, or raycast through a camera. We needed a faithful image-space account of what the renderer had *actually drawn*. The experiment was intentionally smaller than a finished edge extractor: render the existing world into a color-and-depth target, then inspect discontinuities in screen space.
+
+### The small implementation that made the crossing
+
+The Three.js renderer draws the ordinary scene into a \`WebGLRenderTarget\` with a \`DepthTexture\`. A fullscreen quad then reads those buffers. Five selectable modes were introduced: **OFF** (original scene), **SOURCE** (offscreen color copied back unchanged), **SOBEL** (color-luminance gradient), **DEPTH** (linearized-depth discontinuity), and **HYBRID** (both). SOURCE uses a separate \`MeshBasicMaterial\`, deliberately independent of the experimental shader, so a broken shader cannot masquerade as a broken render target.
+
+The implementation's operative ideas, abbreviated from \`athanor/athanor.js\`:
+
+\`\`\`js
+const edgeTarget = new T.WebGLRenderTarget(1, 1, { depthBuffer: true });
+edgeTarget.depthTexture = new T.DepthTexture(1, 1, T.UnsignedShortType);
+edgeTarget.depthTexture.format = T.DepthFormat;
+
+// On resize, match the actual drawing buffer, not CSS pixels.
+edgeTarget.setSize(renderer.domElement.width, renderer.domElement.height);
+
+// First pass: exactly the mounted scene and active camera.
+renderer.setRenderTarget(edgeTarget);
+renderer.render(scene, camera);
+
+// Second pass: fullscreen interpretation of rendered evidence.
+renderer.setRenderTarget(null);
+renderer.clearDepth();
+edgeQuad.material = edgeMode === 1 ? sourceMaterial : edgeShader;
+renderer.render(edgeScene, edgeCamera);
+\`\`\`
+
+The shader calculates a 3×3 luminance Sobel gradient and compares linearized depth at the center pixel with right and upper neighbors:
+
+\`\`\`glsl
+float sx = -tl + tr - 2.0*ml + 2.0*mr - bl + br;
+float sy = -tl - 2.0*tc - tr + bl + 2.0*bc + br;
+float sobel = clamp(length(vec2(sx, sy))*1.6, 0.0, 1.0);
+
+float center = linearDepth(texture2D(tDepth, vEdgeUv).r);
+float dx = linearDepth(texture2D(tDepth, vEdgeUv + vec2(px.x,0.0)).r);
+float dy = linearDepth(texture2D(tDepth, vEdgeUv + vec2(0.0,px.y)).r);
+float depthEdge = smoothstep(.012,.085,
+  max(abs(dx-center),abs(dy-center))/max(center,.2));
+\`\`\`
+
+These are *image-space observations*, not a list of exact 3D contour vertices. Sobel responds to lighting, material and triangulation as well as geometry; depth responds to visible depth discontinuities and occlusion. The current pass covers the **full scene**, including glass and equatorial hardware, not terrain alone. It does not yet produce an occupancy mask, terrain ownership IDs, normal buffer, GPU readback, or unprojected witness positions.
+
+### The black screen was evidence too
+
+The first postprocess build (\`bb2ebb43\`) did not immediately succeed. We tried UV initialization (\`5bd422db\`), depth clearing and texture format (\`6f99e2fa\`), fullscreen frustum culling (\`48bbdddf\`), and repaired an unrelated inspection fault (\`b391be18\`). The first SOURCE mode (\`875d7369\`) still depended on the suspect shader. The independent SOURCE material (\`a8cb1624\`) finally proved the render-target/color-copy path worked. Explicit Sobel taps (\`4e4e5980\`) did not fix the remaining black effects.
+
+Instead of guessing again, we made the GPU's shader compilation and link errors visible in the 👁 JSON (\`28b752bc\`). The human returned the decisive report:
+
+\`\`\`json
+{
+  "shaderErrors": [{
+    "program": "Vertex shader is not compiled.\n",
+    "vertex": "ERROR: 0:68: 'uv' : redefinition\nERROR: 0:68: 'assign' : l-value required (can't modify an input \"uv\")\n",
+    "fragment": ""
+  }],
+  "mode": "SOBEL",
+  "target": [652, 1179]
+}
+\`\`\`
+
+Three.js already injects a vertex attribute named \`uv\`; our vertex shader had also declared and assigned a varying named \`uv\`. Renaming the varying to \`vEdgeUv\` in both stages (\`2e4c3ed2\`) resolved the collision. The subsequent live 👁 report showed **\`shaderErrors: []\`**, build **\`2e4c3ed26137c9563f48297333335da5067233ce\`**, **60.52 FPS** reported, **652×1179** drawing buffer, and **0.7 ms** for the most recent instrumented render call. That last measurement is **CPU-side elapsed time**, not a GPU timer query or a complete GPU cost.
+
+The human supplied six screenshots: Sobel at wide and near viewpoints, Depth at wide and near viewpoints, Hybrid, and another Sobel view. **Sobel drew the world like an anatomical engraving**: the outer contour, bores, slopes, tessellation and hardware. **Depth traced luminous contours across the aperture, ridges and exposed cutaway faces** while preserving the underlying rendered scene. **Hybrid combined both.** The results changed with the camera and remained interactive. This is verified visual evidence, **not** an audited proof that every geological or bore boundary has been detected.
+
+### What we keep
+
+The human made the decision explicit:
+
+> “We're preserving these effects. Our world is going to offer lots of different ways to understand its spatial and material consequences.”
+
+The modes are no longer disposable diagnostic costumes. They are the beginning of Hermeticon's **observational vocabulary**. Future lenses might reveal density, material membership, transport, temperature, deformation, stress, provenance, or histories of matter. Their authority must remain clear: **a lens changes what we see, not what the world is**. A beautiful contour is not automatically a measurement; a measurement should disclose its source and limits.
+
+The original task is still unfinished. To produce defensible terrain-edge witnesses, the next instrument should isolate terrain from glass and hardware, distinguish visible terrain from empty space, retain depth/ownership discontinuities where a bore has terrain behind it, and eventually recover world-space witness positions. We should audit coverage independently and measure any GPU readback stalls before promising cheap per-frame CPU access. The empty node maker remains available; it must not invent evidence.
+
+Filavandrel's earlier diagrams, proposals, mistakes and detours remain above, uncorrected into false foresight. They explain why this small, working shader pass matters. We sought the edge in heights, beads, vertices, curves and raycasts. Then we let the renderer show us the edge it had drawn all along.
+
+> **We came to the edge of the world, stood before the vast emptiness beyond, and said: yes. The edge is here.**
+
+**Evidence trail:** [Hermeticon live](https://bonoj.github.io/Hermeticon/) · [final shader fix \`2e4c3ed2\`](https://github.com/bonoj/Hermeticon/commit/2e4c3ed26137c9563f48297333335da5067233ce) · [GPU diagnostic \`28b752bc\`](https://github.com/bonoj/Hermeticon/commit/28b752bcdeec58cc65eb767f449eda2a233ab1e7).
