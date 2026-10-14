@@ -108,3 +108,16 @@ We came to the edge of the world to disguise it. Instead, we began to learn how 
 - `0fe85128` — adaptive angular probes, directional crossing labels, interval instrumentation.
 
 All numbers above are taken from user-supplied runtime 👁 reports, not claimed as exhaustive proof of geometric correctness.
+
+
+## Addendum — October 14: The terrain already knows
+
+The human and the model tested four colored geological node populations. The initial 96-territory candidate search missed visible crests: its highest node was only the highest of the candidates it happened to sample. A later 768-angle rim survey reported six of six extrema captured and `auditPass: true`, but that audit used the same restricted rim samples as the finder. Screenshots revealed actual terrain peaks between nodes. A passing audit of the wrong domain was not proof of the intended geometry.
+
+The human proposed a simpler representation: sort terrain samples by height while preserving their original indices in a disposable index. Use the top N height indices as starting nodes and binary-search from those seeds to locate boundaries for the surface and subsurface arrays. This is a proposal for the next experiment, not a claim about the current build. Its bracketing, handling of holes and local peaks, and spatial coverage still need measurement.
+
+The crucial pivot was to stop making a separate node-search system rediscover what the terrain already knows. Camera rotation need not invalidate the underlying height ordering; movement through the aperture may require reselection. Measure sort time, selection time, boundary-search time, and mobile frame impact before inventing caching or optimization. In the human's words: "If not, fuck it ;)."
+
+The working principle: **Don't make nodes rediscover what the terrain already knows.** Preserve the earlier failures as evidence of how the human and the model reached this change of representation.
+
+Evidence: colored four-population experiment `747f4aa4`; later metallic-node survey `f5d5f066`, whose narrow audit did not detect the missing full-surface maxima.
