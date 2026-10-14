@@ -611,3 +611,69 @@ flowchart LR
 ### Implementation after the design discussion
 
 The first non-authoritative implementation was committed to Hermeticon as [`4c193168`](https://github.com/bonoj/Hermeticon/commit/4c193168dad38a1033eacbcc688ad14e62d34914): `arcana/draw-surface.js` inventories extracted faces and welded edges, computes camera-conditioned contour candidates, and exposes `drawWitness` diagnostics. The diagnostic candidate lines remain hidden by default. This is **not yet** verified depth-aware visible-edge extraction or exact spherical intersection curves; the plan's outstanding work remains explicitly outstanding.
+
+
+---
+
+## The second unlock: the DRAW is the evidence
+
+*Postscript · October 14, 2026 · after implementation and two live witness reports*
+
+The previous sections record a sincere hypothesis: inventory the geometry, ask the camera which edges might matter, then test visibility and distribute witnesses. We built enough of it to learn something important. **That hypothesis was not the final answer.** The following is the later crossing, not an attempt to edit the earlier conversation into having predicted it.
+
+### What actually shipped, and what we saw
+
+[`4c193168`](https://github.com/bonoj/Hermeticon/commit/4c193168dad38a1033eacbcc688ad14e62d34914) introduced the mesh inventory and camera-conditioned edge candidates. The first 👁 report counted **357,270 source vertex occurrences**, **60,213 welded vertices**, **119,090 triangles**, **179,314 edges**, **1,358 open edges**, and **zero nonmanifold edges**. At one viewpoint it generated **9,883 camera candidate segments**, including **2,039 bore-wall candidates**, in **9.4 ms projection time**. The original four geological node populations were still drawn, unchanged. This was instrumentation, not visible witness replacement.
+
+[`292c646a`](https://github.com/bonoj/Hermeticon/commit/292c646ab22a9c7198137f9800954c76b1189a4a) replaced the old node display with camera-conditioned midpoint witnesses and **CPU terrain raycast visibility tests**. Two user-supplied 👁 reports at different azimuths showed ~**9,908–9,933** candidate segments, **140–146 ray tests** per update, **45–47 rejected for occlusion**, **12–18 rejected at the aperture**, and **93–101 displayed witnesses**. Node populations changed as the camera rotated: green 45→33, purple 14→40, red 34→28; cyan remained **zero**. Both reports were around **59 FPS**, but these are isolated snapshots, not controlled before/after benchmarks. The earlier ~88 FPS snapshot came from a different build/view; it does not prove the exact cost of one subsystem.
+
+Crucially, the reports still said `visibilityAudited:false`, `apertureCurveAudited:false`, and `contourCoverageAudited:false`. We had **not** demonstrated that selected nodes traced the boundaries of what the GPU actually rendered.
+
+The human saw the expensive shape of the problem immediately:
+
+> “Camera doesn't need to look everywhere. Just at edge where terrain can exist.”
+
+And then:
+
+> “Terrain does not know what is drawn and what isn't? But we don't want cameras to have to raycast. We need the gpu to tell us exactly what is being drawn.”
+
+Finally, the distinction that corrected the earlier “BAM”:
+
+> “The camera isn't really the unlock. It's just the only view we care about.”
+
+### What changed conceptually
+
+A camera is a **parameter of the view**, not the source of truth for visibility. The GPU already evaluates projected triangles, depth, clipping and fragments. Our CPU reconstruction walked tens of thousands of possible edges and tried to recover facts that the rendering pipeline had already decided.
+
+The desired observable is more modest and more precise: **the boundary of terrain that is actually drawn in the current viewport**. Begin with the circular aperture and visible terrain/empty-space transitions; account for bore openings. A low-resolution terrain-only occupancy mask is a sensible first experiment because it asks about *rendered coverage*, not about all potential mesh edges.
+
+But a binary mask alone is **not sufficient** for every boundary. A bore lip may have visible terrain behind it, so terrain-to-terrain depth or surface-identity discontinuities can matter. The GPU does not magically hand JavaScript a list of 3D edges: an explicit render pass and perhaps costly readback are required, and any sparse world-space witnesses still need depth/unprojection or equivalent verified correspondence.
+
+This is a change of **evidence source**, not an assertion that the next method is already implemented.
+
+### Cleanly putting the experiment away
+
+At [`b1e4e822`](https://github.com/bonoj/Hermeticon/commit/b1e4e82265d2e91ea70dbb343236e1c103b28bd3), we removed both the old height-ranked four-surface selection and the camera mesh-edge/raycast witness machinery from active Genesis. Their commits remain recoverable. In their place is a deliberately **empty**, instrumented `arcana/node-maker.js`: four inherited colors, up to 256 instances per kind, `world.setWitnessNodes([{x,y,z,kind}])`, honest counts and rejection/timing diagnostics. No automatic nodes. No claims of audited edge coverage.
+
+The **terrain and Wanderer remain real, running systems**: an 85×21×85 signed field, 81 extracted chunks, six bores, eleven relief operations, shader-clipped aperture radius 9.92, and a supported tap-to-walk gold cube that moves in geological coordinates while the terrain translates under its viewing sphere. Genesis still performs a **tap-only** mesh raycast for underside interaction ownership; removing CPU raycasts from witness selection did not remove that independent interaction.
+
+The technical state and next experiment were then consolidated into [Hermeticon HANDOFF](https://github.com/bonoj/Hermeticon/blob/main/HANDOFF.md), with README and the preserved legacy Wanderer handoff corrected at [`425c762b`](https://github.com/bonoj/Hermeticon/commit/425c762bca1f89f975be14bda62ca416c6b6900e). The old Wanderer fixture is **not** the authored Genesis currently mounted at the root.
+
+### The next small, falsifiable experiment
+
+1. Render a small **terrain-only occupancy mask** with the **same camera and spherical fragment-discard behavior** as Genesis. Show its boundary over the actual image.
+2. Rotate the view and inspect the outer aperture, ridge silhouettes and bore lips. Where occupancy cannot distinguish foreground terrain from background terrain, investigate **depth/surface ownership discontinuities** rather than pretending a mask knows more than it does.
+3. Instrument mask resolution, boundary alignment, render time, any GPU readback stalls and phone FPS. Do not move extraction to the CPU without measuring the crossing.
+4. **Only after the drawn boundary is proven**, recover world-space positions and feed a sparse set of witnesses into the empty node maker.
+
+No contour graph, geological extrema, camera-wide mesh inventory or new abstraction is prerequisite to step one.
+
+### What Filavandrel learned
+
+The first unlock was **“We want highest point of DRAW, not of terrain.”** It broke our fixation on geological height.
+
+The second unlock was subtler: **we do not need to infer the DRAW from a CPU simulation of the camera. We can ask the renderer what it drew.**
+
+The earlier architecture and Mermaid diagrams above are preserved as historical proposals, **superseded for the immediate experiment**. The later decision is GPU-first visible-boundary evidence, with the smallest possible diagnostic pass. It is not yet a solved boundary extractor.
+
+**The world owns matter. The renderer owns the visible evidence. The witness maker only renders the witnesses we can justify.**
