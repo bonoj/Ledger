@@ -27,12 +27,20 @@ export function createColumn({seed,depthM=1,cells=100,scenario='A_internal_irrad
  return {config:{schema:VERSION,seed,depthM,cells,scenario},truth,cellsPublic,samples:[],actions:[],random};
 }
 export function investigatorView(w){return {schema:VERSION,depthM:w.config.depthM,cells:w.cellsPublic.map(c=>({zTopM:c.zTopM,zBottomM:c.zBottomM,texture:c.texture,fracture:c.fracture})),samples:w.samples.map(({id,interval,composition})=>({id,interval,composition}))};}
-export function sample(w,top,bottom){
+export function sample(w,top,bottom,options={}){
  if(!Number.isFinite(top)||!Number.isFinite(bottom)||top<0||bottom>w.config.depthM||top>=bottom)throw Error('invalid interval');
- const weights=w.cellsPublic.map(c=>Math.max(0,Math.min(bottom,c.zBottomM)-Math.max(top,c.zTopM))),total=weights.reduce((a,b)=>a+b,0);
- const composition={};for(const k of ['waterIce','naclEquivalent','P','Q','remainder'])composition[k]=r(w.cellsPublic.reduce((s,c,i)=>s+c.composition[k]*weights[i],0)/total);
- const result={id:'sample-'+String(w.samples.length+1).padStart(4,'0'),interval:[top,bottom],composition};
- w.samples.push(result);w.actions.push({type:'sample',top,bottom,id:result.id});return result;
+ const {recoveryFraction=1,disturbanceFraction=0,contaminationFraction=0,contaminant={waterIce:1}}=options;
+ if(![recoveryFraction,disturbanceFraction,contaminationFraction].every(v=>Number.isFinite(v)&&v>=0&&v<=1))throw Error('invalid fractions');
+ const species=['waterIce','naclEquivalent','P','Q','remainder'];
+ if(!contaminant||species.some(k=>!Number.isFinite(contaminant[k]??0)||(contaminant[k]??0)<0)||Math.abs(species.reduce((s,k)=>s+(contaminant[k]??0),0)-1)>1e-9)throw Error('invalid contaminant');
+ const shift=disturbanceFraction*w.config.depthM/w.config.cells;
+ const windows=[[top,bottom,1-disturbanceFraction],[Math.max(0,top-shift),Math.min(w.config.depthM,bottom+shift),disturbanceFraction]];
+ const weights=w.cellsPublic.map(c=>windows.reduce((s,[lo,hi,p])=>s+p*Math.max(0,Math.min(hi,c.zBottomM)-Math.max(lo,c.zTopM))/(hi-lo),0));
+ const total=weights.reduce((a,b)=>a+b,0),composition={};
+ for(const k of species){const native=w.cellsPublic.reduce((s,c,i)=>s+c.composition[k]*weights[i],0)/total;composition[k]=r((1-contaminationFraction)*native+contaminationFraction*(contaminant[k]??0));}
+ const ideal=r(bottom-top),recovered=r(ideal*recoveryFraction);
+ const result={id:'sample-'+String(w.samples.length+1).padStart(4,'0'),interval:[top,bottom],composition,recoveryFraction,disturbanceFraction,contaminationFraction,ledger:{idealMassEquivalentM:ideal,recoveredMassEquivalentM:recovered,lostMassEquivalentM:r(ideal-recovered),contaminantMassEquivalentM:r(recovered*contaminationFraction)}};
+ w.samples.push(result);w.actions.push({type:'sample',top,bottom,options:{recoveryFraction,disturbanceFraction,contaminationFraction,contaminant:{...contaminant}},id:result.id});return result;
 }
 export function syntheticBands(w,id){
  const s=w.samples.find(x=>x.id===id);if(!s)throw Error('unknown sample');
