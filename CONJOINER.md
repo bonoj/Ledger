@@ -227,3 +227,14 @@ Recovered from [Repository's executable donor](https://github.com/bonoj/Reposito
 **Crucial separation:** a thoughtform is *embodied memory or possibility*, not a runtime work ticket. The executable's own comment states: “deliberately not a ticket or interaction target.” A transient experimental asset can be removed once its evidentiary job is done; a tiny accepted residue may remain in a thoughtform; reusable runtime assets need explicit ownership and lifecycle, including disposal of geometry/material resources when presentations are replaced. The Chemlab debt demonstrates that the last lifecycle seam was **known to be incomplete**, not solved by having a capsule.
 
 **Compaction handle:** `thoughtform != task queue != asset registry != authoritative executable`. The source keeps the semantic residue physically recoverable without making it a second source of truth. This is an initial reading of the user's runtime-ticketing/asset-management hint; inspect historical versions and neighboring implementation before claiming the full intended architecture.
+
+
+#### Source correction — five Thoughtforms, not four
+
+A line-by-line inspection of current `Repository/src/betwixt/world-lab.html` found **five** instantiated Thoughtform roots in the Workshop construction, at lines 3726–3918: semantic snapping (3728), Chemlab cold boot (3765), Neptunian caretaker (3808), deterministic graph mind (3829), and **Rendezvous** (3864). The previous inventory omitted Rendezvous.
+
+Rendezvous carries the question of whether two independent things can discover a cheap shared surface and exchange consequence. Its runtime toy uses two independently wandering eyes, a transient filament, and one animated packet/pulse moving from one eye to the other before the connection breaks. Its metadata explicitly warns that the toy does **not** establish inference, durable storage, or a networking architecture. Like the other Thoughtforms, `interaction:'none'`.
+
+This correction matters for runtime ticketing: an embodied *question* can be simulated without becoming a work ticket, and a visual packet-exchange toy is not evidence of an implemented transport protocol. The current source contains exactly one literal occurrence of “ticket” in this file, in the comment distinguishing Thoughtforms from tickets; no asset registry is established by this search. The Chemlab resource-disposal debt remains real.
+
+**Provenance caveat:** line numbers refer to current main-branch source. Historical dating of each addition still requires commit-level verification.
