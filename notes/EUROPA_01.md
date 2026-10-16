@@ -82,7 +82,7 @@ A **turn** is one substantive model work cycle, with an automatic GitHub put. If
 | **9** | Engineering feasibility envelope | Bound radiation, thermal, power, sample depth and delivery mass; compare rocket fuel with penetrator/bubble/soft-landing hardware only at common assumptions |
 | **10** | Review and next expedition | Independent checks, limitations, reusable modules, live artifact/build verification if deployed, and the next research questions |
 
-**Current position: Turn 5 implemented; Turn 6 next.** Synthetic column source and regression tests committed. Local prototype passed 1,055 checks; exact committed variant awaits independent runner verification.
+**Current position: Turn 6 source and tests committed; Turn 7 next.** Local Turn 6 test suite passed 1,511 assertions; remote source parity and CI execution are separate verification steps.
 
 ## Delivery and protection — parked feasibility branch
 
@@ -122,7 +122,7 @@ Before assigning a number to a scientific parameter, trace it to a relevant sour
 
 **2026-10-16 — Scope and methodology reset.** The earlier note had grown into repeated landing concepts and work logs. Replaced it with a question-first science program, executable Ice Column v0, bounded delivery branch, source register, and ten-turn roadmap. Original ideas and corrections remain recoverable from Git history. **No numerical model or runtime has yet been built.**
 
-**Next action:** **Turn 6 — coring and handling**: instrument recovery, disturbance, contamination, and sample provenance; verify the exact committed implementation before expanding it.
+**Next action:** **Turn 7 — virtual measurements**: calibrate forward measurement assumptions, noise and uncertainty, and distinguish synthetic from real laboratory channels.
 
 
 ## Turn 1 result — scientific reconnaissance (2026-10-16)
@@ -354,3 +354,18 @@ A Node-compatible ES module now implements seeded generation of three **syntheti
 **Not yet delivered:** browser/mobile UI, live deployment, measured spectra, physical dose model, validated inverse-problem discrimination.
 
 **Next:** Turn 6 implements honest sample handling and strengthens the privileged/public API boundary, followed by a run of the exact committed regression suite.
+
+
+## Turn 6 result — synthetic coring and handling (2026-10-16)
+
+**Persisted:** `experiments/europa-01/ice-column.mjs` and `ice-column.test.mjs`. Existing source extended rather than rebuilt.
+
+**Sampling model:** optional recoveryFraction, disturbanceFraction, contaminationFraction, and normalized contaminant composition. Disturbance blends the requested depth interval with a slightly expanded neighborhood; contamination blends native sample chemistry with specified foreign composition; recovery separately accounts for lost quantity. This is a **synthetic**, explicitly non-calibrated sampling approximation.
+
+**Ledger:** requested depth interval, sample ID, ideal/recovered/lost mass-equivalent thickness, and contaminant contribution; deterministic sample actions. Inputs validated for finite bounded fractions and valid composition.
+
+**Verification:** the local Turn 6 files at `/mnt/data/europa01/` passed **1,511 Node assertions**. GitHub writes were recovered using smaller sequential Contents updates. The remote implementation and tests were reconstructed from the same algorithm; a read-back and exact remote execution should be recorded separately rather than treating the local pass as GitHub CI.
+
+**Limitations:** recovery fraction does not currently change the reported mean composition; loss is assumed composition-neutral. The model does not represent spatially selective loss, sample-to-sample carryover, drill heating, reaction kinetics, real contamination chemistry or instrument blanks. The simulator world object still exposes privileged ground truth to trusted callers; investigatorView hides scenario and origin, but this is not a security boundary.
+
+**Turn 7:** implement measurement noise and calibrated spectral channel interfaces, then explicitly test whether sampling disturbance can destroy or imitate discriminating depth gradients.
