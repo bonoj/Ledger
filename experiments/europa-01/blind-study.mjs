@@ -21,22 +21,23 @@ function observe(scenario,seed,depth,handling,depthInterval=[.58,.68],noiseSigma
 }
 const mean=xs=>xs[0].map((_,i)=>xs.reduce((s,x)=>s+x[i],0)/xs.length);
 const dist=(a,b)=>a.reduce((s,v,i)=>s+(v-b[i])**2,0);
-export function runBlindStudy({trainingSeeds=50,testSeeds=50,depth=false,handling={},depthInterval=[.58,.68],noiseSigma=.002,noiseMode='paired',abstainMargin=0}={}){
+export function runBlindStudy({trainingSeeds=50,testSeeds=50,depth=false,handling={},depthInterval=[.58,.68],noiseSigma=.002,noiseMode='paired',abstainMargin=0,seedOffset=0}={}){
+ if(!Number.isInteger(seedOffset)||seedOffset<0||seedOffset>1000000)throw Error('invalid seed offset');
  if(!Number.isFinite(abstainMargin)||abstainMargin<0||abstainMargin>1)throw Error('invalid abstention margin');
  if(!['paired','independent'].includes(noiseMode))throw Error('invalid noise mode');
  if(!Array.isArray(depthInterval)||depthInterval.length!==2||!depthInterval.every(Number.isFinite)||depthInterval[0]<0||depthInterval[1]>1||depthInterval[0]>=depthInterval[1]||!Number.isFinite(noiseSigma)||noiseSigma<0)throw Error('invalid measurement settings');
  if(!Number.isInteger(trainingSeeds)||trainingSeeds<2||!Number.isInteger(testSeeds)||testSeeds<1)throw Error('invalid seed counts');
- const centers=scenarios.map(s=>mean(Array.from({length:trainingSeeds},(_,seed)=>observe(s,seed,depth,handling,depthInterval,noiseSigma,noiseMode))));
+ const centers=scenarios.map(s=>mean(Array.from({length:trainingSeeds},(_,seed)=>observe(s,seed+seedOffset,depth,handling,depthInterval,noiseSigma,noiseMode))));
  const trials=[];
  for(let seed=trainingSeeds;seed<trainingSeeds+testSeeds;seed++)for(let label=0;label<2;label++){
-  const xs=observe(scenarios[label],seed,depth,handling,depthInterval,noiseSigma,noiseMode);
+  const xs=observe(scenarios[label],seed+seedOffset,depth,handling,depthInterval,noiseSigma,noiseMode);
   const distances=centers.map(c=>dist(xs,c));
   const guess=distances[0]===distances[1]?-1:(distances[0]<distances[1]?0:1);
   const margin=Math.abs(distances[0]-distances[1])/(distances[0]+distances[1]+1e-12);
   const decision=margin<abstainMargin?-1:guess;
   trials.push({correct:decision===label,abstained:decision<0,margin});
  }
- return {schema:'europa-blind-study/v0',synthetic:true,depth,handling,depthInterval,noiseSigma,noiseMode,abstainMargin,trainingSeeds,testSeeds,
+ return {schema:'europa-blind-study/v0',synthetic:true,depth,handling,depthInterval,noiseSigma,noiseMode,abstainMargin,seedOffset,trainingSeeds,testSeeds,
   correct:trials.filter(t=>t.correct).length,abstained:trials.filter(t=>t.abstained).length,total:trials.length,
   accuracy:trials.filter(t=>t.correct).length/trials.length,
   uncertain:trials.filter(t=>t.margin<.1).length,
