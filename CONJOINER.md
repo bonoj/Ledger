@@ -9,6 +9,20 @@ This is the operating premise of the entire account, not an incidental device pr
 **Measure each crossing by what it moves off the smartphone channel**—and each failure by what it pushes back onto that channel. A conjoiner's pocket is the interface, not the location of the laboratory.
 
 
+## October 16, 2026 — Ion Garden: the laboratory answers
+
+A learner encountered a chemistry exercise that felt difficult and sent the human a photograph. The exercise asked for the simplest binary ionic formula ratios possible from Mg²⁺, V⁵⁺, Br⁻ and S²⁻. The human saw not merely a question to answer but an opportunity to make an instrument. The model interpreted the task and built **Ion Garden**, a phone-oriented, interactive charge-balancing exercise, published through the existing JIT infrastructure: https://bonoj.github.io/jit/ion-garden/ .
+
+This crossing has three roles: **the human** recognized the occasion, exercised judgment and directed revisions; **the model** interpreted the problem, implemented the tool, inspected its source, added deterministic regression checks and committed changes; **the beneficiary** was the learner whose specific difficulty prompted the work. The beneficiary did not have to request software, describe a specification, or operate the laboratory. These are roles in this episode, not permanent identities.
+
+The instrument allows the learner to choose positive and negative ions, vary their counts, see net charge and a trial formula, request progressive hints, check whether a neutral ratio is minimal, and discover all four combinations. The expected exercise answers are MgBr₂, MgS, VBr₅ and V₂S₅. Crucially, the interface now distinguishes **formal charge-balancing predictions** from evidence that a compound is stable or isolable; the exercise's V⁵⁺ combinations should not be misrepresented as laboratory-confirmed substances.
+
+The human then identified two usability defects: the initial layout demanded scrolling, and selecting a combination in the progress area did not make the change in the balancing area sufficiently apparent. The model rebuilt the page for a single viewport and subsequently made the active pair explicit in the laboratory, highlighted the selected progress tile, supplied feedback on selection and animated the lab boundary. The revised selection behavior and chemistry logic passed scripted JavaScript/DOM regression checks. Source commit for the last revision: [`4ddfed55`](https://github.com/bonoj/bonoj.github.io/commit/4ddfed554a5aa236a13d29bb8e3b023b59481a4a).
+
+**Evidence boundary:** repository writes and scripted checks were verified. At the last observation, publication of the latest revision had been queued; a completed live mobile-browser acceptance test was **not** established. Nor is there evidence yet that the beneficiary used the tool or learned from it. Building an educational instrument is demonstrated; its educational effect remains to be witnessed.
+
+**Why this belongs in Conjoiner:** a difficulty expressed in ordinary family life traveled through the human's pocket-sized conversational aperture and returned as a purpose-built executable learning aid. The interesting result is not the size of the application but the compression of distance between an encountered need and a usable capability. The machinery remained the model's burden; the human could stay with the person and the purpose. The next observation belongs to the beneficiary.
+
 ## October 16 photographic witnesses — the collaboration seen through its actual aperture
 
 **Source:** ten smartphone screenshots supplied directly by the human during this retrospective, showing excerpts from earlier sessions. These are **selected glimpses**, not a complete activity log. Their on-screen times and statements should not be used to reconstruct missing commit chronology without corroboration.
