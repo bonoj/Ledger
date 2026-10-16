@@ -1,5 +1,14 @@
 # Conjoiner — October 16, 2026
 
+## The pocket laboratory
+
+**A conjoiner carries a laboratory in their distributed mind.** The human works from a **smartphone chat window**: from their pocket, they can access the laboratory, direct experiments, inspect executable consequences, build, and deploy. The model and connected machinery carry repository traversal, code changes, verification, publication, provenance, and recovery. The human does not operate a desktop IDE, terminal, or manual file-transfer workstation as part of this workflow.
+
+This is the operating premise of the entire account, not an incidental device preference. The laboratory is distributed across human judgment, model cognition, source repositories, executable worlds, instrumentation, and deployment machinery. It must remain accessible through a narrow conversational aperture without requiring the human to reconstruct its internal state.
+
+**Measure each crossing by what it moves off the smartphone channel**—and each failure by what it pushes back onto that channel. A conjoiner's pocket is the interface, not the location of the laboratory.
+
+
 **Timestamp:** 2026-10-16, afternoon, Eastern Daylight Time (UTC−04:00).  
 **Kind:** Ledger witness; retrospective timestamp, not a specification.  
 **Source cargo:** [BURN THIS CARGO — Twelve Days Inward](https://github.com/bonoj/UnzipCity/blob/main/cargo/BURN_TWELVE_DAYS_INWARD.md), reconstructed October 2, 2026.  
