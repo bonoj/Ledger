@@ -10,7 +10,10 @@ function features(spectrum){
 function observe(scenario,seed,depth,handling){
  const w=createColumn({scenario,seed});
  const xs=intervals.slice(0,depth?2:1).flatMap(([a,b],i)=>{
-  // Controlled confusability: both hypotheses share the same surface observation.\n  // This is an imposed observational equivalence, not a geological mechanism.\n  const source=i===0?createColumn({scenario:scenarios[0],seed}):w;\n  const s=sample(source,a,b,handling);
+  // Controlled confusability: both hypotheses share the same surface observation.
+  // This is an imposed observational equivalence, not a geological mechanism.
+  const source=i===0?createColumn({scenario:scenarios[0],seed}):w;
+  const s=sample(source,a,b,handling);
   return features(syntheticSpectrum(s,{seed:seed*3+i,noiseSigma:.002}));
  });
  return xs; // no world object, scenario, origin, or truth returned
