@@ -238,3 +238,23 @@ Rendezvous carries the question of whether two independent things can discover a
 This correction matters for runtime ticketing: an embodied *question* can be simulated without becoming a work ticket, and a visual packet-exchange toy is not evidence of an implemented transport protocol. The current source contains exactly one literal occurrence of “ticket” in this file, in the comment distinguishing Thoughtforms from tickets; no asset registry is established by this search. The Chemlab resource-disposal debt remains real.
 
 **Provenance caveat:** line numbers refer to current main-branch source. Historical dating of each addition still requires commit-level verification.
+
+
+---
+
+## Essential observation condition — smartphone chat window
+
+**This retrospective must not omit its most consequential interface constraint:** the human conducts this collaboration **from a smartphone chat window**. There is no human desktop IDE, terminal, local build workspace, multi-monitor debugging setup, or routine manual file shuttle behind these exchanges. The human directs, judges, and receives executable consequences through the phone; the model operates the repository, tools, tests, deployment and recovery machinery. Browser experiences and artifacts may be opened on the same phone, but that is not a second human development workstation.
+
+This changes how every crossing should be read:
+
+- A request for the human to fetch, patch, upload, copy logs between systems, clear browser caches, or manually run verification is **not a minor inconvenience**. It breaks the collaboration's operating premise and shifts transport labor back onto a very narrow interface.
+- A one-word instruction (➡️, Dracarys, Sling) or a short perceptual correction is not evidence that the human is disengaged. It is an unusually bandwidth-constrained control channel supported by accumulated shared context and executable infrastructure.
+- Build identity, canonical URLs, mobile legibility, direct links, recovery from stale deployments, and tool write reliability are central experimental facts, not housekeeping.
+- A cold handoff succeeds only when a new model encounter can recover authority, tools, provenance and current state **without asking the human to reconstruct them on the phone**.
+- Independent machine observation matters disproportionately because the human should not have to become the model's screenshot, debugger, file mover, or telemetry bus.
+- Distinguish the human's *phone-visible acceptance* from a green repository build or a claimed deployment. These are separate gates.
+
+**Question for every dated unpacking:** What did this episode require the human to do through the smartphone window? What did the environment/model take off that channel? What was pushed back onto it by a failure? Do not silently assume a conventional desktop development workflow.
+
+This is an observation about the collaboration's operating conditions, **not** a prescription that every possible future interface must remain a phone.
