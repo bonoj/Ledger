@@ -216,3 +216,25 @@ Human introduced inflatable bubble landing. Assistant clarified that it is an im
 ### 2026-10-16 — Work log: rocket brakes
 
 Human confirmed no aerobraking and asked whether rocket brakes are necessary. Assistant established staged propulsive descent as baseline, with optional gravity-assist approach shaping and low-speed inflatable touchdown; direct descent versus Europa orbit remains open.
+
+
+## Landing option — slug pitons, shock-isolated payload, impact-assisted boring (2026-10-16)
+
+**Human concept:** “slug pitons and a shock absorber for the payload? Free boring and injection.” Interpret as multiple hardened impact penetrators/anchors striking ice first, with scientific payload carried on a separate longer-stroke shock absorber. The impact could accomplish initial anchoring and penetration while expending residual touchdown kinetic energy. **No engineering feasibility demonstrated.**
+
+**Precedent, with important distinctions:**
+- **NASA Deep Space 2 (Mars, 1999):** forebody penetrator and surface aftbody, flexible interconnect; target ~180 m/s impact and extreme shock (up to ~30,000 g forebody). It was not a successful validated Mars surface mission: probes were lost. NASA/JPL described impact tests and flight-like battery/drill qualification. https://www.jpl.nasa.gov/nmp/ds2/mission/events.html ; https://www.jpl.nasa.gov/news/mars-penetrators-successfully-complete-crucial-subsystem-test/ ; https://ntrs.nasa.gov/citations/19990036055
+- **JAXA LUNAR-A:** designed lunar penetrator/seismometer and heat-flow probes; cancelled in 2007, not flight demonstration. https://www.isas.jaxa.jp/en/missions/spacecraft/others/lunar-a.html
+- **ESA Philae:** landing gear, ice screws, harpoons, and intended downward thruster for anchoring. Harpoons failed to fire and screws failed to penetrate unexpectedly hard comet material; Philae bounced. Demonstrates why anchoring reliability cannot be assumed. https://www.esa.int/Science_Exploration/Space_Science/Rosetta/Rosetta_and_Philae_one_year_since_landing_on_a_comet
+
+**Concept architecture:** propulsive Europa-relative braking → controlled residual-speed touchdown → hardened slug pitons penetrate and/or fracture ice → independent telescoping/crushable shock stroke decelerates payload → deploy anchors and verify grip → use penetration holes as pilot bores, sensor insertion paths, or starter sites for mechanical/thermal excavation → bury instrument vault and fabricate shielding as justified. Pitons should not be presumed to create a bore large enough for the payload.
+
+**Competing alternatives:** rigid soft landing; inflatable bubble; piton + shock-isolated vault; piton + bubble hybrid. Separate impact energy dissipation, retention/anchoring, and scientific sample cleanliness.
+
+**Critical constraints:** unpredictable ice strength, brittle fracture and spall, glancing impact, uneven multi-piton engagement, overturning torque, peak payload g and jerk, shock stroke, anchor pullout, rebound, low-gravity reaction forces, drill alignment, piton extraction/reuse, and contamination from impact fragmentation.
+
+**Quantitative experiment E2:** impact velocity and mass → energy and momentum; candidate piton penetration resistance curves and fracture energy; stroke-dependent payload deceleration; anchor retention under excavation loads; terrain hardness distributions; probability of safe stable landing and usable pilot holes. A stopping-distance average deceleration is not the peak shock pulse. Treat “free boring” as energy reuse, not energy-free excavation.
+
+### 2026-10-16 — Work log: slug-piton impact landing
+
+Human proposed slug pitons plus payload shock absorber, using touchdown energy for boring/injection. Assistant researched NASA/JPL Deep Space 2, JAXA LUNAR-A, and ESA Philae precedents and recorded successes/limitations, alternative architecture, and proposed E2 trade study. No simulation run.
