@@ -341,3 +341,15 @@ The progression is not “the model has vision” in an unrestricted sense. It i
 
 
 ---
+
+## Unpacking 04 — Ozymandias (October 3–4)
+
+The semantic lamp's first incarnation was independently perceived as a brass spear fisher. It was retained as Ozymandias, and a lamp was built as its descendant. Coherent geometry and faithful semantic identity are not equivalent; unexpected results may earn their own identity.
+
+Observer's first lamp-head scan used 84 runtime rays. Its report required a manual return journey from browser to phone to model. The initial evidence was contaminated by background geometry, so no correction was warranted. Target-scoped sensing was subsequently earned; later evidence remained insufficient to establish surface continuity. The key missing capability was not simply more raycasts, but reliable evidence transport and appropriately discriminating observation.
+
+Nested Betwixtables established focus as a presentation seat rather than an object's property. The deepest eligible contained object can enter the seat while its parent returns to its simulation-defined home. Generic interaction dispatch temporarily broke dynamite, exposing an older special-case handler; the repair unified the interaction contract.
+
+Thoughtforms were explicitly described in the crossing as executable asset stores. That does not make them work tickets or a general asset registry. The distinction between preserved possibility and active runtime ownership remains important.
+
+Source: [Ozymandias Crossing](ozymandias_crossing/account.md). Historical implementation anchors include Repository revisions `cc77dd76`, `43869374`, `b0ed355f`, and `bf14368c`.
