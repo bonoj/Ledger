@@ -514,3 +514,43 @@ I'll also keep the canonical notebook readable: established findings up front, c
 **My recommendation:** eight turns, with the first one closing our existing work and the remaining seven returning to Europa itself.
 
 We began by asking what the ice remembers. It's time to discover what we'd have to do to hear it. 🐉
+
+
+## Roadmap amendment — Europa as an executable experiment (2026-10-16)
+
+**Status: active amendment to the verbatim eight-turn plan above.** Preserve that plan as the original decision record. This section updates its implementation and deliverables without rewriting history.
+
+### Why the approach changed
+
+Three visual references clarified the missing bridge between science and the existing Hermeticon world. (1) The actual Abyss/Shell screenshot shows a live, performant, interactive world with deformable terrain and material interactions; it is the implementation baseline, **not** proof of a Europa model. (2) The photoreal cross-section depicts a scientific aspiration—layered ice, inclusions, a drill, recovered core and measurement station—but its labeled depths, compositions and appearances are **illustrative**, not observed Europan stratigraphy. (3) The stylized, particle-rich Europa mockup is a plausible **visual and interaction target** for the existing engine, not an already implemented feature or validated physics result.
+
+The previous roadmap made the world a possible downstream visualization of conclusions. The amendment makes the world a **testable experimental apparatus** from the first turn, running alongside evidence gathering. That is an important methodological improvement: an excavation can challenge assumptions about provenance, material accounting, depth resolution, contamination and recovery in a way a diagram cannot. It also exploits existing Hermeticon capabilities instead of constructing another isolated toy simulator.
+
+**Unchanged scientific ordering:** science → observable evidence → sample requirements → engineering. **Added feedback loop:** scientific constraints shape the world; observations from the instrumented world reveal what the scientific model fails to specify. Simulated observations are never mistaken for evidence from Europa.
+
+### Revised eight-turn expedition
+
+| Turn | Scientific deliverable | Executable-world deliverable | Exit criterion |
+|---|---|---|---|
+| **1 — Baseline and audit** | Close the methodological audit: exact-source regression execution, reconcile local/remote discrepancies, freeze classifier work unless a material defect appears. | Inspect current Abyss/Shell architecture and identify its authoritative terrain/material APIs; establish a minimal Europa experimental scene **using existing systems**. | Baseline documented, reproducible scene and build identified; no invented deployment or physical claims. |
+| **2 — Environment** | Source-backed gravity, temperature, vacuum, radiation and mechanical constraints, explicitly separating measured, inferred and unknown properties. | Europa-like ice terrain, lighting and motion under parameterized environmental assumptions. | Visuals and parameters tagged illustrative vs grounded; deterministic repeatability. |
+| **3 — Histories and strata** | Plausible competing processes: irradiation, impact gardening, fractures, emplacement, freezing and possible exchange; note confusable histories. | Composable depth-dependent material populations embedded in the **authoritative** terrain, with inspectable provenance. | Distinct synthetic histories can yield observable and non-observable differences without hidden-truth leakage. |
+| **4 — Diagnostic evidence** | Candidate depth-resolved discriminants, ambiguities and measurement limits. | A depth probe and simple inspectable strata/composition readout, initially without a large HUD. | Readout derives from the world and has a traceable sampling footprint. |
+| **5 — Integrity and excavation** | Assess heating, mixing, contamination, recovery loss and disturbance against preserved stratigraphic evidence. | Minimal excavation and recovered core with conservation ledger: removed, recovered, dispersed, lost and introduced material. | Mass/material accounting closes within declared numerical tolerance; sampling does not conjure its own chemistry. |
+| **6 — Access mechanisms** | Compare coring, mechanical drilling, thermal access and penetrators with explicit assumptions, energy, mass and preservation tradeoffs. | Interchangeable access tools acting on the same substrate; start with one useful mechanism, then compare. | Comparable instrumented outcomes; no physically uncalibrated drill speed masquerading as an estimate. |
+| **7 — Mission architecture** | Separate landing/delivery, subsurface access, power, thermal budget, communications and contamination constraints. | Simple payload/delivery experiments where feasible; keep surface arrival distinct from coring. | Concept comparison states assumptions and failure modes rather than selecting hardware on aesthetics. |
+| **8 — Synthesis** | Defensible sample strategy, evidence ledger, uncertainty register and prioritized validation experiments. | A small coherent interactive Europa demonstrator: world → excavation → sample → inspection → provenance record. | Reproducible end-to-end demonstration and explicit list of what remains fictional or unvalidated. |
+
+### Implementation discipline
+
+**Core invariant: the drill interrogates the world; it never generates its own results.** Sample composition, depth, recovered mass and contamination must derive from the authoritative material state and declared tool operations. Avoid a decorative particle shower disconnected from sample accounting. Prefer reusing Hermeticon's existing material transport, terrain, populations, instrumentation, focus and deployment machinery after inspection; do not invent their APIs or claim those integrations already exist.
+
+**Smallest useful vertical slice:** one ice patch, a few material populations, one sampling tool, one recoverable core, one inspection readout. Add the mockup's elaborate interface only after that loop is real. Use deterministic seeds and visible build identity. Phone-first performance and clear tap targets remain constraints. Separate visual particle representation from scientifically meaningful quantities: a BB is not automatically a molecule, gram or calibrated volume. Define any conversion and its uncertainty before making quantitative claims.
+
+**Evidence boundary:** all geology, chemistry, synthetic spectra, particle counts, thermal behavior and drill performance remain explicitly labeled by provenance and calibration status. The concept art is a design reference, not a data source. Maintain independent scientific hypotheses and negative controls even when the simulation is visually persuasive.
+
+### Execution policy for subsequent 🏹 turns
+
+Each turn should combine meaningful scientific research, model/world implementation where appropriate, tests, and persistence rather than incrementing the classifier in tiny steps. Inspect the actual code and established cold-boot/deployment paths before editing Abyss/Shell. Do not publish or report a live build until the deployed SHA is verified. The canonical EUROPA-01 notebook records the decision, assumptions, evidence and next action; detailed implementation belongs in the relevant codebase, not copied into this note.
+
+**Immediate next action:** Turn 1 closes exact-source audit **and** inventories Abyss/Shell's actual terrain/material contracts, then establishes the smallest executable Europa scene. No wholesale scene rebuild and no speculative new engine.
