@@ -23,6 +23,14 @@ The human then identified two usability defects: the initial layout demanded scr
 
 **Why this belongs in Conjoiner:** a difficulty expressed in ordinary family life traveled through the human's pocket-sized conversational aperture and returned as a purpose-built executable learning aid. The interesting result is not the size of the application but the compression of distance between an encountered need and a usable capability. The machinery remained the model's burden; the human could stay with the person and the purpose. The next observation belongs to the beneficiary.
 
+### October 16 follow-up — an invitation reaches a second beneficiary
+
+**Witness:** a screenshot of a family text conversation supplied by the human. The human shared the Ion Garden link in the conversation. A second prospective beneficiary, who had previously taken similar coursework, responded spontaneously: “couldve used this s couple yrs ago” followed by a disappointed emoji. This is retrospective recognition of a possible use, **not** a report that the tool was tried or found effective.
+
+The human then extended the offer beyond this chemistry problem: “Send me your problems anytime. No guarantees that what I build will be immediately useful, but we can always make adjustments. They are effortless to build and deploy.” The message turns one artifact into an open invitation to bring future difficulties to the laboratory. It also explicitly treats usefulness as something to be discovered and revised, not presumed at publication.
+
+**Tracking distinction:** (1) the original beneficiary's learning outcome remains unknown; (2) the link has been shared in a real family conversation; (3) another prospective beneficiary expressed spontaneous retrospective interest; (4) no additional tool request, actual use, or learning improvement is yet evidenced. Future observations should record the beneficiary's own experience and any resulting iterations without retroactively upgrading these early signals into proof of effectiveness.
+
 ## October 16 photographic witnesses — the collaboration seen through its actual aperture
 
 **Source:** ten smartphone screenshots supplied directly by the human during this retrospective, showing excerpts from earlier sessions. These are **selected glimpses**, not a complete activity log. Their on-screen times and statements should not be used to reconstruct missing commit chronology without corroboration.
