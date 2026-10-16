@@ -22,6 +22,7 @@ function observe(scenario,seed,depth,handling,depthInterval=[.58,.68],noiseSigma
 const mean=xs=>xs[0].map((_,i)=>xs.reduce((s,x)=>s+x[i],0)/xs.length);
 const dist=(a,b)=>a.reduce((s,v,i)=>s+(v-b[i])**2,0);
 export function runBlindStudy({trainingSeeds=50,testSeeds=50,depth=false,handling={},depthInterval=[.58,.68],noiseSigma=.002,noiseMode='paired'}={}){
+ if(!['paired','independent'].includes(noiseMode))throw Error('invalid noise mode');
  if(!Array.isArray(depthInterval)||depthInterval.length!==2||!depthInterval.every(Number.isFinite)||depthInterval[0]<0||depthInterval[1]>1||depthInterval[0]>=depthInterval[1]||!Number.isFinite(noiseSigma)||noiseSigma<0)throw Error('invalid measurement settings');
  if(!Number.isInteger(trainingSeeds)||trainingSeeds<2||!Number.isInteger(testSeeds)||testSeeds<1)throw Error('invalid seed counts');
  const centers=scenarios.map(s=>mean(Array.from({length:trainingSeeds},(_,seed)=>observe(s,seed,depth,handling,depthInterval,noiseSigma,noiseMode))));
@@ -33,7 +34,7 @@ export function runBlindStudy({trainingSeeds=50,testSeeds=50,depth=false,handlin
   const margin=Math.abs(distances[0]-distances[1])/(distances[0]+distances[1]+1e-12);
   trials.push({correct:guess===label,abstained:guess<0,margin});
  }
- return {schema:'europa-blind-study/v0',synthetic:true,depth,handling,depthInterval,noiseSigma,trainingSeeds,testSeeds,
+ return {schema:'europa-blind-study/v0',synthetic:true,depth,handling,depthInterval,noiseSigma,noiseMode,trainingSeeds,testSeeds,
   correct:trials.filter(t=>t.correct).length,total:trials.length,
   accuracy:trials.filter(t=>t.correct).length/trials.length,
   uncertain:trials.filter(t=>t.margin<.1).length,
