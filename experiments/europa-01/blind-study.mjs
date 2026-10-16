@@ -28,7 +28,7 @@ export function runBlindStudy({trainingSeeds=50,testSeeds=50,depth=false,handlin
  const centers=scenarios.map(s=>mean(Array.from({length:trainingSeeds},(_,seed)=>observe(s,seed,depth,handling,depthInterval,noiseSigma,noiseMode))));
  const trials=[];
  for(let seed=trainingSeeds;seed<trainingSeeds+testSeeds;seed++)for(let label=0;label<2;label++){
-  const xs=observe(scenarios[label],seed,depth,handling,depthInterval,noiseSigma);
+  const xs=observe(scenarios[label],seed,depth,handling,depthInterval,noiseSigma,noiseMode);
   const distances=centers.map(c=>dist(xs,c));
   const guess=distances[0]===distances[1]?-1:(distances[0]<distances[1]?0:1);
   const margin=Math.abs(distances[0]-distances[1])/(distances[0]+distances[1]+1e-12);
