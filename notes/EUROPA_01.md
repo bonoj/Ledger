@@ -201,3 +201,18 @@ For touchdown mass `m` and speed `v`, nominal kinetic energy `E = 0.5 m v²`. Id
 ### 2026-10-16 — Work log: padded landing concept
 
 Human introduced inflatable bubble landing. Assistant clarified that it is an impact absorber rather than aerodynamic balloon, proposed powered descent plus bubble impact, and defined quantitative comparisons and potential secondary uses. No impact simulation or material qualification has yet been performed.
+
+
+## Propulsive braking and approach architecture (2026-10-16)
+
+**Decision:** Europa's negligible atmosphere makes aerodynamic braking/parachutes unavailable as a practical landing mechanism. **Propulsive velocity reduction is baseline**; the inflatable landing bubble only absorbs a controlled residual touchdown velocity.
+
+**Mission stages to distinguish:** heliocentric/Jupiter transfer and Jupiter capture (propulsion and gravity assists), Europa-relative approach, major braking burn, terminal controlled descent, low-speed bubble impact, stabilization and burial. Do not assume Europa orbit insertion is mandatory: compare **direct powered descent from Jupiter-system approach** against **Europa orbit insertion then descent**, accounting for arrival speed, navigation, burn timing, propellant, exposure, and communications.
+
+**First-order touchdown energetics:** kinetic energy `E = 0.5 m v²`; illustrative 500 kg lander at 10 m/s has 25 kJ, at 20 m/s 100 kJ. These are examples, not selected mission mass or impact speeds. Compare rocket propellant saved versus bubble mass, effective stopping stroke, acceleration pulse, rebound, and terrain hazards. Touchdown energy is not the full descent delta-v budget.
+
+**Next calculations:** define credible Europa-relative arrival states; estimate delta-v and propellant fractions under alternative propulsion specific impulses; quantify descent burn duration, thrust-to-weight and throttle needs, and compare terminal residual speeds for bubble options. Use trajectory sources rather than inventing arrival conditions.
+
+### 2026-10-16 — Work log: rocket brakes
+
+Human confirmed no aerobraking and asked whether rocket brakes are necessary. Assistant established staged propulsive descent as baseline, with optional gravity-assist approach shaping and low-speed inflatable touchdown; direct descent versus Europa orbit remains open.
