@@ -7,14 +7,15 @@ function features(spectrum){
  const band=nm=>{const k=spectrum.x.findIndex(x=>x>=nm);return 1-spectrum.y[k]};
  return [band(460),band(580),band(720)];
 }
-function observe(scenario,seed,depth,handling,depthInterval=[.58,.68],noiseSigma=.002){
+function observe(scenario,seed,depth,handling,depthInterval=[.58,.68],noiseSigma=.002,noiseMode='paired'){
  const w=createColumn({scenario,seed});
  const xs=[intervals[0],depthInterval].slice(0,depth?2:1).flatMap(([a,b],i)=>{
   // Controlled confusability: both hypotheses share the same surface observation.
   // This is an imposed observational equivalence, not a geological mechanism.
   const source=i===0?createColumn({scenario:scenarios[0],seed}):w;
   const s=sample(source,a,b,handling);
-  return features(syntheticSpectrum(s,{seed:seed*3+i,noiseSigma}));
+  const measurementSeed=noiseMode==='independent'?((seed*17+i*7919+(scenario===scenarios[0]?0:104729))>>>0):seed*3+i;
+  return features(syntheticSpectrum(s,{seed:measurementSeed,noiseSigma}));
  });
  return xs; // no world object, scenario, origin, or truth returned
 }
