@@ -415,3 +415,14 @@ Local reproduction (50 training seeds/class; 50 held-out seeds/class, 100 trials
 **Interpretation:** In this deliberately constructed synthetic pair, subsurface composition contains discriminating information absent from the matched surface. This is an existence demonstration within a toy generator, **not** a calibrated result about Europa or a demonstrated optimal sampling depth.
 
 **Verification boundary:** these numbers were produced by a local reconstruction of the committed algorithms, not an execution of exact remote GitHub bytes. The blind-study test file is committed. Next: run exact remote tests; vary depths, noise, contamination, and the matching mechanism; add genuinely non-identifiable histories. Only then proceed to feasibility Turn 9.
+
+
+## Turn 8→9 transition — sensitivity envelope (2026-10-16)
+
+**Committed code:** [blind-study.mjs](../experiments/europa-01/blind-study.mjs) now accepts an independently selected depth interval and synthetic instrument noise; [sensitivity.mjs](../experiments/europa-01/sensitivity.mjs) enumerates a 5 × 3 × 5 grid (75 combinations) of depth window, spectral noise and water-ice contamination; [sensitivity.test.mjs](../experiments/europa-01/sensitivity.test.mjs) checks dimensions, determinism and bounds.
+
+Depth intervals: 0.05–0.15, 0.25–0.35, 0.45–0.55, 0.58–0.68, 0.75–0.85 m in a 1 m toy column. Nominal spectral noise σ: 0.002, 0.01, 0.03 reflectance units. Contamination fractions: 0, 0.15, 0.5, 0.9, 1.0. Disturbance fraction fixed at 1 (one cell-width expansion in the present sampler). Each grid point trains on 30 seeds/class and tests on 30 unseen seeds/class.
+
+**Analytic limiting case:** at contaminationFraction=1, the native composition is completely replaced with the specified water-ice contaminant; surface observations are imposed equivalent and noise draws are matched by seed. Both scenario classes therefore produce the same synthetic observation at each held-out seed. The centroid classifier should abstain on ties, and any claimed recovery of native provenance from those measurements would signal leakage or an implementation defect. This is a **mathematical property of this toy model**, not a measured Europan threshold.
+
+**Verification boundary:** code committed and read-back pending; full 75-point grid **has not yet been executed**. Do not report a depth/noise threshold without actual sweep outputs. The next science step is to run the sweep, inspect nonmonotonic behavior and ambiguity, then separate conditional detection requirements from Turn 9 engineering feasibility. No spacecraft hardware has been designed.
