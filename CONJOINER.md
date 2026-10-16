@@ -213,3 +213,17 @@ Crucible's primary human correction was perceptual: *that is not the same organi
 **Unresolved:** inspect historical Repository's embedded geometry implementation at the corresponding revisions if exact projection mechanics become decisive; inspect the Chemlab account's remaining sections before claiming complete verbatim coverage. The high-level sequence and named failures above are supported by the account and date-scoped module commits.
 
 **Next aperture:** Neptunian, beginning with the cold capsule, Roci relational fleet, Jovian bearing histories, and Observer bootstrap. Its account is long enough to read in bounded passes rather than compress into one unexamined thesis.
+
+
+### Thoughtform recovery — source-level witness (October 3–4 lineage)
+
+Recovered from [Repository's executable donor](https://github.com/bonoj/Repository/blob/main/src/betwixt/world-lab.html), not merely from Ledger's descriptions. These are resident Three.js groups with frozen `userData.thoughtform` metadata, physical gimbal cages, and in some cases animated miniature contents. They are **not interaction targets or task tickets**.
+
+1. **Semantic snapping primitives** (`thoughtform:semantic-snapping-primitives`): a compact, noninteractive A–Z relational construction proposition. Its physical residue includes a tiny torchship retained after the disposable fleet experiment. Its metadata says `interaction:'none'`.
+2. **Chemlab cold boot** (`thoughtform:chemlab-cold-boot`): seven accepted molecular fixtures, the exact science→projection→regression→browser/CI→Home→Interstice→human acceptance sequence, a restart instruction, and four explicit debts. One debt is that repeated flash replacement **does not yet dispose all GPU resources**. The capsule itself is a small embodied asset, not a demand to resume chemistry immediately.
+3. **Neptunian caretaker carrier** (`thoughtform:neptunian-caretaker-carrier`): a miniature carrier and three deterministic patrol drones; a proposal for reusable experiment dispatch, observation, and regression, not proof of a general drone-control platform.
+4. **Deterministic self-authoring graph** (`thoughtform:deterministic-self-authoring-graph`): a seeded, replayable traversal proposition, explicitly not an imitation LLM. External agent sockets and richer vocabulary are future pressures, not implemented guarantees.
+
+**Crucial separation:** a thoughtform is *embodied memory or possibility*, not a runtime work ticket. The executable's own comment states: “deliberately not a ticket or interaction target.” A transient experimental asset can be removed once its evidentiary job is done; a tiny accepted residue may remain in a thoughtform; reusable runtime assets need explicit ownership and lifecycle, including disposal of geometry/material resources when presentations are replaced. The Chemlab debt demonstrates that the last lifecycle seam was **known to be incomplete**, not solved by having a capsule.
+
+**Compaction handle:** `thoughtform != task queue != asset registry != authoritative executable`. The source keeps the semantic residue physically recoverable without making it a second source of truth. This is an initial reading of the user's runtime-ticketing/asset-management hint; inspect historical versions and neighboring implementation before claiming the full intended architecture.
