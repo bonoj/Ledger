@@ -466,3 +466,51 @@ Executed local reconstruction of `null-robustness.mjs`, 10 disjoint blocks, 30 t
 ### Turn 9 alternating-label negative control (2026-10-16)
 
 Added `scorePermutation:'alternating'` to `runBlindStudy`, which flips scoring labels for odd absolute seeds **after** prediction, leaving measurements and classifier training unchanged. Added permuted accuracy to `nullRobustness` and regression coverage. Executed local reconstruction of 10-block/2,000-decision experiment: original forced accuracy **1009/2000 = 50.45%**; alternating-permuted accuracy **979/2000 = 48.95%**. Per-block permuted correct out of 200: 92,101,94,120,99,90,90,103,94,96. Selective coverage remained 55.3%, selective accuracy 51.27%. This is a **single deterministic negative-control permutation**, not a permutation distribution, statistical significance test, or physically independent sample. Exact remote bytes were not executed. The null remains non-discriminating; next scientific step is an ensemble of preregistered permutations and an explicit distinction between observational equivalence and geologic equivalence.
+
+
+---
+
+## Reorientation
+
+Our central question remains:
+
+*What can a depth-resolved sample of Europa's ice reveal about its formation, alteration, and possible exchange with the subsurface ocean—and how would we know?*
+
+We have established three useful things:
+
+1. Surface chemistry can be observationally ambiguous, at least in our deliberately constructed synthetic example.
+2. Depth-resolved observations can distinguish the particular histories we constructed, but that success is not yet a geological result.
+3. Sampling and measurement processes can destroy or distort the information we're trying to recover.
+
+The most important unresolved question is no longer whether our classifier can recognize two toy worlds.
+
+**It's what physical evidence would actually distinguish plausible histories of Europa's ice—and what kind of sampling system could preserve that evidence.**
+
+## Proposed roadmap · Next 8 turns
+
+I'd retire the original ten-turn schedule rather than keep stretching Turn 9. Here's the next expedition, with a tangible deliverable every turn.
+
+| Turn | Investigation | Deliverable |
+|---|---|---|
+| **1** | Close the methodological audit | Execute exact source and regression tests; reconcile any discrepancies. No more open-ended classifier refinement. |
+| **2** | Europa's physical environment | Evidence-backed constraints: gravity, temperature, vacuum, radiation, surface mechanics, and uncertain ice-shell structure. |
+| **3** | Plausible ice histories | Build physically motivated stratigraphic scenarios: irradiation, impact gardening, fracture emplacement, freezing, and exchange. |
+| **4** | Diagnostic evidence | Determine which depth profiles, textures, chemical species, and alteration products could discriminate those histories. Identify irreducible ambiguities. |
+| **5** | Sample integrity | Quantify how heating, mixing, contamination, and recovery loss erase diagnostic information. |
+| **6** | Access mechanisms | Compare drilling, coring, thermal penetration, ballistic penetrators, and other plausible approaches. Explicit mass, energy, and contamination tradeoffs. |
+| **7** | Mission architecture | Compare payload delivery and sampling concepts, including propulsive landing versus impact-tolerant approaches. Keep descent and subsurface access separate. |
+| **8** | Scientific synthesis | Write a defensible sampling strategy, uncertainty register, and ranked experiments needed before hardware design. |
+
+The organizing principle is **science → observable evidence → sample requirements → engineering**.
+
+Not engineering first, followed by inventing a scientific justification.
+
+## What I'd change about our workflow
+
+Each 🏹 should advance the investigation substantially. Research, calculation, implementation, tests, and persistence can happen in the same turn. We shouldn't spend four turns adding individual switches to a synthetic classifier.
+
+I'll also keep the canonical notebook readable: established findings up front, current uncertainties and next action immediately visible, detailed experimental history in its existing code and commit history.
+
+**My recommendation:** eight turns, with the first one closing our existing work and the remaining seven returning to Europa itself.
+
+We began by asking what the ice remembers. It's time to discover what we'd have to do to hear it. 🐉
