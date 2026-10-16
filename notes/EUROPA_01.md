@@ -82,7 +82,7 @@ A **turn** is one substantive model work cycle, with an automatic GitHub put. If
 | **9** | Engineering feasibility envelope | Bound radiation, thermal, power, sample depth and delivery mass; compare rocket fuel with penetrator/bubble/soft-landing hardware only at common assumptions |
 | **10** | Review and next expedition | Independent checks, limitations, reusable modules, live artifact/build verification if deployed, and the next research questions |
 
-**Current position: Turn 7 synthetic measurement code and tests committed; Turn 8 next, contingent on execution and measured-reference validation.**
+**Current position: Turn 8 blind-study engine committed; numerical results and test-file persistence pending.**
 
 ## Delivery and protection — parked feasibility branch
 
@@ -122,7 +122,7 @@ Before assigning a number to a scientific parameter, trace it to a relevant sour
 
 **2026-10-16 — Scope and methodology reset.** The earlier note had grown into repeated landing concepts and work logs. Replaced it with a question-first science program, executable Ice Column v0, bounded delivery branch, source register, and ten-turn roadmap. Original ideas and corrections remain recoverable from Git history. **No numerical model or runtime has yet been built.**
 
-**Next action:** **Turn 8 — blind investigation**: compare hidden origin histories using surface and depth measurements; first run exact committed tests and assess reference-data gaps.
+**Next action:** Finish Turn 8 validation: persist tests, run held-out experiment and quantify whether depth adds discriminating information, then proceed to Turn 9 feasibility.
 
 
 ## Turn 1 result — scientific reconnaissance (2026-10-16)
@@ -388,3 +388,14 @@ A Node-compatible ES module now implements seeded generation of three **syntheti
 **Important unresolved science:** the paired Turn 2 histories have not yet been tuned to be spectrally confusable at the surface; no laboratory endmembers have been numerically ingested; model mismatch and correlations are uncharacterized. Therefore no inference about Europa's ocean exchange follows from this simulation.
 
 **Turn 8 gate:** design blind surface-only vs depth-resolved inference and explicitly report non-identifiable cases. Keep hidden labels privileged, test sensitivity to Turn 6 disturbance and contamination, and do not treat synthetic bands as measured chemistry.
+
+
+## Turn 8 — blind investigation (2026-10-16; implementation committed, evaluation pending)
+
+[Blind-study engine](../experiments/europa-01/blind-study.mjs) creates independent synthetic columns from labeled A/B histories for training, then uses held-out seeds for classification. Investigator features are extracted from the **synthetic visible-reflectance** forward model at nominal 460, 580, 720 nm. Classifier uses Euclidean nearest class centroid, trained on known synthetic classes; test truth labels are used only for scoring. The public trial result reports aggregate accuracy and low-margin counts, not hidden origin fields.
+
+**Planned comparisons:** (1) surface 0–4 cm, (2) surface plus 58–68 cm depth, (3) the same depth pair with full synthetic disturbance and 15% water-ice contamination. These handling choices are **stress-test settings, not Europan estimates**.
+
+**Scientific caveats:** The A/B generators have **not been tuned to yield overlapping surface spectra** as required by Turn 2; thus surface classification might be trivially successful, and even improved depth accuracy would not yet demonstrate resolution of a truly degenerate inverse problem. Features and noise are synthetic, class templates are trained from the same model family, and accuracy cannot be generalized to Europa.
+
+**Status:** engine committed. Test-file creation encountered an intermittent GitHub tool rejection, and **no blind-study accuracy has been executed or verified**. Do not mark Turn 8 complete until regression tests, actual metrics, and an ambiguity-aware interpretation are preserved.
