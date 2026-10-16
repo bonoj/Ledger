@@ -364,3 +364,26 @@ The nine subsequent context-bomb images, including field notes, continuity appar
 **Working positioning:** *Independent research and executable experimentation. Commission an investigation, a working instrument, or an integrated research program. Pro bono inquiries welcome.*
 
 **Before publication:** validate service boundaries, operational capacity, contracting terms, and actual market demand. This schedule is a starting hypothesis, not a permanent tariff.
+
+
+## Institute website — next implementation milestone (2026-10-16)
+
+**Status: proposed; not yet implemented.** The Institute website should be **a Hermeticon**, not a conventional portfolio, brochure, or separate graph-based site. It is a navigable, expanding research world built by reusing the existing Hermeticon shell and tap-to-focus/camera machinery.
+
+### First deploy
+
+1. **Observatory:** central Institute Hermeticon with tappable research nodes. Tap to focus; tap a nested node to descend; tap outside to ascend/return. Phone-first, generous tap targets, no hover or long-press dependency.
+2. **Laboratories:** nodes connect to *verified* executable experiments and their research histories (candidate lineages include Crucible, SixCities, ChemLab, Diff Eq, and others). Do not present unverified or superseded builds as live.
+3. **Commissioning Chamber:** navigable research node explaining the **provisional deliverable-based** Open Inquiry / Research Brief / Executable Investigation / Research Expedition / Institutional Partnership offerings, with a path to submit an inquiry. Current proposed prices: **$0 / $2,000+ / $5,000+ / $25,000+ / by proposal**.
+
+### Immediate work order
+
+- Inspect the **existing** Hermeticon shell, focus mechanics, JIT publication protocol, and Ledger references before choosing implementation details. Reuse established machinery, including deterministic build identity and verification; do not invent replacement infrastructure.
+- Write a concise implementation working spec grounded in the actual code and deployment topology.
+- Implement and verify a **live, phone-first Institute Hermeticon with three functioning research nodes**, working focus/return behavior, and a clear way to add nodes.
+- Prefer **Observation** as the first featured research node: invite visitors to investigate, rather than begin with institutional self-description.
+- Expand organically from the first working interaction, using real experiments, evidence, and connections rather than placeholder research claims.
+
+**Acceptance:** canonical live URL, independently verified executing build identity, usable tap navigation on mobile, working research-node destinations, and an extensible node manifest. No claim of deployment until observed.
+
+**Pivot note:** This milestone is deliberately parked for resumption. The human requested a brief pivot immediately after persistence.
