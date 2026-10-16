@@ -242,3 +242,21 @@ Human proposed slug pitons plus payload shock absorber, using touchdown energy f
 ### 2026-10-16 — Decision: reject slug-piton landing baseline
 
 **Human decision:** slug pitons plus long-stroke shock isolation are too heavy. **Remove from active architecture**; retain preceding research only as a rejected alternative with historical precedent. Do not continue optimizing or recommending this option without new mass-budget evidence. Prioritize minimum delivered mass and scientifically useful payload. Continue comparing conventional propulsive soft landing against lightweight inflatable impact attenuation (also unproven). Investigate dual-use corer anchoring only if it avoids dedicated hardware. Next analysis should quantify dry mass, propellant, and impact-protection tradeoffs before selecting touchdown architecture.
+
+
+## CORRECTION — literal slug-shell penetrator (2026-10-16)
+
+**Human clarification:** “I meant a literal slug shell.” Previous interpretation as multiple *slug pitons* was incorrect. **Supersede the piton-cluster architecture as the human's proposal**; retain historical penetrator and anchoring precedents only as comparative background.
+
+**Primary candidate:** a single elongated, hardened, nose-first **slug-shaped shell containing the entire science payload**. Propulsion removes most arrival velocity; controlled residual impact drives the outer shell into the ice. Scientific instruments are independently shock-isolated inside the shell. The exterior shell could then serve as penetrator, borehole liner, anchoring structure, radiation-cover interface, and perhaps permanent instrument housing. The nose could open or deploy a corer after stabilization.
+
+**Critical design separations:**
+- External shell penetration, fracture, and energy dissipation versus internal instrument acceleration pulse.
+- Shell geometry and mechanical integrity versus ice strength, porosity, brittleness, and oblique impact.
+- Penetration depth and shielding achieved versus mass, residual impact velocity, and available stopping distance.
+- Post-impact instrument accessibility, antenna/relay and power connectivity, sample contamination, and ability to drill onward.
+- Instrument shock isolation needs both stroke and travel clearance; do not assume the outer shell's penetration automatically protects the payload.
+
+**First test:** coupled impact penetration + internal suspension simulation, using ranges of ice constitutive properties and impact speeds, reporting penetration depth, shell loads, peak/temporal payload acceleration, probability of rebound/ricochet, and resulting shielding. Compare with inflatable bubble and powered soft landing.
+
+**Research state:** no simulation or validated landing design yet. This corrects terminology and architecture, not evidence.
