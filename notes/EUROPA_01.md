@@ -559,3 +559,8 @@ Each turn should combine meaningful scientific research, model/world implementat
 ### Turn 1 continuation — Europa opt-in (2026-10-16)
 
 Abyss Shell now selects Europa with `?world=europa`, while the default remains Entropy. Europa reuses the existing Hermeticon vessel and atlas terrain; it has no chemical calibration, excavation, or core recovery. Commits: `967f00c0` (world), `1b2f58f` (selector), `a5294066` (handoff). No public/browser runtime verification yet. Locally reconstructed `ice-column.test.mjs` passed 1,511 checks and `null-audit.test.mjs` passed, but **these are not exact committed-source tests**. Scientific audit remains open pending byte-exact verification.
+
+
+### Europa Turn 1 — conservation primitive (2026-10-16)
+
+Abyss now has `shell/codex/europa/material-ledger.js` (`0a53a684`) and `material-ledger.test.mjs` (`1ffe8651`). The pure accounting component records synthetic in-place, recovered, dispersed, lost, and introduced quantities and checks balance. It is not yet wired to the authoritative terrain, and the test is committed but not yet executed against exact repository bytes. The opt-in world comment was corrected (`6dc711ee`). A web fetch of the public `?world=europa` page could not verify the running browser; no live deployment claim. **Next:** execute the conservation test, validate the Shell mount via browser inspection, then connect actual signed-field excavation to removed material inventory. Do not fabricate material quantities from the tool or UI.
