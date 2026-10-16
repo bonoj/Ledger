@@ -169,3 +169,35 @@ Human redirected priorities to payload delivery and radiation shielding, proposi
 ### 2026-10-16 — Work log: autonomous reconnaissance
 
 User authorized active research, cross-domain connections, requests for specific datasets, and instrumented runtime when needed. Assistant performed initial public-source reconnaissance and recorded sources, findings, hypotheses, and first proposed quantitative experiment. No simulation, radiation transport calculation, or physical feasibility test has yet been executed.
+
+
+## Payload delivery option — inflatable padded landing bubble (2026-10-16)
+
+**Human proposal:** “use a balloon drop with a durable padded landing bubble.” **Status:** candidate architecture for analysis, not yet validated.
+
+### Physics and mission interpretation
+
+Europa has essentially no atmosphere: an ordinary balloon cannot provide buoyancy or meaningful aerodynamic descent braking. Interpret **balloon drop** as a **deployable, inflatable, impact-attenuating enclosure** around the payload, deployed after substantial propulsive deceleration. It may reduce the requirements for terminal precision landing and rigid legs, but cannot eliminate the need to shed interplanetary/orbital arrival velocity.
+
+**Candidate sequence:** cruise / Jupiter arrival → Europa approach → powered deceleration and hazard assessment → inflate protective bubble → low-speed controlled impact → dissipate kinetic energy / manage rebound and rolling → stabilize orientation → deflate, shed, or repurpose membrane → activate protected excavation → burrow and construct radiation shelter.
+
+### Competing designs
+
+- **A. Conventional powered soft landing:** rigid landing gear, precise terminal control.
+- **B. Powered descent + padded bubble:** lower touchdown precision requirement; inflation, puncture, rebound, and access complexity.
+- **C. Multi-cell or crushable hybrid:** redundant inflatable chambers combined with sacrificial crush structures.
+- **D. Bubble as multiuse resource:** explore temporary thermal insulation, deployment membrane, structural formwork, or containment during ice processing. Each secondary use requires independent material/thermal/radiation validation.
+
+### Quantitative evaluation to implement
+
+For touchdown mass `m` and speed `v`, nominal kinetic energy `E = 0.5 m v²`. Idealized average stopping deceleration over stroke `s` is `a ≈ v²/(2s)` (not peak acceleration; real pulse shape, ground contact, and rotations matter). Compare candidate residual velocities, bubble radius, effective crush/stroke distance, gas pressure, gas mass, membrane mass, and impact pulse against payload limits. Model sloped terrain, sharp ice ridges, multiple bounces, rebound/roll, and worst-case orientation.
+
+**Critical constraints:** cryogenic membrane flexibility, gas behavior and leakage, puncture resistance, vacuum inflation, low-gravity rebound, landing plume effects, deployability, post-impact egress, anchoring, and preserving the first minutes of radiation and thermal survival.
+
+**Research connections:** Mars Pathfinder/Spirit/Opportunity airbag landings (heritage but atmospheric/planetary conditions differ), deployable space structures, cryogenic polymers, impact energy absorbers, spacecraft shock qualification, and inflatable habitat/membrane materials.
+
+**Decision gate:** compare delivered system mass, propellant savings, reliability, touchdown hazard tolerance, initial survival margin, and time to start burial. Avoid claiming that the bubble is lighter or safer until modeled.
+
+### 2026-10-16 — Work log: padded landing concept
+
+Human introduced inflatable bubble landing. Assistant clarified that it is an impact absorber rather than aerodynamic balloon, proposed powered descent plus bubble impact, and defined quantitative comparisons and potential secondary uses. No impact simulation or material qualification has yet been performed.
