@@ -21,7 +21,7 @@ function observe(scenario,seed,depth,handling,depthInterval=[.58,.68],noiseSigma
 }
 const mean=xs=>xs[0].map((_,i)=>xs.reduce((s,x)=>s+x[i],0)/xs.length);
 const dist=(a,b)=>a.reduce((s,v,i)=>s+(v-b[i])**2,0);
-export function runBlindStudy({trainingSeeds=50,testSeeds=50,depth=false,handling={},depthInterval=[.58,.68],noiseSigma=.002,noiseMode='paired'}={}){
+export function runBlindStudy({trainingSeeds=50,testSeeds=50,depth=false,handling={},depthInterval=[.58,.68],noiseSigma=.002,noiseMode='paired',abstainMargin=0}={}){
  if(!['paired','independent'].includes(noiseMode))throw Error('invalid noise mode');
  if(!Array.isArray(depthInterval)||depthInterval.length!==2||!depthInterval.every(Number.isFinite)||depthInterval[0]<0||depthInterval[1]>1||depthInterval[0]>=depthInterval[1]||!Number.isFinite(noiseSigma)||noiseSigma<0)throw Error('invalid measurement settings');
  if(!Number.isInteger(trainingSeeds)||trainingSeeds<2||!Number.isInteger(testSeeds)||testSeeds<1)throw Error('invalid seed counts');
