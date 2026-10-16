@@ -238,3 +238,7 @@ Human confirmed no aerobraking and asked whether rocket brakes are necessary. As
 ### 2026-10-16 — Work log: slug-piton impact landing
 
 Human proposed slug pitons plus payload shock absorber, using touchdown energy for boring/injection. Assistant researched NASA/JPL Deep Space 2, JAXA LUNAR-A, and ESA Philae precedents and recorded successes/limitations, alternative architecture, and proposed E2 trade study. No simulation run.
+
+### 2026-10-16 — Decision: reject slug-piton landing baseline
+
+**Human decision:** slug pitons plus long-stroke shock isolation are too heavy. **Remove from active architecture**; retain preceding research only as a rejected alternative with historical precedent. Do not continue optimizing or recommending this option without new mass-budget evidence. Prioritize minimum delivered mass and scientifically useful payload. Continue comparing conventional propulsive soft landing against lightweight inflatable impact attenuation (also unproven). Investigate dual-use corer anchoring only if it avoids dedicated hardware. Next analysis should quantify dry mass, propellant, and impact-protection tradeoffs before selecting touchdown architecture.
