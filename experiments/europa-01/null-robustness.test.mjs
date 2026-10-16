@@ -3,6 +3,7 @@ import {nullRobustness} from './null-robustness.mjs';
 const a=nullRobustness({blocks:3,trainingSeeds:5,testSeeds:8});
 assert.deepEqual(a,nullRobustness({blocks:3,trainingSeeds:5,testSeeds:8}));
 assert.equal(a.results.length,3);
+assert.ok(a.permutedAccuracy>=0&&a.permutedAccuracy<=1);
 assert.ok(a.forcedAccuracy>=0&&a.forcedAccuracy<=1);
 assert.ok(a.selectiveCoverage>=0&&a.selectiveCoverage<=1);
 assert.ok(a.selectiveAccuracy===null||(a.selectiveAccuracy>=0&&a.selectiveAccuracy<=1));
