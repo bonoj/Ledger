@@ -124,3 +124,48 @@ Compare at least **surface-only**, **burial/backfill**, **spun/deposited ice she
 ### 2026-10-16 — Work log: early shelter concept
 
 Human redirected priorities to payload delivery and radiation shielding, proposing rapid burial and an ice shell fabricated from in-situ material. Assistant proposed phased descent/emplacement, conventional initial protection, protected subsurface instrumentation, and a comparative radiation/energy/time model. No architecture or material process has yet been demonstrated.
+
+
+## Research reconnaissance I — burial, radiation, cryogenic materials (2026-10-16)
+
+**Sources investigated (primary NASA/JPL where possible):**
+- NASA Europa Lander Science Definition Team report: https://europa.nasa.gov/resources/58/europa-lander-study-2016-report/
+- NASA/JPL Europa Lander concept, including nominal ~10 cm scientific sampling depth: https://www.jpl.nasa.gov/missions/europa-lander/
+- NASA Europa radiation depth mapping: https://europa.nasa.gov/news/17/radiation-maps-of-europa-key-to-future-missions/
+- NASA/JPL Clipper radiation-monitoring study (electron-dominated radiation environment): https://europa.nasa.gov/spacecraft/instruments/radiation-monitoring-study/
+- NASA NTRS Europa surface radiation assessment (directionality, secondary radiation, terrain): https://ntrs.nasa.gov/search.jsp?R=20060013117
+- NASA-funded under-ice Europa study (bury sensitive components in tunnel): https://www.nasa.gov/wp-content/uploads/2017/07/niac_2012_phasei_mccue_europa_tagged.pdf
+- NASA/JPL ice-world radioisotope thermal study (surface sublimation, heat flux): https://ntrs.nasa.gov/citations/20220003771
+- JPL/NASA cryogenic-vacuum excavation testbed and sampling research: https://doi.org/10.3847/psj/ac4493
+- NASA Europa Clipper electronics vault heritage: https://science.nasa.gov/mission/europa-clipper/mission-overview/
+
+### Findings and corrections
+
+1. **Burial has explicit precedent:** a NASA-funded Europa under-ice concept proposes burying radiation-sensitive components in the tunnel left by a cryobot, with surface antennas and sacrificial elements treated separately. This validates burial as a research direction, not the feasibility of our particular deployment mechanism.
+2. **Do not conflate science-sample depth and electronics shielding:** NASA radiation mapping suggests 1–20 cm depth may preserve selected chemical signatures depending on site and assumptions; that is not a radiation-hardening guarantee for electronics. Electron-driven secondary radiation and angular geometry matter.
+3. **Surface ice melt/refreeze is nontrivial:** JPL thermal analysis notes that under the extremely low ambient pressure, exposed surface ice may sublimate rather than form a stable liquid melt pool. Spun shell must specify deposition/bonding physics, vapor containment, thermal control, and power.
+4. **NASA already uses conventional shield vaults:** Europa Clipper employs an aluminum/titanium electronics vault. The architecture comparison must consider imported shielding plus rapid burial, not a false choice between no shielding and ice.
+5. **Cryogenic cuttings are experimentally studied:** JPL's Europa Lander sampling program reports cryogenic-vacuum cutting testbeds, useful for constraints on excavation and spoil handling.
+
+### Cross-domain research map
+
+- **Underground mining and tunneling:** spoil handling, borehole stability, ground support, robotic excavation and anchoring in low gravity.
+- **Additive manufacturing and ice sintering:** layer bonding, deposition rate, structural porosity, fracture toughness; distinguish vacuum-compatible processes from terrestrial ice printing.
+- **Radiation transport and medical/space shielding:** particle spectra, secondary bremsstrahlung, shielding areal density, dose-depth curves, geometry-aware Monte Carlo models (e.g. Geant4 as candidate; no simulation yet run).
+- **Cryogenic vacuum systems:** sublimation, vapor containment, phase changes, thermal management, contamination.
+- **Robotics and fault-tolerant deployment:** autonomous landing, one-way transitions, sacrificial surface components, cable and tether management.
+- **Planetary protection / analytical chemistry:** separation of construction feedstock from pristine analytical cores, blanks, contamination tracing.
+
+### Working hypothesis and first experiment
+
+**Hypothesis H1:** mechanically excavating and burying a compact instrument vault, then backfilling around it, may deliver adequate shielding faster and with less energy than spinning a bonded ice shell. **H2:** a hybrid shell may be worth its cost when structural stability, access, or instrument deployment requires a protected cavity. Both remain untested.
+
+**Experiment E1:** build a parameterized survival-versus-emplacement model with variable ambient dose rate, radiation-hardness threshold, baseline vault shielding, excavation throughput, depth, backfill density, shell construction energy, power, and time. Run sensitivity sweeps rather than fix uncertain constants. Treat attenuation as an input family until sourced radiation transport curves are available; do not claim simple exponential attenuation is a verified Europa model.
+
+**Data sought next:** particle energy/angular flux or dose-depth curves for candidate sites; cryogenic ice mechanical/excavation properties; available excavation test results; power/mass baselines for Europa lander studies. Public datasets first; request user help only for restricted or hard-to-extract data.
+
+**Immediate design shift:** *bury first, manufacture elaborate shelter only if justified*. Keep spun-ice-shell option in comparison; no premature dismissal.
+
+### 2026-10-16 — Work log: autonomous reconnaissance
+
+User authorized active research, cross-domain connections, requests for specific datasets, and instrumented runtime when needed. Assistant performed initial public-source reconnaissance and recorded sources, findings, hypotheses, and first proposed quantitative experiment. No simulation, radiation transport calculation, or physical feasibility test has yet been executed.
