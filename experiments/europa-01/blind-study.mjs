@@ -36,8 +36,8 @@ export function runBlindStudy({trainingSeeds=50,testSeeds=50,depth=false,handlin
   const decision=margin<abstainMargin?-1:guess;
   trials.push({correct:decision===label,abstained:decision<0,margin});
  }
- return {schema:'europa-blind-study/v0',synthetic:true,depth,handling,depthInterval,noiseSigma,noiseMode,trainingSeeds,testSeeds,
-  correct:trials.filter(t=>t.correct).length,total:trials.length,
+ return {schema:'europa-blind-study/v0',synthetic:true,depth,handling,depthInterval,noiseSigma,noiseMode,abstainMargin,trainingSeeds,testSeeds,
+  correct:trials.filter(t=>t.correct).length,abstained:trials.filter(t=>t.abstained).length,total:trials.length,
   accuracy:trials.filter(t=>t.correct).length/trials.length,
   uncertain:trials.filter(t=>t.margin<.1).length,
   method:'nearest class centroid; training labels known, test labels withheld until scoring',
