@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {nullAudit} from './null-audit.mjs';
+const a=nullAudit({trainingSeeds:12,testSeeds:20});
+assert.deepEqual(a,nullAudit({trainingSeeds:12,testSeeds:20}));
+assert.equal(a.paired.correct,0);
+assert.equal(a.paired.total,40);
+assert.equal(a.independent.total,40);
+assert.equal(a.zeroNoise.correct,0);
+assert.ok(a.independent.correct>=0&&a.independent.correct<=40);
+console.log('PASS null audit',JSON.stringify({paired:a.paired.correct,independent:a.independent.correct,zeroNoise:a.zeroNoise.correct}));
