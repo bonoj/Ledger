@@ -431,3 +431,8 @@ Depth intervals: 0.05–0.15, 0.25–0.35, 0.45–0.55, 0.58–0.68, 0.75–0.85
 ### Turn 9 local sweep (2026-10-16)
 
 A locally reconstructed Node experiment evaluated 75 settings, 60 trials each (4,500 trial evaluations). 2,417 were classified correctly; 3,430 had low classification margins. The exact GitHub bytes were not executed. At 0.58–0.68 m, noise 0.002, correct/60 by contamination 0, 0.15, 0.5, 0.9, 1: 60, 60, 57, 40, 0. The zero at complete contamination represents 60 abstentions. These synthetic figures are not calibrated Europa predictions.
+
+
+### Turn 9 audit — noise pairing (2026-10-16)
+
+Blind-study now supports `noiseMode: 'paired' | 'independent'`. Paired mode preserves historical results; independent mode gives A and B observations distinct deterministic measurement seeds while retaining reproducibility. A new `noise-audit.test.mjs` checks replay, bounds and invalid modes. **No independently-noised numerical classification results have been executed or verified yet.** The old 100% contamination abstention conclusion holds for paired noise only; with independent noise, equal chemistry plus distinct noise draws can generate arbitrary classifier guesses, which must not be misrepresented as provenance information. The next test must use accuracy, abstentions, and false-confidence calibration against an explicit no-information null.
