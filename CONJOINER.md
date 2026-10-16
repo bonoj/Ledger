@@ -267,3 +267,42 @@ This changes how every crossing should be read:
 **Question for every dated unpacking:** What did this episode require the human to do through the smartphone window? What did the environment/model take off that channel? What was pushed back onto it by a failure? Do not silently assume a conventional desktop development workflow.
 
 This is an observation about the collaboration's operating conditions, **not** a prescription that every possible future interface must remain a phone.
+
+
+---
+
+## Unpacking 03 — October 3: Neptunian, from spacecraft to a model's eyes
+
+**Primary witness:** [Neptunian Crossing](neptunian_crossing/account.md). **Executable cross-check:** [Repository's Betwixt donor](https://github.com/bonoj/Repository/blob/main/src/betwixt/world-lab.html), with date-scoped commits. Repository history places the caretaker Thoughtform at `20e80b72` (10:56 UTC), the generic bounded Witness at `6586f64d` (19:21 UTC), the spherical scanner at `028f6a9c` (22:59 UTC), and the first relational desk lamp at `f7ea17bd` (23:47 UTC), all October 3. These are executable source milestones, not retrospective invention.
+
+### Departure and recovery
+
+The Chemlab cold-boot capsule carried accepted chemistry and known debts into a new domain without demanding that chemistry be completed. A malformed `const` scope in the first Thoughtform publication broke browser parsing despite green chemistry gates. The human said **Dracarys**; the model repaired the exact scope and preserved a known-good public pin while the fix advanced. This distinguishes a module's test result from the integrity of the entire browser executable.
+
+The older A–Z Thoughtform was reopened as an *idea*, not a task ticket. OrbitalConstruction was inspected for independent semantic-port anatomy (local position, outward normal, tangent, family, size, occupancy). The human chose **no pillage**: compare without importing an alien architecture wholesale. A disposable fleet of 25 Roci/Serenity-inspired ships pressured relational construction. Variations exposed wrong VTOL orientation and, more importantly, visually floating greebles: a radial offset is not a surface attachment relationship. The fleet was retired, and one torchship survived as miniature residue in the Thoughtform. The difference between a **test asset**, a **retained memory asset**, and a **generalized runtime capability** is already explicit in this retirement.
+
+### The Jovian table makes accounting an epistemic requirement
+
+Jupiter and the four Galileans became a dimensionless, compressed orbital experiment, not an ephemeris claim. A first packet of 32 steel bearings showed trajectory traces but silently recycled escapees and impactors. That created visually compelling yet false histories. The correction preserved each protected body's fate, expanded history to 180 simulation-time samples, and introduced a second 32-body packet at **72%** of the first incoming speed. The changed variable was incoming energy, not engineered capture. **Protected experimental bodies are not interchangeable with cheap packed-bearing substrate.** Persistence and termination rules are part of what the experiment can truthfully claim.
+
+The third Thoughtform embodied a deterministic caretaker carrier with three drones. Its proposed future protocol was dispatch → stimulus → observe → record → return. The account explicitly defers shared dispatch architecture until a second consumer earns it. It is a recoverable proposition, **not** proof that runtime tickets or a generic asset registry existed.
+
+### The aperture replaces the human as the model's geometric telemetry bus
+
+A remembered idea of short uninterrupted painting passes converged with earlier bounded orbital-station inference packets. The central question became whether a model could inspect the consequences of its own 3D constructions *without receiving their intended identities*. The cadence was **Builder₀ → Observer₀ → Painter₀ → Builder₁**. Builder creates; a cold Observer receives only bounded geometric consequences; the model diagnoses and corrects; the human retains acceptance authority.
+
+The first Witness returned anonymous ray distance, hit point, and surface normal, with pose/transcript and a finite action budget. It deliberately withheld object names, hierarchy, materials, source coordinates and its own visible body. The eventual instrument used a fixed-radius spherical **legal pose space**: `place(direction)`, `aim(direction)`, `sense()` (the evidence-spending operation), `pause()`, `resume()`, `pose()`, `transcript()`, and `selfTest()`. Twelve ray observations were budgeted. The precessing orbit and floating telemetry were human-visible theater, **not** evidence-generating necessities.
+
+A genuinely cold model distinguished a low extended construction and a separate tall faceted construction on a thin shared support, rejected an initially plausible single-object explanation, and declined to invent semantic identities. Twelve rays were enough for coarse spatial diagnosis, not enough for exact topology or silhouettes. The resulting tool definition was intentionally narrow: **a single-turn JIT spatial inspector for model-generated geometry**, not a world-scale autonomous explorer.
+
+### First native corrective construction
+
+A brass articulated desk lamp then reused Workshop material vocabulary, the Chemlab-earned relational substrate, and endpoint-defined construction primitives. Its semantic chain was **base → lowerPivot → elbow → headPivot → shadeAxis → bulb**. The `contains` relationship did not guarantee that the bulb actually fit inside the rendered shade. A geometric axial/radial containment check exposed the distinction; correction moved the bulb along the semantic shade axis, rather than patching an arbitrary world-space XYZ coordinate. Repository commit `f7ea17bd` records the lamp and spatial audit.
+
+### What this does and does not establish
+
+The progression is not “the model has vision” in an unrestricted sense. It is more exact: **the model can request bounded, anonymous spatial evidence about its executable geometry, distinguish observation from authorial intent, and use the result for correction**. Likewise, a caretaker miniature is not a working ticket queue, and an A–Z ship is not an asset-management system. These limits are what make the discoveries reusable.
+
+**Pocket-laboratory qualification:** on a smartphone-only human channel, the ability to acquire machine-side geometry evidence inside one model turn is especially consequential. It can remove an entire cycle of “build, publish, ask human to look, interpret screenshot, repair” for defects that the instrument can measure. It does **not** eliminate the need for phone-visible final acceptance or justify claiming that the cold Observer can infer unobserved semantics.
+
+**Next:** October 3 evening into October 4: Ozymandias, Observer's confusion-driven new faculties, nested focus, and the semantic desk lamp's next test. Revisit the historical source, not just the current semantic surface.
