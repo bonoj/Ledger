@@ -426,3 +426,8 @@ Depth intervals: 0.05–0.15, 0.25–0.35, 0.45–0.55, 0.58–0.68, 0.75–0.85
 **Analytic limiting case:** at contaminationFraction=1, the native composition is completely replaced with the specified water-ice contaminant; surface observations are imposed equivalent and noise draws are matched by seed. Both scenario classes therefore produce the same synthetic observation at each held-out seed. The centroid classifier should abstain on ties, and any claimed recovery of native provenance from those measurements would signal leakage or an implementation defect. This is a **mathematical property of this toy model**, not a measured Europan threshold.
 
 **Verification boundary:** code committed and read-back pending; full 75-point grid **has not yet been executed**. Do not report a depth/noise threshold without actual sweep outputs. The next science step is to run the sweep, inspect nonmonotonic behavior and ambiguity, then separate conditional detection requirements from Turn 9 engineering feasibility. No spacecraft hardware has been designed.
+
+
+### Turn 9 local sweep (2026-10-16)
+
+A locally reconstructed Node experiment evaluated 75 settings, 60 trials each (4,500 trial evaluations). 2,417 were classified correctly; 3,430 had low classification margins. The exact GitHub bytes were not executed. At 0.58–0.68 m, noise 0.002, correct/60 by contamination 0, 0.15, 0.5, 0.9, 1: 60, 60, 57, 40, 0. The zero at complete contamination represents 60 abstentions. These synthetic figures are not calibrated Europa predictions.
