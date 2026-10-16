@@ -82,7 +82,7 @@ A **turn** is one substantive model work cycle, with an automatic GitHub put. If
 | **9** | Engineering feasibility envelope | Bound radiation, thermal, power, sample depth and delivery mass; compare rocket fuel with penetrator/bubble/soft-landing hardware only at common assumptions |
 | **10** | Review and next expedition | Independent checks, limitations, reusable modules, live artifact/build verification if deployed, and the next research questions |
 
-**Current position: Turn 2 completed; Turn 3 next.** Two deliberately confusable synthetic histories and their discriminating tests are specified below.
+**Current position: Turn 3 completed; Turn 4 next.** Real laboratory spectral datasets identified; file-level ingestion and calibration remain unverified.
 
 ## Delivery and protection — parked feasibility branch
 
@@ -122,7 +122,7 @@ Before assigning a number to a scientific parameter, trace it to a relevant sour
 
 **2026-10-16 — Scope and methodology reset.** The earlier note had grown into repeated landing concepts and work logs. Replaced it with a question-first science program, executable Ice Column v0, bounded delivery branch, source register, and ten-turn roadmap. Original ideas and corrections remain recoverable from Git history. **No numerical model or runtime has yet been built.**
 
-**Next action:** **Turn 3 — reference datasets**: identify accessible laboratory spectra and radiation-chemistry references, with temperature/phase metadata, licenses, and machine-readable access.
+**Next action:** **Turn 4 — Ice Column v0 specification**: formalize deterministic state, forward measurement interfaces, scenario design, provenance and acceptance criteria.
 
 
 ## Turn 1 result — scientific reconnaissance (2026-10-16)
@@ -217,3 +217,35 @@ Before assigning a number to a scientific parameter, trace it to a relevant sour
 ### 2026-10-16 — Work log: Turn 2
 
 Specified four competing hypotheses, predicted signatures, confounders, conditional falsifiers, a blind two-history test, and an observation sequence. No simulation executed or numerical scientific parameter adopted.
+
+
+## Turn 3 result — laboratory spectra and dataset triage (2026-10-16)
+
+**Key decision:** Start with a **visible-reflectance** radiation-chemistry channel anchored in irradiated NaCl–water ice experiments. IR absorbance is a separate channel; Raman is deferred pending verified matching reference files. The Turn 2 generic P/Q inverse problem remains a conceptual test and must not be falsely represented as a measured Europa chemical pair.
+
+| Source | Contents / conditions | Machine access | Rights / caveats | Role |
+| --- | --- | --- | --- | --- |
+| [Cerubini et al. 2022 experimental dataset, Zenodo DOI 10.5281/zenodo.7536720](https://zenodo.org/records/7536720) | Visible reflectance of NaCl–H2O ice mixtures irradiated with 1 and 5 keV electrons; experimental composition variants | ZIP ~283.2 kB, ASCII comma-separated wavelength (µm) + reflectance factor columns; filenames encode composition | CC BY 4.0, attribute dataset and paper; lab electron spectra, flux and sample preparation are not Europa's complete irradiation environment | **First ingest candidate**, before/after irradiation and mixture comparisons |
+| [Cerubini et al., *Icarus* 379, 114977 (2022)](https://doi.org/10.1016/j.icarus.2022.114977) | Methodology, color-center formation, grain/slab preparation and electron exposure | Open-access paper | Preparation affects observed bands | Physical interpretation and uncertainty |
+| [Leiden Ice Database, LIDA](https://icedb.strw.leidenuniv.nl/spectrum_data) | IR absorbance of cryogenic pure/mixed astrophysical ice analogues; 176 catalogue entries and 1164 spectra on inspected page | Per-temperature ASCII downloads and ZIP collections | Site asks users to cite original measurement papers; **license for bulk reuse not verified**, so link/cite before copying into repository | IR forward model after visible prototype |
+| [LIDA pure H2O](https://icedb.strw.leidenuniv.nl/data/14) | 15, 45, 75, 105, 135 K; ~1.92 cm^-1 resolution | TXT/TXT.GZ | 3000-monolayer lab film, not a thick Europan granular surface | Temperature-sensitive IR ice baseline |
+| [LIDA CO2:H2O (1:1)](https://icedb.strw.leidenuniv.nl/data/27) | 10–187 K across many warm-up steps; ~1.84 cm^-1 resolution | TXT/TXT.GZ | Film absorbance; do not conflate with surface reflectance | Mixture/temperature spectral study |
+| [USGS Spectral Library v7, DOI 10.5066/F7RR1WDJ](https://www.usgs.gov/data/usgs-spectral-library-version-7-data) | 0.2–200 µm, mineral/compound and constructed/computed mixture references | Published spectral files including text representations | CC0 1.0; many measurements not cryogenic | Broader endmember and inverse-problem methods |
+| [Poston et al. 2017, JGR Planets](https://doi.org/10.1002/2017JE005429) | Irradiated NaCl spectral behavior in Europa-like conditions | Supplementary XLSX dataset and CSV figure data listed by publisher | Dataset reuse terms not verified | Independent experimental cross-check |
+| [2025/26 planetary science study, DOI 10.3847/PSJ/ae182c](https://doi.org/10.3847/PSJ/ae182c) | Visible/SWIR and often mid-IR reflectance of 14 irradiated cryogenic salt/ice materials | Figure-level data indicated in publication | Verify downloadable files and reuse terms | Expanded salt/hydrate library |
+| [PDS Geosciences Spectral Library / RELAB](https://speclib.rsl.wustl.edu/) | UV–far-IR reference measurements | Searchable database | Per-collection metadata and access require checking | Later validation and context |
+
+### Measurement discipline
+
+- **Visible reflectance factor** vs **IR absorbance** vs **Raman intensity** are not interchangeable ordinates. Do not blend arrays without a physical forward model and common instrument definition.
+- Store wavelength/wavenumber units, resolution, temperature, phase, geometry, sample thickness/grain size, composition, irradiation conditions, calibration and original attribution per spectrum.
+- Separate *laboratory exposure conditions* from inferred *Europa dose-depth histories*. No mapping of electron-beam duration to geological exposure without an explicit, sourced radiation transport model.
+- Lab spectral variation alone does **not** establish whether a material was endogenic or exogenic. The blind history problem also needs stratigraphy, spatial/depth priors, or independent tracers.
+
+### Turn 3 gate and limitations
+
+**Completed:** specific real experimental datasets located; file formats, measured channel, some temperature/resolution metadata and one explicit reusable license verified from catalogue/publisher descriptions; first dataset and channel selected.
+
+**Not completed:** bytes ingested or parsed, file checksums, instrument-convolution tests, dataset-specific error estimates, Raman reference validation, or LIDA bulk-license verification. These must be checked before numerical claims or bundling files.
+
+**Turn 4:** specify an apparatus with a visible-reflectance NaCl radiation-processing mode plus a generic provenance-preserving layered ice state. Keep geological-history discrimination as a harder, separately validated objective.
