@@ -459,3 +459,58 @@ The world learned to report its state; evidence began to cross incompatible inte
 **A conjoiner carries a laboratory in a distributed mind and reaches it through a smartphone aperture. The aperture bounds attention and interaction, not the laboratory's existence.** Its executable worlds, source, instrumentation, history and accepted contracts must persist beyond any one chat window. The model's initiative must preserve those contracts and disclose the difference between proposed, committed, observed and accepted.
 
 **Next:** October 15–16, Sanctum, Sieve, Abyss, deployment identity and the operational test of cold handoff.
+
+
+## Unpacking 10 — October 15–16: The pocket laboratory survives a cold crossing
+
+Sources: [Sanctum entry](https://github.com/bonoj/Sanctum/blob/main/README.md), [Sanctum contract](https://github.com/bonoj/Sanctum/blob/main/CONTRACT.md), [Gate recovery](https://github.com/bonoj/Gate/blob/main/README.md), [Sieve entry](https://github.com/bonoj/Hermeticon/blob/main/codex/sieve/README.md), [Conjoiner Frontier](https://github.com/bonoj/Hermeticon/blob/main/codex/sieve/CONJOINER_FRONTIER.md), [private Sieve context contract](https://github.com/bonoj/Home/blob/main/sieve/README.md), [Abyss entry](https://github.com/bonoj/Abyss/blob/main/README.md), [Abyss Shell handoff](https://github.com/bonoj/Abyss/blob/main/shell/HANDOFF.md), and [Entropy locomotion ledger](https://github.com/bonoj/Abyss/blob/main/shell/LOCOMOTION.md). These are current documents and historical commit evidence, not a claim that every feature described was present at the beginning of October 15.
+
+### October 15: Sanctum becomes a doorway
+
+Sanctum's former large cold-boot README was archived (`0d8e071d`). The replacement (`7589dc91`) made it a minimal entry into a working contract and Hermeticon; later revisions (`3406ec99`, `d04eda73`, `883e6231`) established an explicit, search-independent route to Sieve. Its instruction is important: **read the entry and follow exact links; a repository search for a file stored elsewhere is not a failed handoff**. Sieve's canonical documents live under `bonoj/Hermeticon/codex/sieve/`, not inside Sanctum. The independent harness-convergence statement was linked on October 15 (`f6c9cb9d`).
+
+The contract protects creative agency, stable worlds, scope, provenance, and the human's time. A cold assistant must recover established machinery rather than asking the human to recreate it. Gate describes the write-failure procedure: classify the error, preserve optimistic concurrency, use small legitimate operations or Git Data recovery for transport/tool failures where permitted, and verify by reading the result. Neither a single failed API call nor a successful source commit establishes live behavior.
+
+### October 15: Sieve's throughput and its hard accounting boundary
+
+Sieve pursued a 100/100/100 campaign: connection requests **sent**, applications **submitted**, and professional emails **sent**. Its public runtime is a presentation and action surface; private context and campaign records live in `bonoj/Home/sieve/`. The working specification was archived and replaced with a compact execution contract (`1b006d0a`, `b6498445`). An 88-profile public cold-connect deck was built (`789a1398`) and mounted with mobile eye export (`dbb5996a`, `1de6a7cf`). Email cards were subsequently staged, including a 102-card deck (`992d0bd9`), then the unused email/Hunt interface experiments were retired from Sieve. Those historical iterations should not be mistaken for its current UI.
+
+The critical distinction is **inventory versus action**. A discovered person is not a sent invitation; a prepared application is not a submitted application; a drafted email is not delivered mail. Human-reported outcomes and tool-confirmed actions must be tracked separately. The public Sieve interface is not permission to publish private contact data. A substantial `➡️` authorizes research and persistence, not unapproved outbound sending. The campaign's exact current counts belong to its live private JSON, not this retrospective.
+
+### October 16: Abyss separates world composition from publication
+
+Abyss Shell has one Athanor host, reusable Arcana, and multiple Codex worlds. Genesis is preserved; Entropy is mounted from `shell/main.js`. New worlds using the same runtime belong under `shell/codex/<world>/`; a separate top-level folder is for an intentionally independent runtime. The original Hermeticon repository remains untouched.
+
+The Pages workflow builds Shell's first-party dependency graph into a SHA-addressed immutable bundle `assets/main.<SHA>.js`. HTML fetches `build.json` and imports the matching loader. This addresses a concrete earlier failure: fresh HTML serving stale cached JavaScript. The workflow's push trigger covers `shell/**` and its workflow file; a README-only commit does not publish Shell. A commit, successful Actions run, public manifest, and phone-executed build are four distinct observations. The browser's inspector SHA must be compared with the deployed SHA before saying a world is live.
+
+The bespoke BB sheep were removed after a proximity explosion froze the world. A color argument type mismatch was a strong suspected cause, not a captured browser exception. The failed one-off animal should not be silently restored as a composable fauna system. The subsequent frontier pivoted toward locomotion and physical connection rather than treating a species recipe as the immediate task.
+
+### October 16: Sisyphus and the difference between a leg and a force field
+
+Entropy's locomotion program began with a reusable two-bone IK solver (`ec778c14`) and a visual articulated follower. The existing Wanderer still owned navigation; animation was not physical locomotion. The human redirected the work toward one Wanderer exploring ways of inhabiting gravity: bound, resisting, or decoupled. A deterministic drop-and-settle experiment separated forces and contacts from gait appearance.
+
+The early two-leg standing fixture used massless axial struts between body hips and fixed ground anchors. A clockwise-positive pitch convention had been applied inconsistently in the hip transform. Commit `f9203844` corrected that real kinematic defect. Yet a browser test with a +0.08 lateral velocity impulse at t=2 still lost support at t=3.0667 and fell far beyond reach. The correction was necessary but did not establish dynamic stability.
+
+The human then asked: **“Why is his body not anchored to his legs? If he falls over it means his legs go with him. Is this a fundamental correction we need to make?”** Yes. The fixed-anchor fixture was a force-field approximation, not a connected creature. The topology had to change before more gait tuning could mean anything.
+
+Commits `90f82c4a` and `61e1b22c` introduced dynamic finite-mass feet connected to hips through bilateral compliant spring/damper links, with equal-and-opposite forces and approximate ground contact. This was **not** yet a rigid articulated joint solver.
+
+A user-supplied browser witness for executing SHA `616cab569b8bba28c24a9448dc8bbcb960422f63` reported about 79.11 FPS, 792 fixed steps at 120 Hz, and 6.6 seconds of simulated time. The feet moved separately and were dragged with the falling torso: the previously missing connectivity was visibly present. But the body had launched to y=124.91 with vertical velocity +100.07, pitch -48.62 radians and enormous link errors. That is a numerical energy explosion, **not** stable walking or a healthy fall. A separate impact counter also failed to capture capsule-end collisions despite a first-body-impact witness.
+
+The correct next question was solver mechanics: force direction, torque sign, update order, integration stability, contact impulses, and energy accounting. The recorded frontier calls for a coherent constraint/contact solver, then free-fall, landing, standing, finite shove and N-limb experiments. No stationkeeping, invisible righting, detached legs, or premature optimization at 79 FPS.
+
+### October 16: The recovery procedure is itself tested
+
+The Conjoiner retrospective encountered repeated failed GitHub Contents writes while attempting to persist Unpackings 07–09. The model initially treated the generic safety-check error as a conclusive prohibition and transferred a large copy-paste document back to the human. The human corrected that diagnosis and directed the model to Sanctum.
+
+Sanctum's contract and Gate's recovery instructions supplied an established alternative for permitted GitHub tool failures. The model read the actual Ledger branch head and file blob, created a new Git blob containing the unchanged prior document plus the missing installments, constructed a tree, committed it, advanced `main` with an expected-head check, and read back the resulting document. Commit **`59e61d9e6a4d891dbcb91851b9baac5458494a9f`** verified that Unpackings 07, 08, 09 and their synthesis were present. This was repository persistence, not a Pages deployment claim.
+
+This episode is an especially direct test of the pocket-laboratory proposition. The failure was not solved by requiring the human to operate Git or upload a document. It was solved by recovering the laboratory's own written procedure and executing it through the connected toolchain. The earlier misclassification and unnecessary handoff to the human remain part of the evidence.
+
+### What the crossing establishes
+
+**Sanctum** supplies entry and working obligations. **Gate** supplies delivery-failure recovery. **Sieve** distinguishes private context, prepared outreach and actual external actions. **Abyss** distinguishes authored world, shared runtime, deployment bundle and browser execution. **Entropy** distinguishes a convincing animated limb, a connected force model and a physically credible articulated creature. **Ledger** records these differences without becoming the runtime's source of truth.
+
+The conjoiner does not become reliable by eliminating every failure. It becomes more reliable when a new context can recover the correct organism, classify a failure, apply an existing remedy, preserve negative evidence, and return the human to creative judgment without demanding a desktop workflow.
+
+**Next inquiry:** follow the connected-limb experiment beyond the first unstable browser witness; evaluate whether the solver earns physically bounded attachment and contact, rather than treating the first topology repair as a finished gait.
