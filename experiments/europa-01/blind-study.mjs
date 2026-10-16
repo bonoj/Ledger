@@ -14,7 +14,7 @@ function observe(scenario,seed,depth,handling,depthInterval=[.58,.68],noiseSigma
   // This is an imposed observational equivalence, not a geological mechanism.
   const source=i===0?createColumn({scenario:scenarios[0],seed}):w;
   const s=sample(source,a,b,handling);
-  const measurementSeed=noiseMode==='independent'?((seed*17+i*7919+(scenario===scenarios[0]?0:104729))>>>0):seed*3+i;
+  const measurementSeed=noiseMode==='independent'?((seed*17+i*7919+(seed%2)*104729)>>>0):seed*3+i;
   return features(syntheticSpectrum(s,{seed:measurementSeed,noiseSigma}));
  });
  return xs; // no world object, scenario, origin, or truth returned
