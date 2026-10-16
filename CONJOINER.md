@@ -365,3 +365,42 @@ Worldseed Build 1 was actually committed at Repository `1293194a`, with a 40×40
 **Conjoiner qualification:** initiative can include the model choosing laws and constructing an experiment without advance human approval of its appearance. That autonomy is scientifically meaningful only when the model records predictions before observation, keeps world state distinct from presentation, and accepts a failed or sparse result rather than decorating it into success. The smartphone channel need not carry 1,000 manual decisions; it must retain the ability to judge the resulting world and redirect the inquiry.
 
 **Next:** October 5–7 notes on dice, semantic affordances, functional terrain, Observer, and the danger of polishing instead of learning.
+
+
+## Unpacking 06 — October 5–7: Semantic surfaces, time, and knowing when to stop
+
+**Sources:** [D20](notes/dice.md), [Twenty Faces](notes/twenty-faces.md), [Semantic Affordances](notes/semantic-affordances.md), [Observer](notes/observer.md), [Functional Terrain](notes/functional-terrain.md), [When Progress Becomes Polishing](notes/when-progress-becomes-polishing.md), [Domain Switching Without Reboot](notes/domain-switching-without-reboot.md), and [When the Machinery Becomes the World](notes/2026-10-07-when-the-machinery-becomes-the-world.md). Current Repository's semantic surface was consulted as a comparison, not retroactively treated as October 5 source truth.
+
+### October 5: The d20 as an address space, not miniature terrain
+
+Twenty deformed triangular terrain patches failed as a useful miniature. The die became a cheap container of twenty bounded addresses. In observed build `22469598`, independently tapping a face added persistent objects once, without face labels, button grids, or confusion between tap and orbit drag. A single short human instruction carried cardinality, locality, idempotence, and experimental intent because the geometry already supplied faces and surfaces. This is **semantic compression through a shared executable representation**, not evidence that all ambiguity has vanished.
+
+In the twenty-experience build `9bca1260`, one face could launch a satellite out into die-level space, establishing **face → die → outside**. But most experiences were nouns presented instantly rather than verbs unfolding through time. Growth, crystallization, excavation, and city formation need perceptible causal sequences, not just final meshes. Black painted apertures were weak evidence of depth; an accidental pink trajectory disappearing behind several faces and reappearing elsewhere provided stronger evidence of hidden volume. **Occlusion can establish an unseen interior without rendering that interior explicitly.**
+
+The resulting holding hypothesis is **time + affordances + verbs**. Geometry offers SURFACE, VOLUME, INSIDE, THROUGH, ABOVE; behavior operates on those relationships; time makes the event legible. This was explicitly *not yet a generalized framework*. The d20 code was an experiment whose geometry-specific coupling had not earned extraction.
+
+### October 5: Observer is useful precisely because it is optional
+
+Semantic Construction T1 recovered four major geometric continuities but missed a fifth small isolated bead. Its 340-ray scan appeared to converge under the then-current criterion; that criterion was wrong. T2's multiscale coverage found the missing bead with 2,148 rays, but the run did **not** complete the newly proposed two-quiet-scale stopping rule. Thus the small-feature miss was corrected, not general completeness proved. The final practical disposition was: **semantic snapping → executable geometry → cheap human visual inspection → Observer only when precision or ambiguity warrants its cost**. No mandatory Observer compiler pass, universal sensor policy, or T3 was justified.
+
+This also revises an overly simple pocket-laboratory narrative: model-side senses do not always save time. At thousands of rays and megabyte-scale transcripts, they can be more expensive than a quick human glance on the phone. The conjoiner should choose the cheapest *adequate* witness, not maximize automation.
+
+### October 5–6: Terrain from causes, not a catalog of appearances
+
+Functional terrain separated macro elevation tiers, permission for local extrusion, and octagonal biome jurisdictions whose local function attenuates to zero at the boundary. The octagonal zero boundary was a proposed treaty between otherwise incompatible biome functions, not a universal law of geology. The longer aspiration was causal level of detail: cheap virgin mathematical geography becomes bounded mutable matter when events give it history.
+
+The geological terrain research then exposed a more dangerous failure mode: **each local iteration improved while the research question narrowed**. T1 mixed plausible strata, deformation, drainage and deposition but showed severe sampled blades. T2 corrected representation scale and band-limiting; T3's plausible contact-snap diagnosis changed little; T4 found the real coupling—local stratigraphic resistance multiplying global erosion depth—and bounded it. T5 warped drainage coordinates but did not change the underlying straight-line construction signature. T6 produced a second cliff family from caprock retreat, then invited another round of artifact polishing. The team deliberately stopped. The next experiment should **break the world** through a sequence of geological events, testing qualitative causal variety rather than smoothing one attractive specimen.
+
+The general lesson is not anti-polish. It is to ask periodically whether work is **expanding the reachable consequences** or merely improving one already reachable result. A metric such as slope discontinuity is diagnostic evidence, not the goal; nature is allowed to have sharp cliffs.
+
+### October 7: Cross-domain continuity and the world replacing its control panel
+
+The domain-switching account records movement among simulation, chemistry, orbital dynamics, machine observation, interfaces, deployment, career strategy, writing, and ordinary life without rebuilding a separate specialized agent for each. A compact instruction about a gimbal cage orbiting a seven-node structure was meaningful because both parties had accumulated an executable referent. Its claimed count of roughly 25 domains is an informal categorization, not a benchmark.
+
+The Home reorientation note records Six Cities material phase cycling, experiments up to 500,000 bearings (around 20 FPS), functional terrain/populations, transport, and infrastructure. It asks the next question: what happens when these systems cause one another to change without human direction? The intended shift is **from operating machinery to inhabiting a world in which machinery has consequences**. The note explicitly does not claim a fresh live inspection that evening.
+
+### Conjoiner qualification
+
+A distributed laboratory is not merely a large archive of remembered instructions. It can embed shared meaning in **spatial arrangement, physical relationships, time, state transitions, and observable consequence**. That reduces conversational bandwidth through the smartphone aperture. Yet capability must remain earned: no premature geometry-behavior matrix, no compulsory expensive Observer pass, no conflation of a proposed geological grammar with a working simulation, and no endless polishing mistaken for new research.
+
+**Next:** October 8–10, when the snowglobe answered back, the cost of asking a world, attachment recovery, and conserved liquid.
