@@ -331,3 +331,8 @@ Not five disconnected departmental descriptions. A connected intellectual geneal
 The founding multimodal images become Chapter I. The executable history becomes Chapter II. The open research frontier becomes Chapter III.
 
 **We should make the Institute expansive enough that our current projects look like its earliest experiments, not the limits of its imagination.**
+
+
+## Visual research corpus — continuation
+
+The nine subsequent context-bomb images, including field notes, continuity apparatus, Six Cities, and amphibious locomotion, are described and annotated in **[HERMETICON_VISUAL_CORPUS_II.md](HERMETICON_VISUAL_CORPUS_II.md)**. The corpus separates depicted content from inferred research directions and notes the absence of archived image binaries.
