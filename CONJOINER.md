@@ -353,3 +353,15 @@ Nested Betwixtables established focus as a presentation seat rather than an obje
 Thoughtforms were explicitly described in the crossing as executable asset stores. That does not make them work tickets or a general asset registry. The distinction between preserved possibility and active runtime ownership remains important.
 
 Source: [Ozymandias Crossing](ozymandias_crossing/account.md). Historical implementation anchors include Repository revisions `cc77dd76`, `43869374`, `b0ed355f`, and `bf14368c`.
+
+## Unpacking 05 — October 4: Graph Mind and Worldseed
+
+[Graph Mind](graph_mind_crossing/account.md) begins as a question embodied in a Thoughtform, not an implemented miniature language model. A tiny deterministic world presents observations under a deliberately insufficient vocabulary. When two apparently identical antecedents lead to different outcomes, Graph Mind must retain the contradiction instead of smuggling in the hidden answer. An anonymous distinction can emerge only if it improves prediction or compression across later encounters: a distinction must pay rent. The account defines a proposed experiment and falsification criteria, not a witnessed successful run. Its proposed evidence boundary is particularly rigorous: world truth is sealed from the learner and model until after diagnosis.
+
+[Worldseed](worldseed_crossing/account.md) translates the same principle into an authored causal world. The human deliberately declined advance design approval. The model selected a small field of potential, resistance, trace, and disturbance, with drifting sources/sinks and deterministic shocks. Movement leaves trace; trace changes later resistance. The key proposed test compares a mature historical field with a virgin one under identical forcing: if preserved history cannot change future behavior, apparent structures are decorative. Anonymous persistent regions may earn handles, but no roads, organisms, or settlements are predeclared.
+
+Worldseed Build 1 was actually committed at Repository `1293194a`, with a 40×40 lattice, accelerated 1,000-turn genesis, and an evidence record. The account explicitly admits that the implemented handle criterion measures persistence/coherence but does not yet enforce predictive rent. It also distinguishes a source commit from runtime observation, and records a publication verification failure. Thus the experiment is a **candidate organism**, not proof that useful anonymous vocabulary emerged.
+
+**Conjoiner qualification:** initiative can include the model choosing laws and constructing an experiment without advance human approval of its appearance. That autonomy is scientifically meaningful only when the model records predictions before observation, keeps world state distinct from presentation, and accepts a failed or sparse result rather than decorating it into success. The smartphone channel need not carry 1,000 manual decisions; it must retain the ability to judge the resulting world and redirect the inquiry.
+
+**Next:** October 5–7 notes on dice, semantic affordances, functional terrain, Observer, and the danger of polishing instead of learning.
