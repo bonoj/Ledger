@@ -53,6 +53,16 @@ The second prospective beneficiary moved beyond retrospective interest and named
 
 **Conjoiner consequence:** the beneficiary's prospective need was sufficient to start a new experiment; the human's conversational direction was sufficient to revise it; the model and existing machinery handled implementation and substantial correctness testing. Scientific and mathematical accuracy, verification, and honest evidence boundaries are part of the service delivered to the beneficiary—not optional polish added after a visually pleasing demo.
 
+### October 16 continuation — a beneficiary asks for acid–base help
+
+A family-chat screenshot supplied by the human records a beneficiary reacting to the shared learning instruments: “OMGG I LOVE”, “Yaayyyy thank you”, and “Definitely could be useful for math”. The beneficiary then volunteered a concrete chemistry difficulty: “I don’t know how to tell if a compound is an acid or a base.” This is direct evidence of enthusiasm and a self-reported learning need, **not** yet evidence that an instrument improved understanding.
+
+The human directed the model to add the capability and test it thoroughly for regression. The model built a separate, single-viewport [Acid–Base Lab](https://bonoj.github.io/jit/acid-base/) and linked it from Ion Garden. The instrument presents twelve aqueous examples and asks the learner to classify each as acidic, basic, or neither, then supplies a chemically grounded explanation, a hint, and a caveat. It explicitly resists misleading formula shortcuts: ammonia is a base without OH in its formula; ethanol contains OH but is not a hydroxide base; ammonium chloride is an acidic salt; bicarbonate is amphiprotic but ordinarily mildly basic in water; pure water is amphoteric but neutral. Classification is scoped to ordinary aqueous conditions, not universal behavior of a substance in every environment.
+
+**Verification boundary:** twelve unique cases and their expected classifications were checked, and 72 simulated interaction assertions passed across selection, hints, all three answer choices, progress, and navigation. The published artifact contains a built-in deterministic dataset regression check. These are source-level/simulated-DOM tests, not a physical-phone visual acceptance test or proof of educational efficacy. The human provided the occasion, the quality bar, and one terse instruction; the model handled implementation, test execution, repository commits, and linking.
+
+**Provenance:** [Acid–Base Lab source](https://github.com/bonoj/bonoj.github.io/blob/master/jit/acid-base/index.html). The next witness should be the learner's use, confusion, or correction—not an assumption that a successful deployment is equivalent to learning.
+
 ## October 16 photographic witnesses — the collaboration seen through its actual aperture
 
 **Source:** ten smartphone screenshots supplied directly by the human during this retrospective, showing excerpts from earlier sessions. These are **selected glimpses**, not a complete activity log. Their on-screen times and statements should not be used to reconstruct missing commit chronology without corroboration.
