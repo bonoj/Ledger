@@ -82,7 +82,7 @@ A **turn** is one substantive model work cycle, with an automatic GitHub put. If
 | **9** | Engineering feasibility envelope | Bound radiation, thermal, power, sample depth and delivery mass; compare rocket fuel with penetrator/bubble/soft-landing hardware only at common assumptions |
 | **10** | Review and next expedition | Independent checks, limitations, reusable modules, live artifact/build verification if deployed, and the next research questions |
 
-**Current position: Turn 6 source and tests committed; Turn 7 next.** Local Turn 6 test suite passed 1,511 assertions; remote source parity and CI execution are separate verification steps.
+**Current position: Turn 7 synthetic measurement code and tests committed; Turn 8 next, contingent on execution and measured-reference validation.**
 
 ## Delivery and protection — parked feasibility branch
 
@@ -122,7 +122,7 @@ Before assigning a number to a scientific parameter, trace it to a relevant sour
 
 **2026-10-16 — Scope and methodology reset.** The earlier note had grown into repeated landing concepts and work logs. Replaced it with a question-first science program, executable Ice Column v0, bounded delivery branch, source register, and ten-turn roadmap. Original ideas and corrections remain recoverable from Git history. **No numerical model or runtime has yet been built.**
 
-**Next action:** **Turn 7 — virtual measurements**: calibrate forward measurement assumptions, noise and uncertainty, and distinguish synthetic from real laboratory channels.
+**Next action:** **Turn 8 — blind investigation**: compare hidden origin histories using surface and depth measurements; first run exact committed tests and assess reference-data gaps.
 
 
 ## Turn 1 result — scientific reconnaissance (2026-10-16)
@@ -369,3 +369,22 @@ A Node-compatible ES module now implements seeded generation of three **syntheti
 **Limitations:** recovery fraction does not currently change the reported mean composition; loss is assumed composition-neutral. The model does not represent spatially selective loss, sample-to-sample carryover, drill heating, reaction kinetics, real contamination chemistry or instrument blanks. The simulator world object still exposes privileged ground truth to trusted callers; investigatorView hides scenario and origin, but this is not a security boundary.
 
 **Turn 7:** implement measurement noise and calibrated spectral channel interfaces, then explicitly test whether sampling disturbance can destroy or imitate discriminating depth gradients.
+
+
+## Turn 7 result — virtual measurements (2026-10-16)
+
+**Implemented:** [synthetic visible spectrometer](../experiments/europa-01/virtual-measurements.mjs) and [regression suite](../experiments/europa-01/virtual-measurements.test.mjs). This is an **illustrative forward model**, not a laboratory-calibrated optical simulator.
+
+- Wavelength range **400–900 nm**, default 81 points, wavelength in nm.
+- Three Gaussian absorption-like features nominally centered at **460, 580, 720 nm**; these landmarks are motivated by the salt/irradiated-ice reference discussion, **but band strengths, widths, continuum and chemical mappings are invented synthetic parameters**.
+- Signals depend on NaCl-equivalent, P and Q sample composition. A nominal resolution broadens synthetic bands in quadrature.
+- Noise is independent, zero-mean uniform noise with declared standard deviation `noiseSigma`; seeded by instrument seed and sample ID. Return noisy spectrum, noiseless ideal, per-channel uncertainty, metadata and `physicalCalibration:false`.
+- `compareSpectra` returns an uncertainty-weighted mean squared difference (named reducedChiSquare in code for convenience, **not a rigorous fitted reduced χ²** because no fitted degrees of freedom or covariance). It must not be interpreted as a calibrated origin likelihood.
+- `laboratorySpectrum()` explicitly rejects use until actual measured archives and calibration are ingested and validated.
+- Tests cover 150 scenario/seed cases, reproducibility, dimensions, metadata, noise-seed sensitivity, zero-noise identity, invalid settings, and the blocked laboratory path. **1,056 assertions are specified in source** (150 × 7 + 6), but no execution success is claimed.
+
+**Execution boundary:** GitHub writes and read-back are available, but the local runner's attempt to retrieve the exact remote files failed because `raw.githubusercontent.com` could not resolve. This is a verification transport failure, not evidence of a failed model or successful tests. Run `node experiments/europa-01/ice-column.test.mjs` and `node experiments/europa-01/virtual-measurements.test.mjs` on the exact committed bytes when possible.
+
+**Important unresolved science:** the paired Turn 2 histories have not yet been tuned to be spectrally confusable at the surface; no laboratory endmembers have been numerically ingested; model mismatch and correlations are uncharacterized. Therefore no inference about Europa's ocean exchange follows from this simulation.
+
+**Turn 8 gate:** design blind surface-only vs depth-resolved inference and explicitly report non-identifiable cases. Keep hidden labels privileged, test sensitivity to Turn 6 disturbance and contamination, and do not treat synthetic bands as measured chemistry.
