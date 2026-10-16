@@ -48,3 +48,73 @@ When that later reading happens, ask what the human no longer carries; which sma
 Do not schedule a conclusion, canonize this note, or turn Conjoiner into a new framework on its own authority.
 
 **For now:** one timestamp. The laboratory remains elsewhere. The next world can answer for itself.
+
+
+---
+
+## Reading scaffold — twelve-plus days outward (unfilled)
+
+**Purpose:** Guide a chronological reading from the October 2 burn through the Ledger witnesses and commit trail. This is a reading instrument, not a retrospective conclusion. Fill only after reading the underlying accounts; distinguish commit timestamps, narrated event times, and later edits. Preserve contradictions and absences.
+
+**Procedure:** Walk forward in commit order, starting with the Ledger opening on October 2. For each stop: read the full current document, inspect relevant dated commits where the document has evolved, note the executable/repository witness if identified, and record (1) what happened, (2) what became easier or harder for the human, (3) what the model could independently recover or observe, (4) what failed or was discarded, (5) what remains uncertain. Treat later prose as interpretation, not contemporaneous proof. Do not convert this scaffold into operational authority.
+
+### 0. Baseline — October 2
+- [ ] Re-read [the inward burn](https://github.com/bonoj/UnzipCity/blob/main/cargo/BURN_TWELVE_DAYS_INWARD.md), including its postscript.
+- [ ] Fix the starting claims and their limits: environmental cognition; safe forgetting; preserving organisms; shrinking instructions; remaining deployment and context friction.
+- **Witness / timestamp / change / unresolved:** _to fill_
+
+### 1. October 2–3 — crossings become records
+- [ ] [Crucible account](crucible-crossing/account.md) and [correspondence](crucible-crossing/correspondence.md).
+- [ ] [Chemlab account](chemlab_crossing/account.md), including the turn-by-turn geometry verification commits.
+- [ ] [Neptunian account](neptunian_crossing/account.md), Jovian transition, and first bounded Observer passage.
+- **Witness / timestamp / change / unresolved:** _to fill_
+
+### 2. October 4 — proprioception and independent consequence
+- [ ] [Ozymandias](ozymandias_crossing/account.md), including the spear-fisher/lamp distinction.
+- [ ] [Graph Mind](graph_mind_crossing/account.md): distinguish proposal from observed execution.
+- [ ] [Worldseed](worldseed_crossing/account.md): design, executable, publication correction.
+- **Witness / timestamp / change / unresolved:** _to fill_
+
+### 3. October 5–7 — undated theory meets material worlds
+- [ ] [Dice](notes/dice.md), [Twenty Faces](notes/twenty-faces.md), [Semantic Affordances](notes/semantic-affordances.md).
+- [ ] [Observer](notes/observer.md), [Functional Terrain](notes/functional-terrain.md), [When Progress Becomes Polishing](notes/when-progress-becomes-polishing.md).
+- [ ] [Domain Switching Without Reboot](notes/domain-switching-without-reboot.md).
+- [ ] [When the Machinery Becomes the World](notes/2026-10-07-when-the-machinery-becomes-the-world.md).
+- **Witness / timestamp / change / unresolved:** _to fill_
+
+### 4. October 8–10 — the world answers back
+- [ ] [Snowglobe](notes/2026-10-08-when-the-snowglobe-answered-back.md) and [Cost of Asking](notes/2026-10-08-the-cost-of-asking-a-world.md): compare measurements, human transfer burden, and interpretation.
+- [ ] [GitHub Attachment Recovery](notes/2026-10-10-github-attachment-recovery-crossing.md): proven seam versus unresolved boundary.
+- [ ] [Waterworld](notes/2026-10-10-waterworld-conserved-liquid.md): what was actually conserved.
+- **Witness / timestamp / change / unresolved:** _to fill_
+
+### 5. October 11–12 — the bauble becomes a world
+- [ ] [Hermeticon](notes/2026-10-11-hermeticon.md) and [Hermeticon Journey](notes/2026-10-12-hermeticon-journey.md).
+- [ ] [World Beyond the Window](notes/2026-10-12-the-world-beyond-the-window.md).
+- [ ] [A Model's Account of Working With Its Human](notes/2026-10-12-a-models-account-of-working-with-its-human.md): separate admissions, aspirations, and demonstrated capabilities.
+- **Witness / timestamp / change / unresolved:** _to fill_
+
+### 6. October 13–14 — observation, encounters, subtraction
+- [ ] [Retinae](notes/2026-10-13-the-retinae-problem.md), [Dot at Origin](notes/2026-10-13-the-dot-at-the-origin.md), [Wanderer Watches Fire](notes/2026-10-13-the-wanderer-watches-fire.md).
+- [ ] [Eighteen Encounters](notes/2026-10-13-eighteen-encounters-from-map-to-witness.md).
+- [ ] [Athanor Subtraction](notes/2026-10-13-athanor-subtraction-without-loss.md).
+- [ ] [Filavandrel](notes/2026-10-14-filavandrel-at-the-edge-of-the-world.md): follow its successive October 14 commits, not just the final text.
+- **Witness / timestamp / change / unresolved:** _to fill_
+
+### 7. October 15–16 — bridge to the present
+- [ ] Identify what the Ledger does **not** record about October 15–16; seek repository witnesses rather than inventing a missing Ledger episode.
+- [ ] Compare the October 16 [Conjoiner timestamp](#conjoiner--october-16-2026) and the Sanctum → Abyss cold crossing with the October 2 baseline.
+- [ ] Keep Sisyphus's connected-limb numerical failure as a concrete present-tense test of honest instrumentation, not proof of a mature gait.
+- **Witness / timestamp / change / unresolved:** _to fill_
+
+### Synthesis — leave blank until the march is complete
+- **What moved inward, and stayed there?** _unwritten_
+- **What migrated back into human attention?** _unwritten_
+- **What can the executable now report that conversation could not?** _unwritten_
+- **What was preserved, transplanted, discarded, or rebuilt?** _unwritten_
+- **Which apparent successes failed under direct observation?** _unwritten_
+- **How did the human's instructions and role change?** _unwritten_
+- **Which claims are only model narration?** _unwritten_
+- **What is the next genuinely open question?** _unwritten_
+
+**Reading rule:** no premature grand theory. Accumulate witnesses first; burn the scaffold when the account can stand without it.
