@@ -347,9 +347,9 @@ The nine subsequent context-bomb images, including field notes, continuity appar
 | Offering | Provisional starting price | Deliverable |
 |---|---:|---|
 | **Open Inquiry** | **$0 — pro bono** | A selected, bounded investigation with a meaningful research deliverable; subject to Institute capacity and discretion. |
-| **Research Brief** | **$1,500+** | Documented analysis, evidence, findings, uncertainty, and actionable conclusions; calculations or a small demonstrator where useful. |
+| **Research Brief** | **$2,000+** | Documented analysis, evidence, findings, uncertainty, and actionable conclusions; calculations or a small demonstrator where useful. |
 | **Executable Investigation** | **$5,000+** | Working interactive simulation, prototype, model, or experimental apparatus, with verification notes and findings. |
-| **Research Expedition** | **$15,000+** | Integrated investigation across multiple questions, systems, or experimental cycles, with agreed milestones, artifacts, and a final research dossier. |
+| **Research Expedition** | **$25,000+** | Integrated investigation across multiple questions, systems, or experimental cycles, with agreed milestones, artifacts, and a final research dossier. |
 | **Institutional Partnership** | **By proposal** | Custom research program, deliverables, milestones, confidentiality, and intellectual-property terms. |
 
 ### Engagement rules
