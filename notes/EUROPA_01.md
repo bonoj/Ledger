@@ -82,7 +82,7 @@ A **turn** is one substantive model work cycle, with an automatic GitHub put. If
 | **9** | Engineering feasibility envelope | Bound radiation, thermal, power, sample depth and delivery mass; compare rocket fuel with penetrator/bubble/soft-landing hardware only at common assumptions |
 | **10** | Review and next expedition | Independent checks, limitations, reusable modules, live artifact/build verification if deployed, and the next research questions |
 
-**Current position: Turn 1 pending.** This rewrite is expedition preparation, not a substitute for Turn 1.
+**Current position: Turn 1 completed; Turn 2 next.** Scientific reconnaissance established candidate chemical signatures, radiation depth caveats, and an inverse-problem target. See findings below.
 
 ## Delivery and protection — parked feasibility branch
 
@@ -122,4 +122,46 @@ Before assigning a number to a scientific parameter, trace it to a relevant sour
 
 **2026-10-16 — Scope and methodology reset.** The earlier note had grown into repeated landing concepts and work logs. Replaced it with a question-first science program, executable Ice Column v0, bounded delivery branch, source register, and ten-turn roadmap. Original ideas and corrections remain recoverable from Git history. **No numerical model or runtime has yet been built.**
 
-**Next action:** **Turn 1 — scientific reconnaissance**, starting with published ice composition and radiation-processing constraints, followed by a compact source-to-model parameter table.
+**Next action:** **Turn 2 — hypothesis matrix**: competing origin/alteration scenarios, predicted signatures, confounders, and falsifying measurements.
+
+
+## Turn 1 result — scientific reconnaissance (2026-10-16)
+
+**Result:** A depth-resolved chemical/spectral inverse problem is better motivated than a generic homogeneous ice column. Published Europa observations admit multiple chemical explanations; independent depth information may help distinguish histories, but only under testable assumptions.
+
+### Source-to-model evidence map
+
+| Published observation or study | Evidence / scope | Implication for Ice Column v0 | Guardrail |
+| --- | --- | --- | --- |
+| [Brown & Hand, *AJ* (2013)](https://doi.org/10.1088/0004-6256/145/4/110) | Galileo NIMS spectra have competing hydrated sulfate / sulfuric acid interpretations; irradiation can produce sulfuric acid hydrates | Include chemically distinct endmembers that can be spectrally degenerate | Do not label a NIMS fit a definitive species identification |
+| [Selection of chemical species using Galileo/NIMS, *Icarus* (2023)](https://www.sciencedirect.com/science/article/abs/pii/S0019103522004717) | Many 4–5 component mixtures fit selected NIMS spectra; calibration and SNR strongly affect uniqueness | Implement noisy mixture spectra and explicit non-identifiability | Study is for selected lineament, not all Europa |
+| [Trumbo & Brown, *Science* (2023)](https://doi.org/10.1126/science.adg4155) | JWST CO₂ enriched in Tara Regio; evidence favors internal carbon source | Include internally sourced carbon scenario and secondary radiation transformation | CO₂ formation pathway and direct ocean provenance not uniquely established |
+| [Nordheim, Hand & Paranicas, *Nature Astronomy* (2018)](https://www.nature.com/articles/s41550-018-0499-8) | Spatially variable radiation processing, ~1 cm at some mid/high latitudes versus 10–20 cm in modeled radiation lenses for selected biosignatures | Depth-dependent alteration, site/scenario variable | These are not universal electron shielding depths or instrument survival depths |
+| [Pavlov et al. experiment, NASA report (2024)](https://science.nasa.gov/science-research/planetary-science/astrobiology/nasa-life-signs-could-survive-near-surfaces-of-enceladus-and-europa/) | Irradiation experiments suggest ~20 cm sampling depth for certain amino acids at high-latitude trailing hemisphere under stated assumptions | Separate species-specific destruction/retention curves from generic dose | Do not merge with 2018 radiation model as one 'safe depth' |
+| [Europa Clipper composition review, *Space Science Reviews* (2024)](https://link.springer.com/article/10.1007/s11214-024-01069-y) | Summarizes reported non-ice compounds and unresolved compositional interpretations | Candidate species catalog and instrument/reference search | Review synthesizes multiple evidence strengths; track each individually |
+| [Electron irradiation of methanol ice, *Icarus* (2026)](https://doi.org/10.1016/j.icarus.2026.117136) | Laboratory study of irradiation-driven organic chemical diversity relevant to Europa | Explore product generation as well as destruction | Do not infer Europan abundance from analog experiments |
+
+### Turn 1 scientific conclusions
+
+1. **Mixture degeneracy is a primary phenomenon, not a nuisance:** different compositions can produce similar near-IR spectra. The first instrument must expose this.
+2. **Depth profiles may help distinguish history:** radiation alteration is spatially and depth dependent; a surface-only measurement discards information.
+3. **Origin and transformation must be separate latent variables:** a species may originate internally and be chemically transformed at the surface; origin of carbon is not necessarily the formation location of detected CO₂.
+4. **Radiation preservation is species- and site-dependent:** a single generic 'safe depth' is not scientifically defensible.
+5. **Science-first architecture remains justified:** no landing design choice is required to test these hypotheses.
+
+### Data requirements for Turns 2–3
+
+- Representative endmember spectra and optical constants at relevant temperatures/phases (water ice, sulfuric acid hydrates, hydrated sulfates, NaCl-related material, CO₂ and selected organics).
+- Published radiation dose-versus-depth and spatial scenarios with stated particle spectra and chemistry-specific response.
+- Documented spectral noise/resolution/calibration assumptions and laboratory mixture spectra.
+- Sources and licensing for datasets before incorporating them into executable apparatus.
+
+**Model parameter policy:** no invented concentrations, dose rates, decay constants, or detection thresholds. Use explicitly synthetic dimensionless parameters until sourced.
+
+### Turn 1 acceptance and limitations
+
+**Completed:** primary research papers/reviews identified; distinct observed signatures, inference, and ambiguities recorded; first falsifiable inverse-problem target established.
+
+**Not completed:** numerical datasets retrieved, independent raw-spectra reproduction, site-specific quantitative dose curves, or simulation. Those are planned for later turns, not claimed here.
+
+**Turn 2 gate:** construct a hypothesis-versus-observable matrix and choose the smallest pair of deliberately confusable scenarios for a blind experiment.
