@@ -554,3 +554,8 @@ The previous roadmap made the world a possible downstream visualization of concl
 Each turn should combine meaningful scientific research, model/world implementation where appropriate, tests, and persistence rather than incrementing the classifier in tiny steps. Inspect the actual code and established cold-boot/deployment paths before editing Abyss/Shell. Do not publish or report a live build until the deployed SHA is verified. The canonical EUROPA-01 notebook records the decision, assumptions, evidence and next action; detailed implementation belongs in the relevant codebase, not copied into this note.
 
 **Immediate next action:** Turn 1 closes exact-source audit **and** inventories Abyss/Shell's actual terrain/material contracts, then establishes the smallest executable Europa scene. No wholesale scene rebuild and no speculative new engine.
+
+
+### Turn 1 continuation — Europa opt-in (2026-10-16)
+
+Abyss Shell now selects Europa with `?world=europa`, while the default remains Entropy. Europa reuses the existing Hermeticon vessel and atlas terrain; it has no chemical calibration, excavation, or core recovery. Commits: `967f00c0` (world), `1b2f58f` (selector), `a5294066` (handoff). No public/browser runtime verification yet. Locally reconstructed `ice-column.test.mjs` passed 1,511 checks and `null-audit.test.mjs` passed, but **these are not exact committed-source tests**. Scientific audit remains open pending byte-exact verification.
