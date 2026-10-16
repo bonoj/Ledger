@@ -82,7 +82,7 @@ A **turn** is one substantive model work cycle, with an automatic GitHub put. If
 | **9** | Engineering feasibility envelope | Bound radiation, thermal, power, sample depth and delivery mass; compare rocket fuel with penetrator/bubble/soft-landing hardware only at common assumptions |
 | **10** | Review and next expedition | Independent checks, limitations, reusable modules, live artifact/build verification if deployed, and the next research questions |
 
-**Current position: Turn 4 completed; Turn 5 next.** Deterministic Ice Column v0 specification established; no runtime implemented.
+**Current position: Turn 5 implemented; Turn 6 next.** Synthetic column source and regression tests committed. Local prototype passed 1,055 checks; exact committed variant awaits independent runner verification.
 
 ## Delivery and protection — parked feasibility branch
 
@@ -122,7 +122,7 @@ Before assigning a number to a scientific parameter, trace it to a relevant sour
 
 **2026-10-16 — Scope and methodology reset.** The earlier note had grown into repeated landing concepts and work logs. Replaced it with a question-first science program, executable Ice Column v0, bounded delivery branch, source register, and ten-turn roadmap. Original ideas and corrections remain recoverable from Git history. **No numerical model or runtime has yet been built.**
 
-**Next action:** **Turn 5 — instantiate substrate**: implement deterministic seeded ice-column state and validation, using existing lab infrastructure where feasible.
+**Next action:** **Turn 6 — coring and handling**: instrument recovery, disturbance, contamination, and sample provenance; verify the exact committed implementation before expanding it.
 
 
 ## Turn 1 result — scientific reconnaissance (2026-10-16)
@@ -338,3 +338,19 @@ The Zenodo record confirms CSV-like ASCII with first column wavelength in µm an
 ### 2026-10-16 — Work log: Turn 4
 
 Selected a 1D depth-first executable substrate, separated physics/state from rendering and measurements, specified deterministic replay and conservation checks, and blocked unverified laboratory-spectrum ingestion. Turn 5 should implement the pure core before adding interface polish.
+
+
+## Turn 5 result — instantiated deterministic substrate (2026-10-16)
+
+**Committed source:** [experiments/europa-01/ice-column.mjs](../experiments/europa-01/ice-column.mjs)  
+**Committed tests:** [experiments/europa-01/ice-column.test.mjs](../experiments/europa-01/ice-column.test.mjs)
+
+A Node-compatible ES module now implements seeded generation of three **synthetic** 1-meter, 100-cell ice-column scenarios; depth-tagged sample averaging; a two-band toy measurement; explicit hidden-origin data; an investigator-facing projection; conservation checks; and a hard error for unvalidated measured-library spectra.
+
+**Execution evidence:** A local development prototype passed **1,055 Node assertion checks** (three scenarios × 50 seeds × seven checks, plus five edge checks), including reproducibility, composition/origin normalization, absence of origin and scenario strings in the investigator view, and sample/measurement determinism. The source and tests were then transcribed into the GitHub repository in a slightly streamlined variant. **The exact committed variant has not yet been executed in the local runner**, so the 1,055-check result must not be represented as a verified CI result for the GitHub blobs. Next verification should execute `node experiments/europa-01/ice-column.test.mjs` from a checked-out repo or suitable runner.
+
+**Scope boundary:** These synthetic profiles, radiation indices, fractions and noise levels are illustrative, not calibrated to Europa. The sample function currently reports ideal depth-weighted composition; recovery losses, disturbance, blanks, contamination, and a strict private-state boundary still need Turn 6 work. The returned internal world object contains ground truth and is therefore a privileged simulator API, **not** a secure isolation boundary. The public investigator projection omits origin labels and scenario ID.
+
+**Not yet delivered:** browser/mobile UI, live deployment, measured spectra, physical dose model, validated inverse-problem discrimination.
+
+**Next:** Turn 6 implements honest sample handling and strengthens the privileged/public API boundary, followed by a run of the exact committed regression suite.
