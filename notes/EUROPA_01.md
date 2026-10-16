@@ -260,3 +260,26 @@ Human proposed slug pitons plus payload shock absorber, using touchdown energy f
 **First test:** coupled impact penetration + internal suspension simulation, using ranges of ice constitutive properties and impact speeds, reporting penetration depth, shell loads, peak/temporal payload acceleration, probability of rebound/ricochet, and resulting shielding. Compare with inflatable bubble and powered soft landing.
 
 **Research state:** no simulation or validated landing design yet. This corrects terminology and architecture, not evidence.
+
+
+## Methodology review and scope correction (2026-10-16)
+
+**Human correction:** Prior messages arrived out of order. A piton/slug penetrator may be too heavy; compare **full landing-system mass against propellant mass** before deciding. More fundamentally, **landers probably are not where the investigation should spend most of its time**. Inspect existing Institute methodology and return to the scientific question.
+
+**Inspected:** `HERMETICON.md`, “The Institute and Its Research Program,” especially §2 (organize around research questions, not software projects), §3 (Imagine → Instantiate → Observe → Verify → Preserve → Reimagine), and §4 (executable claims; conservation of evidence; composability before monumentality; smallest useful world; human–model complementarity; generative ambiguity).
+
+### Updated scope
+
+- **Primary inquiry:** Europa ice composition, stratigraphy, radiation modification, material transport, and what measurements can discriminate competing hypotheses.
+- **Primary executable apparatus:** hidden-ground-truth ice column, sample recovery and alteration model, spectral/chemical measurement model, scientific inference and provenance.
+- **Supporting feasibility envelopes:** radiation exposure, thermal environment, power, contamination, sample depth, delivered mass.
+- **Delivery architectures:** conventional powered landing, inflatable padded impact, hardened penetrator/piton/slug, and hybrids are **unselected comparison branches**, not the central project. Keep user correction that messages were out of order; do not treat earlier slug-shell clarification as a settled preference.
+- **Mass comparison:** total wet mass and delivered scientific mass must include propulsion propellant (rocket equation with sourced delta-v and Isp), tanks/engines, landing legs or shock systems, penetration hardware, shielding, deployment, and uncertainty margins. No numerical verdict until a common reference mission is defined.
+
+### Scientific next experiment
+
+Develop the **smallest useful Europa ice-column world**: depth-indexed physical/chemical layers with a surface radiation-processing boundary, hidden composition, sampling disturbance/contamination, and imperfect spectral/chemical instruments. Identify public source data and keep model assumptions explicit. Compare hypotheses and whether measurements can actually discriminate them. The ice world should be useful independent of which landing system ultimately carries the instruments.
+
+### 2026-10-16 — Work log: methodology reorientation
+
+Human questioned the heavy piton/slug architecture, requested fuel-mass comparison, and redirected attention away from landers to existing research methodology. Assistant inspected `HERMETICON.md` and restored question-first, smallest-useful-world priorities. Delivery systems remain a bounded feasibility trade study, not an architecture decision.
