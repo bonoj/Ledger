@@ -441,3 +441,8 @@ Blind-study now supports `noiseMode: 'paired' | 'independent'`. Paired mode pres
 ### Turn 9 null-information audit (2026-10-16)
 
 **Corrected bug:** independent-noise mode previously reached the training observations but not held-out test observations. The held-out call now forwards `noiseMode` (commit `1d06a849`). Earlier independent-noise claims must not be trusted unless recomputed after this fix. New `null-audit.mjs` compares paired, independent, and zero-noise observations of exactly matched surface chemistry; `null-audit.test.mjs` checks deterministic replay, no-information paired abstention, and bounds. **These new tests have not yet run on exact committed bytes**; GitHub cloning from the execution container failed due to DNS resolution. Distinct noise alone is not provenance information. Next: execute remote parity tests, report the null distribution and confidence calibration, and then assess physical feasibility with explicit uncalibrated assumptions.
+
+
+### Turn 9 methodological correction (2026-10-16)
+
+Independent-noise seeds previously encoded the scenario label directly, potentially leaking a nonchemical classification cue. Noise-replicate assignment now counterbalances between classes by seed parity. The blind-study classifier also accepts `abstainMargin` (default 0, backward-compatible), reports `abstained` counts, and the null audit compares forced guessing with 0.1-margin abstention. **No accuracy, selective-risk, or false-confidence numbers have been executed for these corrected revisions.** Counterbalancing is not proof of no leakage; require repeated independent realizations, class-label permutation controls, and execution of exact committed files before interpreting discrimination. Synthetic results remain noncalibrated.
