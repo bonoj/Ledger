@@ -336,3 +336,31 @@ The founding multimodal images become Chapter I. The executable history becomes 
 ## Visual research corpus — continuation
 
 The nine subsequent context-bomb images, including field notes, continuity apparatus, Six Cities, and amphibious locomotion, are described and annotated in **[HERMETICON_VISUAL_CORPUS_II.md](HERMETICON_VISUAL_CORPUS_II.md)**. The corpus separates depicted content from inferred research directions and notes the absence of archived image binaries.
+
+
+## Commissioned research — provisional pricing (2026-10-16)
+
+**Status: PROVISIONAL.** These are proposed starting prices and service definitions, not published commitments, validated market rates, or guarantees of particular research outcomes. Review before the Institute website goes live and revise based on actual engagements.
+
+**Principle:** The Hermeticon Institute commissions **deliverables, not hours**. Each engagement is defined by its question, scope, artifacts, evaluation or acceptance criteria, and applicable rights. Internal estimates of effort are not the client's unit of purchase.
+
+| Offering | Provisional starting price | Deliverable |
+|---|---:|---|
+| **Open Inquiry** | **$0 — pro bono** | A selected, bounded investigation with a meaningful research deliverable; subject to Institute capacity and discretion. |
+| **Research Brief** | **$1,500+** | Documented analysis, evidence, findings, uncertainty, and actionable conclusions; calculations or a small demonstrator where useful. |
+| **Executable Investigation** | **$5,000+** | Working interactive simulation, prototype, model, or experimental apparatus, with verification notes and findings. |
+| **Research Expedition** | **$15,000+** | Integrated investigation across multiple questions, systems, or experimental cycles, with agreed milestones, artifacts, and a final research dossier. |
+| **Institutional Partnership** | **By proposal** | Custom research program, deliverables, milestones, confidentiality, and intellectual-property terms. |
+
+### Engagement rules
+
+- Quote and contract against **defined deliverables**, not timesheets or hourly rates. Prices reflect complexity, uncertainty, commercial value, and requested rights or exclusivity.
+- Agree on **scope and acceptance criteria** before beginning. Competently established negative or inconclusive findings can satisfy a research engagement when the agreed deliverable is an investigation, not a guaranteed discovery.
+- Changes in scope or new research questions require a new agreement; there are no implied unlimited revisions.
+- Specify ownership, licensing, publication, confidentiality, source access, and exclusivity in each agreement. Commissioning an artifact does not automatically transfer every reusable general method or independently developed tool.
+- **Pro bono is integral to the Institute's mission**, not lower-standard work. Select for intellectual merit, public benefit, need, and capacity; do not require participants to disclose private information publicly or consent to publicity.
+- Apply the **same intellectual rigor** regardless of budget. Price according to the resources and commercial demands of the engagement, not the perceived worth of the person posing the question.
+
+**Working positioning:** *Independent research and executable experimentation. Commission an investigation, a working instrument, or an integrated research program. Pro bono inquiries welcome.*
+
+**Before publication:** validate service boundaries, operational capacity, contracting terms, and actual market demand. This schedule is a starting hypothesis, not a permanent tariff.
