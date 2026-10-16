@@ -21,7 +21,8 @@ function observe(scenario,seed,depth,handling,depthInterval=[.58,.68],noiseSigma
 }
 const mean=xs=>xs[0].map((_,i)=>xs.reduce((s,x)=>s+x[i],0)/xs.length);
 const dist=(a,b)=>a.reduce((s,v,i)=>s+(v-b[i])**2,0);
-export function runBlindStudy({trainingSeeds=50,testSeeds=50,depth=false,handling={},depthInterval=[.58,.68],noiseSigma=.002,noiseMode='paired',abstainMargin=0,seedOffset=0}={}){
+export function runBlindStudy({trainingSeeds=50,testSeeds=50,depth=false,handling={},depthInterval=[.58,.68],noiseSigma=.002,noiseMode='paired',abstainMargin=0,seedOffset=0,scorePermutation='none'}={}){
+ if(!['none','alternating'].includes(scorePermutation))throw Error('invalid score permutation');
  if(!Number.isInteger(seedOffset)||seedOffset<0||seedOffset>1000000)throw Error('invalid seed offset');
  if(!Number.isFinite(abstainMargin)||abstainMargin<0||abstainMargin>1)throw Error('invalid abstention margin');
  if(!['paired','independent'].includes(noiseMode))throw Error('invalid noise mode');
@@ -35,9 +36,10 @@ export function runBlindStudy({trainingSeeds=50,testSeeds=50,depth=false,handlin
   const guess=distances[0]===distances[1]?-1:(distances[0]<distances[1]?0:1);
   const margin=Math.abs(distances[0]-distances[1])/(distances[0]+distances[1]+1e-12);
   const decision=margin<abstainMargin?-1:guess;
-  trials.push({correct:decision===label,abstained:decision<0,margin});
+  const scoringLabel=scorePermutation==='alternating'?(label^((seed+seedOffset)%2)):label;
+  trials.push({correct:decision===scoringLabel,abstained:decision<0,margin});
  }
- return {schema:'europa-blind-study/v0',synthetic:true,depth,handling,depthInterval,noiseSigma,noiseMode,abstainMargin,seedOffset,trainingSeeds,testSeeds,
+ return {schema:'europa-blind-study/v0',synthetic:true,depth,handling,depthInterval,noiseSigma,noiseMode,abstainMargin,seedOffset,scorePermutation,trainingSeeds,testSeeds,
   correct:trials.filter(t=>t.correct).length,abstained:trials.filter(t=>t.abstained).length,total:trials.length,
   accuracy:trials.filter(t=>t.correct).length/trials.length,
   uncertain:trials.filter(t=>t.margin<.1).length,
