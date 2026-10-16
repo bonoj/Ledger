@@ -174,3 +174,42 @@ At **each subsequent chronological aperture**, inspect [Repository's semantic su
 Initial cross-check: Repository explicitly says the *built executable* outranks the donor source, build machinery, and semantic prose; `src/betwixt/main.js` is an abandoned reconstruction path, while `src/betwixt/world-lab.html` is the transplanted organism. Betwixt owns context, Workshop is not a separate generalized implementation, Crucible owns its own fluid state, and Observer supplies bounded spatial readings rather than semantic truth or autonomous correction. Beyond geological history and snowglobe runtime instances provide later comparison points. The inert Crucible cargo records exact donor provenance and warns that copying source does not establish integrated behavior. These independently sharpen the Crucible account's distinction between appearance, source, integration, and witnessed acceptance.
 
 **Reading discipline:** record the historical source revision alongside each claim. Do not use today's Repository state to silently rewrite yesterday's crossing.
+
+
+---
+
+## Unpacking 02 — October 3: Chemlab earns its verifier
+
+**Sources read:** [Chemlab Crossing](chemlab_crossing/account.md), with a historical Repository commit cross-check for `src/betwixt/chemlab-geometry.mjs`. The turn-by-turn Chemlab Ledger commits span approximately **07:47–08:44 UTC on October 3**; this is a commit interval, not a claim that the entire experiment began then. Repository confirms the geometry module was extracted at `f9ef5ae8` (08:21 UTC), corrected for acetylene at `e9daae97` (08:27 UTC), and synced for ammonia at `4810a585` (08:31 UTC).
+
+### Initial proposition and earned substrate
+
+A glass tabletop was just a tabletop; the human rejected the model's temptation to make it a specialized chemistry apparatus. A semantic Thoughtform proposed constructing spatial artifacts through relationships rather than hand-placing coordinates. Chemlab became the first real consumer: authored atom/bond graphs, constrained projections, disposable 3D presentations. **The graph was authoritative; the mesh was a view.** Chemistry supplied external constraints stringent enough to expose projection errors.
+
+Methane (CH4) verified tetrahedral construction without hand-authored hydrogen coordinates. Its first visible issue—clipping through the tabletop and sitting with the wrong orientation—belonged to presentation, not chemistry. Water (H2O) forced the distinction between visible bonds and hidden electron-domain structure: two O–H bonds must not imply a linear molecule; approximately 104.5° bent geometry follows from four electron domains and two lone pairs. Carbon dioxide added linear double-bond structure. Ethane (C2H6) then broke world-fixed tetrahedral directions: a second carbon requires a local frame around the incoming bond, with torsion handled explicitly.
+
+### The negative specimen changes the division of labor
+
+The first ethylene (C2H4) candidate was planar yet geometrically wrong: hydrogens at one end bent toward the wrong side of the C=C axis. The human's visual “Intended?” rejected a build-green, source-present candidate. Instead of merely repairing the picture, the pair paused to build a JIT numerical geometry verifier. The crucial sequence was **known-bad candidate → independent numerical failure → projector repair → same regression passes**. Checks were constrained to earned facts: connectivity, bond order, angles, coplanarity, and explicitly asserted torsion.
+
+The next failure revealed that the first CI pass did not execute the browser-side regression. The browser rejected a 90° twist between ethylene's two trigonal planes even though source/build gates had been green. A bond axis alone was not a complete frame; the plane orientation had to propagate. The repair was architectural in the small, not a bespoke pose patch.
+
+Publication was subsequently placed downstream of an executable ES module imported under Node and compared against the browser's embedded geometry block. That prevented a tested projector from silently diverging from the published projector. Acetylene (C2H2) then supplied the first concrete upstream win: the new gate caught a child-frame sign error (180° at one carbon, 0° at the other) **before** the human ever saw the bad candidate. The assertion remained 180° at both ends; the construction changed. Ammonia (NH3) added three visible bonds, one invisible lone pair, and a measured ~106.7° H–N–H angle; nitrogen became blue in presentation. The accepted corpus was CH4, H2O, CO2, C2H6, C2H4, C2H2, NH3.
+
+### The publication seam is part of the scientific method
+
+The historical route was **Repository → Home → Interstice**, not merely a source commit. The account distinguishes executable geometry CI, browser/source agreement, Home's exact pin, Interstice runtime, and human acceptance. A source gate that does not run the relevant assertion is not evidence of the assertion. The first runtime ethylene failure makes this more than a slogan.
+
+A GitHub write boundary temporarily blocked the large whole-file mutation. The account says the model used Git's immutable blob/tree/fast-forward commit machinery instead of silently abandoning the experiment or treating an unwritten plan as executable. This is an account of a specific historical route, **not** permission to bypass a present tool refusal.
+
+### The deliberate stopping point
+
+After ammonia was accepted as “Neptunian. Striking,” the human chose Jupiter. Chemlab was placed into an embodied cold-boot Thoughtform rather than being finished, generalized, or forgotten. The capsule preserved seven accepted fixtures, the earned verification/publication loop, and debts: tree-shaped projection rather than cyclic geometry, incomplete semantic ports, bond-order presentation lag, and resource disposal. Its function was to make a domain crossing reversible.
+
+### What changed from the Crucible crossing
+
+Crucible's primary human correction was perceptual: *that is not the same organism*. Chemlab transformed a perceptual correction into a **reusable executable falsifier**. Human attention was spared not by hiding the defect, but by ensuring that one class of defect could be caught before publication. The model still did not possess full 3D perception; this verifier knew only explicit molecular invariants. That limitation becomes the pressure for Neptunian.
+
+**Unresolved:** inspect historical Repository's embedded geometry implementation at the corresponding revisions if exact projection mechanics become decisive; inspect the Chemlab account's remaining sections before claiming complete verbatim coverage. The high-level sequence and named failures above are supported by the account and date-scoped module commits.
+
+**Next aperture:** Neptunian, beginning with the cold capsule, Roci relational fleet, Jovian bearing histories, and Observer bootstrap. Its account is long enough to read in bounded passes rather than compress into one unexamined thesis.
