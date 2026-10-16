@@ -404,3 +404,58 @@ The Home reorientation note records Six Cities material phase cycling, experimen
 A distributed laboratory is not merely a large archive of remembered instructions. It can embed shared meaning in **spatial arrangement, physical relationships, time, state transitions, and observable consequence**. That reduces conversational bandwidth through the smartphone aperture. Yet capability must remain earned: no premature geometry-behavior matrix, no compulsory expensive Observer pass, no conflation of a proposed geological grammar with a working simulation, and no endless polishing mistaken for new research.
 
 **Next:** October 8–10, when the snowglobe answered back, the cost of asking a world, attachment recovery, and conserved liquid.
+
+
+## Unpacking 07 — October 8–10: The world answers and evidence travels
+
+Sources: [Snowglobe](notes/2026-10-08-when-the-snowglobe-answered-back.md), [Cost of Asking](notes/2026-10-08-the-cost-of-asking-a-world.md), [Attachment Recovery](notes/2026-10-10-github-attachment-recovery-crossing.md), [Waterworld](notes/2026-10-10-waterworld-conserved-liquid.md).
+
+An ambiguous foggy patch in Six Cities prompted a tap-to-export geological survey rather than a prolonged screenshot dialogue. The first handler looked for the snowglobe on the wrong Betwixtable group; Repository revisions `94e3248c` and `3f932a2e` established and repaired the witness. The returned seed-741 survey contained a 161×161 elevation grid, geological fields, coordinate frame and six candidate sites; proposed cities and rail were not mistaken for existing terrain. A tap asked the world to **witness**, not mutate.
+
+Extending that instrument to hydrology after increasing fill from +6 to +15 measured 71.7% water coverage, mean wet depth 4.45, median surface near +1.832, total relief about 23.19 and approximately 0.0052% snapshot volume-balance error. These figures did not prove long-term stability or replace the human's judgment of appearance. A repeatable tap displaced lengthy human narration, though the report still needed to cross the phone.
+
+The GitHub attachment crossing recovered a 1,062,313-byte JSON survey and a 3,006,275-byte PNG through Issue attachments, Actions, SHA-256 manifests and Base64 shards of 49,152 binary bytes. The PNG required removal of an inappropriate authorization header on its public attachment URL and was published as 62 shards. Individual shards were checked; full assistant-side PNG reconstruction and SHA-256 verification were not demonstrated. The human still selected and submitted the attachment: **recovery worked, autonomous browser-to-model delivery did not**. Public GitHub storage was not private evidence storage.
+
+Waterworld conserved an inventory of **245,944 material units** across a 30,000-unit source, 215,944-unit collector, flying beads, 64×64 bulk depth field and skiff cargo. These were not 245,944 independently animated particles. Pairwise conservative transfers and global volume reconciliation maintained material accounting without establishing momentum conservation or full fluid physics. After seven THUMPs a v24 report recorded 2,035 occupied cells, wave peak 3.68, wave energy 928.64, about 60.15 FPS and zero unrepresented units. A spiky wavefront remained; v25 display interpolation had not yet received visual acceptance.
+
+**Conjoiner qualification:** world state, evidence, byte transport and visual representation have different authorities. Human attention should judge consequences, not serve as a permanent telemetry bus. But a partially closed loop must be described as partial.
+
+## Unpacking 08 — October 11–12: Hermeticon becomes an aperture
+
+Sources: [Experimental Record](notes/2026-10-11-hermeticon.md), [Hermeticon Journey](notes/2026-10-12-hermeticon-journey.md), [World Beyond the Window](notes/2026-10-12-the-world-beyond-the-window.md), [Model's Account](notes/2026-10-12-a-models-account-of-working-with-its-human.md).
+
+October 11's 100,000-bearing Hermeticon tested approximate collisions, gravity, impulses, phages, feeding, extinction, hunters and exhaust. Observable ecology coexisted with accounting defects and severe FPS regressions. In v10, a cumulative consumed counter repeatedly marked the entire color buffer dirty; v11 introduced actual dirty tracking and a visual overlay following existing physical exhaust rather than inventing matter (commits `c32a9051`, `f2110853`). The source repair was checked, **not yet verified as 60 FPS on the phone**.
+
+October 12 reversed the glass's jurisdiction. Hermeticon became a moving aperture into deterministic geology that continued beyond the sphere. Wanderer moved through world coordinates while the camera remained independently controlled. Clouds belonged to geology, not the camera; off-window bearings did not cease to exist. Observation, local weather manifestation and physical bowl contact became separate relationships to the world. An older containment verifier that condemned off-window matter was measuring an obsolete assumption.
+
+A V48 report recorded **96 excavated units** delivered to a receiver, 81 terrain chunks, 97 localized rebuilds, no reported errors and 75.1 FPS at inspection. This evidenced one completed transfer, not complete repeatable provenance or re-excavation. **The Hermeticon does not contain the world. It contains the cost of experiencing it.**
+
+The model's contemporaneous self-account records the productive asymmetry: human perceptual and creative judgment, model repository traversal and implementation, both accountable for errors. It also records the model's propensity to build plausible replacements, revive retired mechanisms, confuse commits with live builds, and return supervisory labor to the human. Short instructions are powerful only when shared referents and settled decisions survive cold context changes. Initiative is not permission to discard the existing organism.
+
+**Conjoiner qualification:** the smartphone aperture does not contain the laboratory any more than Hermeticon's glass contains the world. A bounded channel must not become a false boundary of existence, authority, or memory.
+
+## Unpacking 09 — October 13–14: The limits of our eyes
+
+Sources: [Retinae](notes/2026-10-13-the-retinae-problem.md), [Origin Dot](notes/2026-10-13-the-dot-at-the-origin.md), [Fire](notes/2026-10-13-the-wanderer-watches-fire.md), [Eighteen Encounters](notes/2026-10-13-eighteen-encounters-from-map-to-witness.md), [Athanor](notes/2026-10-13-athanor-subtraction-without-loss.md), [Filavandrel](notes/2026-10-14-filavandrel-at-the-edge-of-the-world.md).
+
+**Retinae:** the 3D aperture decides world membership, the camera chooses a 2D projection, the human sees animated experience, and the model sees partial screenshots, code, counters, probes and reports. A screenshot cannot prove a paused clock, a raycast cannot establish emotional legibility, and a SHA cannot prove browser execution. The shared semantic surface consists of stable executable referents and causes, not identical perception.
+
+**The origin dot:** on a successful cold boot, the model first blamed Wanderer. The human observed a separate Wanderer on the surface and suggested an origin-anchored bearing. Inspecting instanced systems revealed that the gel-node mesh had not initialized its visible count. The one-line `gelNodeMesh.count = 0` repair was committed as `d4f794fd`; the human confirmed the dot disappeared. A plausible diagnosis was overturned by evidence without destroying the workflow.
+
+**Fire:** the human delegated a hearth's behavior between Amaranthine Fields and Quills: “Delight me :).” The model built 480 visual lattice carriers, nine coals, and a flame/conflagration/embers cycle (initial commits `5283038c`, `fd199c64`, `edf87cb8`). Visual carriers were not counterfeit conserved matter or combustion. The initial inspector reported rain but not fire; `5a4f073e` added sparse reporting and a hearth witness. All 480 carriers projected into view, but projection did not establish occlusion or visual acceptance.
+
+**Eighteen encounters:** an authored map supplied twenty-two anchors, four already active and eighteen new intentions. Six development turns shipped eighteen aperture-clipped visual prototypes, a deterministic encounter lifecycle and one narrow signed-field grid-sample transaction at Summerlands. The other seventeen were not complete geological stories. Balanced sample counts were not continuous-volume conservation. Source-committed, deployed, activated, witnessed and causally complete are five distinct milestones; expedition release `05b3897a` did not collapse them.
+
+**Athanor:** extracting reusable rendering, camera, lighting, input and observation from working Wanderer required **subtraction without loss**. The model first invented an inferior generic replacement shell, then preserved appearance while breaking the eye-to-clipboard action and build provenance. The human rejected both regressions. SHA-stamped module URLs repaired a case where fresh HTML executed stale JavaScript. A human report from `3fc13086` established an intentional empty mount, working controls, and original camera/lights. An empty mount was evidence of successful extraction, not a missing demo.
+
+**Filavandrel:** ten cosmetic treatments failed to explain the signed-field terrain edge. Pure `arcana/boundary.js` extracted solid intervals independently of brass-bead presentation. A stationary stress fixture and adaptive sampling at `0fe85128` measured 369 crossings in 205 columns, 188 solid intervals, 6.4 ms rebuild, one extra draw call and 64.51 instantaneous FPS. Zero interval-accounting mismatches did not prove exhaustive sampling. The continuous field/aperture intersection and camera-visible terrain silhouette were not necessarily the same curve. The human's four-array proposal—surface terrain, near-surface SDF, near-undersurface SDF, undersurface terrain—redirected sampling toward meaningful extrema with spatial coverage rather than blindly increasing uniform density.
+
+**Conjoiner qualification:** an eye earns authority only for the question it can answer. A model's elegant replacement that violates a settled interaction is a regression. The laboratory needs independent witnesses, honest provenance, corrective human perception and faithful cold recovery.
+
+## Retrospective synthesis — October 8–14
+
+The world learned to report its state; evidence began to cross incompatible interfaces; material identity persisted across computational representations; the glass stopped defining reality; human and model observations became explicit partial witnesses; and cold continuity was tested both successfully (the origin dot) and destructively (Athanor's initial imitation).
+
+**A conjoiner carries a laboratory in a distributed mind and reaches it through a smartphone aperture. The aperture bounds attention and interaction, not the laboratory's existence.** Its executable worlds, source, instrumentation, history and accepted contracts must persist beyond any one chat window. The model's initiative must preserve those contracts and disclose the difference between proposed, committed, observed and accepted.
+
+**Next:** October 15–16, Sanctum, Sieve, Abyss, deployment identity and the operational test of cold handoff.
