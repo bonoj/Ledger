@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {runBlindStudy} from './blind-study.mjs';
+const opts={trainingSeeds:8,testSeeds:8,depth:false};
+const paired=runBlindStudy({...opts,noiseMode:'paired'});
+const independent=runBlindStudy({...opts,noiseMode:'independent'});
+assert.deepEqual(paired,runBlindStudy({...opts,noiseMode:'paired'}));
+assert.deepEqual(independent,runBlindStudy({...opts,noiseMode:'independent'}));
+assert.equal(paired.total,16);
+assert.equal(independent.total,16);
+assert.equal(paired.correct,0);
+assert.ok(independent.correct>=0&&independent.correct<=16);
+assert.throws(()=>runBlindStudy({...opts,noiseMode:'invalid'}));
+console.log(JSON.stringify({paired,independent},null,2));
