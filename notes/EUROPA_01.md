@@ -82,7 +82,7 @@ A **turn** is one substantive model work cycle, with an automatic GitHub put. If
 | **9** | Engineering feasibility envelope | Bound radiation, thermal, power, sample depth and delivery mass; compare rocket fuel with penetrator/bubble/soft-landing hardware only at common assumptions |
 | **10** | Review and next expedition | Independent checks, limitations, reusable modules, live artifact/build verification if deployed, and the next research questions |
 
-**Current position: Turn 1 completed; Turn 2 next.** Scientific reconnaissance established candidate chemical signatures, radiation depth caveats, and an inverse-problem target. See findings below.
+**Current position: Turn 2 completed; Turn 3 next.** Two deliberately confusable synthetic histories and their discriminating tests are specified below.
 
 ## Delivery and protection — parked feasibility branch
 
@@ -122,7 +122,7 @@ Before assigning a number to a scientific parameter, trace it to a relevant sour
 
 **2026-10-16 — Scope and methodology reset.** The earlier note had grown into repeated landing concepts and work logs. Replaced it with a question-first science program, executable Ice Column v0, bounded delivery branch, source register, and ten-turn roadmap. Original ideas and corrections remain recoverable from Git history. **No numerical model or runtime has yet been built.**
 
-**Next action:** **Turn 2 — hypothesis matrix**: competing origin/alteration scenarios, predicted signatures, confounders, and falsifying measurements.
+**Next action:** **Turn 3 — reference datasets**: identify accessible laboratory spectra and radiation-chemistry references, with temperature/phase metadata, licenses, and machine-readable access.
 
 
 ## Turn 1 result — scientific reconnaissance (2026-10-16)
@@ -165,3 +165,55 @@ Before assigning a number to a scientific parameter, trace it to a relevant sour
 **Not completed:** numerical datasets retrieved, independent raw-spectra reproduction, site-specific quantitative dose curves, or simulation. Those are planned for later turns, not claimed here.
 
 **Turn 2 gate:** construct a hypothesis-versus-observable matrix and choose the smallest pair of deliberately confusable scenarios for a blind experiment.
+
+
+## Turn 2 result — hypothesis discrimination matrix (2026-10-16)
+
+**Scientific target:** distinguish material **origin** from subsequent **chemical alteration** and **physical redistribution**. These are separate latent variables. Do not mistake a detected compound for proof of transport from Europa's ocean.
+
+### Four competing explanations
+
+| Hypothesis | Plausible predicted signature | Confounder / mimic | Potential discriminating observation | What would weaken it |
+| --- | --- | --- | --- | --- |
+| **H1 Radiation processing** of pre-existing material | Surface-enriched products, depth-dependent parent/product ratios | Grain size, sputtering, burial, changing dose history | Depth profile of paired parent/product bands, correlated with irradiation model | Profiles incompatible with any plausible processing scenario under calibrated uncertainties |
+| **H2 Endogenic delivery** from depth | Fracture-associated material; buried concentrations; compositional gradients | Impact gardening, external infall, surface redistribution | Depth + fracture geometry + multiple tracers and spatial context | No coherent internal-transport signature in a model where one should remain detectable |
+| **H3 Exogenic delivery** to surface | Surface-enhanced material and associated externally sourced tracers | Surface alteration of internally supplied material | Spatial distribution, compositional covariation, shallow/deep profiles | Abundance/depth pattern inconsistent with plausible deposition/mixing budgets |
+| **H4 Physical redistribution** | Smoothed or displaced layers, structural mixing and compositional discontinuities | Original heterogeneous deposition; coring artifacts | Stratigraphic imaging + compositional depth correlations + adjacent replicate cores | Structure and profiles incompatible with candidate transport/mixing mechanism |
+
+**Falsification caution:** “weakens” is conditional on the stated model; none of these broad families can be categorically falsified by a single short core without stronger assumptions.
+
+### Minimal blind pair
+
+**Scenario A: internal supply + irradiation.** Start with a subsurface source profile, upward/fracture-mediated transport, then depth-dependent conversion of a generic parent species P to product Q.
+
+**Scenario B: external supply + burial/mixing.** Start with surface deposition of a different source mixture, then redistribute it downward and apply irradiation.
+
+**Design constraint:** tune **synthetic, dimensionless** profiles so both scenarios produce an indistinguishable *surface-only* two-band measurement under declared noise. Keep different deeper P/Q profiles and/or fracture association, but allow overlap after noise. Avoid implying P and Q correspond to identified Europan chemicals before Turn 3 reference work.
+
+### Observations in order of scientific leverage
+
+1. **Surface-only two-band spectral measurement**: intentionally insufficient baseline.
+2. **Depth-resolved P/Q measurement** at selected intervals: candidate discriminator, with finite recovery and mixing.
+3. **Core imaging / stratigraphy**: structural evidence for transport or burial, vulnerable to drilling damage.
+4. **Complementary assay**: independent chemical channel for P and Q or co-tracer, with contamination and melt alteration.
+5. **Replicate core or nearby surface context**: tests local heterogeneity; may be unavailable to stationary mission.
+
+### Blind-test protocol and acceptance
+
+- Generate scenarios from deterministic seeds and hold out their true origin labels.
+- Match their surface-only predicted signals within a specified *synthetic* noise envelope.
+- Investigator chooses additional measurements under a fixed sample/energy budget.
+- Record posterior or ranked hypotheses, predicted observations, actual simulated observations, and confidence calibration.
+- Compare outcomes across seeds, noise, sample disturbance, and model mismatch.
+- **Success:** depth or complementary measurement improves discrimination on held-out cases, while ambiguous cases remain explicitly ambiguous.
+- **Failure modes:** algorithm cheats by reading ground truth; confident wrong origin assignments; trivial separation at surface; unrealistically noiseless assays; contamination omitted.
+
+### Turn 2 findings
+
+**Proposed, not demonstrated:** the pair is logically suitable for a controlled inverse-problem experiment. The actual degree of spectral degeneracy and identifiability is **unmeasured** until the forward model, noise model, and synthetic runs exist.
+
+**Open question:** which real chemical endmembers, instrument bands, and temperature-specific laboratory spectra can support P/Q without making the exercise scientifically misleading? This is Turn 3's gate.
+
+### 2026-10-16 — Work log: Turn 2
+
+Specified four competing hypotheses, predicted signatures, confounders, conditional falsifiers, a blind two-history test, and an observation sequence. No simulation executed or numerical scientific parameter adopted.
