@@ -7,31 +7,32 @@ function features(spectrum){
  const band=nm=>{const k=spectrum.x.findIndex(x=>x>=nm);return 1-spectrum.y[k]};
  return [band(460),band(580),band(720)];
 }
-function observe(scenario,seed,depth,handling){
+function observe(scenario,seed,depth,handling,depthInterval=[.58,.68],noiseSigma=.002){
  const w=createColumn({scenario,seed});
- const xs=intervals.slice(0,depth?2:1).flatMap(([a,b],i)=>{
+ const xs=[intervals[0],depthInterval].slice(0,depth?2:1).flatMap(([a,b],i)=>{
   // Controlled confusability: both hypotheses share the same surface observation.
   // This is an imposed observational equivalence, not a geological mechanism.
   const source=i===0?createColumn({scenario:scenarios[0],seed}):w;
   const s=sample(source,a,b,handling);
-  return features(syntheticSpectrum(s,{seed:seed*3+i,noiseSigma:.002}));
+  return features(syntheticSpectrum(s,{seed:seed*3+i,noiseSigma}));
  });
  return xs; // no world object, scenario, origin, or truth returned
 }
 const mean=xs=>xs[0].map((_,i)=>xs.reduce((s,x)=>s+x[i],0)/xs.length);
 const dist=(a,b)=>a.reduce((s,v,i)=>s+(v-b[i])**2,0);
-export function runBlindStudy({trainingSeeds=50,testSeeds=50,depth=false,handling={}}={}){
+export function runBlindStudy({trainingSeeds=50,testSeeds=50,depth=false,handling={},depthInterval=[.58,.68],noiseSigma=.002}={}){
+ if(!Array.isArray(depthInterval)||depthInterval.length!==2||!depthInterval.every(Number.isFinite)||depthInterval[0]<0||depthInterval[1]>1||depthInterval[0]>=depthInterval[1]||!Number.isFinite(noiseSigma)||noiseSigma<0)throw Error('invalid measurement settings');
  if(!Number.isInteger(trainingSeeds)||trainingSeeds<2||!Number.isInteger(testSeeds)||testSeeds<1)throw Error('invalid seed counts');
- const centers=scenarios.map(s=>mean(Array.from({length:trainingSeeds},(_,seed)=>observe(s,seed,depth,handling))));
+ const centers=scenarios.map(s=>mean(Array.from({length:trainingSeeds},(_,seed)=>observe(s,seed,depth,handling,depthInterval,noiseSigma))));
  const trials=[];
  for(let seed=trainingSeeds;seed<trainingSeeds+testSeeds;seed++)for(let label=0;label<2;label++){
-  const xs=observe(scenarios[label],seed,depth,handling);
+  const xs=observe(scenarios[label],seed,depth,handling,depthInterval,noiseSigma);
   const distances=centers.map(c=>dist(xs,c));
   const guess=distances[0]===distances[1]?-1:(distances[0]<distances[1]?0:1);
   const margin=Math.abs(distances[0]-distances[1])/(distances[0]+distances[1]+1e-12);
   trials.push({correct:guess===label,abstained:guess<0,margin});
  }
- return {schema:'europa-blind-study/v0',synthetic:true,depth,handling,trainingSeeds,testSeeds,
+ return {schema:'europa-blind-study/v0',synthetic:true,depth,handling,depthInterval,noiseSigma,trainingSeeds,testSeeds,
   correct:trials.filter(t=>t.correct).length,total:trials.length,
   accuracy:trials.filter(t=>t.correct).length/trials.length,
   uncertain:trials.filter(t=>t.margin<.1).length,
