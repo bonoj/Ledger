@@ -626,3 +626,14 @@ Abyss commit `61806f27` updates signed-field `solidCount` and `voidCount` counte
 ### Browser-confirmed paired-core checkpoint — 2026-10-16
 
 Observed executing Abyss build `6f3cf58ffbf5e23fdb983a36286363f766cf4c73` at 67.14 FPS. Two synthetic cores removed 35 and 49 lattice nodes. The target (-3.1, 2.2) contained 10 transported-lens nodes; the reference (5, -3) contained none. `pairedTrial.discriminated=true`; `materialAccounting.balanced=true`; 84 nodes removed, 66 recovered, 18 dispersed, residual zero. Terrain `solidCount=52749`, consistent with the ledger. This validates deterministic synthetic discrimination, not measured Europa geology or calibrated chemistry. Recovery parcels remain a proxy.
+
+
+### Cold-boot analysis and material-world plan — 2026-10-16
+
+Read Abyss README, Shell handoff, Europa dedicated handoff, provenance notes, and the Ledger's 13 executable experiment files. This is a planning entry, not new runtime verification. Browser-confirmed baseline: Abyss build `6f3cf58f`, 84 lattice nodes removed across two synthetic cores, 66 recovered, 18 dispersed, zero ledger residual. The detected transported lens is deliberately simulated, not an inference about Europa's geology.
+
+**Next implementation:** (1) deterministically assign each removed parcel recovered/dispersed disposition, exactly matching the material ledger by material ID; remove the modulo-index recovery proxy. (2) Compute surface-relative depths and ordered, spatially traceable core intervals rather than fixed absolute elevations. (3) Separate investigator-visible noisy measurements of recovered material from privileged synthetic truth, drawing on the existing ice-column, spectroscopy, blind-study, and null-audit methods. (4) Verify site-map coordinates, sections, and actual terrain occupancy, then develop physical excavation, BB transport, and sample storage. (5) Run exact-source regression and browser checks; preserve Entropy isolation and distinguish commit, deployment, and observed executing SHA.
+
+**Visual direction:** Faceted pale ice, translucent stratigraphy, sparse material BB inclusions, restrained brass apparatus, dark sky. All in-scene labels and data belong on legible navy-blue, fine gold-rimmed Hermeticon cards. Concept imagery establishes materials and mood, not existing functionality. Keep the ice field physically consequential rather than filling it with decorative spacecraft props.
+
+**Scientific limits:** Occupied lattice nodes are not calibrated mass, length, or chemical species. Surface equivalence in the Ledger blind study is imposed; spectral channels are synthetic and uncalibrated. Require blinded inference and null controls before making scientific claims. Preserve the current working world, use existing Arcana and the dedicated [Europa handoff](https://github.com/bonoj/Abyss/blob/main/shell/codex/europa/HANDOFF.md), and update operational documentation only as implementation changes.
