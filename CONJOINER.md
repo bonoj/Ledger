@@ -63,6 +63,12 @@ The human directed the model to add the capability and test it thoroughly for re
 
 **Provenance:** [Acid–Base Lab source](https://github.com/bonoj/bonoj.github.io/blob/master/jit/acid-base/index.html). The next witness should be the learner's use, confusion, or correction—not an assumption that a successful deployment is equivalent to learning.
 
+### October 16 follow-up — direction fields meet the classroom
+
+The human relayed another spontaneous response from the prospective differential-equations beneficiary after sharing the Diff Eq instrument: **“wait thats sick we just learned how to do direction fields”**. The timing is notable: direction fields were already present in the provisional instrument, and the beneficiary recognized them as material just encountered in class. This is direct testimony of curricular relevance and enthusiasm, not yet a measured learning outcome or confirmation that the beneficiary manipulated the graph.
+
+Together with the chemistry beneficiary's **“OMGG I LOVE”**, **“Yaayyyy thank you”**, **“Definitely could be useful for math”**, and volunteered question **“I don’t know how to tell if a compound is an acid or a base”**, the reactions document two different ways beneficiaries can steer the laboratory: recognition of something already being studied and articulation of a new obstacle. Both responses were relayed through the human; neither required the beneficiaries to specify software features or manage technical infrastructure.
+
 ## October 16 photographic witnesses — the collaboration seen through its actual aperture
 
 **Source:** ten smartphone screenshots supplied directly by the human during this retrospective, showing excerpts from earlier sessions. These are **selected glimpses**, not a complete activity log. Their on-screen times and statements should not be used to reconstruct missing commit chronology without corroboration.
