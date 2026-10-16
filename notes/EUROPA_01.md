@@ -399,3 +399,19 @@ A Node-compatible ES module now implements seeded generation of three **syntheti
 **Scientific caveats:** The A/B generators have **not been tuned to yield overlapping surface spectra** as required by Turn 2; thus surface classification might be trivially successful, and even improved depth accuracy would not yet demonstrate resolution of a truly degenerate inverse problem. Features and noise are synthetic, class templates are trained from the same model family, and accuracy cannot be generalized to Europa.
 
 **Status:** engine committed. Test-file creation encountered an intermittent GitHub tool rejection, and **no blind-study accuracy has been executed or verified**. Do not mark Turn 8 complete until regression tests, actual metrics, and an ambiguity-aware interpretation are preserved.
+
+
+### Turn 8 follow-up — imposed surface equivalence and local results (2026-10-16)
+
+A first local reproduction of the unmodified A/B experiment yielded **100/100 correct** for surface-only, surface+depth, and degraded depth. This exposed an **overly easy inverse problem**, not scientific success.
+
+The committed blind-study engine now **imposes exact surface observational equivalence**: for the surface interval, both labels receive the same synthetic A-like composition at the same seed, while deeper intervals retain their respective A/B compositions. This is a **controlled counterfactual test**, **not** a physical model explaining why actual Europa surface histories would coincide.
+
+Local reproduction (50 training seeds/class; 50 held-out seeds/class, 100 trials):
+- Surface-only: **100/100 abstentions**, 0/100 classified correctly; accuracy=0 because abstentions count as not correct, **not because 100 predictions were wrong**.
+- Surface + depth: **100/100 correct**, 0 low-margin cases.
+- Surface + depth with full one-cell-scale synthetic disturbance and 15% water-ice contamination: **100/100 correct**, 1 low-margin case.
+
+**Interpretation:** In this deliberately constructed synthetic pair, subsurface composition contains discriminating information absent from the matched surface. This is an existence demonstration within a toy generator, **not** a calibrated result about Europa or a demonstrated optimal sampling depth.
+
+**Verification boundary:** these numbers were produced by a local reconstruction of the committed algorithms, not an execution of exact remote GitHub bytes. The blind-study test file is committed. Next: run exact remote tests; vary depths, noise, contamination, and the matching mechanism; add genuinely non-identifiable histories. Only then proceed to feasibility Turn 9.
