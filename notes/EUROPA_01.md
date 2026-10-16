@@ -82,7 +82,7 @@ A **turn** is one substantive model work cycle, with an automatic GitHub put. If
 | **9** | Engineering feasibility envelope | Bound radiation, thermal, power, sample depth and delivery mass; compare rocket fuel with penetrator/bubble/soft-landing hardware only at common assumptions |
 | **10** | Review and next expedition | Independent checks, limitations, reusable modules, live artifact/build verification if deployed, and the next research questions |
 
-**Current position: Turn 3 completed; Turn 4 next.** Real laboratory spectral datasets identified; file-level ingestion and calibration remain unverified.
+**Current position: Turn 4 completed; Turn 5 next.** Deterministic Ice Column v0 specification established; no runtime implemented.
 
 ## Delivery and protection — parked feasibility branch
 
@@ -122,7 +122,7 @@ Before assigning a number to a scientific parameter, trace it to a relevant sour
 
 **2026-10-16 — Scope and methodology reset.** The earlier note had grown into repeated landing concepts and work logs. Replaced it with a question-first science program, executable Ice Column v0, bounded delivery branch, source register, and ten-turn roadmap. Original ideas and corrections remain recoverable from Git history. **No numerical model or runtime has yet been built.**
 
-**Next action:** **Turn 4 — Ice Column v0 specification**: formalize deterministic state, forward measurement interfaces, scenario design, provenance and acceptance criteria.
+**Next action:** **Turn 5 — instantiate substrate**: implement deterministic seeded ice-column state and validation, using existing lab infrastructure where feasible.
 
 
 ## Turn 1 result — scientific reconnaissance (2026-10-16)
@@ -249,3 +249,92 @@ Specified four competing hypotheses, predicted signatures, confounders, conditio
 **Not completed:** bytes ingested or parsed, file checksums, instrument-convolution tests, dataset-specific error estimates, Raman reference validation, or LIDA bulk-license verification. These must be checked before numerical claims or bundling files.
 
 **Turn 4:** specify an apparatus with a visible-reflectance NaCl radiation-processing mode plus a generic provenance-preserving layered ice state. Keep geological-history discrimination as a harder, separately validated objective.
+
+
+## Turn 4 result — Ice Column v0 executable specification (2026-10-16)
+
+**Scope:** an instrumented, deterministic 1D depth substrate with optional categorical fracture/transport annotations; **not** a 3D planetary terrain model or spacecraft. No claims that synthetic depths or concentrations represent measured Europan stratigraphy.
+
+### Model domain and units
+
+- Depth coordinate **z in meters**, positive downward from the current surface; default extent **0–1 m** as a configurable sandbox.
+- Discretization **N=100 cells, Δz=0.01 m** as a *computational choice*, not a physically justified sampling resolution. Cell center `z=(i+0.5)Δz`.
+- Each cell: water-ice fraction, NaCl-equivalent salt fraction, generic parent P and alteration product Q fractions (all dimensionless, nonnegative, sum ≤1 with explicitly tracked remainder); temperature K; texture enum `compact|granular|mixed`; fracture flag; relative radiation exposure index; provenance mixture `internal|external|initial`; physical mixing metadata.
+- **Crucial separation:** `source_provenance` is latent history, not an observable chemical label. Identical compounds can arise from different sources.
+- All unsourced chemistry kinetics and exposure-depth laws remain labeled **synthetic demonstration parameters**, not physical dose rates or inferred geological ages.
+
+### Deterministic state and interface contract
+
+```text
+IceColumnConfig {
+  schema: "europa-ice-column/v0"
+  seed: uint32
+  depthM: 1.0
+  cells: 100
+  scenario: "A_internal_irradiated" | "B_external_mixed" | "control"
+  syntheticParameters: { ... dimensionless or explicit SI units ... }
+}
+Cell {
+  zTopM, zBottomM, temperatureK, texture, fracture
+  composition: { waterIce, naclEquivalent, P, Q, remainder }
+  origin: { initial, internal, external }   // sums to 1; hidden
+  radiationIndex                           // dimensionless synthetic
+}
+InstrumentObservation {
+  channel, sampleId, depthIntervalM, wavelengthUnit
+  x[], y[], uncertainty[], measurementMetadata, calibrationId
+  groundTruthVisible: false
+}
+RunRecord {
+  config, modelVersion, seed, actions[], observations[], checks[]
+  groundTruthDigest, provenance, datasetAttribution[]
+}
+```
+
+- RNG: documented 32-bit integer algorithm with deterministic seed; avoid platform-dependent unseeded randomness. Replay of same config/actions must yield byte-identical serialized observations or numerically identical arrays under explicitly documented tolerances.
+- State mutations occur only through recorded actions. Observation code cannot read source labels or scenario names; public state and hidden ground truth are separate interfaces.
+- Depth intervals are half-open `[zTop,zBottom)`; mass/volume fractions bounded, finite and accounted for. If physical transport redistributes material, use conservative fluxes or explicitly book lost material.
+- Observation uncertainty, instrument spectral resolution, geometry, temperature and preparation must be part of provenance, not silently baked into a visualization.
+
+### First two scenarios
+
+**A — internal source, surface alteration:** a synthetic subsurface-enriched salt/P profile connected to an annotated fracture zone; near-surface irradiation transforms some P to Q.  
+**B — external deposition, downward redistribution:** surface-supplied salt/P profile mixed downward; near-surface irradiation transforms P to Q.
+
+**Pairing requirement:** surface-visible spectral outputs should overlap within a declared noise tolerance, while selected depth or independent tracer observations retain *possible* discriminating information. The pairing is an optimization/selection problem; **not yet demonstrated**.
+
+### Measurements and physics boundaries
+
+1. **Synthetic mode:** normalized two-band P/Q observable with declared noise, allowing immediate inverse-problem testing; visibly label `synthetic`.
+2. **Measured-library mode:** visible reflectance factor from **Cerubini et al.** NaCl-water ice spectra, preserving wavelength in µm, composition/texture, beam irradiation and measurement geometry. **Do not enable** until archive bytes, column structure and provenance are actually validated.
+3. Spectral library indicates compact versus granular ice and irradiation produce different color-center signatures, including reported bands near **460, 580 and 720 nm**. [Cerubini et al. 2022 preprint](https://arxiv.org/abs/2208.01314), [dataset](https://zenodo.org/records/7536720).
+4. **Coring action:** request depth interval and sample volume; return depth-tagged sample with recovery fraction, mixed-material provenance *hidden from investigator*, and explicit disturbance/contamination accounting. First implementation may leave this as a stub until Turn 6.
+5. **IR/Raman:** separate channels with independent reference datasets and calibration. Do not substitute visible reflectance arrays.
+
+### Runtime decomposition
+
+- **Pure core:** deterministic generator, state transitions, conservation checks, replay and serialization. No renderer dependency.
+- **Measurement adapter:** receives observable cell fields, not hidden origin labels; can produce noisy synthetic band measurements. Dataset-backed adapter follows only after ingestion validation.
+- **Investigator interface:** depth selection, sampling, visible spectra, uncertainty and notebook; no access to scenario ID.
+- **Verifier:** privileged access to hidden truth only after blind investigation; compares inferred histories and confidence with source labels.
+- **View:** mobile-first single-page column and instrument panel. UI is a consumer of model state, never authoritative.
+
+### Acceptance checks for Turn 5
+
+- Same seed/config/actions → deterministic serialized state.
+- Different seeds → documented controlled variation; no NaN or negative composition.
+- Fractions conserved under mixing, with any physical losses explicitly booked.
+- Hidden origin labels inaccessible through investigator measurement API.
+- Each sample has unique ID, exact depth interval and action provenance.
+- Zero external data required for synthetic mode.
+- Source-backed spectral mode must fail clearly if measured library not validated; never silently substitute synthetic spectra.
+
+### Research data boundary
+
+The Zenodo record confirms CSV-like ASCII with first column wavelength in µm and remaining reflectance-factor columns; [record](https://zenodo.org/records/7536720). Additional [SSHADE experimental metadata](https://www.sshade.eu/data/SPECTRUM_RC_20200622_004) describes example compact slabs at 90 ±15 K, 20 ±2 mm thickness, 410–890 nm, and 1 keV electron irradiation. These are **lab-sample conditions**, not default Europan column properties.
+
+**Turn 4 acceptance:** specification, testable interfaces, hidden-truth boundary, scientific limitations and first implementation gate completed. **No code executed or deployed; dataset archive not downloaded** (runtime network DNS unavailable at specification time).
+
+### 2026-10-16 — Work log: Turn 4
+
+Selected a 1D depth-first executable substrate, separated physics/state from rendering and measurements, specified deterministic replay and conservation checks, and blocked unverified laboratory-spectrum ingestion. Turn 5 should implement the pure core before adding interface polish.
