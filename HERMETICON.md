@@ -406,3 +406,44 @@ The nine subsequent context-bomb images, including field notes, continuity appar
 **Why this belongs in the Institute.** Europa joins **World Systems** (conserved extraction), **Observation & Epistemology** (privileged truth separated from observable evidence), and **Collaborative Cognition** (human/model agreement to accept an indeterminate answer and stop). It operationalizes the Institute's principle that a completed investigation need not produce a positive discovery. Its scientific achievement is an executable distinction between *what the world contains* and *what the investigator can responsibly claim to know*.
 
 **Evidence and reproducibility.** Full experiment notebook: [EUROPA_01](notes/EUROPA_01.md). Cold-return operating handoff: [Abyss Europa](https://github.com/bonoj/Abyss/blob/main/shell/codex/europa/HANDOFF.md). Instrument and regression tests: [Ledger experiments/europa-01](experiments/europa-01/observable-core.mjs). The final browser witness and pause state are preserved in those records. This is a completed expedition; any further physical drilling, sample transport, or improved observables would be a **new** investigation, not unfinished EUROPA-01 business.
+
+
+---
+
+## Institute direction — executable worlds, learning, and commissioned curiosity (2026-10-16)
+
+**Status: strategic discussion preserved; not a binding business plan.** This is an account of conclusions and open hypotheses, not private reasoning transcripts. Ledger records the discussion; executable repositories remain authoritative for implementations.
+
+### What Europa taught us, and what it did not
+
+EUROPA-01 demonstrated unusually rapid assembly of a synthetic world, extraction mechanics, conserved inventory, an observation instrument, tests, and an honest negative result. Its browser witness establishes an executing apparatus, not scientific evidence about the real moon. The blind instrument abstained, and its observables were not calibrated to the planted geological distinction. We initially considered positioning Hermeticon as a rigorous scientific research consultancy, then rejected **hard scientific research institute** as the core identity. The natural work is **world-building, experimental games, interactive systems, educational simulations, and executable investigations**. Rigor remains important, but the standard must fit the claim: scientific discovery, a classroom lesson, and a playful exploratory world demand different validation.
+
+The commercial question is not merely whether a build works, but whether it answers the commissioned brief and creates value for its user. An interactive epistemology experience could be a success even when its measurement abstains; a commission to establish actual Europan geology would not be satisfied by synthetic results. Technical provenance, clear limitations, and honest claims are strengths rather than bureaucratic ornament.
+
+### The education opening
+
+Imagine a teacher requesting a tailored 20–25-minute experience for a particular misconception: ionic ratios, acids and bases, erosion, molecular geometry, ecology, or population dynamics. Hermeticon can potentially deliver a **mobile-browser-first link**, with no installation, app store, specialized equipment, or required student login. A teacher can share a URL or QR code. A useful learning loop is **predict → manipulate → observe → explain → transfer**. Students should discover consequences rather than watch an animated textbook. A working experience is not proof of learning gains; teacher co-design, classroom trials, accessibility, low-end device testing, curriculum fit, and privacy review remain necessary.
+
+The source-inspected example is [ChemLab](https://bonoj.github.io/jit/chemlab/) in [bonoj/bonoj.github.io/jit](https://github.com/bonoj/bonoj.github.io/tree/main/jit). Its compact HTML launcher composes three separate, static, phone-oriented experiences through accessible tabs and lazy-loaded iframes:
+
+- [Ion Garden](https://bonoj.github.io/jit/ion-garden/): choose cations/anions, adjust quantities, discover four simplest charge-neutral ratios, receive graduated hints and feedback, and track progress. Source contains arithmetic/formula regression checks and correctly distinguishes charge neutrality from compound stability.
+- [Acid–Base Lab](https://bonoj.github.io/jit/acid-base/): classify twelve substances with explanatory chemical distinctions and embedded regression assertions.
+- [CHE 001 Field Guide](https://bonoj.github.io/jit/chem001/): searchable concepts, interactive periodic table, and reference/calculation tools.
+
+These implementations were **read in source**, not independently evaluated for classroom learning outcomes. The human reports extending the chemistry offering with Acid–Base and Ion Garden in approximately **five minutes**; that is an account of velocity, not a benchmark or contractual promise. The important economic possibility is **low marginal cost of new lessons through composable machinery**, not that design, scientific review, testing, and instruction are free. A teacher might need four carefully chosen exercises, not a platform procurement.
+
+### Legitimacy and commercial shape
+
+We distinguished **operational legitimacy** (reliable delivery), **epistemic legitimacy** (claims survive appropriate scrutiny), **commercial legitimacy** (buyers value the outcome), and **institutional legitimacy** (an accumulated body of credible work). Europa and ChemLab provide bounded evidence toward capability, not proof of demand or educational effectiveness. An early commission should have an agreed question, audience, scope, working canonical URL, concise teacher/facilitator guidance, limitations, and acceptance criteria. Version identity and source provenance should be reproducible. Classroom use should minimize student data by default; browser-native delivery alone does not settle accessibility, device compatibility, or school privacy requirements.
+
+Potential partners include teachers, schools, museums, enrichment programs, publishers, and creative studios. Teachers may be ideal design partners even where organizational budgets are more viable than individual discretionary spending. The charter's earlier prices are provisional hypotheses, not validated rate cards. Speed should expand what can be explored within a budget, rather than automatically reduce the value of the work.
+
+**The human explicitly rejects premature specialization.** There is no need to decide which problems Hermeticon will tackle first, or to force the Institute into education alone. The public identity can be a laboratory for **interesting questions, executable worlds, interactive learning, and experimental play**. Each project grows a reusable body of systems and practice. The aspiration is to become a place to which people bring fascinating problems.
+
+**Private commercial posture:** The human is personally willing to accept some initial projects without payment to build relationships, experience, and reputation. **Do not publicize, advertise, or volunteer this willingness to prospects; it is not a public pricing policy or a promise to any client.** Evaluate opportunities individually and negotiate terms according to scope and value.
+
+### What remains unproven
+
+Whether educators will use the experiences in actual lessons; whether students learn better; whether institutions will commission bespoke worlds; whether rapid extension scales across topics; whether the Institute can deliver repeatably without excessive maintenance; and what prices buyers accept. Those are questions to explore through genuine collaborations, not assumptions to smuggle into marketing. No new website, incorporation, sales campaign, or build was authorized by this discussion.
+
+**Working formulation:** *Research is how we work. Executable worlds are what we make. Understanding, discovery, and delight are among the things they can deliver.*
