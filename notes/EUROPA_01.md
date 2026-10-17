@@ -669,3 +669,8 @@ Committed Ledger experiment `experiments/europa-01/observable-core.mjs` (`59c735
 **Explicitly deferred:** physical drilling apparatus, BB transport and storage, extra geological units, expanded survey graphics, and visual overhaul. None is a prerequisite for closing EUROPA-01. Preserve the pale ice/brass/navy-card visual direction without unsolicited redesign.
 
 **Exit criterion:** A reproducible, truth-blind comparison of two recovered cores, with controls, an honest uncertainty-aware conclusion (including failure/abstention if warranted), conservation checks, and verified running-world evidence. Once recorded, **pause** rather than expand scope. Ledger is the scientific working notebook; Abyss's Europa handoff is the operational map. This entry is an approved plan, **not implementation or verification evidence**.
+
+
+### Browser witness — Europa build 9158d472 (2026-10-16)
+
+User-supplied Athanor inspector reports executing SHA `9158d472ced5376f565b439f501578eda0bc1381`, Europa active and visible, `error:null`, instantaneous FPS 60.14019436150538. Two cores removed 35 target and 49 reference nodes; 66 recovered, 18 dispersed, 52,749 in place; every generic material residual zero. `pairedTrial.balanced=true`, `discriminated=true`, terrain inventory and provenance accounting checks true. Target recovered 8 synthetic transported-lens nodes; reference zero. `terrain.solidCount=52749`, two local rebuilds. This witnesses the existing truth-aware paired extraction, **not** the independent observable-core adapter or blinded inference. Edge detection `frames=0` remains unverified. The closing experiment plan above is unchanged; exact-source tests and instrument integration remain pending.
