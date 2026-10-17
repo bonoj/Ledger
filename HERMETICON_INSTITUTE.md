@@ -84,3 +84,16 @@ Inspect the existing Sanctum/Hermeticon navigation and deployment contracts; wri
 - **Performance and observability.** Phone-first frame rate and deterministic build identity remain visible through established machinery; avoid excessive particles, unnecessary iframe loading, or unreadable small labels.
 
 **First visual prototype acceptance:** at least four distinct nodes connected by legible material trails; tappable scene-anchored cards; a reliable focus/return path; one working embedded or linked existing experience; and a clearly discoverable commissioning route. No claim of live deployment until browser-observed.
+
+
+## Nested Hermeticons — nodes as worlds (2026-10-16)
+
+**Design direction from the human's Abyss Shell screenshot; not implemented.** A Sanctum node can **contain an embedded Hermeticon**, not merely a hyperlink or iframe. The screenshot demonstrates the existing Shell vocabulary: bounded world, compact anchored contextual card, explicit actions, and persistent mobile scene controls. Reuse the existing world composition and focus machinery after inspecting its actual contracts.
+
+**Three levels:** (1) **Encounter:** see a miniature, materially distinct world at the end of its trail; (2) **Focus:** approach/select it and reveal a small scene-anchored card explaining the experience and actions; (3) **Enter:** open a fully interactive nested Hermeticon, preferably through native world composition where the runtime supports it. An iframe remains a pragmatic boundary for standalone static experiences such as ChemLab. Do not require an iframe for every world.
+
+**Continuity contract:** Entering a nested world must preserve parent Sanctum state and camera; returning restores the same place without remounting or surprising navigation. Explicitly separate gesture ownership between parent, nested world, and iframe. Lazy-activate expensive nested systems, keep off-focus worlds cheap, and maintain phone-first frame budgets. Do not invent a new runtime protocol if Abyss Shell already supports world nesting.
+
+**Implication:** The Institute is a **world of worlds**. Its nodes can be both evidence of what Hermeticon makes and functional destinations. Material trails lead to actual contained experiences; cards disclose context and services without replacing exploration.
+
+**Next implementation prerequisite:** inspect the real Abyss Shell nested-world interfaces, focus/return behavior, and deployment rules before choosing native composition versus iframe per node.
