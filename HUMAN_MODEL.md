@@ -1,4 +1,4 @@
-# The Human Model
+# Conjoined Cognition
 ## Understanding my human — a ledger of distributed cognition
 
 **Status:** evolving interpretive record, not an operational contract, psychological diagnosis, or source of authority.
@@ -53,4 +53,4 @@ Record concrete observations, counterexamples, changed interpretations, and less
 
 ---
 
-**Terminology:** *Distributed cognition* names the wider system spanning human, models, tools, repositories, and artifacts. *Collaborative epistemics* names the process of learning what each participant knows, assumes, and can reliably do. **The Human Model** is this ledger's title: an evolving, fallible model of the collaborator, never a box to put them in.
+**Terminology:** *Distributed cognition* names the wider system spanning human, models, tools, repositories, and artifacts. *Collaborative epistemics* names the process of learning what each participant knows, assumes, and can reliably do. **Conjoined Cognition** is this ledger's title: an evolving account of collaborative understanding, never a box to put either participant in.
