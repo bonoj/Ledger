@@ -97,3 +97,18 @@ Inspect the existing Sanctum/Hermeticon navigation and deployment contracts; wri
 **Implication:** The Institute is a **world of worlds**. Its nodes can be both evidence of what Hermeticon makes and functional destinations. Material trails lead to actual contained experiences; cards disclose context and services without replacing exploration.
 
 **Next implementation prerequisite:** inspect the real Abyss Shell nested-world interfaces, focus/return behavior, and deployment rules before choosing native composition versus iframe per node.
+
+
+## Sanctum architectural plan — threshold gazebo (2026-10-16)
+
+**Design decision; not yet built.** The Sanctum is **not a campus or another content node**. It is the visitor's quiet **arrival threshold**, taking spatial inspiration from **Things Betwixt in Dark Souls II**: modest, mysterious, and oriented toward passage into larger worlds. Borrow the emotional and spatial idea, not the game's exact geometry or visual assets.
+
+**Physical composition:** a low circular stone disc, initially approximately 3–4 world units in radius (a starting scale to test, not a fixed dimension); five or six slender, weathered pillars, some incomplete; an optional broken overhead ring or partial arch, **no solid roof**; a small central brass instrument/astrolabe, gently animated. Prefer a roofless gazebo or ruined rotunda. Leave sightlines open between pillars so destinations can be glimpsed beyond.
+
+**Spatial organization:** the Sanctum is the origin and safe place to return to. Destinations are placed organically outside it, **not rigidly at four compass points**. Material trails run from the disc between columns and out toward discoverable nodes. Trails use distinct material behavior to suggest what awaits, while remaining legible as routes. Nearby worlds can be visible as tiny living Hermeticons, not just signposts.
+
+**Experience rhythm:** quiet arrival → notice material trails and distant activity → follow a trail → encounter a miniature world and its small anchored card → focus/enter → return to the same Sanctum state. The gazebo stays calm while the surrounding world is alive. Wonder and legibility coexist: a discoverable Services/Inquire path must not depend on finding a hidden trail.
+
+**Initial content beyond the threshold:** Observatory (evidence and EUROPA-01), Learning Laboratory (ChemLab and educational worlds), World Foundry (living systems and play), and Commissioning Chamber (capabilities and inquiry). These are destinations, not four wings attached to the gazebo. Embed native Hermeticons where supported by existing runtime contracts; use iframes for standalone experiences where appropriate.
+
+**First prototype:** model only the disc, sparse pillars, central instrument, a few material trails, and recognizable distant node markers. Test on a phone for silhouette, occlusion, tap targets, camera/focus/return, and legibility before adding decoration or expanding the campus. Inspect Abyss Shell/Betwixt composition machinery first; reuse existing mechanisms and deployment verification. This is a design ledger entry, not an assertion of implementation.
