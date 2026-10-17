@@ -387,3 +387,22 @@ The nine subsequent context-bomb images, including field notes, continuity appar
 **Acceptance:** canonical live URL, independently verified executing build identity, usable tap navigation on mobile, working research-node destinations, and an extensible node manifest. No claim of deployment until observed.
 
 **Pivot note:** This milestone is deliberately parked for resumption. The human requested a brief pivot immediately after persistence.
+
+
+---
+
+## Institute expedition I — Europa: the ice that withheld an answer (2026-10-16)
+
+**Status: completed, browser-witnessed, paused.** This is an addition to the Institute's research history, not a change to its charter or a new work order.
+
+**Research question.** Can a small executable world support a disciplined geological interrogation in which a model knows the planted synthetic history, yet an instrument must reach its conclusion from measurements alone? And can an honest *failure to distinguish* count as a successful experiment?
+
+**Apparatus.** An opt-in Europa environment inside [Abyss](https://github.com/bonoj/Abyss), using an 85 × 21 × 85 terrain lattice and synthetic stratigraphy. Two sites were excavated: a target at (-3.1, 2.2), where a transported lens was planted in synthetic history, and a reference at (5, -3). Recovery allocated real removed lattice nodes into recovered and dispersed parcels, preserving generic material-ID accounting. The instrument measured only recovered parcel position, depth, and generic render-material ID, with seeded noise, missingness, and possible contamination; it received neither stratigraphic unit labels nor geological provenance.
+
+**Witness.** [Browser-executing Abyss build `d9bfea855467fd5fb7efcf15f0c4062d56a9c79e`](https://bonoj.github.io/Abyss/shell/?world=europa), user-observed at ~59.53 FPS, Europa active and error-free. Across both cores, 84 nodes were removed, 66 recovered, 18 dispersed; all material-accounting residuals were zero, and inventory matched terrain. The target instrument observed 26 of 28 recovered parcels; the reference observed 32 of 38.
+
+**Finding.** Target mean generic contrast 0.414371; reference 0.437664. Difference -0.023293 against a preregistered-in-code abstention threshold of 0.05: **ABSTAIN**. Synthetic truth indeed contains a transported lens at the target (8 recovered lens nodes, none at reference), but that truth is not available to the blind inference channel. The observable contrast did not resolve the geological distinction. A separate local 100-pair independent-noise null study also yielded 100 abstentions; this is a bounded test, not general proof of specificity. The instrument is not calibrated to Europa chemistry, and the result does not establish equivalence between the sites.
+
+**Why this belongs in the Institute.** Europa joins **World Systems** (conserved extraction), **Observation & Epistemology** (privileged truth separated from observable evidence), and **Collaborative Cognition** (human/model agreement to accept an indeterminate answer and stop). It operationalizes the Institute's principle that a completed investigation need not produce a positive discovery. Its scientific achievement is an executable distinction between *what the world contains* and *what the investigator can responsibly claim to know*.
+
+**Evidence and reproducibility.** Full experiment notebook: [EUROPA_01](notes/EUROPA_01.md). Cold-return operating handoff: [Abyss Europa](https://github.com/bonoj/Abyss/blob/main/shell/codex/europa/HANDOFF.md). Instrument and regression tests: [Ledger experiments/europa-01](experiments/europa-01/observable-core.mjs). The final browser witness and pause state are preserved in those records. This is a completed expedition; any further physical drilling, sample transport, or improved observables would be a **new** investigation, not unfinished EUROPA-01 business.
