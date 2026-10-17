@@ -71,3 +71,16 @@ The human is willing to accept some early interesting projects without payment. 
 ## Next move
 
 Inspect the existing Sanctum/Hermeticon navigation and deployment contracts; write a small implementation spec in the appropriate executable repository; build and verify the first actual hub slice. Preserve discoveries and decisions here, not operational instructions masquerading as source of truth.
+
+
+## Spatial design decision — material trails and anchored cards (2026-10-16)
+
+**User-approved direction, not yet implemented.** The reference is the user's mobile screenshot of the existing Bauble: a bounded miniature terrain inside a dark vessel, with visible particles, scene-anchored labels, and a compact mobile HUD. Preserve this visual/interaction language without assuming the Institute should copy that scene verbatim.
+
+- **Material trails are primary wayfinding.** Routes physically traverse the Sanctum terrain to each destination. They may use contrasting sediment, BBs, brass filings, luminous material, or flowing particles. Prefer trails with spatial continuity and subtle movement over flat UI connector lines. Each trail must clearly terminate at a recognizable node.
+- **Small cards are anchored in the scene.** They identify nodes/services in context, then disclose a concise invitation on focus. Cards should track their world anchor, avoid occlusion and overlapping tap targets, and remain readable on phones. No giant floating card wall.
+- **Embedded iframes are conditional portals.** Existing independent artifacts such as ChemLab can load within a focused encounter when appropriate. The Sanctum owns camera, terrain, node selection, navigation, focus/return, and gesture arbitration. Do not allow iframe interaction to steal gestures from the hub; define a clear enter/exit boundary.
+- **Progressive discovery.** Visitors can follow trails and tap nodes without instructions. A persistent, low-noise Services/Inquire path remains available for direct commercial intent. Provide an accessible textual alternative to spatial navigation.
+- **Performance and observability.** Phone-first frame rate and deterministic build identity remain visible through established machinery; avoid excessive particles, unnecessary iframe loading, or unreadable small labels.
+
+**First visual prototype acceptance:** at least four distinct nodes connected by legible material trails; tappable scene-anchored cards; a reliable focus/return path; one working embedded or linked existing experience; and a clearly discoverable commissioning route. No claim of live deployment until browser-observed.
