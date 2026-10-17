@@ -25,3 +25,15 @@ for(const seed of [1,7,42,741,2026]){
 assert.equal(compareObservableCores(observeRecoveredCore(lens,{noiseSigma:0}),observeRecoveredCore(reference,{noiseSigma:0})).decision,'first-higher');
 assert.equal(compareObservableCores(observeRecoveredCore(lens,{missingFraction:1}),observeRecoveredCore(reference)).decision,'abstain');
 console.log('PASS truth-blind controls');
+
+
+const nullCore=Array.from({length:60},(_,i)=>({disposition:'recovered',position:[i/100,0,0],depth:i/20,materialId:5}));
+const nullDecisions={abstain:0,'first-higher':0,'second-higher':0};
+for(let seed=1;seed<=100;seed++){
+ const first=observeRecoveredCore(nullCore,{seed:seed*2,noiseSigma:.08,missingFraction:.15,contaminationFraction:.1});
+ const second=observeRecoveredCore(nullCore,{seed:seed*2+1,noiseSigma:.08,missingFraction:.15,contaminationFraction:.1});
+ nullDecisions[compareObservableCores(first,second).decision]++;
+}
+assert.equal(Object.values(nullDecisions).reduce((a,b)=>a+b,0),100);
+assert.ok(nullDecisions.abstain>0,'independent-noise null must include abstentions');
+console.log('Independent-noise null outcomes',JSON.stringify(nullDecisions));
