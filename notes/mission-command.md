@@ -94,3 +94,11 @@ This correction increases the density of the original exchange retrospectively. 
 **Evidence boundary:** the revision is committed, but no live mobile-browser acceptance or long-duration patrol observation has been established. In particular, repeated capture and attractive visual trajectories remain hypotheses to test in the running world. The right next step is observation and tuning, not premature declaration of orbital success.
 
 The broader lesson is that a shared metaphor can be a *compressed specification of causality*. When the metaphor is taken seriously, it can demand an entirely different architecture.
+
+### Addendum — Zipper movement and the firing stop
+
+The human added a decisive tempo requirement: **“They should move fast. Let them hard brake to fire then accelerate right back into their zipper movement.”** This changed the design from an abstract orbital model to a legible combat rhythm. The distinction matters: a drone should not be perpetually slowed by having a weapon. Its flight is the baseline; combat is a short, purposeful interruption.
+
+Source revision [`6292b742`](https://github.com/bonoj/bonoj.github.io/commit/6292b7422caa430b6654595c3d3e6845dbd439bc) uses fast off-center approaches and fixed-radius capture arcs, with a brief 0.14-second pause when a target is acquired and a shot is fired. The tower's live position remains the destination. This supersedes the earlier force-based prototype; it is deliberately choreographed trajectory motion, not a physics-integrated gravity assist. **The visual and behavioral result is not yet live-verified.**
+
+“Zipper” is another unusually dense word in the shared language: it conveys speed, abrupt punctuation, decisive traversal, and immediate resumption without a detailed animation brief.
