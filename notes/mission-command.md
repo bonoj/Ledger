@@ -80,3 +80,17 @@ A mature autonomous world should not require its creator to remain its busiest w
 **Evidence:** [Game source](https://github.com/bonoj/bonoj.github.io/blob/master/jit/evermore-2/index.html) · [Aeon Chronicle](https://github.com/bonoj/bonoj.github.io/blob/master/jit/evermore-2/CHRONICLE.md) · [Sanctum Conjoiner](https://github.com/bonoj/Sanctum/blob/main/CONJOINER.md) · [Ledger Conjoined Cognition](https://github.com/bonoj/Ledger/blob/main/HUMAN_MODEL.md).
 
 *Ledger is reflective, not operational authority. The executable source and current project handoff determine what exists.*
+
+## Addendum — The perihelion correction (18 October 2026)
+
+The first implementation made a revealing mistake. It treated the orbital metaphor as a *shape to animate*: drones progressed along a cosine-modulated radial excursion between Tiffany and their towers. The human noticed immediately: **“Drones don't orbit properly. Tiffany is the sun and she accelerates the drones away rapidly. They are caught by their towers which sling them back. Not quite oort cloud comet.”**
+
+The distinction is profound. An interpolated path can resemble a trajectory in isolated screenshots while lacking the thing that makes orbital motion intelligible: **velocity, acceleration, inertia, and curvature arising from forces**. The user was not asking for prettier motion; he was insisting that the motion have a causal vocabulary. This is the same demand that runs through the laboratory's material accounting, terrain deformation, and locomotion work: do not merely depict a consequence; implement a mechanism capable of producing it.
+
+The model proposed a two-anchor, momentum-bearing encounter integrator. It also identified a physical impossibility in a literal reading: two stationary attractors cannot repeatedly supply free gravitational slingshot energy. A bounded, intentionally non-Newtonian impulse at close encounters is therefore an explicit design choice, not hidden physics. The subsequent source change [`80d4510a`](https://github.com/bonoj/bonoj.github.io/commit/80d4510a398b82f48ebbe80d92989a06f2dc9601) replaced positional interpolation with integrated velocities, attraction toward the current destination, tangential encounter curvature, encounter-state switching, and controlled outbound impulses. The [README](https://github.com/bonoj/bonoj.github.io/blob/master/jit/evermore-2/README.md) records the technical contract and outstanding verification.
+
+This correction increases the density of the original exchange retrospectively. **“She's the perihelion” was not decorative poetry**: it encoded an expectation of dynamical behavior that the first implementation failed to preserve. The human needed only a short correction to expose the mismatch; the model's useful contribution was to translate that observation into a feasible hybrid physical model and acknowledge where simulation departed from strict mechanics.
+
+**Evidence boundary:** the revision is committed, but no live mobile-browser acceptance or long-duration patrol observation has been established. In particular, repeated capture and attractive visual trajectories remain hypotheses to test in the running world. The right next step is observation and tuning, not premature declaration of orbital success.
+
+The broader lesson is that a shared metaphor can be a *compressed specification of causality*. When the metaphor is taken seriously, it can demand an entirely different architecture.
