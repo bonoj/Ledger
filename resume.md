@@ -1,7 +1,7 @@
 # John Bono
 **Senior Software Engineer · Cybernetic Systems Architect · Human–Model Systems R&D**
 
-[Executable laboratory](https://bonoj.github.io/Hermeticon/) · [GitHub](https://github.com/bonoj) · [LinkedIn](https://linkedin.com/in/bonoj)  
+[Executable laboratory](https://bonoj.github.io/) · [GitHub](https://github.com/bonoj) · [LinkedIn](https://linkedin.com/in/bonoj)  
 (650) 207-7832 · johnlbono@gmail.com
 
 ## Engineering thesis
@@ -9,6 +9,16 @@
 I build systems that turn ambiguous problems into executable, observable experiments. My foundation is senior production engineering—offline-first connected devices, financial software, mobile architecture, release operations, and distributed state—preceded by a decade of signals-intelligence analysis under uncertainty. My current research asks a practical question: **how much of the software-development barrier can be removed without surrendering human judgment, correctness, or accountability?**
 
 I call the resulting practice **conjoining**: the human specifies intent, interrogates results, corrects errors, and chooses direction; the model operates tools and writes code; persistent repositories, tests, instrumentation, and deployment contracts make the work inspectable and recoverable. This is not a claim that a model is infallible or that prompting replaces engineering. It is an architecture for making engineering leverage available through a conversational interface.
+
+## Explore the work
+
+**[Executable laboratory — bonoj.github.io](https://bonoj.github.io/)**  
+The public entrance to a growing collection of interactive worlds, scientific instruments, and model-mediated engineering experiments. Start here to experience the range of the work rather than just read about it.
+
+**[Tiffinity Survivors — Evermore II](https://github.com/bonoj/Evermore-2)**  
+An evolving real-time world of autonomous populations, resource gathering, competing dependencies, and emergent consequences. It is a concrete example of systems whose behavior must be observed and investigated rather than inferred solely from their design.
+
+These are demonstrations of the *artifacts*. The engineering method, tests, version history, and failure evidence live in the linked repositories and development records.
 
 ## Demonstrated human–model engineering
 
@@ -30,9 +40,7 @@ An agent that generates code is only one component. The hard problems are **task
 
 The most interesting question is not whether an agent can produce something impressive once. It is whether an unfamiliar task can be framed, executed, evaluated, corrected, and resumed reliably—and whether the system can tell the difference between *written*, *tested*, *deployed*, and *observed*.
 
-## Professional experience and technical breadth
-
-## Experience
+## Professional experience
 
 ### Hermeticon — Conjoiner · Cybernetic Systems Architect
 *2023–Present*
@@ -46,14 +54,17 @@ Hermeticon is an institution for the study and construction of possible worlds.
 - **Design composable capabilities** that can be assembled into new experiments rather than rebuilt for every scene; preserve reproducibility, inspectability, and operational provenance.
 - **Direct conjoined research and development:** frame hypotheses, challenge implementations, evaluate observed behavior, and steer human–model construction from concept to deployed artifact.
 
-**Selected executable systems**
+## Selected executable systems — evidence index
 
-- **[Crucible](https://github.com/bonoj/Crucible):** Deformable terrain, material transport, shallow-water simulation, and high-population particle experiments; demonstrated 100,000 simulated beads at 60 fps in dry conditions.
-- **[SixCities](https://github.com/bonoj/SixCities):** Closed-ring logistics world with autonomous drones, launchers, reservoirs, and discrete material streams.
-- **[OrbitalConstruction](https://github.com/bonoj/OrbitalConstruction):** Procedural orbital structures with coherent interior and exterior geometry and modular assembly.
-- **[VerticalAccretion](https://github.com/bonoj/VerticalAccretion):** Downward exploration, construction, route memory, and deterministic replay.
-- **[Foundry](https://github.com/bonoj/Foundry):** Deformable terrain and interacting simulation entities in a real-time strategy substrate.
-- **[Hermeticon](https://github.com/bonoj/Hermeticon):** Composable environment for constructing, observing, and investigating possible worlds.
+- **[Evermore II / Tiffinity Survivors](https://github.com/bonoj/Evermore-2):** Interacting autonomous populations, material dependencies, resource competition, and emergent world behavior; a substrate for investigating consequences that were not individually scripted.
+- **[Abyss / Europa](https://github.com/bonoj/Abyss):** Shared runtime for independently mounted worlds; Europa explores synthetic ice stratigraphy, excavation, and material accounting. Scientific proxies are experimental, not physically calibrated measurements.
+- **[Crucible](https://github.com/bonoj/Crucible):** Deformable terrain, particle transport, shallow-water simulation, and a measured 100,000-bead dry-condition performance experiment.
+- **[SixCities](https://github.com/bonoj/SixCities):** Autonomous drones, reservoirs, launchers, and discrete material logistics in a closed-ring environment.
+- **[OrbitalConstruction](https://github.com/bonoj/OrbitalConstruction):** Modular procedural orbital geometry and coherent interior/exterior construction.
+- **[VerticalAccretion](https://github.com/bonoj/VerticalAccretion):** Exploration, construction, route memory, and deterministic replay.
+- **[Foundry](https://github.com/bonoj/Foundry):** Terrain deformation and interacting simulation entities in a strategy substrate.
+- **[Hermeticon](https://github.com/bonoj/Hermeticon):** Composable world-building and experimental research environment.
+- **[Ledger](https://github.com/bonoj/Ledger):** Written provenance and continuity for human–model investigation; supporting engineering evidence rather than an executable world.
 
 ### Xeal — Founding Software Engineer, Android
 *Los Angeles, CA | Oct 2022–2023*
