@@ -55,7 +55,7 @@ Hermeticon is an institution for the study and construction of possible worlds.
 - **[Foundry](https://github.com/bonoj/Foundry):** Deformable terrain and interacting simulation entities in a real-time strategy substrate.
 - **[Hermeticon](https://github.com/bonoj/Hermeticon):** Composable environment for constructing, observing, and investigating possible worlds.
 
-### Xeal — Senior Software Engineer, Android
+### Xeal — Founding Software Engineer, Android
 *Los Angeles, CA | Oct 2022–2023*
 
 - Architected offline-first software for connected EV charging infrastructure, handling unreliable connectivity and distributed device state.
