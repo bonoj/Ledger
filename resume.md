@@ -6,7 +6,7 @@
 
 ## Profile
 
-I am a **conjoiner**: a systems inventor and principal-level architect who turns imagination into executable machinery. I created a persistent human–model laboratory that builds interactive worlds, autonomous systems, scientific instruments, and production-grade software through a smartphone conversation. My engineering foundation spans financial platforms, offline-first EV infrastructure, distributed state, real-time simulation, and a decade of intelligence analysis.
+I am a **conjoiner**: a systems inventor and principal architect who turns imagination into executable machinery. I created a persistent human–model laboratory that builds interactive worlds, autonomous systems, scientific instruments, and production-grade software through a smartphone conversation. My engineering foundation spans financial platforms, offline-first EV infrastructure, distributed state, real-time simulation, and a decade of intelligence analysis.
 
 I operate across product vision, architecture, implementation, experimentation, and delivery. An unfamiliar question becomes an **executable answer**: I frame the problem, direct and challenge model collaborators, compose or invent the machinery, demand observable consequences, and turn discoveries into reusable capability. Each experiment expands the range of what the laboratory can build next.
 
