@@ -1,14 +1,36 @@
 # John Bono
-**Conjoiner · Cybernetic Systems Architect | Executable Worlds · Interactive Simulations · Experimental R&D**
+**Senior Software Engineer · Cybernetic Systems Architect · Human–Model Systems R&D**
 
-[Hermeticon](https://bonoj.github.io/Hermeticon/) · [GitHub](https://github.com/bonoj) · [LinkedIn](https://linkedin.com/in/bonoj)  
+[Executable laboratory](https://bonoj.github.io/Hermeticon/) · [GitHub](https://github.com/bonoj) · [LinkedIn](https://linkedin.com/in/bonoj)  
 (650) 207-7832 · johnlbono@gmail.com
 
-## Profile
+## Engineering thesis
 
-Systems architect and experimental world-builder who turns complex, unfamiliar domains into executable, observable computational systems. Operates across scientific reasoning, creative direction, simulation architecture, rapid prototyping, and implementation. Develops worlds with coherent rules, interacting materials, persistent consequences, and discoverable behavior.
+I build systems that turn ambiguous problems into executable, observable experiments. My foundation is senior production engineering—offline-first connected devices, financial software, mobile architecture, release operations, and distributed state—preceded by a decade of signals-intelligence analysis under uncertainty. My current research asks a practical question: **how much of the software-development barrier can be removed without surrendering human judgment, correctness, or accountability?**
 
-A **Conjoiner**: directs human–model collaboration as an integrated research and construction practice. Moves from first principles to running models, tests assumptions against behavior, and converts discoveries into reusable capabilities. Combines the analytical discipline of signals intelligence, the engineering judgment of senior production roles, and the imagination to construct possible worlds.
+I call the resulting practice **conjoining**: the human specifies intent, interrogates results, corrects errors, and chooses direction; the model operates tools and writes code; persistent repositories, tests, instrumentation, and deployment contracts make the work inspectable and recoverable. This is not a claim that a model is infallible or that prompting replaces engineering. It is an architecture for making engineering leverage available through a conversational interface.
+
+## Demonstrated human–model engineering
+
+**A working laboratory through a smartphone.** I conduct this work through a smartphone chat window rather than a desktop IDE or terminal. Connected models and tools inspect repositories, implement changes, execute checks, publish artifacts, and recover context. The relevant achievement is not the phone itself; it is that a narrow interface can direct a distributed, persistent engineering system while leaving the human free to reason about behavior.
+
+**From encountered need to executable instrument.** A learner's chemistry problem became [Ion Garden](https://bonoj.github.io/jit/ion-garden/), an interactive ionic-charge-balancing exercise. A prospective differential-equations need became [Diff Eq](https://bonoj.github.io/jit/diff-eq/), with parameter-driven solutions and direction fields. An acid/base question became an interactive classification lab, later integrated with the chemistry tools into [ChemLab](https://bonoj.github.io/jit/chemlab/). These were not generic chat answers: they were implemented, tested software instruments shaped by human feedback. Their educational effectiveness has not been established.
+
+**Verification beyond plausible output.** For Diff Eq, the model reported 4,984 mathematical checks, 21 interaction checks, and 18 simulated canvas scenarios, including numerical differentiation against governing equations; a subsequent pointer-drag revision reported 25 assertions. For chemistry, I required a separate audit of scientific assumptions rather than treating tests against an answer key as proof of correctness. These are recorded scripted/simulated checks, not a claim of independent scientific validation or physical-device acceptance. [Development evidence](https://github.com/bonoj/bonoj.github.io/commit/31973252cd350938bd30e728c2d3bb3f7c58481b).
+
+**Failure is evidence, not embarrassment.** In an articulated-locomotion experiment, an inverse-kinematics visual follower was initially mistaken for progress toward physically connected legs. I challenged the topology: if the torso falls, the feet must be connected and move with it. The resulting finite-mass, force-coupled feet demonstrated connectivity, but a browser observation exposed a numerical energy explosion. That outcome was recorded as a failed stability test—not rebranded as walking. This is how I work: distinguish rendered plausibility, model assumptions, actual dynamics, and measured outcomes.
+
+**Cold-boot continuity and deployment integrity.** The laboratory uses written entry contracts, working specifications, chronological evidence, and explicit source/build/runtime verification. In one recovery, a failed repository-write path was resolved by consulting the established contract and using Git's object-level operations; the human did not have to switch to a desktop or manually transport a file. In another, stale executable JavaScript motivated SHA-addressed deployment bundles and explicit checks that a phone is running the intended build. A commit, successful CI run, published asset, and executing browser are different facts.
+
+**Composable executable worlds.** Alongside these instruments, I develop simulation substrates for terrain deformation, material transport, shallow-water dynamics, autonomous logistics, procedural construction, and articulated physical experiments. [Crucible](https://github.com/bonoj/Crucible) demonstrated 100,000 simulated beads at approximately 60 FPS under dry conditions. These are experimental systems with bounded observations, not assertions of general-purpose physics-engine completeness.
+
+## Why this work matters for agent engineering
+
+An agent that generates code is only one component. The hard problems are **task specification, environment state, tool authority, observability, evaluation, recovery, and provenance**. My laboratory confronts these at the level of actual repository mutations and running artifacts. I am especially interested in environments where a model must produce verifiable consequences, where failure cases are retained as useful training/evaluation evidence, and where human direction remains precise without requiring constant low-level intervention.
+
+The most interesting question is not whether an agent can produce something impressive once. It is whether an unfamiliar task can be framed, executed, evaluated, corrected, and resumed reliably—and whether the system can tell the difference between *written*, *tested*, *deployed*, and *observed*.
+
+## Professional experience and technical breadth
 
 ## Experience
 
