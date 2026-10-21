@@ -112,3 +112,85 @@ Inspect the existing Sanctum/Hermeticon navigation and deployment contracts; wri
 **Initial content beyond the threshold:** Observatory (evidence and EUROPA-01), Learning Laboratory (ChemLab and educational worlds), World Foundry (living systems and play), and Commissioning Chamber (capabilities and inquiry). These are destinations, not four wings attached to the gazebo. Embed native Hermeticons where supported by existing runtime contracts; use iframes for standalone experiences where appropriate.
 
 **First prototype:** model only the disc, sparse pillars, central instrument, a few material trails, and recognizable distant node markers. Test on a phone for silhouette, occlusion, tap targets, camera/focus/return, and legibility before adding decoration or expanding the campus. Inspect Abyss Shell/Betwixt composition machinery first; reuse existing mechanisms and deployment verification. This is a design ledger entry, not an assertion of implementation.
+
+## Composable Spatial Encounters — implementation specification (2026-10-21)
+
+**Status:** architectural specification; not a claim of an implemented or browser-verified Institute. This section supersedes any implication that a portal must always be an iframe or that the public site must absorb entire source worlds. The Institute is the first public consumer of a reusable composition grammar, not the owner of every primitive.
+
+**Strategic authorities:** [Sanctum / EMPIRE.md](https://github.com/bonoj/Sanctum/blob/main/EMPIRE.md) defines the long-horizon physical hivemind-governed distributed microdrone Empire and the freedom to build and command it. [Sanctum / FOUNDATION.md](https://github.com/bonoj/Sanctum/blob/main/FOUNDATION.md) defines the first commercial crossing: paid, bounded outcomes without surrendering the laboratory. The Institute must serve both by making capability tangible and inquiry obvious, without exposing private orchestration or implying that a website *is* the Empire.
+
+### Design axiom
+
+> **3D owns space. DOM owns legibility. Worlds own behavior. The Sanctum owns navigation.**
+
+The Institute is a **world of worlds**, not a brochure with a decorative canvas and not one giant coupled simulation. Visitors arrive in a quiet, roofless stone threshold. Material trails lead to recognizable miniature encounters. A tap focuses a world and discloses its meaning; entering activates a real experience; returning restores the original Sanctum state. Text, emoji, links, and applications are first-class inhabitants of the experience, without pretending they must all be meshes.
+
+### Sources to synthesize, not blindly transplant
+
+- **Genesis / Athanor / Arcana:** [Hermeticon Genesis composition](https://github.com/bonoj/Hermeticon/blob/main/codex/genesis/world.js), [Abyss Genesis composition](https://github.com/bonoj/Abyss/blob/main/shell/codex/genesis/world.js). These already compose a Hermeticon vessel, terrain, flora/fauna, Wanderer, observation, and a moving nested Hermeticon. Reuse stable interfaces after inspection; **Genesis is an authored composition, not a reusable Arcana definition**. Do not make the Institute depend on Genesis's entire ecology merely to render a miniature.
+- **Evermore II:** [current laws](https://github.com/bonoj/bonoj.github.io/blob/master/jit/evermore-2/README.md) and [chronicle](https://github.com/bonoj/bonoj.github.io/blob/master/jit/evermore-2/CHRONICLE.md). Borrow its semantic icon grammar, visible physical transfers, local agency, and discoverable causal relationships. Its single-page 2D Canvas simulation remains independent. **Do not port or embed its entire game loop into the 3D host.** Extract concepts or bounded behaviors only when an encounter requires them.
+- **Existing JITs:** independent browser applications such as [ChemLab](https://bonoj.github.io/jit/chemlab/) remain independently deployable. A portal may link to them, focus an iframe, or—only where a compatible native interface actually exists—mount a nested world. Never invent a universal iframe-to-3D conversion layer.
+
+### Ownership and composition contract
+
+| Layer | Owns | Must not own |
+| --- | --- | --- |
+| **Sanctum host** | One renderer/canvas, camera, arrival scene, navigation state, focus/return, route history, input arbitration, lifecycle scheduling | Each world's internal simulation or its business logic |
+| **Spatial scene** | Terrain/disc/pillars, trails, node positions, silhouettes, world-space anchors, visibility/occlusion hints | Readable long-form text or iframe gesture handling |
+| **Encounter adapter** | A stable identity, scene anchor, preview representation, metadata, focus target, activation/deactivation and disposal hooks | Global navigation, a second unconditional render loop, or ownership of parent state |
+| **DOM overlay** | Readable labels, emoji, accessible controls, links, inquiry route, fallback navigation, status and evidence disclosures | 3D spatial authority or hidden click-through surfaces |
+| **Nested world / standalone JIT** | Its own behavior, local controls, observation and internal lifecycle while active | Parent camera or implicit global pointer ownership |
+| **Commercial entry** | Clear capabilities, evidence boundaries, inquiry initiation and contact | Private Sanctum contracts, reusable laboratory internals or unsupported claims |
+
+**Proposed encounter descriptor** (design interface, not an existing exported API):
+
+```js
+{
+  id: 'learning',
+  title: 'Learning Laboratory',
+  symbol: '⚗️',
+  invitation: 'Touch an idea and see what changes.',
+  anchor: { x: 0, y: 0, z: 0 },
+  preview: { kind: 'miniature', source: 'existing-bounded-scene' },
+  enter: { kind: 'iframe', url: 'https://bonoj.github.io/jit/chemlab/' },
+  evidence: { label: 'Executable learning experience', href: 'https://bonoj.github.io/jit/chemlab/' }
+}
+```
+
+This is illustrative configuration, not an assertion that the host currently supports this schema. Each encounter must be addressable by a stable ID and deep link. Supported entry modes should be deliberately small: **external link**, **focused iframe**, and **native nested world**. Use the simplest mode that works for each destination; native nesting requires an inspected and verified runtime interface. No new shared engine abstraction without evidence of repeated need.
+
+### Navigation state machine
+
+`ARRIVED → ENCOUNTERED → FOCUSED → ENTERED → RETURNED`, with explicit backward transitions. `RETURNED` restores the prior camera transform, selection, scroll/gesture context, and running/paused state rather than recreating the entire hub. Deep links may begin focused or entered when supported, and browser Back must produce a predictable exit. Failure to load a destination returns to the focused card with a working direct link; it must not strand the visitor in a blank iframe.
+
+**Input ownership is exclusive.** In hub mode the Sanctum owns pointer/touch gestures; in a focused card the DOM controls own their targets; in entered iframe/native-world mode the child owns its interior interactions until an explicit, always-visible Exit/Return action. Prevent tap-through and parent camera movement during child interaction. No hover-only affordances or long-press prerequisites on phones. The inquiry route remains discoverable regardless of state.
+
+### Spatial cards and emoji
+
+Anchors are 3D coordinates projected each frame into DOM overlay positions. Labels use ordinary text and emoji with accessible names, sensible font sizes and generous hit targets. Resolve overlap, offscreen positions, and occlusion by hiding, repositioning or clustering secondary labels; never make a tiny world-space text texture the only way to read a service. A focused encounter presents one sentence of invitation, one meaningful action, and an honest evidence/limitations link where appropriate. Avoid giant floating panels and permanent screen clutter.
+
+Material trails are spatial, continuous, distinguishable, and terminate at recognizable encounters. Movement or particles may hint at the destination's nature, but **the trail is wayfinding, not a substitute for accessible navigation**. The central stone threshold stays quiet so that the surrounding worlds carry the delight.
+
+### Lifecycle and performance
+
+Only one primary 3D renderer and host animation clock should run for the hub. Inactive encounter previews are cheap: static, low-frequency, or simplified, with heavy physics/ecology suspended until focus or entry. Lazy-load iframe content only on entry; suspend or unload on exit as appropriate. For native nesting, preserve the parent scene and explicitly manage update/draw and resource disposal. Never create a second full-screen renderer per miniature by default. Apply mobile device pixel ratio limits and reduced-motion behavior; test memory, GPU load, iframe return, and long-session stability on a real phone. FPS is a diagnostic, not a substitute for successful interactions.
+
+### First executable slice: prove the grammar
+
+Build **one** small Sanctum rather than a complete campus:
+
+1. Roofless stone disc, sparse pillars, small central brass instrument, four distinct distant encounters, and four materially legible trails.
+2. At least one **living miniature** assembled from existing Arcana/Genesis primitives, with an inexpensive preview state. This must be an actual world behavior, not a static marketing mockup.
+3. At least one projected **scene-anchored DOM card** with readable text and emoji, reliable tap/focus/return, and no gesture bleed.
+4. One **real portal** to an already deployed JIT (ChemLab is a candidate): focused iframe if it behaves reliably, otherwise an explicit external navigation with return affordance. Do not claim iframe success until tested on the canonical origin.
+5. A persistent, clear **Services / Start an inquiry** path, plus an accessible non-3D alternative listing the same four encounters.
+
+Initial encounters: **Observatory** (Europa and evidence), **Learning Laboratory** (ChemLab family), **World Foundry** (Evermore II and other verified worlds), **Commissioning Chamber** (bounded executable questions and contact). The latter is a real commercial route, not a fifth hidden puzzle.
+
+**Acceptance:** canonical public URL and executing build identity verified independently; actual Android touch witness; reliable focus/return and browser Back; no tap-through; one real live world preview; one real launched application; legible phone text/emoji; keyboard/reduced-motion/fallback path; visible inquiry mechanism; no invented testimonials, unsupported research claims, or transfer of private laboratory machinery. Separate source commit, publisher success, and browser execution in the record.
+
+### Implementation location and handoff
+
+This Ledger is **the architectural and experience specification**, not the executable repository. Before coding, inspect current Hermeticon/Abyss host contracts, existing Sanctum/Betwixt entrypoints, and the GitHub Pages deployment topology. Choose the Institute's canonical repository/path based on actual ownership and publishing constraints. Reuse established build fingerprints, cache behavior, tests, and verification; do not fork infrastructure merely to build a public site. Document the chosen implementation path and a concise cold-boot README in its executable repository, with a link back here. Keep architectural decisions in this section and detailed development archaeology in an implementation chronicle.
+
+**Foundation gate:** The public Sanctum must make one useful commercial action easier: a qualified visitor can understand a real example and initiate a bounded inquiry. Delight is the medium; credible capability and agency are the purpose. The public website is neither a prerequisite to every sale nor a substitute for outreach.
