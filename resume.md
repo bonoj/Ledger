@@ -15,7 +15,7 @@ I call the resulting practice **conjoining**: the human specifies intent, interr
 **[Executable laboratory — bonoj.github.io](https://bonoj.github.io/)**  
 The public entrance to a growing collection of interactive worlds, scientific instruments, and model-mediated engineering experiments. Start here to experience the range of the work rather than just read about it.
 
-**[Tiffinity Survivors — Evermore II](https://github.com/bonoj/Evermore-2)**  
+**[Tiffinity Survivors — Evermore II](https://bonoj.github.io/jit/evermore-2/)**  
 An evolving real-time world of autonomous populations, resource gathering, competing dependencies, and emergent consequences. It is a concrete example of systems whose behavior must be observed and investigated rather than inferred solely from their design.
 
 These are demonstrations of the *artifacts*. The engineering method, tests, version history, and failure evidence live in the linked repositories and development records.
