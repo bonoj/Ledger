@@ -107,7 +107,9 @@ Inspect the existing Sanctum/Hermeticon navigation and deployment contracts; wri
 
 **Spatial organization:** the Sanctum is the origin and safe place to return to. Destinations are placed organically outside it, **not rigidly at four compass points**. Material trails run from the disc between columns and out toward discoverable nodes. Trails use distinct material behavior to suggest what awaits, while remaining legible as routes. Nearby worlds can be visible as tiny living Hermeticons, not just signposts.
 
-**Experience rhythm:** quiet arrival → notice material trails and distant activity → follow a trail → encounter a miniature world and its small anchored card → focus/enter → return to the same Sanctum state. The gazebo stays calm while the surrounding world is alive. Wonder and legibility coexist: a discoverable Services/Inquire path must not depend on finding a hidden trail.
+**Experience rhythm:** quiet arrival → notice material trails and distant activity → follow a trail → encounter a miniature world and its small anchored card → focus/enter → return to the same Sanctum state.
+
+**Threshold surprise (Siofra principle):** The entrance is unassuming; its apparent scale is much smaller than the worlds it reveals. Keep the arrival quiet and modest rather than previewing every capability. Entering should surprise and delight through discovery, while a discreet inquiry route remains easy to find. The gazebo stays calm while the surrounding world is alive. Wonder and legibility coexist: a discoverable Services/Inquire path must not depend on finding a hidden trail.
 
 **Initial content beyond the threshold:** Observatory (evidence and EUROPA-01), Learning Laboratory (ChemLab and educational worlds), World Foundry (living systems and play), and Commissioning Chamber (capabilities and inquiry). These are destinations, not four wings attached to the gazebo. Embed native Hermeticons where supported by existing runtime contracts; use iframes for standalone experiences where appropriate.
 
