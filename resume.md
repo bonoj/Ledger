@@ -1,14 +1,14 @@
 # John Bono
-**Senior Software Engineer · Systems Architect · Human–Model R&D**
+**Conjoiner · Principal Systems Architect · Director-Level Experimental R&D**
 
 [Live laboratory](https://bonoj.github.io/) · [Tiffinity Survivors](https://bonoj.github.io/jit/evermore-2/) · [GitHub](https://github.com/bonoj) · [LinkedIn](https://linkedin.com/in/bonoj)  
 (650) 207-7832 · johnlbono@gmail.com
 
 ## Profile
 
-I am a senior software engineer, product engineer, and systems inventor. I build interactive software, autonomous worlds, and scientific instruments through a persistent human–model engineering laboratory operated from a smartphone conversation. My work spans production financial systems, offline-first EV charging infrastructure, mobile architecture, distributed state, real-time simulation, and a decade of intelligence analysis.
+I am a **conjoiner**: a systems inventor and principal-level architect who turns imagination into executable machinery. I created a persistent human–model laboratory that builds interactive worlds, autonomous systems, scientific instruments, and production-grade software through a smartphone conversation. My engineering foundation spans financial platforms, offline-first EV infrastructure, distributed state, real-time simulation, and a decade of intelligence analysis.
 
-I specialize in turning an unfamiliar question into an **executable answer**: frame the problem, compose or invent the machinery, test its behavior, deploy it, observe the consequences, and retain what the experiment teaches us. The system grows more capable with every useful primitive and every recovered failure.
+I operate across product vision, architecture, implementation, experimentation, and delivery. An unfamiliar question becomes an **executable answer**: I frame the problem, direct and challenge model collaborators, compose or invent the machinery, demand observable consequences, and turn discoveries into reusable capability. Each experiment expands the range of what the laboratory can build next.
 
 ## Experience the work
 
@@ -18,11 +18,11 @@ I specialize in turning an unfamiliar question into an **executable answer**: fr
 
 ## The engineering system
 
-**A pocket interface to persistent engineering.** I work from a smartphone chat window. Models and connected tools inspect code, implement changes, run checks, mutate repositories, publish builds, and recover state. I contribute product direction, architecture, first-principles challenges, spatial intuition, interaction design, and judgment about observed behavior. The interface stays small while the engineering system remains deep.
+**A pocket interface to an engineering laboratory.** I architect and direct the work through a smartphone conversation. Models and connected tools inspect code, implement changes, run checks, mutate repositories, publish builds, and recover state. I set product direction, invent systems, challenge assumptions, shape the experience, and judge observed behavior. The interface is small; the reach of the laboratory is not.
 
 **Software as composable vocabulary.** Reusable mechanisms for terrain, materials, agents, sensing, movement, rendering, and instrumentation become expressive building blocks. A new world can begin as a composition of existing capabilities; unexpected behavior reveals the next abstraction to build. The laboratory compounds in both executable machinery and the shared language used to direct it.
 
-**Consequences over code generation.** Specifications, source, tests, deployment identity, browser observations, and chronological evidence form a recoverable engineering record. A source commit, passing test, deployed bundle, and running browser are distinct checkpoints. The model participates in implementation and critique; I interrogate the results and steer the next experiment. [Sanctum](https://github.com/bonoj/Sanctum) preserves the operating contract; [Ledger](https://github.com/bonoj/Ledger) preserves the research record.
+**Engineering authority through observable consequences.** Specifications, source, tests, deployment identity, browser observations, and chronological evidence form a recoverable engineering record. A source commit, passing test, deployed bundle, and running browser are distinct checkpoints. The model participates in implementation and critique; I interrogate the results and steer the next experiment. [Sanctum](https://github.com/bonoj/Sanctum) preserves the operating contract; [Ledger](https://github.com/bonoj/Ledger) preserves the research record.
 
 **Rapid instruments for real questions.** A learner's chemistry need became [Ion Garden](https://bonoj.github.io/jit/ion-garden/); a differential-equations need became [Diff Eq](https://bonoj.github.io/jit/diff-eq/) with manipulable direction fields; acid/base investigations became [ChemLab](https://bonoj.github.io/jit/chemlab/). The Diff Eq development record includes 4,984 mathematical checks, 21 interaction checks, 18 simulated canvas scenarios, and a later 25-assertion pointer-drag revision. [Inspect the implementation evidence](https://github.com/bonoj/bonoj.github.io/commit/31973252cd350938bd30e728c2d3bb3f7c58481b).
 
@@ -40,7 +40,7 @@ Additional work in [procedural orbital construction](https://github.com/bonoj/Or
 
 ## Professional experience
 
-### Hermeticon — Conjoiner · Cybernetic Systems Architect
+### Hermeticon — Founder · Conjoiner · Principal Systems Architect
 *2023–Present*
 
 Independent experimental R&D in interactive systems, composable simulation, model-mediated software engineering, and executable scientific inquiry. Built and operated a persistent laboratory connecting conversational direction to source changes, automated checks, published software, runtime instrumentation, and recoverable research records.
