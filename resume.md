@@ -1,5 +1,5 @@
 # John Bono
-**Conjoiner · Principal Systems Architect · Director-Level Experimental R&D**
+**Conjoiner · Cybernetic Systems Architect | Executable Worlds · Interactive Simulations · Experimental R&D**
 
 [Live laboratory](https://bonoj.github.io/) · [Tiffinity Survivors](https://bonoj.github.io/jit/evermore-2/) · [GitHub](https://github.com/bonoj) · [LinkedIn](https://linkedin.com/in/bonoj)  
 (650) 207-7832 · johnlbono@gmail.com
