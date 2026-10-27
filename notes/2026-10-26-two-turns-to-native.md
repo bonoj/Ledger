@@ -152,3 +152,152 @@ The scarce attention can then return to the experience itself.
 ---
 
 *Retrospective assembled from the actual conversational sequence and reported build/device observations. Executable source and CI records, not this note, remain authoritative.*
+
+---
+
+## October 27 continuation: From two turns to enforceable native UX
+
+The original experiment demonstrated that a model could translate a small, declarative web experience into a compiled Android application while absorbing much of the build and delivery work. It left a more important question unresolved: **how can a model build freely without drifting away from an established canonical UI and its intended interactions?**
+
+A plausible native screen is not sufficient evidence of fidelity. A model can produce an attractive, functioning Compose screen while substituting unapproved Material components, changing design tokens, altering interaction semantics, or adding behavior the contract never authorized. The original `mini-gestalt/v1` contract identified content and design vocabulary, but did not specify enough behavior to adjudicate every difference between the web and native implementations. For example, the web and Android chip selection semantics differed; that discrepancy was an ambiguity to resolve, not automatically a defect.
+
+The work therefore shifted from **model-directed construction** to **construction under independent authority**, while keeping the existing working application recoverable.
+
+### The authority we were trying to establish
+
+The proposed division of responsibility is:
+
+- **Human intent:** what experience should exist and which departures are acceptable.
+- **Declarative contract:** approved content, component identities, ordering, and design tokens.
+- **Behavioral covenant:** independently specified observable state transitions and invariants.
+- **Canonical native library:** approved composable components and tokens that screen code is expected to reuse.
+- **Model-authored screen:** implementation and composition within those constraints.
+- **Independent gate:** reject disallowed substitutions or authority changes before accepting an APK.
+- **Runtime Eyes:** report what the installed application actually did so observation can be compared with the covenant.
+
+The critical principle is that **the model constructing the candidate must not be able to quietly rewrite the rules that judge the candidate**. This is a design objective, not yet an absolute property of the repository.
+
+The exploratory design was captured in [ENFORCEABLE_NATIVE_CONTRACT.md](https://github.com/bonoj/bonoj.github.io/blob/master/jit/gestalt/ENFORCEABLE_NATIVE_CONTRACT.md). It distinguishes structure, appearance, behavior, state, accessibility, and native execution; defines candidate obligations; and insists that a deliberately broken implementation must fail the same test that accepts a corrected implementation. The first proposed Save covenant was deliberately narrow: initial unsaved state, first tap saved, second tap unsaved. Persistence through activity recreation and other interaction details were not silently promoted from implementation accidents into requirements.
+
+### Preserve the working prototype; isolate the experiment
+
+Before changing the native implementation, the known-good state was preserved on `gestalt-working-baseline-2026-10-27`. The enforcement work proceeded on `gestalt-covenant-fixture`, leaving the original `master` experience untouched. The instrumented APK uses a distinct application ID, `io.github.bonoj.jitgestalt.eyes`, so it can coexist with the original install.
+
+This isolation mattered because enforcement experiments are expected to fail. We wanted to learn from deliberately invalid builds without turning the user's functioning prototype into a casualty of validation research.
+
+The fixture introduced [`covenant.json`](https://github.com/bonoj/bonoj.github.io/blob/gestalt-covenant-fixture/jit/gestalt/covenant-fixture/covenant.json) and a small independent Save-transition check. That initial check exercised a toy state machine, not the running Android UI; it should not be confused with a Compose instrumentation test.
+
+### Canonical primitives and the first build gate
+
+The isolated Android source gained [`CanonicalUi.kt`](https://github.com/bonoj/bonoj.github.io/blob/gestalt-covenant-fixture/jit/gestalt/android/app/src/main/java/io/github/bonoj/jitgestalt/CanonicalUi.kt), defining `CanonicalButton`, `CanonicalChip`, `CanonicalCard`, and `CanonicalTokens`. The screen was revised to compose these primitives instead of directly constructing its own Material 3 buttons, chips, cards, and color values.
+
+This is **component provenance**, not proof of design fidelity. The wrappers currently delegate to Material 3. They demonstrate where canonical authority could live and how model-authored screen code could be constrained; they are not an implementation of Pinterest's proprietary Gestalt library or an assertion about any organization's internal UX system.
+
+The [`check_canonical.py`](https://github.com/bonoj/bonoj.github.io/blob/gestalt-covenant-fixture/jit/gestalt/covenant-fixture/check_canonical.py) fixture performs conservative lexical checks of the screen source. It rejects direct uses of selected Material primitives and screen-local colors and checks for required canonical usages. Four deliberate negative controls exercise raw button, chip, card, and rogue-color substitutions. The [Runtime Eyes workflow](https://github.com/bonoj/bonoj.github.io/blob/gestalt-covenant-fixture/.github/workflows/jit-gestalt-eyes.yml) executes the guard before Gradle, so a failed guard stops packaging.
+
+The first guard exposed an instructive bug in **the verifier itself**. Kotlin allows `Card { ... }` as well as `Card(...)`; the initial regular expression recognized only the parenthesized form. Consequently the raw-card negative control escaped detection and the CI job failed with `FAILED to detect raw-card`. The checker was corrected to recognize the trailing-lambda form. This failure is valuable evidence that tests of the verifier are necessary, not proof that the verifier is comprehensive.
+
+### Separating candidate code from canonical authority
+
+A model with permission to modify both screen and validator can make almost any candidate appear compliant. To reduce that circularity, the work created a separate authority branch, `gestalt-canonical-authority-2026-10-27`, and changed the candidate workflow to check out the authority at an **immutable commit SHA**, not at a floating branch head.
+
+The trusted checkout supplies the canonical checker and [`verify_candidate.py`](https://github.com/bonoj/bonoj.github.io/blob/gestalt-canonical-authority-2026-10-27/jit/gestalt/covenant-fixture/verify_candidate.py), which compares designated protected candidate files against the authority revision. The workflow directs the trusted checker at the candidate source tree. When the checker or canonical component definitions legitimately change, the trusted authority and candidate must be updated together and the workflow repinned. During this iteration, the authority pin was updated after both the regex repair and the canonical Card signature repair.
+
+This creates a meaningful **independent-checkout boundary** for the experimental CI job. It is **not tamper-resistant repository policy**: the candidate workflow remains editable, required checks and branch protections have not been verified, and a model with unrestricted repository write permission could bypass or weaken the workflow. The checker also scans a narrow known screen rather than all possible Kotlin sources; lexical matching can miss aliases, indirection, and other language forms. An AST-aware checker, protected workflow configuration, controlled authority updates, and actual required-status enforcement remain future work.
+
+### A real native build failure—and a bounded repair
+
+After the negative-control correction, CI progressed to Kotlin compilation and exposed a concrete wrapper error:
+
+```text
+CanonicalUi.kt:30:96 Argument type mismatch:
+actual type is @Composable () -> Unit
+but @Composable ColumnScope.() -> Unit was expected
+```
+
+The `CanonicalCard` wrapper had declared ordinary composable content where Material 3 `Card` expected a `ColumnScope` receiver. The correction changed its parameter to `content: @Composable ColumnScope.() -> Unit` and added the appropriate import. The candidate and trusted authority were both updated; the workflow was repinned to authority commit `a7e2e53431d9adecd18a446f402ab9537c491ac6`, with candidate commit `edab8db29a5d35674e029da55b90b97c7c26422a`.
+
+This is a second distinct lesson. The guard passed, but the Kotlin compiler rejected the implementation. **Static policy checks and actual compilation test different things.** Neither substitutes for the other.
+
+The user subsequently returned an Eyes report from the installed Android app, demonstrating that an instrumented build had been installed and exercised. That is direct device-level evidence; the report itself does not contain an APK SHA or workflow run ID, so it cannot independently prove exact binary provenance or the status of every CI check.
+
+### Runtime Eyes: bringing the device back into the conversation
+
+The native app gained a **👁 Copy Runtime Eyes** action. It uses Android's clipboard service to export structured JSON, rather than requiring screenshots, ADB, a local IDE, or a network telemetry backend. The report schema is `jit-gestalt-native-eye/v1`. It contains capture and session timestamps, fixture and contract identities, app package ID, selected interest, Save state, Explore count, and timestamped user-action events.
+
+The first returned report was captured at `2026-10-27T17:08:22.527613Z`, roughly 10.8 seconds after session start. It identified `io.github.bonoj.jitgestalt.eyes` and reported five interactions:
+
+| Event | Observed detail |
+| --- | --- |
+| Explore | count `1` |
+| Select interest | `Recipes` |
+| Explore | count `2` |
+| Toggle Save | `false` |
+| Toggle Save | `true` |
+
+The final reported state was `selectedInterest = "Recipes"`, `saved = true`, and `exploreCount = 2`. The Explore events and final count agree; the Save events demonstrate reported transitions in both directions. But the trace does not include a separately recorded initial Save observation, and the event list is an in-memory session trace rather than an independent inspection of the rendered Compose semantics. It therefore supports a narrow behavioral observation, **not a complete covenant pass**.
+
+Runtime Eyes is intentionally lightweight. `rememberSaveable` state may survive activity recreation, while the in-memory event list resets. The report does not capture the full UI hierarchy, screenshot pixels, accessibility properties, process-death persistence, or build SHA. It also originates inside the candidate app, so it is useful evidence, not an independent oracle. No personal text inputs were collected in this fixture; clipboard contents still deserve ordinary device privacy care.
+
+The resulting feedback loop is now tangible:
+
+```text
+Human experience intent
+    ↓
+Contract + proposed covenant + canonical UI
+    ↓
+Model-authored Compose screen
+    ↓
+Trusted-checkout source guard → Gradle / Kotlin build
+    ↓
+APK installed on physical Android
+    ↓
+User interacts → 👁 Copy Runtime Eyes
+    ↓
+Model inspects actual reported state and transitions
+```
+
+The meaningful improvement over the original experiment is not the complexity of the UI. It is the appearance of **independent constraints before execution and structured observations after execution**.
+
+### What is established, and what is still conjecture
+
+**Established by source, CI feedback, and returned device report:**
+
+- The canonical wrappers and lexical guard were committed to an isolated branch, with a known-good recovery branch preserved.
+- The workflow was configured to obtain validation logic from a separately pinned authority commit.
+- The negative-control checker caught several deliberate substitutions; it initially missed trailing-lambda `Card` syntax, and that defect was repaired.
+- The compiler caught a real `ColumnScope` signature mismatch that the source guard could not catch.
+- An instrumented native app ran on the user's Android device and returned a structured five-event Eyes report with internally consistent final state.
+- The user could deliver native runtime observations through ordinary chat clipboard paste.
+
+**Not established:**
+
+- Fully automatic JSON-to-Kotlin generation or semantic equivalence between contract, web renderer, and native UI.
+- Complete visual adherence to a production design system.
+- Tamper-proof policy enforcement or verified GitHub branch-protection/ruleset configuration.
+- Exhaustive static analysis of Kotlin/Compose, native UI hierarchy assertions, accessibility verification, or automated screenshot comparison.
+- End-to-end attestation linking the particular device report to a unique source SHA and signed APK.
+- A complete, independently verified Save covenant including initial state and lifecycle behavior.
+- A quantified reduction in engineering labor or a general guarantee against model drift.
+
+### Why this continuation matters
+
+The original result moved implementation labor beneath a conversational interface. The continuation explores how to move **quality authority outside that same interface**. Those are complementary but distinct achievements.
+
+Without a canonical boundary, a capable model can build rapidly and still erode the experience through tiny, plausible substitutions. Without runtime observation, a passing build can conceal broken interactions. Without independent governance, a validator maintained by the candidate author can certify its own mistakes. The experiment exposed all three problems in a small enough setting to observe and repair.
+
+The desirable end state is not a deterministic UI compiler that removes the model's creativity. It is **a constrained creative workspace**: approved primitives and invariants remain stable, while the model remains free to compose, prototype, and surprise within them. When an intentional deviation is desirable, the human can amend the authority explicitly rather than having drift masquerade as design.
+
+The next falsifiable milestone is to run a **controlled violation-and-restoration test** against the independently pinned gate: deliberately substitute an unauthorized native primitive or token, confirm that the required check rejects it, restore the canonical implementation without weakening the test, and confirm acceptance. Separately, compare native UI semantics and observed interaction traces to the declared covenant. Only after those tests, and after protecting the workflow itself from candidate edits, would it be reasonable to describe the guardrails as reliably enforced.
+
+For now, the experiment has advanced from **“two turns to native”** to **“native construction with an emerging independent acceptance boundary and a human-returned runtime observation channel.”** That is a narrower claim than solved UX fidelity—and a more useful one.
+
+### Artifacts and recovery
+
+- [Original JIT Gestalt workbench and Android baseline](https://github.com/bonoj/bonoj.github.io/tree/master/jit/gestalt)
+- [Working recovery branch](https://github.com/bonoj/bonoj.github.io/tree/gestalt-working-baseline-2026-10-27/jit/gestalt)
+- [Enforcement experiment and Runtime Eyes fixture](https://github.com/bonoj/bonoj.github.io/tree/gestalt-covenant-fixture/jit/gestalt)
+- [Pinned-authority branch](https://github.com/bonoj/bonoj.github.io/tree/gestalt-canonical-authority-2026-10-27)
+- [Runtime Eyes APK workflow](https://github.com/bonoj/bonoj.github.io/actions/workflows/jit-gestalt-eyes.yml)
+
+*Continuation recorded October 27, 2026. Claims distinguish committed source, CI failures, compiled behavior, and human-reported device observation. The repository and actual workflow logs remain the executable record.*
