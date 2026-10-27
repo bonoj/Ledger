@@ -292,6 +292,35 @@ The next falsifiable milestone is to run a **controlled violation-and-restoratio
 
 For now, the experiment has advanced from **“two turns to native”** to **“native construction with an emerging independent acceptance boundary and a human-returned runtime observation channel.”** That is a narrower claim than solved UX fidelity—and a more useful one.
 
+## October 27 follow-up: Catching drift before building
+
+The next experiment asked a narrower, falsifiable question: **Can the canonical source boundary detect an unauthorized UI substitution without compiling or installing another APK?**
+
+The working `gestalt-covenant-fixture` branch and the separately pinned canonical authority were left untouched. A disposable branch, [`gestalt-drift-negative-control-2026-10-27`](https://github.com/bonoj/bonoj.github.io/tree/gestalt-drift-negative-control-2026-10-27), was created from the fixture. In `MainActivity.kt`, the Explore action's `CanonicalButton` call was deliberately replaced with a raw Material 3 `Button`. No interaction behavior, state, or trusted rule needed to change. The deliberately invalid source was committed as [`9d69cf6`](https://github.com/bonoj/bonoj.github.io/commit/9d69cf6c649f2759f03540a8c6cd2a516be09b2b).
+
+The candidate source was then examined with the same raw-`Button` recognition pattern used by the pinned Python guard. It matched `Button(`, demonstrating that **this specific unauthorized substitution is detectable from source alone**. No Gradle build, APK packaging, device installation, or new Runtime Eyes session was required to identify it.
+
+The implementation was subsequently restored from the working fixture and committed as [`06815fb`](https://github.com/bonoj/bonoj.github.io/commit/06815fb1d4015e52bd2104e41105f1d39d5e48f5). The restored file's Git blob SHA, `a862ec67247002481476879d5c25471d53caf7cf`, matched the original fixture file **exactly**. This is stronger restoration evidence than a visual comparison or an assertion that the source merely looked the same.
+
+| Stage | Evidence | Conclusion |
+| --- | --- | --- |
+| Isolated negative candidate | `9d69cf6` | Raw Material `Button` deliberately substituted |
+| Source-level recognition | Guard-equivalent `Button(` pattern matched | The targeted violation was detectable without a build |
+| Restored candidate | `06815fb` | Canonical `CanonicalButton` restored |
+| Byte-for-byte comparison | Matching Git blob SHA `a862ec6…` | Screen source returned exactly to the fixture baseline |
+
+**Evidence boundary:** This was a direct source-pattern check, **not** a recorded GitHub Actions rejection of the disposable branch. The workflow's push trigger was scoped to `gestalt-covenant-fixture`; a full negative/positive CI run and verified required-status enforcement remain unperformed. Nor does one regex match establish complete Kotlin semantic coverage, visual fidelity, or resistance to deliberate validator bypass. The meaningful observation is narrower and sufficient: the chosen drift was recognizable before compilation, and restoration was verified without altering the canonical authority.
+
+### Why the absence of a build matters
+
+The experiment illustrates **validation at the earliest useful boundary**. Source provenance can be checked before compilation; compilation checks Kotlin and Android correctness; native runtime observation checks behavior; screenshot or semantics tests would check additional UX properties. These are complementary evidence layers, not one expensive universal test.
+
+For this violation, compiling the app would have added little: both a raw Material `Button` and a canonical wrapper could compile and function, while only one respected the approved component boundary. A source gate can reject that class of drift faster and more directly than a device test.
+
+The deeper design principle is to **spend verification effort in proportion to the question being asked**. Reject a forbidden component at the source boundary. Build to establish executable correctness. Observe a device to establish runtime behavior. Reserve visual comparison and lifecycle testing for claims that actually require them.
+
+This is a concrete example of model-mediated software engineering moving beyond fast construction: the system begins to preserve design intent through inexpensive, inspectable constraints, while retaining a recoverable working implementation.
+
 ### Artifacts and recovery
 
 - [Original JIT Gestalt workbench and Android baseline](https://github.com/bonoj/bonoj.github.io/tree/master/jit/gestalt)
