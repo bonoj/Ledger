@@ -108,6 +108,29 @@ For standard application prototypes, the limiting factor may move away from typi
 
 This suggests an important inversion. Rather than asking how to help a designer produce more Kotlin, ask how much Kotlin the designer should ever need to see.
 
+## The pre-existing machinery mattered
+
+This was not a greenfield demonstration of a model spontaneously inventing an entire delivery organization. The collaborators already had established operational conventions:
+
+- **Sanctum:** preserve creative momentum, constrain changes, absorb routine failures, distinguish written, built, deployed, and observed results.
+- **Gate:** use the existing JIT publication route, isolate experiments, read back changes, and verify public artifacts rather than equating commits with deployments.
+- **JIT/GitHub Pages:** a known experiment shelf and hosting path, requiring no new web distribution infrastructure.
+- **GitHub Actions and Android tooling:** mature third-party machinery for installing dependencies, compiling, packaging, and exposing an APK artifact.
+
+These were different forms of reuse: *organizational rules*, *deployment infrastructure*, and *implementation assets*. The experiment strongly exercised the first two. It did **not** establish reusable contract-to-native compilation or a general native component system. There is no measured count of how often the model consulted Sanctum or Gate during the original turns, so the precise causal contribution of reading those documents should not be overstated.
+
+The practical achievement was that the human did not need to coordinate the boundaries manually. The established machinery provided a route, and the model operated within it. The one SDK failure was corrected at the failing boundary, not by rebuilding the system.
+
+**Preserved recovery path:** the working Android build recipe, pinned toolchain, SDK fix, APK artifact steps, and physical-device verification procedure now live in [JIT Gestalt's README](https://github.com/bonoj/bonoj.github.io/blob/master/jit/gestalt/README.md), with the executable [GitHub Actions workflow](https://github.com/bonoj/bonoj.github.io/blob/master/.github/workflows/jit-gestalt-android.yml) as the authoritative implementation. The SDK fix replaced an action that attempted to install obsolete `tools` with direct installation of platform 35 and build-tools 35.0.0. No new orchestration framework was needed.
+
+## Native as destination, not default architecture
+
+The native Compose build was useful because the experiment explicitly asked whether conversational intent could reach an actual native application. That does not imply every future JIT world should be reimplemented in native UI code.
+
+For a web-first executable world, a thin Android WebView shell could preserve one authoritative HTML/JavaScript/WebGL experience while adding an installable package and selective platform integration. That route is **a proposal, not a demonstrated result**. WebView compatibility, performance, permissions, storage, media, and lifecycle behavior would require device evidence.
+
+The relevant architectural choice is therefore conditional: **build native when native interaction is the question; package the existing web experience when the question is simply getting a world onto a phone.** Neither choice changes what tonight proved.
+
 ## The next experiment
 
 The current web contract and native app share *intent*, but the Android app is still a separately authored mirror. The next falsifiable milestone is:
