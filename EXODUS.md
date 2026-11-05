@@ -212,3 +212,10 @@ Human direction: “➡️”. Rechecked two Department of Labor pages. FLSA dir
 ## 2026-11-05T23:08:00Z — Ledger mirror publication workflow
 
 Human direction: “Let's keep the current workflow. I will periodically ask you to mirror into ledger repo EXODUS.md. beginning now :).” Decision: Exodus remains the private authoritative working repository and CHRONICLE.md remains canonical. Ledger EXODUS.md is a periodically refreshed, selective public-facing narrative downstream of the work, not a live sync or an alternate source of operational truth. Inspected Ledger README and confirmed EXODUS.md did not exist. Created Ledger EXODUS.md summarizing founding thesis, rights boundaries, instruments, evidence, recovery, publication posture and open questions without copying private raw observations. Commit: 3abdb2a49b858ef72966362918a9ebba1e10e5c4. Next: update Ledger only when the human requests a mirror; preserve the distinction between verified observations and proposed obligations.
+
+
+---
+
+## 2026-11-05T23:09:23Z — Ledger mirror correction
+
+Human: “It's a summary rather than a mirror. Is there new information you created work keeping?” The original Ledger document summarized the Chronicle and lost its detailed history. Replaced Ledger EXODUS.md with the complete Chronicle text, prefaced only by provenance, in commit 4bdb543e5925bb9d005700bd04cdbbe2d5c00e0c. Future requested mirrors should preserve the complete Chronicle, not substitute editorial summaries. Exodus remains the authoritative private source.
