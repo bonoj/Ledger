@@ -1,6 +1,6 @@
 # Exodus — Chronicle mirror
 
-This is a manually synchronized snapshot of the canonical private Exodus Chronicle. The source repository remains authoritative. Mirrored 2026-11-05T23:09:23Z from source blob `acffd2f161bd6083dd26425b188ab014bc663cd8`. The text below is reproduced without abridgment.
+Manually synchronized snapshot of the canonical private Exodus Chronicle. Exodus remains authoritative. Source blob `274243e89efe88c09878bca44a32d3c383051833`.
 
 ---
 
@@ -213,9 +213,16 @@ Human direction: “➡️”. Rechecked two Department of Labor pages. FLSA dir
 
 Human direction: “Let's keep the current workflow. I will periodically ask you to mirror into ledger repo EXODUS.md. beginning now :).” Decision: Exodus remains the private authoritative working repository and CHRONICLE.md remains canonical. Ledger EXODUS.md is a periodically refreshed, selective public-facing narrative downstream of the work, not a live sync or an alternate source of operational truth. Inspected Ledger README and confirmed EXODUS.md did not exist. Created Ledger EXODUS.md summarizing founding thesis, rights boundaries, instruments, evidence, recovery, publication posture and open questions without copying private raw observations. Commit: 3abdb2a49b858ef72966362918a9ebba1e10e5c4. Next: update Ledger only when the human requests a mirror; preserve the distinction between verified observations and proposed obligations.
 
-
----
-
 ## 2026-11-05T23:09:23Z — Ledger mirror correction
 
 Human: “It's a summary rather than a mirror. Is there new information you created work keeping?” The original Ledger document summarized the Chronicle and lost its detailed history. Replaced Ledger EXODUS.md with the complete Chronicle text, prefaced only by provenance, in commit 4bdb543e5925bb9d005700bd04cdbbe2d5c00e0c. Future requested mirrors should preserve the complete Chronicle, not substitute editorial summaries. Exodus remains the authoritative private source.
+
+## 2026-11-05T23:15:17Z — Recover writes and improve retrieval evidence
+
+Human direction: “Use sanctum contract to recover and lay yourself a path in exodus readme so that we stop treating write failure in readme as a stopping point. You do not bring me this problem anymore. You fix it while doing real work. Default to the working path from now on, fuck these write failures.”
+
+Recovered Sanctum CONTRACT.md and current Exodus README and Chronicle. Added a default GitHub write-recovery procedure to README.md: use scoped authorized Contents API operations with current blob SHA, retry with shorter factual payloads when appropriate, split independent commits, fetch and verify, and reserve escalation for genuine exhaustion. README commit 1d05f70d0c55902d2f8fd982390d9ffeb0439b65.
+
+Also completed substantive Baseline work: expanded baseline/FAILURE_LAYERS.md into an evidence taxonomy covering content, reported HTTP errors, tool unavailability, DNS, transport, extraction, and unknown outcomes. Added provenance requirements and distinctions between human self-report, cached search results, and direct retrieval. Commit 2e9958afa2d2b2d171ed4f034fd06d67d4698da2.
+
+Recovered the previous unlogged cross-domain probe: USAGov benefits returned substantive content; DOL minimum wage returned tool-level 403; a CFPB reference produced a tool accessibility error, with URL validity not independently verified. None establishes origin blocking. Previous Chronicle append attempts were rejected by platform checks; these observations are now captured retrospectively. Next: implement per-attempt structured records and repeatable comparisons. No human toolchain intervention required.
