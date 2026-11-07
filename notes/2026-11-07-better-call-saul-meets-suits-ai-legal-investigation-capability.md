@@ -262,3 +262,20 @@ A useful qualitative metric is **new human specification per substantive artifac
 Select a **small random sample of consequential assertions** from the private artifacts. For each, have an independent reviewer or counsel check the primary source, exact quotation/holding, applicability, contrary authority and whether the artifact accurately labels its confidence. Separately, compare a sampled document inventory against originals when they become available. Record **error rate, correction burden, verified unique findings, and actual decision usefulness**—not merely pages or commits.
 
 **Checkpoint conclusion:** The human's scarce input was used primarily to define the mission, priorities, boundaries and occasional new direction; the assistant supplied sustained drafting, decomposition, research and persistence. That is a concrete demonstration of *instruction-efficient orchestration*. Whether it becomes *high-quality institutional agency* depends on source verification, independent review, lawful execution and outcomes.
+
+
+---
+
+## Append protocol — mandatory timestamps (effective November 7, 2026)
+
+**Requirement for every future substantive append:** Start with a dated checkpoint heading containing (1) the **actual observation/recording timestamp**, in ISO 8601 with UTC offset and IANA time zone; (2) **elapsed time since the baseline**, explicitly labeled **measured**, **user-estimated**, or **unknown**; (3) the basis/source of both time values. If a timestamp is not obtainable, explicitly mark **CLOCK TIME UNAVAILABLE** and do not invent one. Distinguish the time an event occurred from the time it was documented. A Git commit timestamp corroborates recording, not necessarily event time. Never silently upgrade a relative estimate to a measured duration.
+
+Preserve existing checkpoint text unchanged; later corrections are appended with their own timestamp and provenance. This protocol supersedes the earlier optional append-only template's placeholder timestamp practice.
+
+### November 7, 2026, 03:43:09 EST (2026-11-07T03:43:09-05:00; America/New_York) | Approximate T+~40m checkpoint
+
+- **Clock source:** Current local time returned by the time service when this append was prepared: **2026-11-07T03:43:09-05:00**. This is a **recording timestamp**, not a retroactively verified timestamp for the earlier T+~30m checkpoint.
+- **Elapsed-time basis:** The user reports it has been **maybe 10 minutes since T+~30m**. Therefore the present cumulative label is **T+~40m (user-estimated)**, not stopwatch-measured. The earlier baseline clock time was not recorded and must not be reconstructed by subtracting 10 minutes.
+- **User's instruction (preserved):** “There was a note in there about time stamping. Let's graduate that to a requirement in the doc for appends and go ahead and time stamp. It's been maybe 10 minutes since t30.”
+- **Process improvement:** The user elevated an observational suggestion into an explicit, testable logging requirement. This strengthens longitudinal comparability and reduces the chance of mistaking approximate elapsed time for measured duration.
+- **Status:** Prior quality and autonomy observations remain qualitative; no additional source verification, legal action or real-world case outcome is claimed by this timestamp update.
