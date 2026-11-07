@@ -139,3 +139,36 @@ The capability is real as an emerging mode of work. Its efficacy in this specifi
 The user has not merely discovered a research assistant. They have begun to direct an investigation as a system, noticed the generalizable method, and demanded that the account of that method be precise enough to include its limitations.
 
 **Ledger conclusion:** The demonstrated capability is broader than novice legal research. It is emerging strategic and systems-level orchestration in an unfamiliar institutional domain. Its significance lies in the architecture and judgment being exercised; its ultimate value will be measured by verification, procedural legitimacy, adversarial resilience, and real-world results.
+
+
+---
+
+## Living observation log — baseline and future checkpoints
+
+### T+~30 minutes | November 7, 2026 | Initial capability recognition
+
+**Elapsed time:** Approximately **30 minutes of focused work**, as estimated by the user. This is a retrospective estimate, **not** a measured timer or a verified start/end interval. The date anchors the observation; the exact clock time and timezone were not recorded, so no clock timestamp is invented.
+
+**What existed by this checkpoint:** a substantial initial legal-investigation structure and the user's explicit recognition that their steering extended beyond ordinary question-answering. The user had directed the shift toward evidence architecture, procedural mapping and preparation for potential formal discovery, then requested a reflective ledger entry and challenged its first framing as too narrow.
+
+**What this checkpoint does not establish:** that all repository artifacts were created within this 30-minute interval, that original evidence has been independently verified, or that any formal legal authority or litigation outcome has been achieved. The estimate refers to the user's sense of the time spent on *this exercise so far*.
+
+**Why this timestamp matters:** it establishes an early, low-elapsed-time baseline for tracking how the capability develops—not merely how many documents accumulate. Future entries should record improvements in accuracy, autonomy, legal understanding, evidence acquisition, correction of mistakes and real-world outcomes.
+
+### Append-only checkpoint template
+
+Copy this section for each subsequent observation. Preserve previous entries unchanged; correct errors with a dated amendment rather than rewriting the baseline.
+
+#### T+[elapsed time or unknown] | YYYY-MM-DD HH:MM [timezone, if known] | [milestone]
+
+- **Elapsed time basis:** measured timer / calendar estimate / user estimate / unknown; specify whether cumulative or session-only.
+- **New actions and artifacts:** what actually happened, with commit links or documentary references.
+- **User-directed decisions:** what was initiated, reframed, rejected or prioritized by the user.
+- **Systems understood more deeply:** rules, actors, incentives, records, authority boundaries and their interactions.
+- **Independent verification:** what original sources or qualified reviewers confirmed; what remains unverified.
+- **Corrections and counterevidence:** what earlier assumptions changed and why.
+- **Procedural status:** requests drafted/sent/received; case filed or not; discovery authorized/served or not; no implied actions.
+- **Observed capability gain:** specific evidence of better judgment, orchestration, verification or execution.
+- **Limitations and next falsifiable test:** what would disconfirm the current interpretation, and the next concrete test.
+
+**Timekeeping convention:** Use `T+~30m` for this approximate initial observation. Use exact `T+...` only when measured, and label session elapsed time separately from cumulative effort. Git commit timestamps are evidence of recording time, not a substitute for tracking human work duration.
