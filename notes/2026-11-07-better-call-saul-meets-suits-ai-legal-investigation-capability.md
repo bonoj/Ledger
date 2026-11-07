@@ -279,3 +279,22 @@ Preserve existing checkpoint text unchanged; later corrections are appended with
 - **User's instruction (preserved):** “There was a note in there about time stamping. Let's graduate that to a requirement in the doc for appends and go ahead and time stamp. It's been maybe 10 minutes since t30.”
 - **Process improvement:** The user elevated an observational suggestion into an explicit, testable logging requirement. This strengthens longitudinal comparability and reduces the chance of mistaking approximate elapsed time for measured duration.
 - **Status:** Prior quality and autonomy observations remain qualitative; no additional source verification, legal action or real-world case outcome is claimed by this timestamp update.
+
+
+---
+
+## 2026-11-07T03:55:30-05:00 (America/New_York) | T+unknown | Pause and handoff checkpoint
+
+**Recording time:** 2026-11-07 03:55:30 EST, obtained from the current-time service at append preparation. **Elapsed time:** unknown since the prior user-estimated T+~40m checkpoint; no stopwatch or reliable new duration was supplied. This is the append's recording timestamp, not a claim about when all preceding work happened.
+
+**User's direction (verbatim):**
+
+> Persist the need for followup and plan for continuation in a handoff at the repo level. Then lay a path from sanctum to both home concordia and the ledger repo note in one quiet instruction. Then update the ledger to cap this for now. Feel free to include this entire direction verbatim.
+
+**What was actually persisted:** A dedicated private [Home/Concordia continuation handoff](https://github.com/bonoj/Home/blob/main/concordia/CONTINUATION_HANDOFF_2026-11-07.md) sets a narrow next-work acceptance test: obtain original dated government source records, or document the access limitation without inventing findings. The private campaign master plan points to that handoff. [Sanctum's README](https://github.com/bonoj/Sanctum/blob/main/README.md) now provides **one quiet instruction** linking to the private operational handoff and this public reflective note. No private patient details are copied here.
+
+**Methodological significance:** The user moved from low-instruction autonomous continuation to an intentional **stop-and-resume boundary**: the workflow must retain state across repositories, distinguish private operations from public reflection, and leave the next assistant a concrete verification task rather than a vague invitation to continue. This is a test of durable delegation and clean handoff, not evidence of independent case success.
+
+**Quality and limits at pause:** The workflow has generated a structured, version-controlled investigation and corrected a stale CMS-release assumption. The main unresolved gate remains independently acquiring original official CMS facility rows and inspection reports, plus patient-authorized clinical records when appropriate. No filing, subpoena, records request, outside communication, clinical finding or recovery is claimed. Further autonomous work is **paused**, not running in the background.
+
+**Ledger status:** **Capped for now at user direction.** Future entries should be append-only and comply with the mandatory timestamp-and-provenance protocol above.
