@@ -357,6 +357,48 @@ The enduring achievement is the pocket laboratory becoming more physically capab
 
 ---
 
+## 20. Comparative landscape — ordinary chat, not autonomous coding agents (2026-11-09)
+
+This comparison intentionally excludes coding-agent products as the primary peer group. Codex, Claude Code, Cursor agent modes, Replit Agent, and other autonomous development environments can perform impressive implementation work, but comparing their autonomous work sessions to **ordinary conversational engineering** would obscure the specific experiment. The relevant question is: **what can a person build, deploy, verify, and operate from a general-purpose chat conversation using connected tools, without handing the development project to a separate coding agent?**
+
+### Comparable chat-native capabilities
+
+| System / approach | Ordinary-chat tool actions | Development and deployment from chat | Live runtime interaction | Relationship to JIT MCP |
+| --- | --- | --- | --- | --- |
+| **ChatGPT connected apps/plugins** | Supported apps can search, read and perform authorized write actions from conversations. | GitHub and other connected tools can support a tool-mediated engineering workflow where permissions allow. | Depends on the installed tool/provider; not inherently a physical Android WebView. | **The host substrate we extended** with a private JIT MCP plugin, backend, Android companion and signed runtime. |
+| **Claude remote MCP connectors** | Custom remote MCP servers can expose read and action tools in ordinary Claude conversations, including mobile. | A developer can expose repository/build/deployment actions through an MCP server, subject to connector implementation and permissions. | Remote MCP can invoke external runtime systems; Anthropic also supports interactive MCP Apps in chat. | **A genuine architectural peer**, not proof of an identical enrolled Android WebView control plane. |
+| **Claude interactive MCP Apps** | Interactive tool UIs appear within Claude mobile/web/desktop conversations. | Primarily a way to use connected applications; development capability depends on connected services. | Rich interactive interfaces *inside chat*, distinct from controlling a separate, visible Android WebView on the same phone. | Comparable conversational tool extensibility, different runtime target. |
+| **Gemini connected apps** | Google has announced connected actions with productivity and website-building services. | Some integrations can build or manage websites through chat. | Provider-defined app actions, not evidence by itself of generic, device-local DOM extraction and revision-checked browser actuation. | Comparable chat-native app ecosystem, different demonstrated boundary. |
+| **JIT MCP pocket laboratory** | Private six-tool plugin plus connected repository and infrastructure tools in ordinary Android ChatGPT. | Observed engineering, repository writes, release approval, CI coordination and verification through plain conversation; one bounded Work bootstrap for the MCP Site. | **Device-verified** native Android WebView observation, structured extraction, scroll and a consented v6 text-field fill through signed remote JS. | Demonstrated integration of chat engineering, deployment and physical-device runtime feedback into one continuous workflow. |
+
+The distinction is not that other platforms lack tool use, mobile access, MCP, write actions, or interactive applications. They have meaningful versions of all of these. The narrower, defensible claim is that **this project demonstrated a particular complete crossing**: ordinary Android chat → private tool → authenticated backend → enrolled native WebView → signed, versioned DOM runtime → device-originated result. The comparison does not establish that no other developer has built an equivalent private integration; an exhaustive survey of private MCP servers and unpublished projects is impossible.
+
+### Why the usual AI-app-builder comparison is misleading
+
+A prompt-to-app product may generate a site, deploy it and display a preview. That is valuable, but it is often an application-specific generation experience or a delegated agent workflow. The JIT MCP experiment was different in two ways. First, the *general-purpose conversation itself* was used to engineer and maintain the infrastructure rather than merely request an app from a separate builder. Second, the runtime target was a **real physical Android browser**, with enrollment, consent, origin restrictions, signed remote capability updates, revision checks and result retrieval—not simply a hosted preview pane.
+
+The relevant benchmark is therefore not “how many lines of code were generated?” or “could a coding agent complete this task faster?” It is whether the human can maintain a durable laboratory through ordinary conversation, publish and verify changes, and then interrogate and actuate real runtime behavior without changing tools or becoming the manual transport layer.
+
+### What we can and cannot conclude
+
+**Demonstrated here:** a plain-chat-first engineering process; one bounded Work inference use for the MCP Site bootstrap; zero *human-observed repository write failures* in this development; no need to invoke Sanctum Contract to recover writes; verified v4→v5→v6 signed runtime delivery; physical Android observation, Wikipedia scroll and Disney form-field fill; a stable six-tool private plugin identity.
+
+**Not demonstrated:** a successful v6 click/navigation result; the full v6 A–H acceptance sequence; universal browser automation; that all other chat ecosystems lack comparable private implementations; independently audited token counts or comparative cost; or a statistically meaningful reliability advantage based on one project's zero observed write failures.
+
+### External reference points, consulted for this comparison
+
+- [OpenAI — Connected apps in ChatGPT](https://help.openai.com/en/articles/11487775-connected-apps-in-chatgpt): ordinary conversations can use connected services and authorized actions.
+- [OpenAI — Connecting custom MCP servers in ChatGPT](https://help.openai.com/en/articles/12584461-connecting-custom-mcp-servers-in-chatgpt): custom MCP connections, action permissions and documented product availability/limitations; these general public docs should not be confused with the actual private plugin path demonstrated here.
+- [Anthropic — Get started with custom connectors using remote MCP](https://support.claude.com/en/articles/11175166-get-started-with-custom-connectors-using-remote-mcp): remote MCP servers and tool actions across Claude clients, including mobile.
+- [Anthropic — Interactive connectors and MCP Apps](https://claude.com/resources/articles/interactive-tools-in-claude): interactive connected interfaces in ordinary Claude conversations.
+- [Google — New connected apps roll out to Gemini (September 23, 2026)](https://blog.google/innovation-and-ai/products/gemini-app/new-connected-apps-gemini): chat-native productivity and website-building integrations.
+
+This is a **capability comparison, not a market-wide novelty claim or benchmark**. Product documentation changes; the links identify what was publicly described at the time of the retrospective. The JIT MCP claims remain grounded in its own command IDs, UTC timestamps, source and deployment evidence.
+
+**Comparative conclusion:** The frontier we demonstrated is not “AI can write software.” It is **ordinary conversation functioning as a continuous engineering, delivery and physical-runtime interaction environment**, with the human retaining judgment and local consent while persistent machinery absorbs implementation and transport. That is the meaningful unit of comparison.
+
+---
+
 ## Evidence and provenance index
 
 - [JIT MCP source and docs](https://github.com/bonoj/bonoj.github.io/tree/master/jit/mcp/)
