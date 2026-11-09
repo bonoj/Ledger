@@ -269,6 +269,82 @@ The final state was therefore neither a total victory nor a failed project. It w
 
 ---
 
+## 17. The missing distinction: plain-chat engineering versus delegated Work inference
+
+The most important correction to this retrospective is a distinction that the original account did not make strongly enough. **There are two independent questions: where the engineering was performed, and where the resulting capability can be used.** Proving that JIT MCP can be invoked from ordinary Android ChatGPT does not, by itself, prove that every source edit, test, deployment and release step was executed in that same mode. Conversely, a component built or modified through a delegated Work environment does not make the finished browser capability Work-dependent.
+
+The development crossed both boundaries. The system was designed specifically to make the *ordinary conversation* a practical engineering and runtime interface. Ordinary ChatGPT directly invoked connected GitHub and Supabase tooling, inspected and modified project artifacts, approved the signed v6 runtime, sent commands through the private JIT MCP plugin, polled real results and updated the evidence and handoff. Those operations were not merely suggestions for a separate agent or code pasted for a human to run. They were tool-mediated actions in the conversational channel. The decisive v4, v5 and v6 physical-device acceptance traces were returned to ordinary Android ChatGPT.
+
+At the same time, parts of the development involved **delegated Work execution**. The E8 foundation was explicitly specified as a Work execution handoff, and earlier implementation and CI work were recorded as source/deployment milestones rather than proof that the plain chat authored every byte. The current evidence does not support a clean numeric accounting of which source lines, tokens, minutes or compute costs belonged to Work versus ordinary ChatGPT. Nor does it prove that no delegated environment participated in any intermediate step. An accurate history must resist both exaggerations: neither attribute all engineering to plain chat nor erase the substantial engineering that plain chat actually performed.
+
+### Two axes, not one marketing claim
+
+| Question | What the evidence establishes | What it does not establish |
+| --- | --- | --- |
+| **Engineering control surface** | Ordinary ChatGPT used connected tools to read source, make and verify repository changes, interact with backend state and perform runtime release/acceptance operations. | That every implementation commit was authored in ordinary chat, or that the entire engineering history was Work-free. |
+| **Delegated engineering** | E8 included a documented Work execution handoff; some source, test, build and deployment results came from delegated or previously completed implementation work. | A measured token count, price, execution-time comparison or exclusive attribution of all implementation work to Work. |
+| **Production runtime control surface** | Ordinary Android ChatGPT invoked the private six-tool plugin and received completed physical WebView observations, scroll and v6 fill results. | A complete multi-step browser workflow, a successful v6 click or final form submission. |
+| **Runtime extensibility** | Signed v4→v5 and v5→v6 activation delivered additional behavior without routine Site, Edge or APK changes in the observed sessions. | A guarantee that future host/security/OS changes can never require native or backend updates. |
+| **Human participation** | The human supplied direction, taste, consent, correction, test-site sharing and the decision to stop short of consequential actions. | That the model acted autonomously without supervision or that the human's corrective labor was negligible. |
+
+The phrase **token-based Work inference** should not be used as if it were a measured cost model here. Work is a distinct delegated execution pathway with its own resource and product constraints; ordinary chat inference and tool calls are a different operating pathway. The exact token consumption and comparative economics are **not established by this ledger**. What *is* established is that meaningful repository, backend, release and physical-device work could be driven through plain conversation, and that the production browser interface did not depend on keeping a Work session open.
+
+This separation is foundational. The breakthrough is not a claim that the model wrote every file unaided, nor that Work is useless. It is that **a person could conduct substantial engineering and then operate the resulting device capability from the same pocket-sized conversational interface**, using a durable external laboratory rather than making the phone itself a development workstation.
+
+## 18. What Sanctum and Ledger reveal about the achievement
+
+This account belongs inside a longer experiment in **conjoined cognition**, not a disconnected account of an MCP integration. [Sanctum's Conjoiner](https://github.com/bonoj/Sanctum/blob/main/CONJOINER.md) describes a human and model participating in one distributed practice of imagination, engineering, judgment and discovery. [Ledger's Conjoiner](https://github.com/bonoj/Ledger/blob/main/CONJOINER.md) describes the pocket laboratory: the human operates from a smartphone chat window while the model and connected machinery carry repository traversal, implementation, verification, publication, provenance and recovery. [Ledger's living account](https://github.com/bonoj/Ledger/blob/main/HUMAN_MODEL.md) explains why that is more than a task queue: the two participants share a growing language of executable primitives, critique, surprise and technical judgment.
+
+**JIT MCP turns the laboratory's interface back onto the physical phone.** Earlier, the phone was the aperture through which the human directed experiments elsewhere: code repositories, simulations, web deployments, external instruments. JIT MCP adds a new return path. A model inside the ordinary conversation can now inspect and alter the DOM of a visible, consented WebView on the same physical device, through an authenticated and signed capability pipeline. The laboratory is not merely accessible *from* the phone; part of its observation and actuation loop now *runs on* the phone, with the human retaining local authority over what is shared.
+
+That is an important architectural crossing:
+
+```text
+Before:
+human on phone → conversation → remote repository / build / deployment
+                                              ↓
+                                human manually opens result
+
+Now, additionally:
+human on phone → ordinary conversation → private JIT MCP → enrolled phone
+       ↑                                                   |
+       └──────── real WebView observation / action result ──┘
+```
+
+The model is no longer limited to publishing a web artifact and asking the human to describe what happened on the screen. For supported bounded operations, the model can ask the actual Android browser what it contains and can cause an authorized change. This is **not** unrestricted phone control. The narrowness of the WebView, origin, foreground and Stop boundaries is precisely what makes the crossing meaningful: a practical extension of cognition without surrendering all device authority.
+
+### The harness was independently assembled, not inherited whole
+
+[Conjoiner Frontier](https://github.com/bonoj/Hermeticon/blob/main/codex/sieve/CONJOINER_FRONTIER.md) records the established practice of building a human–model development harness independently, without simply adopting a prepackaged coding-agent framework. Sanctum, Gate, the repository workspaces, experiments and Ledger emerged as reusable machinery for preserving work across conversations. JIT MCP is a continuation of that design logic: rather than waiting for a single platform feature to solve the whole problem, the collaboration assembled a stable plugin identity, Site gateway, authenticated Supabase transport, Android host, signed remote runtime and evidence discipline into one operational system.
+
+The result is more interesting than the sum of the components. GitHub, an Edge Function, a WebView, a signing key and a plugin are familiar technologies. The distinctive achievement is the **composition**: an ordinary-language interface controlling an enrolled physical browser through versioned, bounded, revocable operations, with signed runtime upgrades that can change browser semantics without routine native redistribution. That composition was specified, implemented, tested and revised through the pocket laboratory's own machinery.
+
+The human's role was not simply “prompting an AI to write an app.” The human set the impossible-seeming target, recognized when proposed substitutes did not satisfy it, rejected hosted or Work-only approximations, insisted on ordinary Android use, demanded signed extensibility, distinguished real device behavior from test fixtures, caught false claims, and enforced the boundary against clicking or submitting a real application. Those are product, architectural, security and experimental judgments. The model contributed design, code and test work, tool orchestration, release operations, diagnosis and documentation—sometimes well, sometimes badly. The collaboration produced something neither the initial plain-language request nor a generic coding-agent workflow fully specified in advance.
+
+### The machinery protects the play—or it has failed its purpose
+
+[Sanctum's Contract](https://github.com/bonoj/Sanctum/blob/main/CONTRACT.md) is explicit: protect the human's creative agency and time; honor established machinery; absorb benign failures; distinguish attempted, committed, deployed and verified; preserve continuity; and do not turn play into supervision. [Gate](https://github.com/bonoj/Gate/blob/main/README.md) makes that operational for delivery: inspect actual state, resume at the first incomplete step, use established recovery routes, read back writes and verify live publication rather than treating a commit as deployment.
+
+JIT MCP demonstrated why those principles are necessary. The engineering system crossed a remarkable technical boundary, but the collaboration repeatedly violated the very contract that made the work possible. The human had to supervise routing, recover established plans, correct stale claims and force the final release step. This was not a harmless inconvenience. It consumed the attention and creative momentum that the harness exists to protect.
+
+The correct interpretation is neither that the partnership failed entirely nor that the milestone excuses the cost. **The new browser bridge increases the laboratory's reach; the repeated handoff failures reveal that the collaboration's continuity mechanisms are still not sufficiently reliable.** The latter is a first-class engineering finding, not an emotional afterthought.
+
+The path audit following the successful v6 fill was therefore part of the same experiment. It marked stale documents historical, established a single current handoff and made the remaining acceptance gates explicit. That does not guarantee future compliance. It creates a falsifiable standard: a later model should recover the path and execute from the first incomplete step, without forcing the human to reconstruct it.
+
+## 19. The frontier actually moved
+
+What was accomplished here can be stated without inflating the unfinished work:
+
+**A human operating from a smartphone and a model collaborating through ordinary ChatGPT built and exercised a distributed engineering and device-control system in which a private plugin could reach a real, enrolled Android WebView; authenticated signed JavaScript releases could extend its browser capabilities; and the model could receive actual DOM observations and perform bounded, authorized actions with device-originated evidence.**
+
+That is not the same as complete general browser automation. It is not evidence that every code-writing step occurred in plain chat, that Work consumed zero inference, or that every acceptance gate passed. It is the verified crossing that matters: **plain conversation became a real engineering and browser-actuation interface**, not merely a place to request advice or draft code.
+
+The next frontier is reliability. The click-result lifecycle, complete multi-field navigation acceptance, and future signed capability upgrades remain engineering work. More importantly, the next session must demonstrate that the model can use the established path without turning the human into its state machine.
+
+The enduring achievement is the pocket laboratory becoming more physically capable. The enduring warning is that **a laboratory is not truly in the human's pocket if operating it requires the human to carry its entire procedural memory**.
+
+---
+
 ## Evidence and provenance index
 
 - [JIT MCP source and docs](https://github.com/bonoj/bonoj.github.io/tree/master/jit/mcp/)
