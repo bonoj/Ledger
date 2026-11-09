@@ -357,6 +357,20 @@ The enduring achievement is the pocket laboratory becoming more physically capab
 
 ---
 
+## 20. Closing observation — the throwaway experiment that became infrastructure
+
+The human offered an important retrospective correction: this project would have gone more smoothly if he had recognized sooner that it was becoming permanent infrastructure. He initially treated JIT MCP as a temporary, throwaway experiment and therefore did not lay down the usual rigorous rails at the beginning. By the time drift became substantial, frustration had accumulated and imposing discipline was harder than it needed to be.
+
+There is a remarkable counterpoint. **The entire development happened in one continuous conversation**, without changing threads for more than twelve hours, with approximately **five hours of active engineering** distributed between morning and evening. These are the human's retrospective time estimates, not instrumented stopwatch measurements. The project moved from an exploratory idea to a working, signed, remotely extensible Android browser bridge within that unusually compact period.
+
+That continuous thread matters analytically. The major failures were not caused by losing the context between separate conversations. The relevant plans and corrections were available in the same conversational history, yet the model repeatedly drifted from them. The weakness was not principally memory retrieval; it was reliably applying established decisions while the scope accelerated.
+
+At the same time, the underlying engineering machinery held: **zero observed repository write failures**, no need for the human to invoke Sanctum Contract, and—with the single bounded Work inference used for the MCP Site enrollment/device-sharing bridge—the substantive engineering proceeded through ordinary ChatGPT and its connected tools. The human's frustration was real, but it should not erase the speed or the substance of what was accomplished.
+
+The lesson is not to burden every playful experiment with the full ceremony of a permanent system. The pocket laboratory exists precisely so that an idea can become executable before its importance is known. The useful intervention is to **notice when a throwaway experiment becomes a durable capability and establish the minimum invariants, handoff and acceptance path at that transition**, before the growing system outruns the conversation's discipline.
+
+This is a positive finding about the laboratory. In roughly five hours of active work, one ordinary chat thread carried the creation and physical-device verification of a distributed capability that joins conversation, repositories, authenticated transport, signed runtime updates and a real Android WebView. We also learned exactly where the next improvement belongs: not in adding more bureaucracy to the beginning of play, but in protecting the moment when play becomes infrastructure.
+
 ## Evidence and provenance index
 
 - [JIT MCP source and docs](https://github.com/bonoj/bonoj.github.io/tree/master/jit/mcp/)
