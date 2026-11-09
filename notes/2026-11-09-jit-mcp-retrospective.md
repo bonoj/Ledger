@@ -269,27 +269,29 @@ The final state was therefore neither a total victory nor a failed project. It w
 
 ---
 
-## 17. The missing distinction: plain-chat engineering versus delegated Work inference
+## 17. The decisive attribution: plain-chat engineering, with one bounded Work exception
 
-The most important correction to this retrospective is a distinction that the original account did not make strongly enough. **There are two independent questions: where the engineering was performed, and where the resulting capability can be used.** Proving that JIT MCP can be invoked from ordinary Android ChatGPT does not, by itself, prove that every source edit, test, deployment and release step was executed in that same mode. Conversely, a component built or modified through a delegated Work environment does not make the finished browser capability Work-dependent.
+The human clarified the execution history after reviewing the first retrospective: **the only Work inference used in JIT MCP development was to build the ChatGPT MCP Site for enrollment and device sharing with the ChatGPT app's ordinary chat.** This is a first-hand attribution from the person directing the work, and corrects this account's earlier suggestion that E8 or other implementation phases were delegated to Work.
 
-The development crossed both boundaries. The system was designed specifically to make the *ordinary conversation* a practical engineering and runtime interface. Ordinary ChatGPT directly invoked connected GitHub and Supabase tooling, inspected and modified project artifacts, approved the signed v6 runtime, sent commands through the private JIT MCP plugin, polled real results and updated the evidence and handoff. Those operations were not merely suggestions for a separate agent or code pasted for a human to run. They were tool-mediated actions in the conversational channel. The decisive v4, v5 and v6 physical-device acceptance traces were returned to ordinary Android ChatGPT.
+**The rest of the JIT MCP development was carried out through plain ChatGPT conversations and their connected tools.** That includes the substantial architecture, repository engineering, Android companion work, Supabase command/result transport, signed runtime and release mechanisms, tests, debugging, documentation, and the live device acceptance operations. These activities were not a Work coding-agent campaign merely controlled from chat. The ordinary chat was the working engineering surface.
 
-At the same time, parts of the development involved **delegated Work execution**. The E8 foundation was explicitly specified as a Work execution handoff, and earlier implementation and CI work were recorded as source/deployment milestones rather than proof that the plain chat authored every byte. The current evidence does not support a clean numeric accounting of which source lines, tokens, minutes or compute costs belonged to Work versus ordinary ChatGPT. Nor does it prove that no delegated environment participated in any intermediate step. An accurate history must resist both exaggerations: neither attribute all engineering to plain chat nor erase the substantial engineering that plain chat actually performed.
+The distinction is between **where inference was spent** and **what the system ultimately enabled**. The single bounded Work use established the MCP Site bridge required for enrollment and device sharing. Once that bridge existed, plain ChatGPT was used to engineer and evolve the rest of the stack and to operate the resulting Android browser integration.
 
-### Two axes, not one marketing claim
+| Development area | Inference/execution attribution |
+| --- | --- |
+| ChatGPT MCP Site supporting enrollment and device sharing with ordinary app chat | **Work inference — the sole Work use reported by the human** |
+| Android companion and native WebView engineering | **Plain ChatGPT with connected tools** |
+| Supabase transport, sessions, command/result lifecycle, authentication and authorization | **Plain ChatGPT with connected tools** |
+| Runtime versioning, signing, digest approval, remote v4/v5/v6 delivery | **Plain ChatGPT with connected tools** |
+| Repository modifications, test orchestration, CI/signing workflow and recovery | **Plain ChatGPT with connected tools** |
+| Real ordinary-ChatGPT → plugin → Android observations, scrolling, extraction and v6 fill | **Plain ChatGPT operating the completed system** |
+| Evidence ledger, invariants, handoffs, audit and retrospective | **Plain ChatGPT with connected tools** |
 
-| Question | What the evidence establishes | What it does not establish |
-| --- | --- | --- |
-| **Engineering control surface** | Ordinary ChatGPT used connected tools to read source, make and verify repository changes, interact with backend state and perform runtime release/acceptance operations. | That every implementation commit was authored in ordinary chat, or that the entire engineering history was Work-free. |
-| **Delegated engineering** | E8 included a documented Work execution handoff; some source, test, build and deployment results came from delegated or previously completed implementation work. | A measured token count, price, execution-time comparison or exclusive attribution of all implementation work to Work. |
-| **Production runtime control surface** | Ordinary Android ChatGPT invoked the private six-tool plugin and received completed physical WebView observations, scroll and v6 fill results. | A complete multi-step browser workflow, a successful v6 click or final form submission. |
-| **Runtime extensibility** | Signed v4→v5 and v5→v6 activation delivered additional behavior without routine Site, Edge or APK changes in the observed sessions. | A guarantee that future host/security/OS changes can never require native or backend updates. |
-| **Human participation** | The human supplied direction, taste, consent, correction, test-site sharing and the decision to stop short of consequential actions. | That the model acted autonomously without supervision or that the human's corrective labor was negligible. |
+An E8 document was titled a *Work execution handoff*, but a document's proposed routing is not evidence that Work inference actually executed that phase. The human's clarification is the authoritative account of the mode used. Earlier language implying delegated E8 implementation was **incorrect and superseded**.
 
-The phrase **token-based Work inference** should not be used as if it were a measured cost model here. Work is a distinct delegated execution pathway with its own resource and product constraints; ordinary chat inference and tool calls are a different operating pathway. The exact token consumption and comparative economics are **not established by this ledger**. What *is* established is that meaningful repository, backend, release and physical-device work could be driven through plain conversation, and that the production browser interface did not depend on keeping a Work session open.
+This retrospective does **not** contain instrumented token counts, billing records or a numerical compute-cost comparison, and it does not manufacture them. The important historical claim is about the mode of engineering, not a fabricated quantitative estimate.
 
-This separation is foundational. The breakthrough is not a claim that the model wrote every file unaided, nor that Work is useless. It is that **a person could conduct substantial engineering and then operate the resulting device capability from the same pocket-sized conversational interface**, using a durable external laboratory rather than making the phone itself a development workstation.
+The resulting achievement is unusually concrete: **with one bounded Work-assisted Site bootstrap, the human and model built the Android browser bridge and its extensible control plane through ordinary ChatGPT conversations.** The same ordinary app chat then demonstrated real observation and actuation on the physical phone. This is more than using a chat interface to commission code from a separate coding agent. The chat, its tools, and the persistent laboratory formed the development environment.
 
 ## 18. What Sanctum and Ledger reveal about the achievement
 
