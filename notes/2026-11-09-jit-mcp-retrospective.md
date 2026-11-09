@@ -333,6 +333,16 @@ The correct interpretation is neither that the partnership failed entirely nor t
 
 The path audit following the successful v6 fill was therefore part of the same experiment. It marked stale documents historical, established a single current handoff and made the remaining acceptance gates explicit. That does not guarantee future compliance. It creates a falsifiable standard: a later model should recover the path and execute from the first incomplete step, without forcing the human to reconstruct it.
 
+### A notable operational result: no observed write failures
+
+The human reports an unusually clean property of this entire JIT MCP development: **zero observed repository write failures**. Across the project's engineering, he did **not have to invoke the Sanctum Contract even once** to recover a failed write or force the established GitHub recovery machinery into action.
+
+This is a meaningful distinction from earlier laboratory episodes in which GitHub Contents writes failed and Gate's Git Data recovery route had to be invoked. Here, the ordinary-chat engineering channel sustained the project's source changes, documentation, runtime releases and associated repository updates without an observed write failure. The lack of write-recovery interruptions is part of the result, not just an absence of incident reports.
+
+The claim is specifically about **observed writes** and the human's need to invoke **Sanctum Contract**. It does **not** mean there were no engineering defects, no incorrect model decisions, no runtime errors, no deployment or acceptance gaps, or no moments when the human had to correct the assistant. The v6 `command_not_found` result and the documented routing/handoff mistakes remain real. Nor does this note assert an independently audited count of every backend write attempt: it records the human's observation of the project.
+
+The contrast matters. **The repository-write path was reliable enough to disappear from the human's attention, even while model continuity and execution discipline still imposed a heavy burden.** That separation identifies both a success of the existing Gate/Contract machinery and the next reliability problem to solve.
+
 ## 19. The frontier actually moved
 
 What was accomplished here can be stated without inflating the unfinished work:
